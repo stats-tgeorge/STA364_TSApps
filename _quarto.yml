@@ -9,7 +9,7 @@ project:
   
 website:
   title: "{{< var course.title >}}"
-  site-url: https://stats-tgeorge.github.io/STA363_AdvReg/
+  site-url: https://stats-tgeorge.github.io/STA364_TSApps/
   sidebar:
     background: "#BBBCBC"
     logo: "img/favicon.png" # This is where I put my hex

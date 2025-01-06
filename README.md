@@ -13,16 +13,13 @@ This work is licensed under a
 
 Course website for STA 364 - Time Series Applications - Spring 2025 at Cornell College
 
-Course website is live at https://github.com/stats-tgeorge/STA363_AdvReg.
+Course website is live at https://stats-tgeorge.github.io/STA364_TSApps/.
 
 # Attribution
 
 
 - Website design is based on [STA 363 by Dr. Lucy D’Agostino McGowan](https://sta-363-s23.github.io/website/)
 
-- Slide Originals: [STA 310 by Dr. Maria Tackett](https://github.com/sta310-sp22/slides)
-
-- Labs Originals: Textbook author, Dr. Paul Roback and Dr. Ann Cannon
 
 - The hex is designed by [Tyler George](https://stats-tgeorge.github.io/personal_website/about.html). It uses the *fHH1.csv* data included in [Beyond Multiple Linear Regression](https://bookdown.org/roback/bookdown-BeyondMLR/).
 
