@@ -5,8 +5,7 @@ title: "Useful links"
 |                            |                                                                                         |
 |----------------|--------------------------------------------------------|
 | RStudio Server             | 🔗 on [Cornell College Cluster](http://turing.cornellcollege.edu:8787/)                 |
-| Course GitHub organization | 🔗 on [GitHub](https://github.com/DSC223-FB2-2022)                                      |
-| Gradebook                  | 🔗 on [Moodle](https://moodle.cornellcollege.edu/grade/report/grader/index.php?id=6992) |
+| Gradebook                  | 🔗 on [Moodle]({{< var course.mgradebook >}}) |
 
 ## Other Useful Links
 -   [Data Wrangling and Viz Interactive Tutorials](https://datasciencebox.org/02-interactive-tutorials)
