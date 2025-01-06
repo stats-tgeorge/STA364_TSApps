@@ -1,0 +1,165 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Instructor Dr. Tyler George\n   Cornell College, West 311\n    tgeorge@cornellcollege.edu \n\n\n\n\nJanuary 13th to February 5th\n   By Appointment\n   West 201\n\n\n\n\n   MWTh 3:05pm-4:05pm and by appt.\n   West 311\n   Optional Appointment",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#ai-policy",
+    "href": "syllabus.html#ai-policy",
+    "title": "Time Series Applications",
+    "section": "AI Policy",
+    "text": "AI Policy\nThe beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. There is a good possibility that using tools like these are going to become an important skill for careers in the not distant future (https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech).\nIn the meantime though, it’s going to take a while for society to figure out when using these tools is/isn’t acceptable.\nWork created by AI tools may not be considered original work and, instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn’t cite sources. AI models have built-in biases (ie, they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources) AI tools have limitations (ie, they lack critical thinking to evaluate and reflect on criteria; they lack abductive reasoning to make judgments with incomplete information at hand; they make up or use inaccurate information and may “hallucinate” sources that do not exist)\nIn this course, all informal writing should be written without the use of AI. The purpose of informal writing is to help you think through your ideas, connect with your lived experiences, and to figure out your thoughts and opinions. Using AI here subverts that process.\nA final note: Other courses may have different AI policies, and it is important to be aware of the policy in each class.\n\nDISABILITIES AND ACCOMODATIONS POLICY\nCornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability related accommodations within the first three days of the term for which the accommodations are required, due to the fast pace of the block format. For more information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.\n\n\nACADEMIC HONESTY POLICY\nCornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is her or his work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College’s requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty.”\n\n\nIllness Policy\nIf you are experiencing COVID-19 symptoms, do not attend class. Perform a home test or contact Director of Student Health Services Lynn O’Brien at student_health@cornellcollege.edu immediately to arrange a COVID-19 test at the Health Center. If you need to isolate due to COVID-19, or if you become unable to attend class for any other health reason, contact me as soon as possible to determine if you are able to continue in the class. A Withdrawal for Health Reasons may be required.\n\n\nMandatory Reporter Reminder\nIt is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at mwhite@cornelllcollege.edu.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Time Series Applications Schedule",
+    "section": "",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 Jan\nSyllabus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n31 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n3 Feb\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n4 Feb\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n5 Feb",
+    "crumbs": [
+      "Course Contents",
+      "Schedule & Assignments"
+    ]
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#course-links",
+    "href": "course-links.html#course-links",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#other-useful-links",
+    "href": "course-links.html#other-useful-links",
+    "title": "Useful links",
+    "section": "Other Useful Links",
+    "text": "Other Useful Links\n\nData Wrangling and Viz Interactive Tutorials\nRStudio Cheatsheets\nIntroduction to dplyr\nR Date Examples\nNY Times Cornell College Sign-up\nR for Data Science 2nd Ed\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#data-links",
+    "href": "course-links.html#data-links",
+    "title": "Useful links",
+    "section": "Data Links",
+    "text": "Data Links\n\nTidyTuesday\nR Data Sources for Regression Analysis\nFiveThirtyEight data\nAmazon Registry of Open Data\nOpen data StackExchange\nData.gov\nUS Census\nNew York City data\nGeorge Mason University Data Link List\nToward Data Science list of Data Sources\nNHS Scotland Open Data\nEdinburgh Open Data\nOpen access to Scotland’s official statistics\nBikeshare data portal\nUK Gov Data\nKaggle datasets\nOpenIntro datasets\nAwesome public datasets\nYouth Risk Behavior Surveillance System (YRBSS)\nPRISM Data Archive Project\nHarvard Dataverse\nAndrew G. Reiter Poly Scie Datasets\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies\nU.S. Data\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nState of Iowa Open Geospatial Data\nIf you know of others, let me know!",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Course Description\nFollowing a second regression course, this class will begin with a review of multiple linear regression, but now using R. New topics will include probability distributions, likelihoods, differentiating binary vs binomial logistic regression, and poisson regression including its variants. The class of generalized linear models will then be presented which unifies all past modeling approaches. All methods are presented using realistic case studies. Conducting and communicating the modeling process including exploratory data analysis, model exploration and selection, and inferences are all emphasized.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Class Project",
+    "section": "",
+    "text": "You will be analyzing a dataset using regression analysis and a classification analysis.\nCollaboration: You can work individually or in groups of up to 3.\nAs one of my past professors liked to say, “Keep it Simple Stupid (KISS)”"
+  },
+  {
+    "objectID": "project.html#part-1-research-questions-and-data",
+    "href": "project.html#part-1-research-questions-and-data",
+    "title": "Class Project",
+    "section": "Part 1: Research Questions and Data",
+    "text": "Part 1: Research Questions and Data\n\nDetermine a topic\nFind data that goes with that topic. See HERE.\n\n\nMust have at least 5 variables that may be useful in a classification and/or regression model.\n\n\nClean and prepare that data.\nWrite two research questions that you will use that data to investigate.\n\n\nOne question that can be answered with regression; make clear the outcome variable and its units.\nOne question that can be answered with classification; make clear the outcome variable and its possible categories.\n\n\nSubmit a project-proposal_last_names.html document that includes\n\n\nsource or sources of your data\na glimpse of your data (run glimpse())\nvariable definitions\nYour research questions\n\nMoodle link: HERE"
+  },
+  {
+    "objectID": "project.html#part-2-eda",
+    "href": "project.html#part-2-eda",
+    "title": "Class Project",
+    "section": "Part 2: EDA",
+    "text": "Part 2: EDA\n\nConduct a full EDA on your dataset including any variables being considered for either research question. Minimally this should include the following. All included graphs/tables must have comments and discussion.\n\n\nClearly describe what the cases in the final clean dataset represent.\nWho collected the data? When, why, and how? Answer as much of this as the available information allows.\nUnivariate distributions of all variables.\nGraphs that specifically compare potential predictors to the variables that will be your response variables.\n\n\nSubmit a eda_last_names.html document to Moodle HERE."
+  },
+  {
+    "objectID": "project.html#part-3-modeling",
+    "href": "project.html#part-3-modeling",
+    "title": "Class Project",
+    "section": "Part 3: Modeling",
+    "text": "Part 3: Modeling\nThe following should be included in your modeling report (generated from a Quarto file, or files).\n\nRegression\n\nRegression: Methods\n\nDescribe the models used.\nDescribe what you did to evaluate models.\n\nIndicate how you estimated quantitative evaluation metrics.\nIndicate what plots you used to evaluate models.\n\nDescribe the goals / purpose of the methods used in the overall context of your research investigations.\n\n\n\nRegression: Results\n\nSummarize your final model and justify your model choice (see below for ways to justify your choice).\n\nCompare the different models in light of evaluation metrics, plots, variable importance, and data context.\nDisplay evaluation metrics for different models in a clean, organized way. This display should include both the estimated CV metric as well as its standard deviation.\nBroadly summarize conclusions from looking at these CV evaluation metrics and their measures of uncertainty.\nSummarize conclusions from residual plots from initial models (don’t have to display them though).\n\nShow and interpret some representative examples of residual plots for your final model. Does the model show acceptable results in terms of any systematic biases?\n\n\n\nRegression: Conclusions\n\nInterpret you final model (show plots of estimated non-linear functions, or slope coefficients) for important predictors, and provide some general interpretations of what you learn from these\nInterpret evaluation metric(s) for the final model in context with units. Does the model show an acceptable amount of error?\nSummarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.\n\n\n\n\nClassification\n\nClassification: Methods\n\nIndicate at least 2 different methods used to answer your classification research question.\n\nDescribe what you did to evaluate the models explored.\nIndicate how you estimated quantitative evaluation metrics.\n\nDescribe the goals / purpose of the methods used in the overall context of your research investigations.\n\n\n\nClassification: Results\n\nSummarize your final model and justify your model choice (see below for ways to justify your choice).\n\nCompare the different classification models tried in light of evaluation metrics, variable importance, and data context.\nDisplay evaluation metrics for different models in a clean, organized way. This display should include both the estimated metric as well as its standard deviation. (This won’t be available from OOB error estimation. If using OOB, don’t worry about reporting the SD.)\nBroadly summarize conclusions from looking at these evaluation metrics and their measures of uncertainty.\n\n\n\n\nClassification: Conclusions\n\nInterpret evaluation metric(s) for the final model in context. Does the model show an acceptable amount of error?\n\nIf using OOB error estimation, display the test (OOB) confusion matrix, and use it to interpret the strengths and weaknesses of the final model.\n\nSummarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.\n\n\n\n\nSubmit\nSubmit one (or two) model_last_names.html document(s) with your analysis from the parts above. Submit on Moodle HERE."
+  },
+  {
+    "objectID": "project.html#part-4-tell-people-about-it.",
+    "href": "project.html#part-4-tell-people-about-it.",
+    "title": "Class Project",
+    "section": "Part 4: Tell people about it.",
+    "text": "Part 4: Tell people about it.\nA 5-10 minute video presentation of your project. (Recording the presentation over Zoom is a good option for creating the video. You can record to your computer or to the cloud.)\n\nUpload the video to Google Drive.\nAll team members should have an equal speaking role in the presentation.\n\nIn order to record your presentation,\n\nStart a Zoom meeting and invite your project mates.\nOne of your share your screen with presentation slides (recommended: Quarto Presentation, Google Slides, or Powerpoint).\nPlease have everyone turn your video on so that we can see who is speaking.\nWhen you are ready to start, the host of the meeting (who ever started the meeting) can click Record on this Computer. I highly recommend that someone else start a timer so that you can make sure you keep the presentation to 10 minutes max.\nStart presenting!\nYou can Pause the recording, as needed, and then press start recording again.\nWhen you have finished recording, you can press Stop Recording. When you end the meeting, the recording (an mp4 file) will be downloaded to the computer of the individual who pressed Record.\nUpload the video to Google Drive.\n\nWe will watch these in class!\nSource: Brianna Heggeseth, STA 253"
+  }
+]
