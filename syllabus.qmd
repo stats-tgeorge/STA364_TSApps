@@ -16,7 +16,7 @@ library(pander)
 ::: {.column width="33%"}
 ### Instructor
 
-Instructor [{{< var instructor.name >}}]({{< var instructor.url >}})
+[{{< var instructor.name >}}]({{< var instructor.url >}})
 
 `r fontawesome::fa('university')`   {{< var college.name >}}, {{< var instructor.office >}}
 
