@@ -25,7 +25,7 @@ course:
   coursecal: "https://calendar.google.com/calendar/u/0?cid=Y19mNDVlZjMyN2U1NjgzNWEwMjU3ODk4MGRjYTkyYWNhOWYzY2ExNmQxMWE2ODgxMGZhMzQ2ZTRlM2FiOGY1NzQ0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
   moodle: "https://moodle.cornellcollege.edu/course/view.php?id=8175"
   mgradebook: "https://moodle.cornellcollege.edu/grade/report/grader/index.php?id=8175"
-  url: "https://stats-tgeorge.github.io/STA363_AdvReg/"
+  url: "https://stats-tgeorge.github.io/STA364_TSApps/"
   copyright_year: "2025"
   text: | 
     The textbook is: [Forecasting: Principles and Practice](https://otexts.com/fpp2/) by Rob J Hyndman and George Athanasopoulos -- it is freely available online. Chapters 1-8.
