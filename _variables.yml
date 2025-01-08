@@ -28,7 +28,7 @@ course:
   url: "https://stats-tgeorge.github.io/STA364_TSApps/"
   copyright_year: "2025"
   text: | 
-    The textbook is: [Forecasting: Principles and Practice](https://otexts.com/fpp2/) by Rob J Hyndman and George Athanasopoulos -- it is freely available online. Chapters 1-8.
+    The textbook is: [Forecasting: Principles and Practice](https://otexts.com/fpp3/) by Rob J Hyndman and George Athanasopoulos -- it is freely available online. Chapters 1-8.
   # text2: |    
   #   The secondary text is: [An Introduction to Statistical Learning with Applications in R](https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html)  by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani -- it is freely available online. Chapter 7.
   description: "Time series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable's change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models."
