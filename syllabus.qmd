@@ -30,7 +30,7 @@ library(pander)
 
 `r fontawesome::fa("clock")`   {{< var course.class_time >}}
 
-`r fontawesome::fa("location-dot")`   West 201
+`r fontawesome::fa("location-dot")`   {{< var course.location >}}
 :::
 
 ::: {.column width="33%"}
