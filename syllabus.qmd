@@ -12,7 +12,7 @@ library(tibble)
 library(pander)
 ```
 
-:::::: columns
+:::: columns
 ::: {.column width="33%"}
 ### Instructor
 
@@ -42,7 +42,7 @@ library(pander)
 
 `r fontawesome::fa("calendar-check")`   [Optional Appointment]({{< var instructor.appointment_url >}})
 :::
-::::::
+::::
 
 ### You Are A Priority
 
@@ -68,7 +68,7 @@ This course supports the Educational Priorities and Outcomes of Cornell College,
 
 To be successful in this class, you should have completed {{< var course.pre_req >}}.
 
-### Open Access Books – Free!
+### Course Materials
 
 All of the materials for this class are free.
 
@@ -78,11 +78,11 @@ All of the materials for this class are free.
 
 Our course will run from a combination of [Moodle]({{< var course.moodle >}}) and the course website at [{{< var course.url >}}]({{< var course.url >}}).
 
-### Software – No need to install
+### Software
 
 In this course, we will use a combination of technologies, including R and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact, for a while, I prefer you don’t). If you are an off-campus student, please let me know right away.
 
-You can access the RStudio Server at: <{{< var college.rstudio >}}>.
+You can access the RStudio Server at: [{{< var college.rstudio >}}]({{< var college.rstudio >}}).
 
 **If you have any technical problems you should contact IT as soon as possible**. [Submit a Work Order](https://www.cornellcollege.edu/information-technology/index.shtml)!
 
@@ -92,7 +92,7 @@ You can access the RStudio Server at: <{{< var college.rstudio >}}>.
 #In this class, I would like you to work in groups for a variety of reasons. A large part of this class is communicating analysis. At the beginning of the block, groups will be formed. You should expect to work with this group every day. When we work in groups in class we may decide on roles, specifically who is controlling the one screen will rotate). Group members will rotate roles between tasks to help make sure everybody is sharing work. You won’t be working in a group for everything; any quizzes, and exams may be individual. 
 ```
 
-### Evaluations and grades
+### Grades
 
 You will find your grades in the course [Moodle Gradebook]({{< var course.mgradebook >}}).
 
@@ -146,16 +146,21 @@ bind_rows(assignments, assignments_total) %>%
 ```
 :::
 
-:::: centered-table
+::: centered-table
+
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
   pandoc.table(justify = "lclc", 
                col.names = c("Grade", "Range", "Grade", "Range"))
 ```
 
+:::
+
+### Course Policies
+
 <div>
 
-## AI Policy
+#### AI Policy
 
 The beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. It is likely that using tools like these will become an important skill for careers in the not-too-distant future (<https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech>).
 
@@ -167,21 +172,21 @@ In this course, all informal writing should be written without AI. The purpose o
 
 **A final note: Other courses may have different AI policies, and it is important to be aware of each class's policy.**
 
-### DISABILITIES AND ACCOMMODATIONS POLICY
+#### DISABILITIES AND ACCOMMODATIONS POLICY
 
 Cornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability-related accommodations within the first three days of the term for which the accommodations are required due to the fast pace of the block format. For more [information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.](http://www.cornellcollege.edu/academic-support-and-advising/disabilities/index.shtml)
 
-### ACADEMIC HONESTY POLICY
+#### ACADEMIC HONESTY POLICY
 
 Cornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is her or his work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College's requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty."
 
-### Illness Policy
+#### Illness Policy
 
 If you become unable to attend class for any other health reason, contact me as soon as possible.
 
-### Mandatory Reporter Reminder
+#### Mandatory Reporter Reminder
 
 It is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at **mwhite\@cornelllcollege.edu**.
 
 </div>
-::::
+
