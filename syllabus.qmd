@@ -82,11 +82,11 @@ Our course will run from a combination of [Moodle]({{< var course.moodle >}}) an
 
 In this course, we will use a combination of technologies, including R and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact, for a while, I prefer you don’t). If you are an off-campus student, please let me know right away.
 
-You can access the RStudio Server at: \<{{< var college.rstudio >}}\>.
+You can access the RStudio Server at: <{{< var college.rstudio >}}>.
 
 **If you have any technical problems you should contact IT as soon as possible**. [Submit a Work Order](https://www.cornellcollege.edu/information-technology/index.shtml)!
 
-```{r}
+```{r, include = F}
 ### Group Work
 
 #In this class, I would like you to work in groups for a variety of reasons. A large part of this class is communicating analysis. At the beginning of the block, groups will be formed. You should expect to work with this group every day. When we work in groups in class we may decide on roles, specifically who is controlling the one screen will rotate). Group members will rotate roles between tasks to help make sure everybody is sharing work. You won’t be working in a group for everything; any quizzes, and exams may be individual. 
