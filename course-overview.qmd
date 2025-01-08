@@ -4,4 +4,4 @@ title: "{{< var course.title >}}"
 
 ### Course Description
 
-Time series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable's change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.
+{{< var course.description >}}
