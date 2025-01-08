@@ -3,7 +3,7 @@ title: "{{< var course.title >}}"
 subtitle: "{{< var course.semester >}}"
 format:
   html: default
-  #pdf: default
+  pdf: default
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
@@ -28,7 +28,7 @@ Instructor [{{< var instructor.name >}}]({{< var instructor.url >}})
 
 {{< var course.dates >}}
 
-`r fontawesome::fa("clock")`   {{< var course.time >}}
+`r fontawesome::fa("clock")`   {{< var course.class_time >}}
 
 `r fontawesome::fa("location-dot")`   West 201
 :::
@@ -46,7 +46,7 @@ Instructor [{{< var instructor.name >}}]({{< var instructor.url >}})
 
 ### You Are A Priority
 
-My goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus are unique and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That all being said, I have structured the class in a way that I, from experience teaching and learning myself, think will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I ask that you keep an open line of communication between us for when you need help and/or flexibility. You and your learning are why I am here.
+My goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus are unique and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That all being said, I have structured the class in a way that I, from experience teaching and learning myself, think will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I ask that you keep an open line of communication between us when you need help and/or flexibility. You and your learning are why I am here.
 
 ### Course Description
 
@@ -54,16 +54,15 @@ My goal for this block is to help you learn the material. I want to first and fo
 
 ### Learning Objectives
 
-This course supports the Educational Priorities and Outcomes of Cornell College with emphases on knowledge, communication, and reasoning. Specifically, the learning objectives of this course are:
+This course supports the Educational Priorities and Outcomes of Cornell College, emphasizing knowledge, communication, and reasoning. Specifically, the learning objectives of this course are:
 
-- Ability to communicate statistical ideas clearly and accurately (communication). 
-- Understand what a time series is (knowledge, reasoning). 
-- Understand forecasting strategies (knowledge, reasoning). 
-- Understand regression with time related variables (knowledge, reasoning). 
-- Learn and apply some advanced time series methods (knowledge, reasoning).
-- Ability to ascertain which type of analysis is appropriate for a particular data set and question (reasoning, ethical behavior). 
-- Become more adept at following the statistical process of starting with a question, collecting the requisite data, analyzing the data, and reporting on the results (reasoning, communication). 
-
+-   Ability to communicate statistical ideas clearly and accurately (communication).
+-   Understand what a time series is (knowledge, reasoning).
+-   Understand forecasting strategies (knowledge, reasoning).
+-   Understand regression with time-related variables (knowledge, reasoning).
+-   Learn and apply some advanced time series methods (knowledge, reasoning).
+-   Ability to ascertain which type of analysis is appropriate for a particular data set and question (reasoning, ethical behavior).
+-   Become more adept at following the statistical process of starting with a question, collecting the requisite data, analyzing the data, and reporting on the results (reasoning, communication).
 
 ### Prerequisite
 
@@ -81,7 +80,7 @@ Our course will run from a combination of [Moodle]({{< var course.moodle >}}) an
 
 ### Software – No need to install
 
-We will use a combination of technologies in this course including R, and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact for a while I prefer you don’t). If you are an off campus student, please let me know right away.
+In this course, we will use a combination of technologies, including R and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact, for a while, I prefer you don’t). If you are an off-campus student, please let me know right away.
 
 You can access the RStudio Server at: \<{{< var college.rstudio >}}\>.
 
@@ -122,15 +121,15 @@ grading <- tibble::tribble(
 
 ##### Homework:
 
-Your homework will be graded for correctness. I will generally evaluate a random subset of the assigned questions. Your goal is to practice the application of the method and be able to interpret the result. You will find your homework and due dates on the homepage of the course website. 
+Your homework will be graded for correctness. I will generally evaluate a random subset of the assigned questions. Your goal is to practice the application of the method and be able to interpret the result. You will find your homework and due dates on the course website's homepage.
 
 ##### Participation
 
-This be measrued by your class (meeting) attendance, and your work on labs and class examples. With class work, please save your script files in the folder that I can view on the RStudio server. I will look at these files to see if you are following along.
+This will be measured by your class attendance and your work on labs and class examples. With class work, please save your script files in the folder provided on the RServer. I will look at these files to see if you are following along and participating.
 
 #### Project
 
-Your project will entail multiple stages of submission with details accessed through “Project” on the left side of the course website (once available). Some class time will be used for discussing projects but not enough to complete the project. I do not anticipate we will start these until week 3. You will need to use time series analysis and write a scrollytelling article about your results. If you have never heard of scrollytelling, check out [this NYT article](https://www.nytimes.com/2023/12/27/briefing/innovative-storytelling-from-2023.html) and this [shorthand website](https://shorthand.com/the-craft/scrollytelling-examples/index.html).. 
+Your project will entail multiple submission stages with details accessed through “Project” on the left side of the course website (once available). Some class time will be used for discussing projects, but not enough to complete the project. I do not anticipate we will start these until week 3. You must use time series analysis and write a scrollytelling article about your results. If you have never heard of scrollytelling, check out [this NYT article](https://www.nytimes.com/2023/12/27/briefing/innovative-storytelling-from-2023.html) and this [shorthand website](https://shorthand.com/the-craft/scrollytelling-examples/index.html).
 
 ##### Exams
 
@@ -158,19 +157,19 @@ grading %>%
 
 ## AI Policy
 
-The beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. There is a good possibility that using tools like these are going to become an important skill for careers in the not distant future (<https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech>).
+The beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. It is likely that using tools like these will become an important skill for careers in the not-too-distant future (<https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech>).
 
-In the meantime though, it's going to take a while for society to figure out when using these tools is/isn't acceptable.
+In the meantime, though, society will have to figure out when using these tools is acceptable.
 
-Work created by AI tools may not be considered original work and, instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn't cite sources. AI models have built-in biases (ie, they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources) AI tools have limitations (ie, they lack critical thinking to evaluate and reflect on criteria; they lack abductive reasoning to make judgments with incomplete information at hand; they make up or use inaccurate information and may “hallucinate” sources that do not exist)
+Work created by AI tools may not be considered original work and, instead, considered automated plagiarism. It is derived from previously created texts from other sources the models were trained on, yet doesn't cite sources. AI models have built-in biases (ie, they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources) AI tools have limitations (ie, they lack critical thinking to evaluate and reflect on criteria; they lack deductive reasoning to make judgments with incomplete information at hand; they make up or use inaccurate information and may “hallucinate” sources that do not exist)
 
-In this course, all informal writing should be written without the use of AI. The purpose of informal writing is to help you think through your ideas, connect with your lived experiences, and to figure out your thoughts and opinions. Using AI here subverts that process.
+In this course, all informal writing should be written without AI. The purpose of informal writing is to help you think through your ideas, connect with your lived experiences, and figure out your thoughts and opinions. Using AI here subverts that process.
 
-**A final note: Other courses may have different AI policies, and it is important to be aware of the policy in each class.**
+**A final note: Other courses may have different AI policies, and it is important to be aware of each class's policy.**
 
-### DISABILITIES AND ACCOMODATIONS POLICY
+### DISABILITIES AND ACCOMMODATIONS POLICY
 
-Cornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability related accommodations within the first three days of the term for which the accommodations are required, due to the fast pace of the block format. For more [information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.](http://www.cornellcollege.edu/academic-support-and-advising/disabilities/index.shtml)
+Cornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability-related accommodations within the first three days of the term for which the accommodations are required due to the fast pace of the block format. For more [information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.](http://www.cornellcollege.edu/academic-support-and-advising/disabilities/index.shtml)
 
 ### ACADEMIC HONESTY POLICY
 
@@ -178,7 +177,7 @@ Cornell College expects all members of the Cornell community to act with academi
 
 ### Illness Policy
 
-If you are experiencing COVID-19 symptoms, do not attend class. Perform a home test or contact Director of Student Health Services Lynn O’Brien at **student_health\@cornellcollege.edu** immediately to arrange a COVID-19 test at the Health Center. If you need to isolate due to COVID-19, or if you become unable to attend class for any other health reason, contact me as soon as possible to determine if you are able to continue in the class. A Withdrawal for Health Reasons may be required.
+If you become unable to attend class for any other health reason, contact me as soon as possible.
 
 ### Mandatory Reporter Reminder
 
