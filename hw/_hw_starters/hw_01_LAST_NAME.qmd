@@ -1,0 +1,26 @@
+---
+title: "Homework 1"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question 1
+
+1. For cases 3 and 4 in [Section 1.5](https://otexts.com/fpp3/case-studies.html), list the possible predictor variables that might be useful, assuming that the relevant data are available.
+
+
+TYPE YOUR ANSWER
+
+## Question 2
+
+2. For case 3 in [Section 1.5](https://otexts.com/fpp3/case-studies.html), describe the five steps of forecasting in the context of this project.
+
+TYPE YOUR ANSWER
+
+## Question 3
+
+3. What are you most interested in forecasting? 
+
+TYPE YOUR ANSWER

@@ -4,7 +4,7 @@
     "href": "syllabus.html",
     "title": "Time Series Applications",
     "section": "",
-    "text": "Instructor\nDr. Tyler George\n   Cornell College, West 311\n    tgeorge@cornellcollege.edu \n\n\n\nClass Meetings\nJanuary 13th to February 5th\n   9:00 am - 11:00 am and 1:00 pm - 3:00 pm\n   West 213\n\n\n\nOffice Hours\n   MWTh 3:05pm-4:05pm and by appt.\n   West 311\n   Optional Appointment\n\n\n\n\nYou Are A Priority\nMy goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus are unique and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That all being said, I have structured the class in a way that I, from experience teaching and learning myself, think will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I ask that you keep an open line of communication between us when you need help and/or flexibility. You and your learning are why I am here.\n\n\nCourse Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.\n\n\nLearning Objectives\nThis course supports the Educational Priorities and Outcomes of Cornell College, emphasizing knowledge, communication, and reasoning. Specifically, the learning objectives of this course are:\n\nAbility to communicate statistical ideas clearly and accurately (communication).\nUnderstand what a time series is (knowledge, reasoning).\nUnderstand forecasting strategies (knowledge, reasoning).\nUnderstand regression with time-related variables (knowledge, reasoning).\nLearn and apply some advanced time series methods (knowledge, reasoning).\nAbility to ascertain which type of analysis is appropriate for a particular data set and question (reasoning, ethical behavior).\nBecome more adept at following the statistical process of starting with a question, collecting the requisite data, analyzing the data, and reporting on the results (reasoning, communication).\n\n\n\nPrerequisite\nTo be successful in this class, you should have completed STA 201 and STA 202.\n\n\nCourse Materials\nAll of the materials for this class are free.\nThe textbook is: Forecasting: Principles and Practice by Rob J Hyndman and George Athanasopoulos – it is freely available online. Chapters 1-8.\n\n\nCourse Site and Moodle\nOur course will run from a combination of Moodle and the course website at https://stats-tgeorge.github.io/STA364_TSApps/.\n\n\nSoftware\nIn this course, we will use a combination of technologies, including R and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact, for a while, I prefer you don’t). If you are an off-campus student, please let me know right away.\nYou can access the RStudio Server at: http://turing.cornellcollege.edu:8787/.\nIf you have any technical problems you should contact IT as soon as possible. Submit a Work Order!\n\n\nGrades\nYou will find your grades in the course Moodle Gradebook.\n\nGrade Category Descriptions\n\nHomework:\nYour homework will be graded for correctness. I will generally evaluate a random subset of the assigned questions. Your goal is to practice the application of the method and be able to interpret the result. You will find your homework and due dates on the course website’s homepage.\n\n\nParticipation\nThis will be measured by your class attendance and your work on labs and class examples. With class work, please save your script files in the folder provided on the RServer. I will look at these files to see if you are following along and participating.\n\n\n\nProject\nYour project will entail multiple submission stages with details accessed through “Project” on the left side of the course website (once available). Some class time will be used for discussing projects, but not enough to complete the project. I do not anticipate we will start these until week 3. You must use time series analysis and write a scrollytelling article about your results. If you have never heard of scrollytelling, check out this NYT article and this shorthand website.\n\nExams\nYou will have two exams this block, 1/24 and 2/4-2/5. Each exam will have two components. Component 1 will be on these dates and be in a written format. Component 2 will be a take-home, open-book, open-note, exam that you will have 12 hours or more to complete.\n\n\n\n\n\n\n\n\nAssignment\nPoints\n\n\n\n\nHomework\n300\n\n\nParticipation\n100\n\n\nProject\n200\n\n\nExams, two 200pts exams\n400\n\n\nTotal\n1000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrade\nRange\nGrade\nRange\n\n\n\n\nA\n93-100%\nC\n73-76%\n\n\nA-\n90–92%\nC-\n70-72%\n\n\nB+\n87–89%\nD+\n67-69%\n\n\nB\n83-86%\nD\n63-66%\n\n\nB-\n80-82%\nD-\n60-62%\n\n\nC+\n77-79%\nF\n&lt;60%\n\n\n\n\n\n\n\n\nCourse Policies\n\n\nAI Policy\nThe beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. It is likely that using tools like these will become an important skill for careers in the not-too-distant future (https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech).\nIn the meantime, though, society will have to figure out when using these tools is acceptable.\nWork created by AI tools may not be considered original work and, instead, considered automated plagiarism. It is derived from previously created texts from other sources the models were trained on, yet doesn’t cite sources. AI models have built-in biases (ie, they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources) AI tools have limitations (ie, they lack critical thinking to evaluate and reflect on criteria; they lack deductive reasoning to make judgments with incomplete information at hand; they make up or use inaccurate information and may “hallucinate” sources that do not exist)\nIn this course, all informal writing should be written without AI. The purpose of informal writing is to help you think through your ideas, connect with your lived experiences, and figure out your thoughts and opinions. Using AI here subverts that process.\nA final note: Other courses may have different AI policies, and it is important to be aware of each class’s policy.\n\n\nDISABILITIES AND ACCOMMODATIONS POLICY\nCornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability-related accommodations within the first three days of the term for which the accommodations are required due to the fast pace of the block format. For more information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.\n\n\nACADEMIC HONESTY POLICY\nCornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is her or his work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College’s requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty.”\n\n\nIllness Policy\nIf you become unable to attend class for any other health reason, contact me as soon as possible.\n\n\nMandatory Reporter Reminder\nIt is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at mwhite@cornelllcollege.edu.",
+    "text": "Instructor\nDr. Tyler George\n   Cornell College, West 311\n    tgeorge@cornellcollege.edu \n\n\n\nClass Meetings\nJanuary 13th to February 5th\n   9:00 am - 11:00 am and 1:00 pm - 3:00 pm\n   West 213\n\n\n\nOffice Hours\n   MWTh 3:05pm-4:05pm and by appt.\n   West 311\n   Optional Appointment\n\n\n\n\nYou Are A Priority\nMy goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus are unique and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That all being said, I have structured the class in a way that I, from experience teaching and learning myself, think will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I ask that you keep an open line of communication between us when you need help and/or flexibility. You and your learning are why I am here.\n\n\nCourse Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.\n\n\nLearning Objectives\nThis course supports the Educational Priorities and Outcomes of Cornell College, emphasizing knowledge, communication, and reasoning. Specifically, the learning objectives of this course are:\n\nAbility to communicate statistical ideas clearly and accurately (communication).\nUnderstand what a time series is (knowledge, reasoning).\nUnderstand forecasting strategies (knowledge, reasoning).\nUnderstand regression with time-related variables (knowledge, reasoning).\nLearn and apply some advanced time series methods (knowledge, reasoning).\nAbility to ascertain which type of analysis is appropriate for a particular data set and question (reasoning, ethical behavior).\nBecome more adept at following the statistical process of starting with a question, collecting the requisite data, analyzing the data, and reporting on the results (reasoning, communication).\n\n\n\nPrerequisite\nTo be successful in this class, you should have completed STA 201 and STA 202.\n\n\nCourse Materials\nAll of the materials for this class are free.\nThe textbook is: Forecasting: Principles and Practice by Rob J Hyndman and George Athanasopoulos – it is freely available online. Chapters 1-9.\n\n\nCourse Site and Moodle\nOur course will run from a combination of Moodle and the course website at https://stats-tgeorge.github.io/STA364_TSApps/.\n\n\nSoftware\nIn this course, we will use a combination of technologies, including R and RStudio (server). I have set up an RStudio server that you will access with a web browser. You don’t need to install any software (in fact, for a while, I prefer you don’t). If you are an off-campus student, please let me know right away.\nYou can access the RStudio Server at: http://turing.cornellcollege.edu:8787/.\nIf you have any technical problems you should contact IT as soon as possible. Submit a Work Order!\n\n\nGrades\nYou will find your grades in the course Moodle Gradebook.\n\nGrade Category Descriptions\n\nHomework:\nYour homework will be graded for correctness. I will generally evaluate a random subset of the assigned questions. Your goal is to practice the application of the method and be able to interpret the result. You will find your homework and due dates on the course website’s homepage.\n\n\nParticipation\nThis will be measured by your class attendance and your work on labs and class examples. With class work, please save your script files in the folder provided on the RServer. I will look at these files to see if you are following along and participating.\n\n\n\nProject\nYour project will entail multiple submission stages with details accessed through “Project” on the left side of the course website (once available). Some class time will be used for discussing projects, but not enough to complete the project. I do not anticipate we will start these until week 3. You must use time series analysis and write a scrollytelling article about your results. If you have never heard of scrollytelling, check out this NYT article and this shorthand website.\n\nExams\nYou will have two exams this block, 1/23 and 2/4-2/5. Each exam will have two components. Component 1 will be on these dates and be in a written format. Component 2 will be a take-home, open-book, open-note, exam that you will have 12 hours or more to complete.\n\n\n\n\n\n\n\n\nAssignment\nPoints\n\n\n\n\nHomework\n300\n\n\nParticipation\n100\n\n\nProject\n200\n\n\nExams, two 200pts exams\n400\n\n\nTotal\n1000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrade\nRange\nGrade\nRange\n\n\n\n\nA\n93-100%\nC\n73-76%\n\n\nA-\n90–92%\nC-\n70-72%\n\n\nB+\n87–89%\nD+\n67-69%\n\n\nB\n83-86%\nD\n63-66%\n\n\nB-\n80-82%\nD-\n60-62%\n\n\nC+\n77-79%\nF\n&lt;60%\n\n\n\n\n\n\n\n\nCourse Policies\n\n\nAI Policy\nThe beta release of Dall-E-Mini in July 2022 and ChatGPT in November 2022 are among many tools using artificial intelligence. It is likely that using tools like these will become an important skill for careers in the not-too-distant future (https://www.theguardian.com/commentisfree/2023/jan/07/chatgpt-bot-excel-ai-chatbot-tech).\nIn the meantime, though, society will have to figure out when using these tools is acceptable.\nWork created by AI tools may not be considered original work and, instead, considered automated plagiarism. It is derived from previously created texts from other sources the models were trained on, yet doesn’t cite sources. AI models have built-in biases (ie, they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources) AI tools have limitations (ie, they lack critical thinking to evaluate and reflect on criteria; they lack deductive reasoning to make judgments with incomplete information at hand; they make up or use inaccurate information and may “hallucinate” sources that do not exist)\nIn this course, all informal writing should be written without AI. The purpose of informal writing is to help you think through your ideas, connect with your lived experiences, and figure out your thoughts and opinions. Using AI here subverts that process.\nA final note: Other courses may have different AI policies, and it is important to be aware of each class’s policy.\n\n\nDISABILITIES AND ACCOMMODATIONS POLICY\nCornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability-related accommodations within the first three days of the term for which the accommodations are required due to the fast pace of the block format. For more information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.\n\n\nACADEMIC HONESTY POLICY\nCornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is her or his work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College’s requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty.”\n\n\nIllness Policy\nIf you become unable to attend class for any other health reason, contact me as soon as possible.\n\n\nMandatory Reporter Reminder\nIt is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at mwhite@cornelllcollege.edu.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -15,10 +15,61 @@
     "href": "index.html",
     "title": "Time Series Applications Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the block.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 Jan\nSyllabus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n31 Jan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n3 Feb\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n4 Feb\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n5 Feb",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the block.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 Jan\nSyllabus, R Intro, and Ch1 Getting Started\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 Jan\nCh2 TS Graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 Jan\nCh2 TS Graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 Jan\nCh3 TS Decomposition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 Jan\nCh 5 The Forecasters Toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 Jan\nCh 7 TS Regression Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 Jan\nCh7/Ch 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 Jan\nExam 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n31 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n3 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n4 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n5 Feb\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
+    ]
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
     ]
   },
   {
@@ -66,89 +117,920 @@
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "Homework 1",
     "section": "",
-    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
-    "crumbs": [
-      "Course information",
-      "R/RStudio Access"
-    ]
+    "text": "The goal of this assignment is to introduce you to R, RStudio, and Time Series!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "hw/hw-01.html#terminology",
+    "href": "hw/hw-01.html#terminology",
+    "title": "Homework 1",
+    "section": "Terminology",
+    "text": "Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR: The name of the programming language we will be using throughout the course.\nRStudio: An integrated development environment for R. In other words, it is a convenient interface for writing and running R code."
+  },
+  {
+    "objectID": "hw/hw-01.html#rrstudio-in-class",
+    "href": "hw/hw-01.html#rrstudio-in-class",
+    "title": "Homework 1",
+    "section": "R/Rstudio in Class",
+    "text": "R/Rstudio in Class\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOn the bottom right of RStudio, you should see a Files tab. Click that tab.\n\nYou should now see a folder with your name on it. In this shared folder, we can both create, edit, and delete files.\nYou should also see a folder named STA364_inst_files. This is where I will place the files you will need for homework, exams, labs, etc.\n\n\n\nEach of your assignments will begin with the following setup steps.\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-01_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the file with your name on it (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML with your name."
+  },
+  {
+    "objectID": "hw/hw-01.html#hello-rstudio",
+    "href": "hw/hw-01.html#hello-rstudio",
+    "title": "Homework 1",
+    "section": "Hello RStudio!",
+    "text": "Hello RStudio!\nRStudio is comprised of four panes.\n\n\n\n\n\n\n\n\n\n\nOn the bottom left is the Console, this is where you can write code that will be evaluated. Try typing 2 + 2 here and hit enter, what do you get?\nOn the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.\nIf you click on a file, it will open in the editor, on the top left pane. *The image shows an rmd file but we will be working with Quarto files (qmd).\nFinally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing x &lt;- 2 in the Console and hit enter, what do you get in the Environment pane?"
+  },
+  {
+    "objectID": "hw/hw-01.html#packages",
+    "href": "hw/hw-01.html#packages",
+    "title": "Homework 1",
+    "section": "Packages",
+    "text": "Packages\nR is an open-source language, and developers contribute functionality to R via packages. In this assignment we will use the following packages:\n\ntidyverse: a collection of packages for doing data analysis in a “tidy” way\nfpp3: a package that contains functions and datasets for our course/book\n\nWe use the library() function to load packages. In your Quarto document you should see an R chunk labelled load-packages which has the necessary code for loading both packages. You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the Run Current Chunk icon (green arrow pointing right icon).\n\n\n\n\n\n\n\n\n\nNote that these packages also get loaded in your Quarto environment when you Render your Quarto document."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html",
+    "href": "slides/1-getting-started_o.html",
+    "title": "Time Series Applications Ch1 Getting started",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Dr. Tyler George\nWest 311\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\n\n\n\n\nSubmissions\nGradebook\n\n\n\n\n\nLet’s open it up!\n\n\n\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.\n\n\n\n\n\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error).\n\n\n\n\n\nI are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes.\n\n\n\n\n\nComplete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
   },
   {
-    "objectID": "course-instructor.html",
-    "href": "course-instructor.html",
-    "title": "Instructor",
+    "objectID": "slides/1-getting-started_o.html#meet-the-prof",
+    "href": "slides/1-getting-started_o.html#meet-the-prof",
+    "title": "Time Series Applications Ch1 Getting started",
     "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
+    "text": "Dr. Tyler George\nWest 311"
   },
   {
-    "objectID": "course-instructor.html#instructor",
-    "href": "course-instructor.html#instructor",
-    "title": "Instructor",
+    "objectID": "slides/1-getting-started_o.html#where-is",
+    "href": "slides/1-getting-started_o.html#where-is",
+    "title": "Time Series Applications Ch1 Getting started",
     "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
+    "text": "stats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\n\n\n\n\nSubmissions\nGradebook"
   },
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Time Series Applications",
+    "objectID": "slides/1-getting-started_o.html#syllabus",
+    "href": "slides/1-getting-started_o.html#syllabus",
+    "title": "Time Series Applications Ch1 Getting started",
     "section": "",
-    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
+    "text": "Let’s open it up!"
   },
   {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Class Project",
+    "objectID": "slides/1-getting-started_o.html#diversity-inclusion",
+    "href": "slides/1-getting-started_o.html#diversity-inclusion",
+    "title": "Time Series Applications Ch1 Getting started",
     "section": "",
-    "text": "You will be analyzing a dataset using regression analysis and a classification analysis.\nCollaboration: You can work individually or in groups of up to 3.\nAs one of my past professors liked to say, “Keep it Simple Stupid (KISS)”"
+    "text": "It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
   },
   {
-    "objectID": "project.html#part-1-research-questions-and-data",
-    "href": "project.html#part-1-research-questions-and-data",
-    "title": "Class Project",
-    "section": "Part 1: Research Questions and Data",
-    "text": "Part 1: Research Questions and Data\n\nDetermine a topic\nFind data that goes with that topic. See HERE.\n\n\nMust have at least 5 variables that may be useful in a classification and/or regression model.\n\n\nClean and prepare that data.\nWrite two research questions that you will use that data to investigate.\n\n\nOne question that can be answered with regression; make clear the outcome variable and its units.\nOne question that can be answered with classification; make clear the outcome variable and its possible categories.\n\n\nSubmit a project-proposal_last_names.html document that includes\n\n\nsource or sources of your data\na glimpse of your data (run glimpse())\nvariable definitions\nYour research questions\n\nMoodle link: HERE"
+    "objectID": "slides/1-getting-started_o.html#collaboration-policy",
+    "href": "slides/1-getting-started_o.html#collaboration-policy",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "",
+    "text": "Only work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error)."
   },
   {
-    "objectID": "project.html#part-2-eda",
-    "href": "project.html#part-2-eda",
-    "title": "Class Project",
-    "section": "Part 2: EDA",
-    "text": "Part 2: EDA\n\nConduct a full EDA on your dataset including any variables being considered for either research question. Minimally this should include the following. All included graphs/tables must have comments and discussion.\n\n\nClearly describe what the cases in the final clean dataset represent.\nWho collected the data? When, why, and how? Answer as much of this as the available information allows.\nUnivariate distributions of all variables.\nGraphs that specifically compare potential predictors to the variables that will be your response variables.\n\n\nSubmit a eda_last_names.html document to Moodle HERE."
+    "objectID": "slides/1-getting-started_o.html#sharing-reusing-code-policy",
+    "href": "slides/1-getting-started_o.html#sharing-reusing-code-policy",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "",
+    "text": "I are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes."
   },
   {
-    "objectID": "project.html#part-3-modeling",
-    "href": "project.html#part-3-modeling",
-    "title": "Class Project",
-    "section": "Part 3: Modeling",
-    "text": "Part 3: Modeling\nThe following should be included in your modeling report (generated from a Quarto file, or files).\n\nRegression\n\nRegression: Methods\n\nDescribe the models used.\nDescribe what you did to evaluate models.\n\nIndicate how you estimated quantitative evaluation metrics.\nIndicate what plots you used to evaluate models.\n\nDescribe the goals / purpose of the methods used in the overall context of your research investigations.\n\n\n\nRegression: Results\n\nSummarize your final model and justify your model choice (see below for ways to justify your choice).\n\nCompare the different models in light of evaluation metrics, plots, variable importance, and data context.\nDisplay evaluation metrics for different models in a clean, organized way. This display should include both the estimated CV metric as well as its standard deviation.\nBroadly summarize conclusions from looking at these CV evaluation metrics and their measures of uncertainty.\nSummarize conclusions from residual plots from initial models (don’t have to display them though).\n\nShow and interpret some representative examples of residual plots for your final model. Does the model show acceptable results in terms of any systematic biases?\n\n\n\nRegression: Conclusions\n\nInterpret you final model (show plots of estimated non-linear functions, or slope coefficients) for important predictors, and provide some general interpretations of what you learn from these\nInterpret evaluation metric(s) for the final model in context with units. Does the model show an acceptable amount of error?\nSummarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.\n\n\n\n\nClassification\n\nClassification: Methods\n\nIndicate at least 2 different methods used to answer your classification research question.\n\nDescribe what you did to evaluate the models explored.\nIndicate how you estimated quantitative evaluation metrics.\n\nDescribe the goals / purpose of the methods used in the overall context of your research investigations.\n\n\n\nClassification: Results\n\nSummarize your final model and justify your model choice (see below for ways to justify your choice).\n\nCompare the different classification models tried in light of evaluation metrics, variable importance, and data context.\nDisplay evaluation metrics for different models in a clean, organized way. This display should include both the estimated metric as well as its standard deviation. (This won’t be available from OOB error estimation. If using OOB, don’t worry about reporting the SD.)\nBroadly summarize conclusions from looking at these evaluation metrics and their measures of uncertainty.\n\n\n\n\nClassification: Conclusions\n\nInterpret evaluation metric(s) for the final model in context. Does the model show an acceptable amount of error?\n\nIf using OOB error estimation, display the test (OOB) confusion matrix, and use it to interpret the strengths and weaknesses of the final model.\n\nSummarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.\n\n\n\n\nSubmit\nSubmit one (or two) model_last_names.html document(s) with your analysis from the parts above. Submit on Moodle HERE."
+    "objectID": "slides/1-getting-started_o.html#five-tips-for-success",
+    "href": "slides/1-getting-started_o.html#five-tips-for-success",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "",
+    "text": "Complete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
   },
   {
-    "objectID": "project.html#part-4-tell-people-about-it.",
-    "href": "project.html#part-4-tell-people-about-it.",
-    "title": "Class Project",
-    "section": "Part 4: Tell people about it.",
-    "text": "Part 4: Tell people about it.\nA 5-10 minute video presentation of your project. (Recording the presentation over Zoom is a good option for creating the video. You can record to your computer or to the cloud.)\n\nUpload the video to Google Drive.\nAll team members should have an equal speaking role in the presentation.\n\nIn order to record your presentation,\n\nStart a Zoom meeting and invite your project mates.\nOne of your share your screen with presentation slides (recommended: Quarto Presentation, Google Slides, or Powerpoint).\nPlease have everyone turn your video on so that we can see who is speaking.\nWhen you are ready to start, the host of the meeting (who ever started the meeting) can click Record on this Computer. I highly recommend that someone else start a timer so that you can make sure you keep the presentation to 10 minutes max.\nStart presenting!\nYou can Pause the recording, as needed, and then press start recording again.\nWhen you have finished recording, you can press Stop Recording. When you end the meeting, the recording (an mp4 file) will be downloaded to the computer of the individual who pressed Record.\nUpload the video to Google Drive.\n\nWe will watch these in class!\nSource: Brianna Heggeseth, STA 253"
+    "objectID": "slides/1-getting-started_o.html#excel---not",
+    "href": "slides/1-getting-started_o.html#excel---not",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#r",
+    "href": "slides/1-getting-started_o.html#r",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#rstudio",
+    "href": "slides/1-getting-started_o.html#rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "RStudio",
+    "text": "RStudio\n\n\n\n\n\n\nRStudio Server: http://turing.cornellcollege.edu:8787 (Only available on campus)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#r-and-rstudio",
+    "href": "slides/1-getting-started_o.html#r-and-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#r-vs.-rstudio",
+    "href": "slides/1-getting-started_o.html#r-vs.-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#r-packages",
+    "href": "slides/1-getting-started_o.html#r-packages",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of March 14th, 2024, there are 20,582 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#tour-r-rstudio",
+    "href": "slides/1-getting-started_o.html#tour-r-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#tour-recap-r-rstudio",
+    "href": "slides/1-getting-started_o.html#tour-recap-r-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/1-getting-started_o.html#a-short-list-for-now-of-r-essentials",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n. . .\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n. . .\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#r-essentials-continued",
+    "href": "slides/1-getting-started_o.html#r-essentials-continued",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n. . .\n\ndataframe$var_name\n\n\nObject documentation can be accessed with ?\n\n. . .\n\n?mean"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#tidyverse",
+    "href": "slides/1-getting-started_o.html#tidyverse",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#quarto-1",
+    "href": "slides/1-getting-started_o.html#quarto-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#tour-quarto",
+    "href": "slides/1-getting-started_o.html#tour-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#tour-recap-quarto",
+    "href": "slides/1-getting-started_o.html#tour-recap-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#environments",
+    "href": "slides/1-getting-started_o.html#environments",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#environments-1",
+    "href": "slides/1-getting-started_o.html#environments-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#how-will-we-use-quarto",
+    "href": "slides/1-getting-started_o.html#how-will-we-use-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery activity, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the block"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#forecasts-that-arent-forecasts",
+    "href": "slides/1-getting-started_o.html#forecasts-that-arent-forecasts",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Forecasts that aren’t forecasts",
+    "text": "Forecasts that aren’t forecasts"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-19",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-19",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (1/9)",
+    "text": "What can we forecast? (1/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-29",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-29",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (2/9)",
+    "text": "What can we forecast? (2/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-39",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-39",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (3/9)",
+    "text": "What can we forecast? (3/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-49",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-49",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (4/9)",
+    "text": "What can we forecast? (4/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-59",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-59",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (5/9)",
+    "text": "What can we forecast? (5/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-69",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-69",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (6/9)",
+    "text": "What can we forecast? (6/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-79",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-79",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (7/9)",
+    "text": "What can we forecast? (7/9)\n\n\n\nCC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59368531"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-89",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-89",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (8/9)",
+    "text": "What can we forecast? (8/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-99",
+    "href": "slides/1-getting-started_o.html#what-can-we-forecast-99",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (9/9)",
+    "text": "What can we forecast? (9/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#which-is-easiest-to-forecast",
+    "href": "slides/1-getting-started_o.html#which-is-easiest-to-forecast",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Which is easiest to forecast?",
+    "text": "Which is easiest to forecast?\n\ndaily electricity demand in 3 days time\ntime of sunrise this day next year\nGoogle stock price tomorrow\nGoogle stock price in 6 months time\nmaximum temperature tomorrow\nexchange rate of $US/AUS next week\ntotal sales of drugs in Australian pharmacies next month\ntiming of next Halley’s comet appearance"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#which-is-easiest-to-forecast-1",
+    "href": "slides/1-getting-started_o.html#which-is-easiest-to-forecast-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Which is easiest to forecast?",
+    "text": "Which is easiest to forecast?\n\ntime of sunrise this day next year\ntiming of next Halley’s comet appearance\nmaximum temperature tomorrow\ndaily electricity demand in 3 days time\ntotal sales of drugs in Australian pharmacies next month\nGoogle stock price tomorrow\nexchange rate of $US/AUS next week\nGoogle stock price in 6 months time\n\n. . .\nQuestions - how do we measure ``easiest’’? - what makes something easy/difficult to forecast?"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#forecastability-factors",
+    "href": "slides/1-getting-started_o.html#forecastability-factors",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Forecastability factors",
+    "text": "Forecastability factors\nSomething is easier to forecast if:\n\nwe have a good understanding of the factors that contribute to it\nthere is lots of data available;\nthe future is somewhat similar to the past\nthe forecasts cannot affect the thing we are trying to forecast."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#time-series-data",
+    "href": "slides/1-getting-started_o.html#time-series-data",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Time series data",
+    "text": "Time series data\n\nFour-yearly Olympic winning times\nAnnual Google profits\nQuarterly Australian beer production\nMonthly rainfall\nWeekly retail sales\nDaily IBM stock prices\nHourly electricity demand\n5-minute freeway traffic counts\nTime-stamped stock transaction data"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures",
+    "href": "slides/1-getting-started_o.html#random-futures",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures\n. . ."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-1",
+    "href": "slides/1-getting-started_o.html#random-futures-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-2",
+    "href": "slides/1-getting-started_o.html#random-futures-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-3",
+    "href": "slides/1-getting-started_o.html#random-futures-3",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-4",
+    "href": "slides/1-getting-started_o.html#random-futures-4",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-5",
+    "href": "slides/1-getting-started_o.html#random-futures-5",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-6",
+    "href": "slides/1-getting-started_o.html#random-futures-6",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-7",
+    "href": "slides/1-getting-started_o.html#random-futures-7",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-8",
+    "href": "slides/1-getting-started_o.html#random-futures-8",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#random-futures-9",
+    "href": "slides/1-getting-started_o.html#random-futures-9",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures\n\n\n\n\n\n\n\n\n\n. . .\n\n“He who sees the past as surprise-free is bound to have a future full of surprises.’’(Amos Tversky)"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#statistical-forecasting",
+    "href": "slides/1-getting-started_o.html#statistical-forecasting",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Statistical forecasting",
+    "text": "Statistical forecasting\n\nThing to be forecast: a random variable, \\(y_t\\).\nForecast distribution: If \\({\\cal I}\\) is all observations, then \\(y_{t} |{\\cal I}\\) means “the random variable \\(y_{t}\\) given what we know in \\({\\cal I}\\).\nThe “point forecast” is the mean (or median) of \\(y_{t} |{\\cal I}\\)\nThe “forecast variance” is \\(\\text{var}[y_{t} |{\\cal I}]\\). Variance is the square of the standard deviation.\nA prediction interval or “interval forecast” is a range of values of \\(y_t\\) with high probability.\nWith time series, \\({y}_{t|t-1} = y_t | \\{y_1,y_2,\\dots,y_{t-1}\\}\\)."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-1-paperware-company",
+    "href": "slides/1-getting-started_o.html#case-study-1-paperware-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 1: Paperware company",
+    "text": "CASE STUDY 1: Paperware company\nProblem: Want forecasts of each of hundreds of items. Series can be stationary, trended or seasonal. They currently have a large forecasting program written in-house but it doesn’t seem to produce sensible forecasts. They want me to fix it.\n. . .\nAdditional information\n\nProgram written in COBOL making numerical calculations limited. It is not possible to do any optimization.\nTheir programmer has little experience in numerical computing.\nThey employ no statisticians and want the program to produce forecasts automatically."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-1paperware-company",
+    "href": "slides/1-getting-started_o.html#case-study-1paperware-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 1:Paperware company",
+    "text": "CASE STUDY 1:Paperware company\nMethods currently used\n. . .\n\n12 month average\n6 month average\nstraight line regression over last 12 months\nstraight line regression over last 6 months\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values, where the average is taken only over the last 6 months."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-2-pbs",
+    "href": "slides/1-getting-started_o.html#case-study-2-pbs",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-1",
+    "href": "slides/1-getting-started_o.html#case-study-2-pbs-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS\n\nThe Pharmaceutical Benefits Scheme (PBS) is the Australian government drugs subsidy scheme.\n\nMany drugs bought from pharmacies are subsidised to allow more equitable access to modern drugs.\nThe cost to government is determined by the number and types of drugs purchased. Currently nearly 1% of GDP.\nThe total cost is budgeted based on forecasts of drug usage."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-2",
+    "href": "slides/1-getting-started_o.html#case-study-2-pbs-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-3",
+    "href": "slides/1-getting-started_o.html#case-study-2-pbs-3",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS\n\nIn 2001: $4.5 billion budget, under-forecasted by $800 million.\nThousands of products. Seasonal demand.\nSubject to covert marketing, volatile products, uncontrollable expenditure.\nAlthough monthly data available for 10 years, data are aggregated to annual values, and only the first three years are used in estimating the forecasts.\nAll forecasts being done with the FORECAST function in MS-Excel!"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-3-car-fleet-company",
+    "href": "slides/1-getting-started_o.html#case-study-3-car-fleet-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 3: Car fleet company",
+    "text": "CASE STUDY 3: Car fleet company\nClient: One of Australia’s largest car fleet companies\nProblem: how to forecast resale value of vehicles? How should this affect leasing and sales policies?\n. . .\n\nAdditional information\n\nThey can provide a large amount of data on previous vehicles and their eventual resale values.\nThe resale values are currently estimated by a group of specialists. They see me as a threat and do not cooperate."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-4-airline",
+    "href": "slides/1-getting-started_o.html#case-study-4-airline",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-4-airline-1",
+    "href": "slides/1-getting-started_o.html#case-study-4-airline-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline\n\n\n\n\n\n\n\n\n\n. . .\nNot the real data! Or is it?"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#case-study-4-airline-2",
+    "href": "slides/1-getting-started_o.html#case-study-4-airline-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline\nProblem: how to forecast passenger traffic on major routes?\n. . .\n\nAdditional information\n\nThey can provide a large amount of data on previous routes.\nTraffic is affected by school holidays, special events such as the Grand Prix, advertising campaigns, competition behavior, etc.\nThey have a highly capable team of people who are able to do most of the computing."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#the-basic-steps-in-a-forecasting-task",
+    "href": "slides/1-getting-started_o.html#the-basic-steps-in-a-forecasting-task",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "The basic steps in a forecasting task",
+    "text": "The basic steps in a forecasting task\n\nStep 1: Problem definition.\nStep 2: Gathering information.\nStep 3: Preliminary (exploratory) analysis.\nStep 4: Choosing and fitting models.\nStep 5: Using and evaluating a forecasting model."
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#assignment-1-1",
+    "href": "slides/1-getting-started_o.html#assignment-1-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Assignment 1",
+    "text": "Assignment 1\n\nRead Chapter 1 (around 30-45 minutes)\nComplete exercises in 1.8. Submit on Moodle"
+  },
+  {
+    "objectID": "slides/1-getting-started_o.html#references",
+    "href": "slides/1-getting-started_o.html#references",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "References",
+    "text": "References\n\nForecasting: Principles and Practice\nDr. Mine Çetinkaya-Rundel\nModern Dive."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#meet-the-prof",
+    "href": "slides/1-getting-started.html#meet-the-prof",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Meet the prof",
+    "text": "Meet the prof\n\n\nDr. Tyler George\nWest 311"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#meet-each-other",
+    "href": "slides/1-getting-started.html#meet-each-other",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Meet each other!",
+    "text": "Meet each other!"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#where-is",
+    "href": "slides/1-getting-started.html#where-is",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Where is?…",
+    "text": "Where is?…\nCourse Website\nstats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\nMoodle\n\nSubmissions\nGradebook"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#syllabus",
+    "href": "slides/1-getting-started.html#syllabus",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Syllabus",
+    "text": "Syllabus\nLet’s open it up!"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#diversity-inclusion",
+    "href": "slides/1-getting-started.html#diversity-inclusion",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#collaboration-policy",
+    "href": "slides/1-getting-started.html#collaboration-policy",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error)."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#sharing-reusing-code-policy",
+    "href": "slides/1-getting-started.html#sharing-reusing-code-policy",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nI are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#five-tips-for-success",
+    "href": "slides/1-getting-started.html#five-tips-for-success",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Five tips for success",
+    "text": "Five tips for success\n\nComplete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#excel---not",
+    "href": "slides/1-getting-started.html#excel---not",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#r",
+    "href": "slides/1-getting-started.html#r",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#rstudio",
+    "href": "slides/1-getting-started.html#rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "RStudio",
+    "text": "RStudio\n\n\nRStudio Server: http://turing.cornellcollege.edu:8787 (Only available on campus)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#r-and-rstudio",
+    "href": "slides/1-getting-started.html#r-and-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#r-vs.-rstudio",
+    "href": "slides/1-getting-started.html#r-vs.-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#r-packages",
+    "href": "slides/1-getting-started.html#r-packages",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of March 14th, 2024, there are 20,582 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#tour-r-rstudio",
+    "href": "slides/1-getting-started.html#tour-r-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#tour-recap-r-rstudio",
+    "href": "slides/1-getting-started.html#tour-recap-r-rstudio",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/1-getting-started.html#a-short-list-for-now-of-r-essentials",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#r-essentials-continued",
+    "href": "slides/1-getting-started.html#r-essentials-continued",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\n\ndataframe$var_name\n\n\nObject documentation can be accessed with ?\n\n\n\n\n?mean"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#tidyverse",
+    "href": "slides/1-getting-started.html#tidyverse",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#quarto-1",
+    "href": "slides/1-getting-started.html#quarto-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#tour-quarto",
+    "href": "slides/1-getting-started.html#tour-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#tour-recap-quarto",
+    "href": "slides/1-getting-started.html#tour-recap-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#environments",
+    "href": "slides/1-getting-started.html#environments",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#environments-1",
+    "href": "slides/1-getting-started.html#environments-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#how-will-we-use-quarto",
+    "href": "slides/1-getting-started.html#how-will-we-use-quarto",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery activity, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the block"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#forecasts-that-arent-forecasts",
+    "href": "slides/1-getting-started.html#forecasts-that-arent-forecasts",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Forecasts that aren’t forecasts",
+    "text": "Forecasts that aren’t forecasts"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-19",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-19",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (1/9)",
+    "text": "What can we forecast? (1/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-29",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-29",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (2/9)",
+    "text": "What can we forecast? (2/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-39",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-39",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (3/9)",
+    "text": "What can we forecast? (3/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-49",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-49",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (4/9)",
+    "text": "What can we forecast? (4/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-59",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-59",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (5/9)",
+    "text": "What can we forecast? (5/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-69",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-69",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (6/9)",
+    "text": "What can we forecast? (6/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-79",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-79",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (7/9)",
+    "text": "What can we forecast? (7/9)\n\n\n\nCC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59368531"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-89",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-89",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (8/9)",
+    "text": "What can we forecast? (8/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#what-can-we-forecast-99",
+    "href": "slides/1-getting-started.html#what-can-we-forecast-99",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "What can we forecast? (9/9)",
+    "text": "What can we forecast? (9/9)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#which-is-easiest-to-forecast",
+    "href": "slides/1-getting-started.html#which-is-easiest-to-forecast",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Which is easiest to forecast?",
+    "text": "Which is easiest to forecast?\n\ndaily electricity demand in 3 days time\ntime of sunrise this day next year\nGoogle stock price tomorrow\nGoogle stock price in 6 months time\nmaximum temperature tomorrow\nexchange rate of $US/AUS next week\ntotal sales of drugs in Australian pharmacies next month\ntiming of next Halley’s comet appearance"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#which-is-easiest-to-forecast-1",
+    "href": "slides/1-getting-started.html#which-is-easiest-to-forecast-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Which is easiest to forecast?",
+    "text": "Which is easiest to forecast?\n\ntime of sunrise this day next year\ntiming of next Halley’s comet appearance\nmaximum temperature tomorrow\ndaily electricity demand in 3 days time\ntotal sales of drugs in Australian pharmacies next month\nGoogle stock price tomorrow\nexchange rate of $US/AUS next week\nGoogle stock price in 6 months time\n\n\nQuestions - how do we measure ``easiest’’? - what makes something easy/difficult to forecast?"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#forecastability-factors",
+    "href": "slides/1-getting-started.html#forecastability-factors",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Forecastability factors",
+    "text": "Forecastability factors\nSomething is easier to forecast if:\n\nwe have a good understanding of the factors that contribute to it\nthere is lots of data available;\nthe future is somewhat similar to the past\nthe forecasts cannot affect the thing we are trying to forecast."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#time-series-data",
+    "href": "slides/1-getting-started.html#time-series-data",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Time series data",
+    "text": "Time series data\n\nFour-yearly Olympic winning times\nAnnual Google profits\nQuarterly Australian beer production\nMonthly rainfall\nWeekly retail sales\nDaily IBM stock prices\nHourly electricity demand\n5-minute freeway traffic counts\nTime-stamped stock transaction data"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures",
+    "href": "slides/1-getting-started.html#random-futures",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-1",
+    "href": "slides/1-getting-started.html#random-futures-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-2",
+    "href": "slides/1-getting-started.html#random-futures-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-3",
+    "href": "slides/1-getting-started.html#random-futures-3",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-4",
+    "href": "slides/1-getting-started.html#random-futures-4",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-5",
+    "href": "slides/1-getting-started.html#random-futures-5",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-6",
+    "href": "slides/1-getting-started.html#random-futures-6",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-7",
+    "href": "slides/1-getting-started.html#random-futures-7",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-8",
+    "href": "slides/1-getting-started.html#random-futures-8",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#random-futures-9",
+    "href": "slides/1-getting-started.html#random-futures-9",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Random futures",
+    "text": "Random futures\n\n\n\n“He who sees the past as surprise-free is bound to have a future full of surprises.’’(Amos Tversky)"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#statistical-forecasting",
+    "href": "slides/1-getting-started.html#statistical-forecasting",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Statistical forecasting",
+    "text": "Statistical forecasting\n\nThing to be forecast: a random variable, \\(y_t\\).\nForecast distribution: If \\({\\cal I}\\) is all observations, then \\(y_{t} |{\\cal I}\\) means “the random variable \\(y_{t}\\) given what we know in \\({\\cal I}\\).\nThe “point forecast” is the mean (or median) of \\(y_{t} |{\\cal I}\\)\nThe “forecast variance” is \\(\\text{var}[y_{t} |{\\cal I}]\\). Variance is the square of the standard deviation.\nA prediction interval or “interval forecast” is a range of values of \\(y_t\\) with high probability.\nWith time series, \\({y}_{t|t-1} = y_t | \\{y_1,y_2,\\dots,y_{t-1}\\}\\)."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-1-paperware-company",
+    "href": "slides/1-getting-started.html#case-study-1-paperware-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 1: Paperware company",
+    "text": "CASE STUDY 1: Paperware company\nProblem: Want forecasts of each of hundreds of items. Series can be stationary, trended or seasonal. They currently have a large forecasting program written in-house but it doesn’t seem to produce sensible forecasts. They want me to fix it.\n\nAdditional information\n\nProgram written in COBOL making numerical calculations limited. It is not possible to do any optimization.\nTheir programmer has little experience in numerical computing.\nThey employ no statisticians and want the program to produce forecasts automatically."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-1paperware-company",
+    "href": "slides/1-getting-started.html#case-study-1paperware-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 1:Paperware company",
+    "text": "CASE STUDY 1:Paperware company\nMethods currently used\n\n\n12 month average\n6 month average\nstraight line regression over last 12 months\nstraight line regression over last 6 months\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values, where the average is taken only over the last 6 months."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-2-pbs",
+    "href": "slides/1-getting-started.html#case-study-2-pbs",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-2-pbs-1",
+    "href": "slides/1-getting-started.html#case-study-2-pbs-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS\nThe Pharmaceutical Benefits Scheme (PBS) is the Australian government drugs subsidy scheme.\n\nMany drugs bought from pharmacies are subsidised to allow more equitable access to modern drugs.\nThe cost to government is determined by the number and types of drugs purchased. Currently nearly 1% of GDP.\nThe total cost is budgeted based on forecasts of drug usage."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-2-pbs-2",
+    "href": "slides/1-getting-started.html#case-study-2-pbs-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-2-pbs-3",
+    "href": "slides/1-getting-started.html#case-study-2-pbs-3",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 2: PBS",
+    "text": "CASE STUDY 2: PBS\n\nIn 2001: $4.5 billion budget, under-forecasted by $800 million.\nThousands of products. Seasonal demand.\nSubject to covert marketing, volatile products, uncontrollable expenditure.\nAlthough monthly data available for 10 years, data are aggregated to annual values, and only the first three years are used in estimating the forecasts.\nAll forecasts being done with the FORECAST function in MS-Excel!"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-3-car-fleet-company",
+    "href": "slides/1-getting-started.html#case-study-3-car-fleet-company",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 3: Car fleet company",
+    "text": "CASE STUDY 3: Car fleet company\nClient: One of Australia’s largest car fleet companies\nProblem: how to forecast resale value of vehicles? How should this affect leasing and sales policies?\n\nAdditional information\n\nThey can provide a large amount of data on previous vehicles and their eventual resale values.\nThe resale values are currently estimated by a group of specialists. They see me as a threat and do not cooperate."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-4-airline",
+    "href": "slides/1-getting-started.html#case-study-4-airline",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-4-airline-1",
+    "href": "slides/1-getting-started.html#case-study-4-airline-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline\n\n\nNot the real data! Or is it?"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#case-study-4-airline-2",
+    "href": "slides/1-getting-started.html#case-study-4-airline-2",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "CASE STUDY 4: Airline",
+    "text": "CASE STUDY 4: Airline\nProblem: how to forecast passenger traffic on major routes?\n\nAdditional information\n\nThey can provide a large amount of data on previous routes.\nTraffic is affected by school holidays, special events such as the Grand Prix, advertising campaigns, competition behavior, etc.\nThey have a highly capable team of people who are able to do most of the computing."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#the-basic-steps-in-a-forecasting-task",
+    "href": "slides/1-getting-started.html#the-basic-steps-in-a-forecasting-task",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "The basic steps in a forecasting task",
+    "text": "The basic steps in a forecasting task\n\nStep 1: Problem definition.\nStep 2: Gathering information.\nStep 3: Preliminary (exploratory) analysis.\nStep 4: Choosing and fitting models.\nStep 5: Using and evaluating a forecasting model."
+  },
+  {
+    "objectID": "slides/1-getting-started.html#assignment-1-1",
+    "href": "slides/1-getting-started.html#assignment-1-1",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "Assignment 1",
+    "text": "Assignment 1\n\nRead Chapter 1 (around 30-45 minutes)\nComplete exercises in 1.8. Submit on Moodle"
+  },
+  {
+    "objectID": "slides/1-getting-started.html#references",
+    "href": "slides/1-getting-started.html#references",
+    "title": "Time Series Applications Ch1 Getting started",
+    "section": "References",
+    "text": "References\n\nForecasting: Principles and Practice\nDr. Mine Çetinkaya-Rundel\nModern Dive."
   }
 ]

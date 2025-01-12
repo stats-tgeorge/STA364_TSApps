@@ -1,0 +1,15 @@
+{
+  "hash": "b5cae106b4a97d1a218a89275719af83",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Homework 1\"\nsubtitle: \"Review on R, RStudio, and MLR\"\n---\n\n\n\n\n\n\n\n# Getting started\n\n## This One Time\n\n-   Go to our RStudio Server at <http://turing.cornellcollege.edu:8787/>\n\n-   Go to your class folder you made named \"STA363\"\n\n-   Create a new folder called *FirstInitial_Last_Initial_HW* with your initials. \n\n## Every Homework\n\nEach of your assignments will begin with the following steps.\n\n-   Finding the instructions on our website: [https://stats-tgeorge.github.io/STA363_AdvReg/](https://stats-tgeorge.github.io/STA363_AdvReg/)\n\n-   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>\n\n-   Creating a new *project.* and giving it a sensible name such as *homework_1* and having that project in the course folder you created.\n\n-   Create a new quarto document and give it a sensible name such as *hw1*.\n\n-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.\n\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    ---\n    title: \"Document title\"\n    author: \"my name\"\n    format:\n      html:\n    embed-resources: true\n    ---\n    ```\n    :::\n\n\n\n\n\n# Instructions\n\nBe sure to include the relevant R code as well as full sentences answering each of the questions (i.e. if I ask for the average, you can output the answer in R but **also** write a full sentence with the answer). Be sure to frequently save your files!\n\nData for the homework will be in the STA363_inst_files -> data folder.\n\n# Exercises\n\nAll problems are from {{< var course.text >}}. Abbreviated BMLR. \n\n- Conceptual 1B\n- Conceptual2a-d\n- Conceptual Number 3\n- Guided Number 3\n \nPlease do not give them new numbers. If you want to be brief, use a code such as C1B for the first problem. \n\n# Submission\n\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\n-   Finding the .html file in your File pane (on the bottom right of the screen)\n-   Click the check box next to the file\n-   Click the blue gear above and then click \"Export\" to download\n-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

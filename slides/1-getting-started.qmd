@@ -1,0 +1,808 @@
+---
+title: "Time Series Applications \n Ch1 Getting started"
+format: 
+  revealjs:
+    output-file: "1-getting-started.html"
+    slide-number: true
+  html:
+    output-file: "1-getting-started_o.html"
+logo: "../img/favicon.png"
+---
+
+# Course Information
+
+## Meet the prof
+
+::: columns
+::: {.column width="50%"}
+Dr. Tyler George
+
+West 311
+:::
+
+::: {.column width="50%"}
+![](figs/tyler.png){fig-alt="Headshot of Dr. Tyler George" fig-align="center"}
+:::
+:::
+
+## Meet each other!
+
+## Where is?...
+
+### Course Website
+[stats-tgeorge.github.io/STA364_TSApps/](https://stats-tgeorge.github.io/STA364_TSApps/)
+
+-   All course materials (slides, exams, etc)
+-   Links (book, data, and more)
+
+### Moodle
+-   Submissions
+-   Gradebook
+
+## Syllabus
+
+Let's open it up!
+
+
+
+## Diversity + inclusion {.smaller}
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+
+::: incremental
+-   Please let me know your preferred name and pronouns on the Getting to know you survey.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. 
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+:::
+
+
+
+## Collaboration policy {.smaller}
+
+-   Only work that is clearly assigned as team work should be completed collaboratively.
+
+-   Some labs/activities will be completed in groups.
+    You **should** work with each other during, and sometimes outside of class, to complete the labs.
+
+-   Homework must be submitted individually.
+    You may **not** directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.
+
+-   Exams must be completed individually.
+    You may **not** discuss any aspect of the exam with peers.
+    If you have questions, email me, especially if you get stuck on an usual problem (not a coding error).
+
+## Sharing / reusing code policy {.smaller}
+
+-   I are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.
+
+-   Unless explicitly stated otherwise, this course's policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must ***explicitly cite*** where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class. 
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
+
+-   You do not need to cite code I provide in class or in the notes. 
+
+## Five tips for success
+
+1.  Complete all the preparation work before class (readings).
+
+2.  Ask questions.
+
+3.  Do the readings.
+
+4.  Do the labs/activities.
+
+4.  Do the Homework
+
+6.  Don’t procrastinate! There is no time for falling behind on the block!
+
+# Software
+
+## Excel - not...
+
+![](figs/excel.png){fig-alt="An Excel window with data about countries" fig-align="center"}
+
+## R
+
+![](figs/r.png){fig-alt="An R shell" fig-align="center"}
+
+## RStudio
+
+![](figs/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
+
+-   RStudio Server: [http://turing.cornellcollege.edu:8787](http://turing.cornellcollege.edu:8787) (Only available on campus)
+
+
+
+## R and RStudio {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](figs/r-logo.png){fig-alt="R logo" fig-align="center"}
+
+-   R is an open-source statistical **programming language**
+-   R is also an environment for statistical computing and graphics
+-   It's easily extensible with *packages*
+:::
+
+::: {.column .fragment width="50%"}
+![](figs/rstudio-logo.png){fig-alt="RStudio logo"}
+
+-   RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
+-   RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
+:::
+:::
+
+## R vs. RStudio
+
+[![](figs/r_vs_rstudio.png){fig-alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." fig-align="center" width="1001"}](https://moderndive.com/1-getting-started.html)
+
+::: aside
+Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
+:::
+
+## R packages {.smaller}
+
+::: incremental
+-   **Packages**: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
+
+-   As of March 14th, 2024, there are 20,582 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+
+-   We're going to work with a small (but important) subset of these!
+:::
+
+::: aside
+<sup>1</sup> Wickham and Bryan, [R Packages](https://r-pkgs.org/).
+
+<sup>2</sup> [CRAN contributed packages](https://cran.r-project.org/web/packages/).
+:::
+
+## Tour: R + RStudio {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: demo
+**Option 1:**
+
+Sit back and enjoy the show!
+:::
+:::
+
+::: {.column width="50%"}
+::: appex
+**Option 2:**
+
+{{< fa laptop >}}
+
+- Go to the server <http://turing.cornellcollege.edu>
+- Cornell username all lower case
+- Starting password given in class
+
+:::
+:::
+:::
+
+## Tour recap: R + RStudio
+
+![](figs/tour-r-rstudio.png)
+
+## A short list (for now) of R essentials
+
+-   Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+. . .
+
+```{r}
+#| eval: false
+
+do_this(to_this)
+do_that(to_this, to_that, with_those)
+```
+
+-   Packages are installed with the `install.packages()` function and loaded with the `library` function, once per session:
+
+. . .
+
+```{r}
+#| eval: false
+
+install.packages("package_name")
+library(package_name)
+```
+
+## R essentials (continued)
+
+-   Columns (variables) in data frames are accessed with `$`:
+
+. . .
+
+```{r}
+#| eval: false
+
+dataframe$var_name
+```
+
+
+-   Object documentation can be accessed with `?`
+
+. . .
+
+
+```{r}
+#| eval: false
+
+?mean
+```
+
+## tidyverse
+
+::: columns
+::: {.column width="50%"}
+[![](figs/tidyverse.png){fig-alt="Hex logos for dplyr, ggplot2, forcats, tibble, readr, stringr, tidyr, and purrr"}](https://tidyverse.org)
+:::
+
+::: {.column width="50%"}
+[tidyverse.org](https://www.tidyverse.org/)
+
+-   The **tidyverse** is an opinionated collection of R packages designed for data science
+-   All packages share an underlying philosophy and a common grammar
+:::
+:::
+
+# Quarto
+
+## Quarto
+
+::: incremental
+-   Fully reproducible reports -- each time you render the analysis is ran from the beginning
+-   Code goes in chunks narrative goes outside of chunks
+-   A visual editor for a familiar / Google docs-like editing experience
+:::
+
+## Tour: Quarto {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: demo
+**Option 1:**
+
+Sit back and enjoy the show!
+:::
+:::
+
+::: {.column width="50%"}
+::: appex
+**Option 2:**
+
+{{< fa laptop >}}
+
+- Go to the server <http://turing.cornellcollege.edu>
+- Cornell username all lower case
+- Starting password given in class
+
+
+:::
+:::
+:::
+
+## Tour recap: Quarto
+
+![](figs/tour-quarto.png){fig-alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
+
+## Environments
+
+::: callout-important
+The environment of your Quarto document is separate from the Console!
+:::
+
+Remember this, and expect it to bite you a few times as you're learning to work with Quarto!
+
+## Environments
+
+::: columns
+::: {.column width="50%"}
+First, run the following in the console:
+
+```{r eval = FALSE}
+x <- 2
+x * 3
+```
+
+<br>
+
+::: {.question .fragment}
+All looks good, eh?
+:::
+:::
+
+::: {.column .fragment width="50%"}
+Then, add the following in an R chunk in your Quarto document
+
+```{r}
+#| eval: false
+
+x * 3
+```
+
+<br>
+
+::: {.question .fragment}
+What happens?
+Why the error?
+:::
+:::
+:::
+
+## How will we use Quarto?
+
+-   Every activity, project, etc. is an Quarto document
+-   You'll always have a template Quarto document to start with
+-   The amount of scaffolding in the template will decrease over the block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+library(patchwork)
+library(gganimate)
+library(fpp3)
+austa <- readr::read_csv("http://OTexts.com/fpp3/extrafiles/austa.csv") %>%
+  as_tsibble(index = Year)
+
+melsyd <- tsibbledata::ansett %>%
+  filter(Airports == "MEL-SYD")
+```
+
+# What can we forecast?
+
+## Forecasts that aren't forecasts
+
+\fullheight{hopecasts2}
+
+![](figs/hopecasts2.png)
+
+
+## What can we forecast? (1/9)
+
+![](figs/AusBOM.png)
+
+## What can we forecast? (2/9)
+
+![](figs/nasdaq-stock-market.jpg)
+
+## What can we forecast? (3/9)
+
+![](figs/Forex2.png)
+
+## What can we forecast? (4/9)
+
+![](figs/ts22015.jpg)
+
+## What can we forecast? (5/9)
+
+![](figs/comet.jpg)
+
+## What can we forecast? (6/9)
+
+![](figs/pills.jpg)
+
+## What can we forecast? (7/9)
+
+![](figs/elecwires.png)
+
+:::aside
+CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=59368531>
+:::
+
+## What can we forecast? (8/9)
+
+![](figs/covid.jpg)
+
+
+## What can we forecast? (9/9)
+
+![](figs/12apostles.jpg)
+
+## Which is easiest to forecast? {.smaller}
+
+ * daily electricity demand in 3 days time
+ * time of sunrise this day next year
+ * Google stock price tomorrow
+ * Google stock price in 6 months time
+ * maximum temperature tomorrow
+ * exchange rate of \$US/AUS next week
+ * total sales of drugs in Australian pharmacies next month
+ * timing of next Halley's comet appearance
+
+
+## Which is easiest to forecast? {.smaller}
+
+ 1. time of sunrise this day next year
+ 2. timing of next Halley's comet appearance
+ 3. maximum temperature tomorrow
+ 4. daily electricity demand in 3 days time
+ 5. total sales of drugs in Australian pharmacies next month
+ 6. Google stock price tomorrow
+ 7. exchange rate of \$US/AUS next week
+ 8. Google stock price in 6 months time
+
+. . .
+
+*Questions* 
+ - how do we measure ``easiest''?
+ - what makes something easy/difficult to forecast?
+
+
+## Forecastability factors
+
+Something is easier to forecast if:
+
+ 1. we have a good understanding of the factors that contribute to it
+ 2. there is lots of data available;
+ 3. the future is somewhat similar to the past
+ 4. the forecasts cannot affect the thing we are trying to forecast.
+
+# Time series data and random futures
+
+## Time series data {.smaller}
+
+  - Four-yearly Olympic winning times
+  - Annual Google profits
+  - Quarterly Australian beer production
+  - Monthly rainfall
+  - Weekly retail sales
+  - Daily IBM stock prices
+  - Hourly electricity demand
+  - 5-minute freeway traffic counts
+  - Time-stamped stock transaction data
+
+## Random futures
+
+```{r austa, echo=FALSE}
+# Grab ABS data
+austa <- readxl::read_excel("data/340101.xlsx", sheet="Data1", skip=9) %>%
+  rename(date = `Series ID`, value = A85375847A) %>%
+  select(date, value) %>%
+  transmute(
+    Month = yearmonth(date),
+    Visitors = value / 1e3
+  ) %>%
+  bind_rows(tibble(
+    Month = yearmonth(seq(as.Date("2021-11-01"), by = "1 month", length = 2)),
+    Visitors = NA_real_
+  )) %>%
+  as_tsibble(index = Month) %>%
+  filter(Month >= yearmonth("2000 Jan"))
+# Fit ETS model
+fit <- austa %>%
+  filter(Month < yearmonth("2018 Jan")) %>%
+  model(ETS(Visitors))
+# Product forecasts
+fc <- forecast(fit, h = 48) %>%
+  mutate(Month = as.Date(Month))
+# Simulate 100 future sample paths
+set.seed(1967)
+sim <- fit %>%
+  generate(h = 48, times = 100) %>%
+  mutate(
+    replicate = factor(.rep, levels = 1:100, labels = paste("Future", 1:100)),
+    .rep = as.numeric(.rep)
+  ) %>%
+  as_tibble() %>%
+  mutate(Month = as.Date(Month))
+# Nice colors
+cols <- scale_colour_manual(
+  values = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442", sample(rainbow(93))),
+  breaks = paste("Future", 1:100),
+  name = " "
+)
+# Now build up some plots with alignment
+p1 <- austa %>%
+  mutate(Visitors = if_else(Month >= yearmonth("2018 Jan"), NA_real_, Visitors)) %>%
+  as_tibble() %>%
+  mutate(Month = as.Date(Month)) %>%
+  ggplot(aes(x = Month, y = Visitors)) +
+  geom_line() +
+  labs(
+    x = "Month",
+    y = "Thousands of visitors",
+    title = "Total short-term visitors to Australia"
+  ) +
+  scale_x_date(
+    breaks = seq(as.Date("2000-01-01"), by = "5 years", l = 5),
+    labels = paste("Jan", seq(2000, 2020, by = 5)),
+    minor_breaks = seq(as.Date("2001-01-01"), by = "1 year", l = 25)
+  ) +
+  ylim(min(austa$Visitors, sim$.sim, na.rm = TRUE), max(austa$Visitors, sim$.sim, na.rm = TRUE))
+p2 <- p1 + cols +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate),
+    data = sim %>% filter(.rep <= 1)
+  )
+p3 <- p1 + cols +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate),
+    data = sim %>% filter(.rep <= 2)
+  )
+p4 <- p1 + cols +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate),
+    data = sim %>% filter(.rep <= 3)
+  )
+p5 <- p1 + cols +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate),
+    data = sim %>% filter(.rep <= 10)
+  )
+p6 <- p1 + cols +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate), alpha = 0.5, data = sim) +
+  guides(colour = "none")
+p7 <- p1 +
+  geom_line(aes(y = .sim, group = replicate, colour = replicate), alpha = 0.5, col = "gray", data = sim) +
+  guides(colour = "none")
+p8 <- p7 + autolayer(fc, level = c(50, 90))
+p9 <- p8 + coord_cartesian(xlim=as.Date(c("2014-01-01","2021-08-01"))) +
+  scale_x_date(
+    breaks = seq(as.Date("2000-01-01"), by = "2 years", l = 11),
+    labels = paste("Jan", seq(2000, 2020, by = 2)),
+    minor_breaks = seq(as.Date("2001-01-01"), by = "1 year", l = 25)
+  ) 
+aligned_plots <- align_patches(p1, p2, p3, p4, p5, p6, p7, p8,p9)
+```
+
+. . .
+
+```{r austa1, dependson="austa", echo=FALSE}
+aligned_plots[[1]]
+```
+
+## Random futures
+
+
+
+```{r austa2, dependson='austa', echo=FALSE}
+aligned_plots[[2]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa3, dependson='austa', echo=FALSE}
+aligned_plots[[3]]
+
+```
+
+
+
+## Random futures
+
+
+
+```{r austa4, dependson='austa', echo=FALSE}
+aligned_plots[[4]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa5, dependson='austa', echo=FALSE}
+aligned_plots[[5]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa6, dependson='austa', echo=FALSE}
+aligned_plots[[6]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa7, dependson='austa', echo=FALSE}
+aligned_plots[[7]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa8, dependson='austa', echo=FALSE}
+aligned_plots[[8]]
+```
+
+
+
+## Random futures
+
+
+
+```{r austa9, dependson='austa', echo=FALSE}
+aligned_plots[[9]]
+```
+
+
+
+## Random futures {.smaller}
+
+
+
+```{r austa9b, dependson='austa', echo=FALSE}
+aligned_plots[[9]] +
+  geom_line(
+    colour = "black",
+    data = austa %>% filter(Month >= yearmonth("2018 Jan")) %>% mutate(Month = as.Date(Month))
+  )
+```
+
+
+. . .
+
+:::center
+"He who sees the past as surprise-free is bound to have a future full of surprises.''(Amos Tversky)
+:::
+
+## Statistical forecasting {.smaller}
+
+- Thing to be forecast: a random variable, $y_t$.
+- Forecast distribution: If ${\cal I}$ is all observations, then $y_{t} |{\cal I}$ means "the random variable $y_{t}$ given what we know in ${\cal I}$.
+- The "point forecast" is the mean (or median) of $y_{t} |{\cal I}$
+- The "forecast variance" is $\text{var}[y_{t} |{\cal I}]$. Variance is the square of the standard deviation. 
+- A prediction interval or "interval forecast" is a range of values of $y_t$ with high probability.
+- With time series, ${y}_{t|t-1} = y_t | \{y_1,y_2,\dots,y_{t-1}\}$.
+
+# Some case studies
+
+## CASE STUDY 1: Paperware company {.smaller}
+
+*Problem*: Want forecasts of each of hundreds of items. Series can be stationary, trended or seasonal. They currently have a large forecasting program written in-house but it doesn't seem to produce sensible forecasts. They want me to fix it.
+
+. . .
+
+**Additional information**
+
+- Program  written in COBOL making numerical calculations limited. It is not possible to do any optimization.
+- Their programmer has little experience in numerical computing.
+- They employ no statisticians and want the program to produce forecasts automatically.
+
+
+## CASE STUDY 1:Paperware company {.smaller}
+
+*Methods currently used*
+
+. . .
+
+- 12 month average
+- 6 month average
+- straight line regression over last 12 months
+- straight line regression over last 6 months
+- prediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values
+- prediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values, where the average is taken only over the last 6 months.
+
+## CASE STUDY 2: PBS 
+
+![](figs/pills.jpg)
+
+## CASE STUDY 2: PBS {.smaller}
+
+### The Pharmaceutical Benefits Scheme (PBS) is the Australian government drugs subsidy scheme.
+
+- Many drugs bought from pharmacies are subsidised to allow more equitable access to modern drugs.
+- The cost to government is determined by the number and types of drugs purchased. Currently nearly 1\% of GDP.
+- The total cost is budgeted based on forecasts of drug usage.
+
+
+## CASE STUDY 2: PBS
+
+![](figs/pbs2.jpg)
+
+## CASE STUDY 2: PBS {.smaller}
+
+- In 2001: \$4.5 billion budget, under-forecasted by \$800 million.
+- Thousands of products. Seasonal demand.
+- Subject to covert marketing, volatile products, uncontrollable expenditure.
+- Although monthly data available for 10 years, data are aggregated to annual values, and only the first three years are used in estimating the forecasts.
+- All forecasts being done with the `FORECAST` function in MS-Excel!
+
+## CASE STUDY 3: Car fleet company {.smaller}
+
+**Client:** One of Australia's largest car fleet companies
+
+**Problem:** how to forecast resale value of vehicles? How
+should this affect leasing and sales policies?
+
+. . .
+
+### Additional information
+ - They can provide a large amount of data on previous vehicles and their eventual resale values.
+ - The resale values are currently estimated by a group of specialists. They see me as a threat and do not cooperate.
+
+## CASE STUDY 4: Airline
+
+![](figs/ansettlogo.jpg)
+
+## CASE STUDY 4: Airline {.smaller}
+
+```{r, echo=FALSE}
+melsyd %>%
+  filter(Class == "Economy") %>%
+  autoplot(Passengers) +
+  labs(
+    title = "Economy class passengers",
+    subtitle = "Melbourne-Sydney",
+    x = "Year",
+    y = "Thousands"
+  )
+```
+
+
+. . .
+
+*Not the real data! Or is it?*
+
+
+## CASE STUDY 4: Airline {.smaller}
+
+**Problem:** how to forecast passenger traffic on major routes?
+
+. . .
+
+### Additional information
+
+- They can provide a large amount of data on previous routes.
+- Traffic is affected by school holidays, special events such as
+the Grand Prix, advertising campaigns, competition behavior, etc.
+- They have a highly capable team of people who are able to do
+most of the computing.
+
+
+## The basic steps in a forecasting task
+- Step 1: Problem definition.
+- Step 2: Gathering information.
+- Step 3: Preliminary (exploratory) analysis.
+- Step 4: Choosing and fitting models.
+- Step 5: Using and evaluating a forecasting model.
+
+# Assignment 1
+
+## Assignment 1
+- Read Chapter 1 (around 30-45 minutes)
+- Complete exercises in 1.8. Submit on Moodle
+
+## References
+
+- [Forecasting: Principles and Practice](https://otexts.com/fpp3/)
+
+- Dr. Mine Çetinkaya-Rundel
+
+- [Modern Dive](https://moderndive.com/1-getting-started.html).
+
