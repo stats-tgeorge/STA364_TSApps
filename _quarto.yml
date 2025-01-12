@@ -19,7 +19,7 @@ website:
         href: http://turing.cornellcollege.edu:8787/
         text: "RStudio Server"
       - icon: book
-        href: https://otexts.com/fpp2/
+        href: https://otexts.com/fpp3/
         text: "Book"
       - icon: person-fill
         text: "Moodle"

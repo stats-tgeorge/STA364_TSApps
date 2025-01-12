@@ -1,5 +1,5 @@
 ---
-title: "Time Series Applications \n Ch1 Getting started"
+title: "Time Series Applications \n Ch1 Getting Started"
 format: 
   revealjs:
     output-file: "1-getting-started.html"
@@ -479,6 +479,8 @@ Something is easier to forecast if:
 
 ```{r austa, echo=FALSE}
 # Grab ABS data
+#| cache: true
+
 austa <- readxl::read_excel("data/340101.xlsx", sheet="Data1", skip=9) %>%
   rename(date = `Series ID`, value = A85375847A) %>%
   select(date, value) %>%

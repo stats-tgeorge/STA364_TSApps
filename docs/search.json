@@ -154,882 +154,882 @@
   {
     "objectID": "slides/1-getting-started_o.html",
     "href": "slides/1-getting-started_o.html",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "Dr. Tyler George\nWest 311\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\n\n\n\n\nSubmissions\nGradebook\n\n\n\n\n\nLet’s open it up!\n\n\n\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.\n\n\n\n\n\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error).\n\n\n\n\n\nI are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes.\n\n\n\n\n\nComplete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
   },
   {
     "objectID": "slides/1-getting-started_o.html#meet-the-prof",
     "href": "slides/1-getting-started_o.html#meet-the-prof",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "Dr. Tyler George\nWest 311"
   },
   {
     "objectID": "slides/1-getting-started_o.html#where-is",
     "href": "slides/1-getting-started_o.html#where-is",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "stats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\n\n\n\n\nSubmissions\nGradebook"
   },
   {
     "objectID": "slides/1-getting-started_o.html#syllabus",
     "href": "slides/1-getting-started_o.html#syllabus",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "Let’s open it up!"
   },
   {
     "objectID": "slides/1-getting-started_o.html#diversity-inclusion",
     "href": "slides/1-getting-started_o.html#diversity-inclusion",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
   },
   {
     "objectID": "slides/1-getting-started_o.html#collaboration-policy",
     "href": "slides/1-getting-started_o.html#collaboration-policy",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "Only work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error)."
   },
   {
     "objectID": "slides/1-getting-started_o.html#sharing-reusing-code-policy",
     "href": "slides/1-getting-started_o.html#sharing-reusing-code-policy",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "I are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes."
   },
   {
     "objectID": "slides/1-getting-started_o.html#five-tips-for-success",
     "href": "slides/1-getting-started_o.html#five-tips-for-success",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "",
     "text": "Complete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
   },
   {
     "objectID": "slides/1-getting-started_o.html#excel---not",
     "href": "slides/1-getting-started_o.html#excel---not",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Excel - not…",
     "text": "Excel - not…"
   },
   {
     "objectID": "slides/1-getting-started_o.html#r",
     "href": "slides/1-getting-started_o.html#r",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R",
     "text": "R"
   },
   {
     "objectID": "slides/1-getting-started_o.html#rstudio",
     "href": "slides/1-getting-started_o.html#rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "RStudio",
     "text": "RStudio\n\n\n\n\n\n\nRStudio Server: http://turing.cornellcollege.edu:8787 (Only available on campus)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#r-and-rstudio",
     "href": "slides/1-getting-started_o.html#r-and-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R and RStudio",
     "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/1-getting-started_o.html#r-vs.-rstudio",
     "href": "slides/1-getting-started_o.html#r-vs.-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R vs. RStudio",
     "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
   },
   {
     "objectID": "slides/1-getting-started_o.html#r-packages",
     "href": "slides/1-getting-started_o.html#r-packages",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R packages",
     "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of March 14th, 2024, there are 20,582 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
   },
   {
     "objectID": "slides/1-getting-started_o.html#tour-r-rstudio",
     "href": "slides/1-getting-started_o.html#tour-r-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour: R + RStudio",
     "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
   },
   {
     "objectID": "slides/1-getting-started_o.html#tour-recap-r-rstudio",
     "href": "slides/1-getting-started_o.html#tour-recap-r-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour recap: R + RStudio",
     "text": "Tour recap: R + RStudio"
   },
   {
     "objectID": "slides/1-getting-started_o.html#a-short-list-for-now-of-r-essentials",
     "href": "slides/1-getting-started_o.html#a-short-list-for-now-of-r-essentials",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "A short list (for now) of R essentials",
     "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n. . .\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n. . .\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#r-essentials-continued",
     "href": "slides/1-getting-started_o.html#r-essentials-continued",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R essentials (continued)",
     "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n. . .\n\ndataframe$var_name\n\n\nObject documentation can be accessed with ?\n\n. . .\n\n?mean"
   },
   {
     "objectID": "slides/1-getting-started_o.html#tidyverse",
     "href": "slides/1-getting-started_o.html#tidyverse",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "tidyverse",
     "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
   },
   {
     "objectID": "slides/1-getting-started_o.html#quarto-1",
     "href": "slides/1-getting-started_o.html#quarto-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Quarto",
     "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
   },
   {
     "objectID": "slides/1-getting-started_o.html#tour-quarto",
     "href": "slides/1-getting-started_o.html#tour-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour: Quarto",
     "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
   },
   {
     "objectID": "slides/1-getting-started_o.html#tour-recap-quarto",
     "href": "slides/1-getting-started_o.html#tour-recap-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour recap: Quarto",
     "text": "Tour recap: Quarto"
   },
   {
     "objectID": "slides/1-getting-started_o.html#environments",
     "href": "slides/1-getting-started_o.html#environments",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Environments",
     "text": "Environments\n\n\n\n\n\n\nImportant\n\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
   },
   {
     "objectID": "slides/1-getting-started_o.html#environments-1",
     "href": "slides/1-getting-started_o.html#environments-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Environments",
     "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
   },
   {
     "objectID": "slides/1-getting-started_o.html#how-will-we-use-quarto",
     "href": "slides/1-getting-started_o.html#how-will-we-use-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "How will we use Quarto?",
     "text": "How will we use Quarto?\n\nEvery activity, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the block"
   },
   {
     "objectID": "slides/1-getting-started_o.html#forecasts-that-arent-forecasts",
     "href": "slides/1-getting-started_o.html#forecasts-that-arent-forecasts",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Forecasts that aren’t forecasts",
     "text": "Forecasts that aren’t forecasts"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-19",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-19",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (1/9)",
     "text": "What can we forecast? (1/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-29",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-29",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (2/9)",
     "text": "What can we forecast? (2/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-39",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-39",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (3/9)",
     "text": "What can we forecast? (3/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-49",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-49",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (4/9)",
     "text": "What can we forecast? (4/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-59",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-59",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (5/9)",
     "text": "What can we forecast? (5/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-69",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-69",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (6/9)",
     "text": "What can we forecast? (6/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-79",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-79",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (7/9)",
     "text": "What can we forecast? (7/9)\n\n\n\nCC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59368531"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-89",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-89",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (8/9)",
     "text": "What can we forecast? (8/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#what-can-we-forecast-99",
     "href": "slides/1-getting-started_o.html#what-can-we-forecast-99",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (9/9)",
     "text": "What can we forecast? (9/9)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#which-is-easiest-to-forecast",
     "href": "slides/1-getting-started_o.html#which-is-easiest-to-forecast",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Which is easiest to forecast?",
     "text": "Which is easiest to forecast?\n\ndaily electricity demand in 3 days time\ntime of sunrise this day next year\nGoogle stock price tomorrow\nGoogle stock price in 6 months time\nmaximum temperature tomorrow\nexchange rate of $US/AUS next week\ntotal sales of drugs in Australian pharmacies next month\ntiming of next Halley’s comet appearance"
   },
   {
     "objectID": "slides/1-getting-started_o.html#which-is-easiest-to-forecast-1",
     "href": "slides/1-getting-started_o.html#which-is-easiest-to-forecast-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Which is easiest to forecast?",
     "text": "Which is easiest to forecast?\n\ntime of sunrise this day next year\ntiming of next Halley’s comet appearance\nmaximum temperature tomorrow\ndaily electricity demand in 3 days time\ntotal sales of drugs in Australian pharmacies next month\nGoogle stock price tomorrow\nexchange rate of $US/AUS next week\nGoogle stock price in 6 months time\n\n. . .\nQuestions - how do we measure ``easiest’’? - what makes something easy/difficult to forecast?"
   },
   {
     "objectID": "slides/1-getting-started_o.html#forecastability-factors",
     "href": "slides/1-getting-started_o.html#forecastability-factors",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Forecastability factors",
     "text": "Forecastability factors\nSomething is easier to forecast if:\n\nwe have a good understanding of the factors that contribute to it\nthere is lots of data available;\nthe future is somewhat similar to the past\nthe forecasts cannot affect the thing we are trying to forecast."
   },
   {
     "objectID": "slides/1-getting-started_o.html#time-series-data",
     "href": "slides/1-getting-started_o.html#time-series-data",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Time series data",
     "text": "Time series data\n\nFour-yearly Olympic winning times\nAnnual Google profits\nQuarterly Australian beer production\nMonthly rainfall\nWeekly retail sales\nDaily IBM stock prices\nHourly electricity demand\n5-minute freeway traffic counts\nTime-stamped stock transaction data"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures",
     "href": "slides/1-getting-started_o.html#random-futures",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures\n. . ."
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-1",
     "href": "slides/1-getting-started_o.html#random-futures-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-2",
     "href": "slides/1-getting-started_o.html#random-futures-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-3",
     "href": "slides/1-getting-started_o.html#random-futures-3",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-4",
     "href": "slides/1-getting-started_o.html#random-futures-4",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-5",
     "href": "slides/1-getting-started_o.html#random-futures-5",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-6",
     "href": "slides/1-getting-started_o.html#random-futures-6",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-7",
     "href": "slides/1-getting-started_o.html#random-futures-7",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-8",
     "href": "slides/1-getting-started_o.html#random-futures-8",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started_o.html#random-futures-9",
     "href": "slides/1-getting-started_o.html#random-futures-9",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures\n\n\n\n\n\n\n\n\n\n. . .\n\n“He who sees the past as surprise-free is bound to have a future full of surprises.’’(Amos Tversky)"
   },
   {
     "objectID": "slides/1-getting-started_o.html#statistical-forecasting",
     "href": "slides/1-getting-started_o.html#statistical-forecasting",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Statistical forecasting",
     "text": "Statistical forecasting\n\nThing to be forecast: a random variable, \\(y_t\\).\nForecast distribution: If \\({\\cal I}\\) is all observations, then \\(y_{t} |{\\cal I}\\) means “the random variable \\(y_{t}\\) given what we know in \\({\\cal I}\\).\nThe “point forecast” is the mean (or median) of \\(y_{t} |{\\cal I}\\)\nThe “forecast variance” is \\(\\text{var}[y_{t} |{\\cal I}]\\). Variance is the square of the standard deviation.\nA prediction interval or “interval forecast” is a range of values of \\(y_t\\) with high probability.\nWith time series, \\({y}_{t|t-1} = y_t | \\{y_1,y_2,\\dots,y_{t-1}\\}\\)."
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-1-paperware-company",
     "href": "slides/1-getting-started_o.html#case-study-1-paperware-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 1: Paperware company",
     "text": "CASE STUDY 1: Paperware company\nProblem: Want forecasts of each of hundreds of items. Series can be stationary, trended or seasonal. They currently have a large forecasting program written in-house but it doesn’t seem to produce sensible forecasts. They want me to fix it.\n. . .\nAdditional information\n\nProgram written in COBOL making numerical calculations limited. It is not possible to do any optimization.\nTheir programmer has little experience in numerical computing.\nThey employ no statisticians and want the program to produce forecasts automatically."
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-1paperware-company",
     "href": "slides/1-getting-started_o.html#case-study-1paperware-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 1:Paperware company",
     "text": "CASE STUDY 1:Paperware company\nMethods currently used\n. . .\n\n12 month average\n6 month average\nstraight line regression over last 12 months\nstraight line regression over last 6 months\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values, where the average is taken only over the last 6 months."
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-2-pbs",
     "href": "slides/1-getting-started_o.html#case-study-2-pbs",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS"
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-1",
     "href": "slides/1-getting-started_o.html#case-study-2-pbs-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS\n\nThe Pharmaceutical Benefits Scheme (PBS) is the Australian government drugs subsidy scheme.\n\nMany drugs bought from pharmacies are subsidised to allow more equitable access to modern drugs.\nThe cost to government is determined by the number and types of drugs purchased. Currently nearly 1% of GDP.\nThe total cost is budgeted based on forecasts of drug usage."
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-2",
     "href": "slides/1-getting-started_o.html#case-study-2-pbs-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS"
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-2-pbs-3",
     "href": "slides/1-getting-started_o.html#case-study-2-pbs-3",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS\n\nIn 2001: $4.5 billion budget, under-forecasted by $800 million.\nThousands of products. Seasonal demand.\nSubject to covert marketing, volatile products, uncontrollable expenditure.\nAlthough monthly data available for 10 years, data are aggregated to annual values, and only the first three years are used in estimating the forecasts.\nAll forecasts being done with the FORECAST function in MS-Excel!"
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-3-car-fleet-company",
     "href": "slides/1-getting-started_o.html#case-study-3-car-fleet-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 3: Car fleet company",
     "text": "CASE STUDY 3: Car fleet company\nClient: One of Australia’s largest car fleet companies\nProblem: how to forecast resale value of vehicles? How should this affect leasing and sales policies?\n. . .\n\nAdditional information\n\nThey can provide a large amount of data on previous vehicles and their eventual resale values.\nThe resale values are currently estimated by a group of specialists. They see me as a threat and do not cooperate."
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-4-airline",
     "href": "slides/1-getting-started_o.html#case-study-4-airline",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline"
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-4-airline-1",
     "href": "slides/1-getting-started_o.html#case-study-4-airline-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline\n\n\n\n\n\n\n\n\n\n. . .\nNot the real data! Or is it?"
   },
   {
     "objectID": "slides/1-getting-started_o.html#case-study-4-airline-2",
     "href": "slides/1-getting-started_o.html#case-study-4-airline-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline\nProblem: how to forecast passenger traffic on major routes?\n. . .\n\nAdditional information\n\nThey can provide a large amount of data on previous routes.\nTraffic is affected by school holidays, special events such as the Grand Prix, advertising campaigns, competition behavior, etc.\nThey have a highly capable team of people who are able to do most of the computing."
   },
   {
     "objectID": "slides/1-getting-started_o.html#the-basic-steps-in-a-forecasting-task",
     "href": "slides/1-getting-started_o.html#the-basic-steps-in-a-forecasting-task",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "The basic steps in a forecasting task",
     "text": "The basic steps in a forecasting task\n\nStep 1: Problem definition.\nStep 2: Gathering information.\nStep 3: Preliminary (exploratory) analysis.\nStep 4: Choosing and fitting models.\nStep 5: Using and evaluating a forecasting model."
   },
   {
     "objectID": "slides/1-getting-started_o.html#assignment-1-1",
     "href": "slides/1-getting-started_o.html#assignment-1-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Assignment 1",
     "text": "Assignment 1\n\nRead Chapter 1 (around 30-45 minutes)\nComplete exercises in 1.8. Submit on Moodle"
   },
   {
     "objectID": "slides/1-getting-started_o.html#references",
     "href": "slides/1-getting-started_o.html#references",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "References",
     "text": "References\n\nForecasting: Principles and Practice\nDr. Mine Çetinkaya-Rundel\nModern Dive."
   },
   {
     "objectID": "slides/1-getting-started.html#meet-the-prof",
     "href": "slides/1-getting-started.html#meet-the-prof",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Meet the prof",
     "text": "Meet the prof\n\n\nDr. Tyler George\nWest 311"
   },
   {
     "objectID": "slides/1-getting-started.html#meet-each-other",
     "href": "slides/1-getting-started.html#meet-each-other",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Meet each other!",
     "text": "Meet each other!"
   },
   {
     "objectID": "slides/1-getting-started.html#where-is",
     "href": "slides/1-getting-started.html#where-is",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Where is?…",
     "text": "Where is?…\nCourse Website\nstats-tgeorge.github.io/STA364_TSApps/\n\nAll course materials (slides, exams, etc)\nLinks (book, data, and more)\n\nMoodle\n\nSubmissions\nGradebook"
   },
   {
     "objectID": "slides/1-getting-started.html#syllabus",
     "href": "slides/1-getting-started.html#syllabus",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Syllabus",
     "text": "Syllabus\nLet’s open it up!"
   },
   {
     "objectID": "slides/1-getting-started.html#diversity-inclusion",
     "href": "slides/1-getting-started.html#diversity-inclusion",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Diversity + inclusion",
     "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
   },
   {
     "objectID": "slides/1-getting-started.html#collaboration-policy",
     "href": "slides/1-getting-started.html#collaboration-policy",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Collaboration policy",
     "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nSome labs/activities will be completed in groups. You should work with each other during, and sometimes outside of class, to complete the labs.\nHomework must be submitted individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, email me, especially if you get stuck on an usual problem (not a coding error)."
   },
   {
     "objectID": "slides/1-getting-started.html#sharing-reusing-code-policy",
     "href": "slides/1-getting-started.html#sharing-reusing-code-policy",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Sharing / reusing code policy",
     "text": "Sharing / reusing code policy\n\nI are aware that a huge volume of code is available on the web, and many tasks may have solutions posted.\nUnless explicitly stated otherwise, this course’s policy is that may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s). Often on exams, I will require you use code provided in class.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source\nYou do not need to cite code I provide in class or in the notes."
   },
   {
     "objectID": "slides/1-getting-started.html#five-tips-for-success",
     "href": "slides/1-getting-started.html#five-tips-for-success",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Five tips for success",
     "text": "Five tips for success\n\nComplete all the preparation work before class (readings).\nAsk questions.\nDo the readings.\nDo the labs/activities.\nDo the Homework\nDon’t procrastinate! There is no time for falling behind on the block!"
   },
   {
     "objectID": "slides/1-getting-started.html#excel---not",
     "href": "slides/1-getting-started.html#excel---not",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Excel - not…",
     "text": "Excel - not…"
   },
   {
     "objectID": "slides/1-getting-started.html#r",
     "href": "slides/1-getting-started.html#r",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R",
     "text": "R"
   },
   {
     "objectID": "slides/1-getting-started.html#rstudio",
     "href": "slides/1-getting-started.html#rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "RStudio",
     "text": "RStudio\n\n\nRStudio Server: http://turing.cornellcollege.edu:8787 (Only available on campus)"
   },
   {
     "objectID": "slides/1-getting-started.html#r-and-rstudio",
     "href": "slides/1-getting-started.html#r-and-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R and RStudio",
     "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/1-getting-started.html#r-vs.-rstudio",
     "href": "slides/1-getting-started.html#r-vs.-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R vs. RStudio",
     "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
   },
   {
     "objectID": "slides/1-getting-started.html#r-packages",
     "href": "slides/1-getting-started.html#r-packages",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R packages",
     "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of March 14th, 2024, there are 20,582 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
   },
   {
     "objectID": "slides/1-getting-started.html#tour-r-rstudio",
     "href": "slides/1-getting-started.html#tour-r-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour: R + RStudio",
     "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
   },
   {
     "objectID": "slides/1-getting-started.html#tour-recap-r-rstudio",
     "href": "slides/1-getting-started.html#tour-recap-r-rstudio",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour recap: R + RStudio",
     "text": "Tour recap: R + RStudio"
   },
   {
     "objectID": "slides/1-getting-started.html#a-short-list-for-now-of-r-essentials",
     "href": "slides/1-getting-started.html#a-short-list-for-now-of-r-essentials",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "A short list (for now) of R essentials",
     "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
   },
   {
     "objectID": "slides/1-getting-started.html#r-essentials-continued",
     "href": "slides/1-getting-started.html#r-essentials-continued",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "R essentials (continued)",
     "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\n\ndataframe$var_name\n\n\nObject documentation can be accessed with ?\n\n\n\n\n?mean"
   },
   {
     "objectID": "slides/1-getting-started.html#tidyverse",
     "href": "slides/1-getting-started.html#tidyverse",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "tidyverse",
     "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
   },
   {
     "objectID": "slides/1-getting-started.html#quarto-1",
     "href": "slides/1-getting-started.html#quarto-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Quarto",
     "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
   },
   {
     "objectID": "slides/1-getting-started.html#tour-quarto",
     "href": "slides/1-getting-started.html#tour-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour: Quarto",
     "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\n\n\nGo to the server http://turing.cornellcollege.edu\nCornell username all lower case\nStarting password given in class"
   },
   {
     "objectID": "slides/1-getting-started.html#tour-recap-quarto",
     "href": "slides/1-getting-started.html#tour-recap-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Tour recap: Quarto",
     "text": "Tour recap: Quarto"
   },
   {
     "objectID": "slides/1-getting-started.html#environments",
     "href": "slides/1-getting-started.html#environments",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Environments",
     "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
   },
   {
     "objectID": "slides/1-getting-started.html#environments-1",
     "href": "slides/1-getting-started.html#environments-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Environments",
     "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
   },
   {
     "objectID": "slides/1-getting-started.html#how-will-we-use-quarto",
     "href": "slides/1-getting-started.html#how-will-we-use-quarto",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "How will we use Quarto?",
     "text": "How will we use Quarto?\n\nEvery activity, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the block"
   },
   {
     "objectID": "slides/1-getting-started.html#forecasts-that-arent-forecasts",
     "href": "slides/1-getting-started.html#forecasts-that-arent-forecasts",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Forecasts that aren’t forecasts",
     "text": "Forecasts that aren’t forecasts"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-19",
     "href": "slides/1-getting-started.html#what-can-we-forecast-19",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (1/9)",
     "text": "What can we forecast? (1/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-29",
     "href": "slides/1-getting-started.html#what-can-we-forecast-29",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (2/9)",
     "text": "What can we forecast? (2/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-39",
     "href": "slides/1-getting-started.html#what-can-we-forecast-39",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (3/9)",
     "text": "What can we forecast? (3/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-49",
     "href": "slides/1-getting-started.html#what-can-we-forecast-49",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (4/9)",
     "text": "What can we forecast? (4/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-59",
     "href": "slides/1-getting-started.html#what-can-we-forecast-59",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (5/9)",
     "text": "What can we forecast? (5/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-69",
     "href": "slides/1-getting-started.html#what-can-we-forecast-69",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (6/9)",
     "text": "What can we forecast? (6/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-79",
     "href": "slides/1-getting-started.html#what-can-we-forecast-79",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (7/9)",
     "text": "What can we forecast? (7/9)\n\n\n\nCC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59368531"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-89",
     "href": "slides/1-getting-started.html#what-can-we-forecast-89",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (8/9)",
     "text": "What can we forecast? (8/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#what-can-we-forecast-99",
     "href": "slides/1-getting-started.html#what-can-we-forecast-99",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "What can we forecast? (9/9)",
     "text": "What can we forecast? (9/9)"
   },
   {
     "objectID": "slides/1-getting-started.html#which-is-easiest-to-forecast",
     "href": "slides/1-getting-started.html#which-is-easiest-to-forecast",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Which is easiest to forecast?",
     "text": "Which is easiest to forecast?\n\ndaily electricity demand in 3 days time\ntime of sunrise this day next year\nGoogle stock price tomorrow\nGoogle stock price in 6 months time\nmaximum temperature tomorrow\nexchange rate of $US/AUS next week\ntotal sales of drugs in Australian pharmacies next month\ntiming of next Halley’s comet appearance"
   },
   {
     "objectID": "slides/1-getting-started.html#which-is-easiest-to-forecast-1",
     "href": "slides/1-getting-started.html#which-is-easiest-to-forecast-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Which is easiest to forecast?",
     "text": "Which is easiest to forecast?\n\ntime of sunrise this day next year\ntiming of next Halley’s comet appearance\nmaximum temperature tomorrow\ndaily electricity demand in 3 days time\ntotal sales of drugs in Australian pharmacies next month\nGoogle stock price tomorrow\nexchange rate of $US/AUS next week\nGoogle stock price in 6 months time\n\n\nQuestions - how do we measure ``easiest’’? - what makes something easy/difficult to forecast?"
   },
   {
     "objectID": "slides/1-getting-started.html#forecastability-factors",
     "href": "slides/1-getting-started.html#forecastability-factors",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Forecastability factors",
     "text": "Forecastability factors\nSomething is easier to forecast if:\n\nwe have a good understanding of the factors that contribute to it\nthere is lots of data available;\nthe future is somewhat similar to the past\nthe forecasts cannot affect the thing we are trying to forecast."
   },
   {
     "objectID": "slides/1-getting-started.html#time-series-data",
     "href": "slides/1-getting-started.html#time-series-data",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Time series data",
     "text": "Time series data\n\nFour-yearly Olympic winning times\nAnnual Google profits\nQuarterly Australian beer production\nMonthly rainfall\nWeekly retail sales\nDaily IBM stock prices\nHourly electricity demand\n5-minute freeway traffic counts\nTime-stamped stock transaction data"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures",
     "href": "slides/1-getting-started.html#random-futures",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-1",
     "href": "slides/1-getting-started.html#random-futures-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-2",
     "href": "slides/1-getting-started.html#random-futures-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-3",
     "href": "slides/1-getting-started.html#random-futures-3",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-4",
     "href": "slides/1-getting-started.html#random-futures-4",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-5",
     "href": "slides/1-getting-started.html#random-futures-5",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-6",
     "href": "slides/1-getting-started.html#random-futures-6",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-7",
     "href": "slides/1-getting-started.html#random-futures-7",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-8",
     "href": "slides/1-getting-started.html#random-futures-8",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures"
   },
   {
     "objectID": "slides/1-getting-started.html#random-futures-9",
     "href": "slides/1-getting-started.html#random-futures-9",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Random futures",
     "text": "Random futures\n\n\n\n“He who sees the past as surprise-free is bound to have a future full of surprises.’’(Amos Tversky)"
   },
   {
     "objectID": "slides/1-getting-started.html#statistical-forecasting",
     "href": "slides/1-getting-started.html#statistical-forecasting",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Statistical forecasting",
     "text": "Statistical forecasting\n\nThing to be forecast: a random variable, \\(y_t\\).\nForecast distribution: If \\({\\cal I}\\) is all observations, then \\(y_{t} |{\\cal I}\\) means “the random variable \\(y_{t}\\) given what we know in \\({\\cal I}\\).\nThe “point forecast” is the mean (or median) of \\(y_{t} |{\\cal I}\\)\nThe “forecast variance” is \\(\\text{var}[y_{t} |{\\cal I}]\\). Variance is the square of the standard deviation.\nA prediction interval or “interval forecast” is a range of values of \\(y_t\\) with high probability.\nWith time series, \\({y}_{t|t-1} = y_t | \\{y_1,y_2,\\dots,y_{t-1}\\}\\)."
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-1-paperware-company",
     "href": "slides/1-getting-started.html#case-study-1-paperware-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 1: Paperware company",
     "text": "CASE STUDY 1: Paperware company\nProblem: Want forecasts of each of hundreds of items. Series can be stationary, trended or seasonal. They currently have a large forecasting program written in-house but it doesn’t seem to produce sensible forecasts. They want me to fix it.\n\nAdditional information\n\nProgram written in COBOL making numerical calculations limited. It is not possible to do any optimization.\nTheir programmer has little experience in numerical computing.\nThey employ no statisticians and want the program to produce forecasts automatically."
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-1paperware-company",
     "href": "slides/1-getting-started.html#case-study-1paperware-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 1:Paperware company",
     "text": "CASE STUDY 1:Paperware company\nMethods currently used\n\n\n12 month average\n6 month average\nstraight line regression over last 12 months\nstraight line regression over last 6 months\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values\nprediction obtained by a straight line through the last observation with slope equal to the average slope of the lines connecting last year’s and this year’s values, where the average is taken only over the last 6 months."
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-2-pbs",
     "href": "slides/1-getting-started.html#case-study-2-pbs",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS"
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-2-pbs-1",
     "href": "slides/1-getting-started.html#case-study-2-pbs-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS\nThe Pharmaceutical Benefits Scheme (PBS) is the Australian government drugs subsidy scheme.\n\nMany drugs bought from pharmacies are subsidised to allow more equitable access to modern drugs.\nThe cost to government is determined by the number and types of drugs purchased. Currently nearly 1% of GDP.\nThe total cost is budgeted based on forecasts of drug usage."
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-2-pbs-2",
     "href": "slides/1-getting-started.html#case-study-2-pbs-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS"
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-2-pbs-3",
     "href": "slides/1-getting-started.html#case-study-2-pbs-3",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 2: PBS",
     "text": "CASE STUDY 2: PBS\n\nIn 2001: $4.5 billion budget, under-forecasted by $800 million.\nThousands of products. Seasonal demand.\nSubject to covert marketing, volatile products, uncontrollable expenditure.\nAlthough monthly data available for 10 years, data are aggregated to annual values, and only the first three years are used in estimating the forecasts.\nAll forecasts being done with the FORECAST function in MS-Excel!"
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-3-car-fleet-company",
     "href": "slides/1-getting-started.html#case-study-3-car-fleet-company",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 3: Car fleet company",
     "text": "CASE STUDY 3: Car fleet company\nClient: One of Australia’s largest car fleet companies\nProblem: how to forecast resale value of vehicles? How should this affect leasing and sales policies?\n\nAdditional information\n\nThey can provide a large amount of data on previous vehicles and their eventual resale values.\nThe resale values are currently estimated by a group of specialists. They see me as a threat and do not cooperate."
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-4-airline",
     "href": "slides/1-getting-started.html#case-study-4-airline",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline"
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-4-airline-1",
     "href": "slides/1-getting-started.html#case-study-4-airline-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline\n\n\nNot the real data! Or is it?"
   },
   {
     "objectID": "slides/1-getting-started.html#case-study-4-airline-2",
     "href": "slides/1-getting-started.html#case-study-4-airline-2",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "CASE STUDY 4: Airline",
     "text": "CASE STUDY 4: Airline\nProblem: how to forecast passenger traffic on major routes?\n\nAdditional information\n\nThey can provide a large amount of data on previous routes.\nTraffic is affected by school holidays, special events such as the Grand Prix, advertising campaigns, competition behavior, etc.\nThey have a highly capable team of people who are able to do most of the computing."
   },
   {
     "objectID": "slides/1-getting-started.html#the-basic-steps-in-a-forecasting-task",
     "href": "slides/1-getting-started.html#the-basic-steps-in-a-forecasting-task",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "The basic steps in a forecasting task",
     "text": "The basic steps in a forecasting task\n\nStep 1: Problem definition.\nStep 2: Gathering information.\nStep 3: Preliminary (exploratory) analysis.\nStep 4: Choosing and fitting models.\nStep 5: Using and evaluating a forecasting model."
   },
   {
     "objectID": "slides/1-getting-started.html#assignment-1-1",
     "href": "slides/1-getting-started.html#assignment-1-1",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "Assignment 1",
     "text": "Assignment 1\n\nRead Chapter 1 (around 30-45 minutes)\nComplete exercises in 1.8. Submit on Moodle"
   },
   {
     "objectID": "slides/1-getting-started.html#references",
     "href": "slides/1-getting-started.html#references",
-    "title": "Time Series Applications Ch1 Getting started",
+    "title": "Time Series Applications Ch1 Getting Started",
     "section": "References",
     "text": "References\n\nForecasting: Principles and Practice\nDr. Mine Çetinkaya-Rundel\nModern Dive."
   }
