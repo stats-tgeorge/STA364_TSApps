@@ -1,0 +1,148 @@
+---
+title: "Homework 2"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+### Question 1
+
+Explore the following four time series: *Bricks* from `aus_production`, *Lynx* from `pelt`, *Close* from `gafa_stock`, *Demand* from `vic_elec`.
+
+a. Use ? (or help()) to find out about the data in each series.
+
+```{r help}
+
+```
+
+b. What is the time interval of each series?
+
+WRITE YOUR ANSWER HERE
+
+c. Use `autoplot()` to produce a time plot of each series.
+
+```{r brick_plot}
+
+```
+
+```{r lynx_plot}
+
+```
+
+```{r close_plot}
+
+```
+
+```{r demand_plot}
+
+```
+
+d. For the last plot, modify the axis labels and title. See the `labs()` function. 
+
+
+
+
+### Question 2 (fpp3)
+
+
+The first chunk below reads `tute1.csv` into R and use then shows the data with the `View()` function. You should find four columns of information. Columns B through D each contain a quarterly series, labelled *Sales*, *AdBudget* and *GDP*. *Sales* contains the quarterly sales for a small company over the period 1981-2005. *AdBudget* is the advertising budget and *GDP* is the gross domestic product. All series have been adjusted for inflation.
+
+You can read the data into R with the following script:
+
+```{r}
+tute1 <- readr::read_csv("data/tute1.csv")
+View(tute1)
+```
+
+Then converts the data to a time series object in R (tsibble).
+
+```{r}
+mytimeseries <- tute1 |>
+  mutate(Quarter = yearquarter(Quarter)) |>
+  as_tsibble(index = Quarter)
+```
+
+Then construct the time series plot for the *Sales* series.
+
+```{r}
+mytimeseries |>
+  autoplot(Sales)
+```
+
+a. Use this code to generate a time series plot for the other two series in the data, *AdBudget*, and *GDP*. 
+
+```{r, ts_AdBudget}
+
+```
+
+```{r, ts_GDP}
+
+
+```
+
+b. Compare and contrast the three series. 
+
+
+WRITE YOUR ANSWER HERE
+
+
+### Question 3 (fpp4)
+
+The `USgas` package contains data on the demand for natural gas in the US.
+
+a. Install the `USgas` package. (Use `install.packages('package_name')`). Then to use it you will need `library(package_name)`.
+
+```{r pkg_install}
+#| eval: false # you do not need to install it every render
+# this will show the code but since eval (evaluation) is false,
+# it will run the chunk at each render
+
+
+```
+
+
+b. Create a tsibble from `us_total` with *year* as the index and *state* as the key.
+
+```{r 3b}
+
+
+```
+
+c. Plot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island). Interpret your results. 
+
+```{r 3c}
+
+```
+
+
+
+### Question 4 (fpp6)
+
+The `aus_arrivals` data set comprises quarterly international arrivals to Australia from Japan, New Zealand, UK and the US. The data is available after you have called in the `fpp3` package. 
+
+a. Use `autoplot()`, `gg_season()` and `gg_subseries()` to compare the differences between the arrivals from these four countries. 
+
+```{r 4a_J}
+
+```
+
+```{r 4a_NZ}
+
+```
+
+```{r 4a_UK}
+
+```
+
+```{r 4a_US}
+
+```
+
+b. Can you identify any unusual observations?
+
+WRITE YOUR ANSWER HERE
+
+
+
+

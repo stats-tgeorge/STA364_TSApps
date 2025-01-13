@@ -794,12 +794,6 @@ most of the computing.
 - Step 4: Choosing and fitting models.
 - Step 5: Using and evaluating a forecasting model.
 
-# Assignment 1
-
-## Assignment 1
-- Read Chapter 1 (around 30-45 minutes)
-- Complete exercises in 1.8. Submit on Moodle
-
 ## References
 
 - [Forecasting: Principles and Practice](https://otexts.com/fpp3/)

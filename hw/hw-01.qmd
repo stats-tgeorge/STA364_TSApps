@@ -40,7 +40,7 @@ We've already thrown around a few new terms, so let's define them before we proc
 
 -   Open the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like *hw-01_LAST_NAME.qmd*.
 
--   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the file with your name on it (that we share) -\> Change the "LAST_NAME part of the file name to your last name -> Save*.
+-   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the folder `STA364_Projects` (that we share) -\> Change the "LAST_NAME part of the file name to your last name -> Save*.
 
 -   Update the top of the document, called the `YAML` with your name. 
 
