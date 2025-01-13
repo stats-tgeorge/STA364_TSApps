@@ -11,8 +11,6 @@ library(tidyverse)
 library(fpp3)
 ```
 
-The goal of this assignment is to introduce you to R, RStudio, and Time Series!
-
 # Getting started
 
 ## R/Rstudio in Class
@@ -27,13 +25,13 @@ The goal of this assignment is to introduce you to R, RStudio, and Time Series!
 
 -   Open the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like *hw-02_LAST_NAME.qmd*.
 
--   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the folder `STA364_Projects` (that we share) -\> Change the "LAST_NAME part of the file name to your last name -> Save*.
+-   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the folder `STA364_Projects` (that we share) -\> Change the "LAST_NAME part of the file name to your last name -\> Save*.
 
--   Update the top of the document, called the `YAML` with your name. 
+-   Update the top of the document, called the `YAML,` with your name.
 
 # Homework Instructions
 
-Be sure to include the relevant R code and full sentences answering each of the questions (e.g., if I ask for the average, you can output the answer in R but **also** write a full sentence with the answer). Be sure to save your files frequently!
+Be sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but **also** write a complete sentence with the answer). Be sure to save your files frequently!
 
 Data for the homework will be in the STA364_inst_files -\> data folder.
 
@@ -47,23 +45,22 @@ Read [fpp3](https://otexts.com/fpp3/what-can-be-forecast.html) 2.7-2.9.
 
 ### Question 1
 
-Explore the following four time series: *Bricks* from `aus_production`, *Lynx* from `pelt`, *Close* from `gafa_stock`, *Demand* from `vic_elec`.
+Explore the following four time series: *Bricks* from `aus_production`, *Lynx* from `pelt`, *Close* from `gafa_stock`, and *Demand* from `vic_elec`.
 
-a. Use ? (or help()) to find out about the data in each series.
-b. What is the time interval of each series?
-c. Use `autoplot()` to produce a time plot of each series.
-d. For the last plot, modify the axis labels and title. See the `labs()` function. 
-
+a.  Use ? (or help()) to find out about the data in each series.
+b.  What is the time interval of each series?
+c.  Use `autoplot()` to produce a time plot of each series.
+d.  For the last plot, modify the axis labels and title. See the `labs()` function.
 
 ### Question 2 (fpp3)
 
-i. Create a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the *files* tab on the bottom right. Click *New Folder* and name the folder *data*. 
+i.  Create a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the *files* tab on the bottom right. Click *New Folder* and name the folder *data*.
 
-ii. Now you need to copy the data from the instructor data folder to a data folder in your own folder. Go to the STA364_inst_files folder, and into the data folder 
+ii. Now, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder
 
-iii. Check the box next to `tute.csv`, then *More*, then *Copy to...*; save it in your newly created data folder.  
+iii. Check the box next to `tute.csv`, then *More*, then *Copy to...*, and save the file in your newly created data folder.
 
-The first chunk below reads `tute1.csv` into R and use then shows the data with the `View()` function. You should find four columns of information. Columns B through D each contain a quarterly series, labelled *Sales*, *AdBudget* and *GDP*. *Sales* contains the quarterly sales for a small company over the period 1981-2005. *AdBudget* is the advertising budget and *GDP* is the gross domestic product. All series have been adjusted for inflation.
+The first chunk below reads `tute1.csv` into R and then shows the data with the `View()` function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and *GDP*. *Sales* contains the quarterly sales for a small company over the period 1981-2005. *AdBudget* is the advertising budget, and *GDP* is the gross domestic product. All series have been adjusted for inflation.
 
 You can read the data into R with the following script:
 
@@ -87,27 +84,24 @@ mytimeseries |>
   autoplot(Sales)
 ```
 
-a. Use this code to generate a time series plot for the other two series in the data, *AdBudget*, and *GDP*. 
-b. Compare and contrast the three series. 
+a.  Use this code to generate a time series plot for the other two series in the data, *AdBudget*, and *GDP*.
+b.  Compare and contrast the three series.
 
 ### Question 3 (fpp4)
 
 The `USgas` package contains data on the demand for natural gas in the US.
 
-a. Install the `USgas` package. (Use `install.packages('package_name')`). Then to use it you will need `library(package_name)`.
-b. Create a tsibble from `us_total` with *year* as the index and *state* as the key.
-c. Plot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).
-
+a.  Install the `USgas` package. (Use `install.packages('package_name')`). Then to use it you will need `library(package_name)`.
+b.  Create a tsibble from `us_total` with *year* as the index and *state* as the key.
+c.  Plot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).
 
 ### Question 4 (fpp6)
 
-The `aus_arrivals` data set comprises quarterly international arrivals to Australia from Japan, New Zealand, UK and the US. The data is available after you have called in the `fpp3` package. 
+The `aus_arrivals` data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the `fpp3` package.
 
-a. Use `autoplot()`, `gg_season()` and `gg_subseries()` to compare the differences between the arrivals from these four countries. 
+a.  Use `autoplot()`, `gg_season()` and `gg_subseries()` to compare the differences between the arrivals from these four countries.
 
-b. Can you identify any unusual observations?
-
-
+b.  Can you identify any unusual observations?
 
 # Submission
 
@@ -117,5 +111,3 @@ When you are finished with your homework, be sure to Render the final document. 
 -   Click the check box next to the file
 -   Click the blue gear above and then click "Export" to download
 -   Submit your final HTML document to the respective assignment on [Moodle]({{< var course.moodle >}})
-
-

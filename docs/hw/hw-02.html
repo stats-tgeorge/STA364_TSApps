@@ -288,7 +288,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The goal of this assignment is to introduce you to R, RStudio, and Time Series!</p>
 <section id="getting-started" class="level1">
 <h1>Getting started</h1>
 <section id="rrstudio-in-class" class="level2">
@@ -303,14 +302,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Going to our RStudio Server at <a href="http://turing.cornellcollege.edu:8787/" class="uri">http://turing.cornellcollege.edu:8787/</a></p></li>
 <li><p>Open the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like <em>hw-02_LAST_NAME.qmd</em>.</p></li>
 <li><p>Then you need to save your copy. Click <em>File -&gt; Save as -&gt; Navigate to the folder <code>STA364_Projects</code> (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save</em>.</p></li>
-<li><p>Update the top of the document, called the <code>YAML</code> with your name.</p></li>
+<li><p>Update the top of the document, called the <code>YAML,</code> with your name.</p></li>
 </ul>
 </section>
 </section>
 </section>
 <section id="homework-instructions" class="level1">
 <h1>Homework Instructions</h1>
-<p>Be sure to include the relevant R code and full sentences answering each of the questions (e.g., if I ask for the average, you can output the answer in R but <strong>also</strong> write a full sentence with the answer). Be sure to save your files frequently!</p>
+<p>Be sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but <strong>also</strong> write a complete sentence with the answer). Be sure to save your files frequently!</p>
 <p>Data for the homework will be in the STA364_inst_files -&gt; data folder.</p>
 </section>
 <section id="exercises" class="level1">
@@ -323,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="problems">Problems</h2>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>Explore the following four time series: <em>Bricks</em> from <code>aus_production</code>, <em>Lynx</em> from <code>pelt</code>, <em>Close</em> from <code>gafa_stock</code>, <em>Demand</em> from <code>vic_elec</code>.</p>
+<p>Explore the following four time series: <em>Bricks</em> from <code>aus_production</code>, <em>Lynx</em> from <code>pelt</code>, <em>Close</em> from <code>gafa_stock</code>, and <em>Demand</em> from <code>vic_elec</code>.</p>
 <ol type="a">
 <li>Use ? (or help()) to find out about the data in each series.</li>
 <li>What is the time interval of each series?</li>
@@ -335,10 +334,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="question-2-fpp3">Question 2 (fpp3)</h3>
 <ol type="i">
 <li><p>Create a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the <em>files</em> tab on the bottom right. Click <em>New Folder</em> and name the folder <em>data</em>.</p></li>
-<li><p>Now you need to copy the data from the instructor data folder to a data folder in your own folder. Go to the STA364_inst_files folder, and into the data folder</p></li>
-<li><p>Check the box next to <code>tute.csv</code>, then <em>More</em>, then <em>Copy to…</em>; save it in your newly created data folder.</p></li>
+<li><p>Now, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder</p></li>
+<li><p>Check the box next to <code>tute.csv</code>, then <em>More</em>, then <em>Copy to…</em>, and save the file in your newly created data folder.</p></li>
 </ol>
-<p>The first chunk below reads <code>tute1.csv</code> into R and use then shows the data with the <code>View()</code> function. You should find four columns of information. Columns B through D each contain a quarterly series, labelled <em>Sales</em>, <em>AdBudget</em> and <em>GDP</em>. <em>Sales</em> contains the quarterly sales for a small company over the period 1981-2005. <em>AdBudget</em> is the advertising budget and <em>GDP</em> is the gross domestic product. All series have been adjusted for inflation.</p>
+<p>The first chunk below reads <code>tute1.csv</code> into R and then shows the data with the <code>View()</code> function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and <em>GDP</em>. <em>Sales</em> contains the quarterly sales for a small company over the period 1981-2005. <em>AdBudget</em> is the advertising budget, and <em>GDP</em> is the gross domestic product. All series have been adjusted for inflation.</p>
 <p>You can read the data into R with the following script:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tute1 <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"data/tute1.csv"</span>)</span>
@@ -371,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="question-4-fpp6" class="level3">
 <h3 class="anchored" data-anchor-id="question-4-fpp6">Question 4 (fpp6)</h3>
-<p>The <code>aus_arrivals</code> data set comprises quarterly international arrivals to Australia from Japan, New Zealand, UK and the US. The data is available after you have called in the <code>fpp3</code> package.</p>
+<p>The <code>aus_arrivals</code> data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the <code>fpp3</code> package.</p>
 <ol type="a">
 <li><p>Use <code>autoplot()</code>, <code>gg_season()</code> and <code>gg_subseries()</code> to compare the differences between the arrivals from these four countries.</p></li>
 <li><p>Can you identify any unusual observations?</p></li>
