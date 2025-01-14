@@ -1,0 +1,90 @@
+
+## HW 3
+Problems: Chapter 2.10 problems: 7-10
+From this point forward - you need to start commenting on your graphs. What do you observe? Is there trends/cycles/seasonal effects? Outliers? Other interesting features? 
+
+## HW 4
+Problems: Chapter 2.10 problems: 11
+
+Chapter 3, problems 1-3, 5 (only the aus_production data), 7a-d only.
+
+In 5, reworded:
+
+For the following series, if needed, find an appropriate Box-Cox transformation in order to stabilise the variance. Tobacco from aus_production, Economy class passengers between Melbourne and Sydney from ansett, and Pedestrian counts at Southern Cross Station from pedestrian.
+
+## HW5
+
+Read 3.1 through 3.4 of the book
+
+Chapter 3: 9, 10 a-d. 
+
+## HW6
+
+Chapter 5 numbers 1-5, In 4 and 5 check model assumptions (all four). Make sure to comment on each assumption, describe how you know the assumption passes or fails. Also make sure to use the formal Portmanteau tests.
+
+Example: We can see in the histogram that there is a long tail to the left making it heavily left skewed. This fails the normality assumption for the residuals.
+
+Hints:
+
+1)
+
+Household wealth data - choose a country with a filter
+
+NSW stands for new south wales, use a filter on territory
+
+Australian takeaway - you will need to group_by and summarize and add up Turnover. We have done this in the notes a few times for this dataset in chapter 3.
+
+2) c is challenging. You will need to manually calculate the slope between the first and last points and compare it to the change in predicted values in the forecast table between the first forecast and the last value in the dataset. 
+
+
+## HW 7
+
+Chapter 5 exercises: 6-8, 11
+
+## HW 8
+
+Chapter 7: 1 and 2
+
+Recommended: Make a summary R markdown/script file of the R functions/code chunks we have used up until this point. 
+
+
+## HW 9
+
+
+Read chapter 6.
+
+Chapter 7 number 4.
+
+Hints/help:
+
+e) The code (may need to change data/variable names):
+
+augment(fit) %>%
+  mutate(month = month(Month, label = TRUE)) %>%
+  ggplot(aes(x = month, y = .innov)) +
+  geom_boxplot()
+
+g) skip
+h) hilo function will be useful again
+
+## HW 10
+
+Night 1: Chapter 8: 1a, 5a-c
+
+Night 2: Chapter 8 5d,e,f, 6 (see below) ,7,10,11
+6: More info: Try 4 models here. 1) all additive, 2) additive but dampened trend, 3) additive with box cox transform, 4) additive with log transform.
+[Hint: use h=20 when forecasting, so you can clearly see the differences between the various options when plotting the forecasts.]
+
+## HW 11
+
+Chapter 9: 1-5
+
+Ignore PACF in 2. 
+
+## HW 12
+
+Chapter 9
+
+7,9,10,11,12,14,15
+
+7: With drift is the same as saying fit with a constant. In R this is done with ARIMA(time_series ~ c + pdq(stuff) where you choose c of 0 for no constant and c of 1 to have a constant included.
