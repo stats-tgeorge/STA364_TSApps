@@ -104,6 +104,8 @@ Denote original observations as $y_1,\dots,y_T$ and transformed observations as 
 
 \underline{Mathematical transformations for stabilizing}
 
+| Function      |                         | Impact        |
+|---------------|-------------------------|---------------|
 | Square root 	| $w_t = \sqrt{y_t}$    	| $\downarrow$ 	|
 | Cube root   	| $w_t = \sqrt[3]{y_t}$ 	| Increasing   	|
 | Logarithm   	| $w_t = \log(y_t)$     	| strength     	|

@@ -1,1 +1,0 @@
-Sitemap: https://stats-tgeorge.github.io/STA364_TSApps/sitemap.xml
