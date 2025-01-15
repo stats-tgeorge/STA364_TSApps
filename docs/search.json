@@ -1065,39 +1065,83 @@
     ]
   },
   {
-    "objectID": "hw/hw-01.html",
-    "href": "hw/hw-01.html",
-    "title": "Homework 1",
+    "objectID": "hw/hw-02.html",
+    "href": "hw/hw-02.html",
+    "title": "Homework 2",
     "section": "",
-    "text": "The goal of this assignment is to introduce you to R, RStudio, and Time Series!"
+    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
   },
   {
-    "objectID": "hw/hw-01.html#terminology",
-    "href": "hw/hw-01.html#terminology",
-    "title": "Homework 1",
-    "section": "Terminology",
-    "text": "Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR: The name of the programming language we will be using throughout the course.\nRStudio: An integrated development environment for R. In other words, it is a convenient interface for writing and running R code."
+    "objectID": "hw/hw-02.html#rrstudio-in-class",
+    "href": "hw/hw-02.html#rrstudio-in-class",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
   },
   {
-    "objectID": "hw/hw-01.html#rrstudio-in-class",
-    "href": "hw/hw-01.html#rrstudio-in-class",
-    "title": "Homework 1",
-    "section": "R/Rstudio in Class",
-    "text": "R/Rstudio in Class\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOn the bottom right of RStudio, you should see a Files tab. Click that tab.\n\nYou should now see a folder with your name on it. In this shared folder, we can both create, edit, and delete files.\nYou should also see a folder named STA364_inst_files. This is where I will place the files you will need for homework, exams, labs, etc.\n\n\n\nEach of your assignments will begin with the following setup steps.\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-01_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML with your name."
+    "objectID": "hw/hw-02.html#reading",
+    "href": "hw/hw-02.html#reading",
+    "title": "Homework 2",
+    "section": "Reading",
+    "text": "Reading\nRead fpp3 2.7-2.9."
   },
   {
-    "objectID": "hw/hw-01.html#hello-rstudio",
-    "href": "hw/hw-01.html#hello-rstudio",
-    "title": "Homework 1",
-    "section": "Hello RStudio!",
-    "text": "Hello RStudio!\nRStudio is comprised of four panes.\n\n\n\n\n\n\n\n\n\n\nOn the bottom left is the Console, this is where you can write code that will be evaluated. Try typing 2 + 2 here and hit enter, what do you get?\nOn the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.\nIf you click on a file, it will open in the editor, on the top left pane. *The image shows an rmd file but we will be working with Quarto files (qmd).\nFinally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing x &lt;- 2 in the Console and hit enter, what do you get in the Environment pane?"
+    "objectID": "hw/hw-02.html#problems",
+    "href": "hw/hw-02.html#problems",
+    "title": "Homework 2",
+    "section": "Problems",
+    "text": "Problems\n\nQuestion 1\nExplore the following four time series: Bricks from aus_production, Lynx from pelt, Close from gafa_stock, and Demand from vic_elec.\n\nUse ? (or help()) to find out about the data in each series.\nWhat is the time interval of each series?\nUse autoplot() to produce a time plot of each series.\nFor the last plot, modify the axis labels and title. See the labs() function.\n\n\n\nQuestion 2 (fpp3)\n\nCreate a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the files tab on the bottom right. Click New Folder and name the folder data.\nNow, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder\nCheck the box next to tute.csv, then More, then Copy to…, and save the file in your newly created data folder.\n\nThe first chunk below reads tute1.csv into R and then shows the data with the View() function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and GDP. Sales contains the quarterly sales for a small company over the period 1981-2005. AdBudget is the advertising budget, and GDP is the gross domestic product. All series have been adjusted for inflation.\nYou can read the data into R with the following script:\n\ntute1 &lt;- readr::read_csv(\"data/tute1.csv\")\nView(tute1)\n\nThen converts the data to a time series object in R (tsibble).\n\nmytimeseries &lt;- tute1 |&gt;\n  mutate(Quarter = yearquarter(Quarter)) |&gt;\n  as_tsibble(index = Quarter)\n\nThen construct the time series plot for the Sales series.\n\nmytimeseries |&gt;\n  autoplot(Sales)\n\n\nUse this code to generate a time series plot for the other two series in the data, AdBudget, and GDP.\nCompare and contrast the three series.\n\n\n\nQuestion 3 (fpp4)\nThe USgas package contains data on the demand for natural gas in the US.\n\nInstall the USgas package. (Use install.packages('package_name')). Then to use it you will need library(package_name).\nCreate a tsibble from us_total with year as the index and state as the key.\nPlot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).\n\n\n\nQuestion 4 (fpp6)\nThe aus_arrivals data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the fpp3 package.\n\nUse autoplot(), gg_season() and gg_subseries() to compare the differences between the arrivals from these four countries.\nCan you identify any unusual observations?"
   },
   {
-    "objectID": "hw/hw-01.html#packages",
-    "href": "hw/hw-01.html#packages",
-    "title": "Homework 1",
-    "section": "Packages",
-    "text": "Packages\nR is an open-source language, and developers contribute functionality to R via packages. In this assignment we will use the following packages:\n\ntidyverse: a collection of packages for doing data analysis in a “tidy” way\nfpp3: a package that contains functions and datasets for our course/book\n\nWe use the library() function to load packages. In your Quarto document you should see an R chunk labelled load-packages which has the necessary code for loading both packages. You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the Run Current Chunk icon (green arrow pointing right icon).\n\n\n\n\n\n\n\n\n\nNote that these packages also get loaded in your Quarto environment when you Render your Quarto document."
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
+    ]
   },
   {
     "objectID": "course-links.html",
@@ -1144,83 +1188,46 @@
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "Homework 1",
     "section": "",
-    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
-    "crumbs": [
-      "Course information",
-      "R/RStudio Access"
-    ]
+    "text": "The goal of this assignment is to introduce you to R, RStudio, and Time Series!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "hw/hw-01.html#terminology",
+    "href": "hw/hw-01.html#terminology",
+    "title": "Homework 1",
+    "section": "Terminology",
+    "text": "Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR: The name of the programming language we will be using throughout the course.\nRStudio: An integrated development environment for R. In other words, it is a convenient interface for writing and running R code."
+  },
+  {
+    "objectID": "hw/hw-01.html#rrstudio-in-class",
+    "href": "hw/hw-01.html#rrstudio-in-class",
+    "title": "Homework 1",
+    "section": "R/Rstudio in Class",
+    "text": "R/Rstudio in Class\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOn the bottom right of RStudio, you should see a Files tab. Click that tab.\n\nYou should now see a folder with your name on it. In this shared folder, we can both create, edit, and delete files.\nYou should also see a folder named STA364_inst_files. This is where I will place the files you will need for homework, exams, labs, etc.\n\n\n\nEach of your assignments will begin with the following setup steps.\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-01_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML with your name."
+  },
+  {
+    "objectID": "hw/hw-01.html#hello-rstudio",
+    "href": "hw/hw-01.html#hello-rstudio",
+    "title": "Homework 1",
+    "section": "Hello RStudio!",
+    "text": "Hello RStudio!\nRStudio is comprised of four panes.\n\n\n\n\n\n\n\n\n\n\nOn the bottom left is the Console, this is where you can write code that will be evaluated. Try typing 2 + 2 here and hit enter, what do you get?\nOn the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.\nIf you click on a file, it will open in the editor, on the top left pane. *The image shows an rmd file but we will be working with Quarto files (qmd).\nFinally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing x &lt;- 2 in the Console and hit enter, what do you get in the Environment pane?"
+  },
+  {
+    "objectID": "hw/hw-01.html#packages",
+    "href": "hw/hw-01.html#packages",
+    "title": "Homework 1",
+    "section": "Packages",
+    "text": "Packages\nR is an open-source language, and developers contribute functionality to R via packages. In this assignment we will use the following packages:\n\ntidyverse: a collection of packages for doing data analysis in a “tidy” way\nfpp3: a package that contains functions and datasets for our course/book\n\nWe use the library() function to load packages. In your Quarto document you should see an R chunk labelled load-packages which has the necessary code for loading both packages. You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the Run Current Chunk icon (green arrow pointing right icon).\n\n\n\n\n\n\n\n\n\nNote that these packages also get loaded in your Quarto environment when you Render your Quarto document."
+  },
+  {
+    "objectID": "hw/hw-03.html",
+    "href": "hw/hw-03.html",
+    "title": "Homework 3",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "course-instructor.html",
-    "href": "course-instructor.html",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-instructor.html#instructor",
-    "href": "course-instructor.html#instructor",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Time Series Applications",
-    "section": "",
-    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "hw/hw-02.html",
-    "href": "hw/hw-02.html",
-    "title": "Homework 2",
-    "section": "",
-    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
-  },
-  {
-    "objectID": "hw/hw-02.html#rrstudio-in-class",
-    "href": "hw/hw-02.html#rrstudio-in-class",
-    "title": "Homework 2",
-    "section": "",
-    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
-  },
-  {
-    "objectID": "hw/hw-02.html#reading",
-    "href": "hw/hw-02.html#reading",
-    "title": "Homework 2",
-    "section": "Reading",
-    "text": "Reading\nRead fpp3 2.7-2.9."
-  },
-  {
-    "objectID": "hw/hw-02.html#problems",
-    "href": "hw/hw-02.html#problems",
-    "title": "Homework 2",
-    "section": "Problems",
-    "text": "Problems\n\nQuestion 1\nExplore the following four time series: Bricks from aus_production, Lynx from pelt, Close from gafa_stock, and Demand from vic_elec.\n\nUse ? (or help()) to find out about the data in each series.\nWhat is the time interval of each series?\nUse autoplot() to produce a time plot of each series.\nFor the last plot, modify the axis labels and title. See the labs() function.\n\n\n\nQuestion 2 (fpp3)\n\nCreate a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the files tab on the bottom right. Click New Folder and name the folder data.\nNow, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder\nCheck the box next to tute.csv, then More, then Copy to…, and save the file in your newly created data folder.\n\nThe first chunk below reads tute1.csv into R and then shows the data with the View() function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and GDP. Sales contains the quarterly sales for a small company over the period 1981-2005. AdBudget is the advertising budget, and GDP is the gross domestic product. All series have been adjusted for inflation.\nYou can read the data into R with the following script:\n\ntute1 &lt;- readr::read_csv(\"data/tute1.csv\")\nView(tute1)\n\nThen converts the data to a time series object in R (tsibble).\n\nmytimeseries &lt;- tute1 |&gt;\n  mutate(Quarter = yearquarter(Quarter)) |&gt;\n  as_tsibble(index = Quarter)\n\nThen construct the time series plot for the Sales series.\n\nmytimeseries |&gt;\n  autoplot(Sales)\n\n\nUse this code to generate a time series plot for the other two series in the data, AdBudget, and GDP.\nCompare and contrast the three series.\n\n\n\nQuestion 3 (fpp4)\nThe USgas package contains data on the demand for natural gas in the US.\n\nInstall the USgas package. (Use install.packages('package_name')). Then to use it you will need library(package_name).\nCreate a tsibble from us_total with year as the index and state as the key.\nPlot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).\n\n\n\nQuestion 4 (fpp6)\nThe aus_arrivals data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the fpp3 package.\n\nUse autoplot(), gg_season() and gg_subseries() to compare the differences between the arrivals from these four countries.\nCan you identify any unusual observations?"
+    "text": "Getting started\n\nStart with the following steps:\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-03_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name.\n\n\n\n\nHomework Instructions\n\n\n\n\n\n\nNote\n\n\n\nBe sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but also write a complete sentence with the answer). Be sure to save your files frequently!\nFrom this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?\n\n\nData for the homework is in the STA364_inst_files &gt; data folder.\n\n\nExercises\n\nQuestion 1 (fpp7)\n\nMonthly Australian retail data is provided in aus_retail. Select one of the time series as follows (but choose a different seed value):\n\n\nset.seed(12345678)\nmyseries &lt;- aus_retail |&gt;\n  filter(`Series ID` == sample(aus_retail$`Series ID`,1))\n\nExplore your chosen retail time series using the following functions: autoplot, gg_season(), gg_subseries(), gg_lag(), ACF()|&gt;autoplot().\n\n\nQuestion 2 (fpp8)\n\nUse the following graphics functions: autoplot(), gg_season(), gg_subseries(), gg_lag(), ACF() and explore features from the following time series: “Total Private” Employed from us_employment, Bricks from aus_production, Hare from pelt, “H02” Cost from PBS, and Barrels from us_gasoline.\n\n\n\nCan you spot any seasonality, cyclicity, or trend?\nWhat do you learn about the series?\nWhat can you say about the seasonal patterns?\nCan you identify any unusual years?\n\n\n\nQuestion 3 (fpp10)\n\nThe aus_livestock data contains the monthly total number of pigs slaughtered in Victoria, Australia, from Jul 1972 to Dec 2018. Use filter() to extract pig slaughters in Victoria between 1990 and 1995. Use autoplot() and ACF() for this data. How do they differ from white noise? If a more extended period of data is used, what difference does it make to the ACF?\n\n\n\nQuestion 4 (fpp11)\n\n\nUse the following code to compute the daily changes in Google closing stock prices. Explain what lines 2 through 5 are doing.\n\n\n\ndgoog &lt;- gafa_stock |&gt;                                    # line 1\n  filter(Symbol == \"GOOG\", year(Date) &gt;= 2018) |&gt;         # line 2\n  mutate(trading_day = row_number()) |&gt;                   # line 3\n  update_tsibble(index = trading_day, regular = TRUE) |&gt;  # line 4\n  mutate(diff = difference(Close))                        # line 5\n\n\nWhy was it necessary to re-index the tsibble?\nPlot these differences and their ACF.\nDo the changes in the stock prices look like white noise?\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane of RStudio (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final HTML document to the respective assignment on Moodle"
   },
   {
     "objectID": "slides/1-getting-started_o.html",

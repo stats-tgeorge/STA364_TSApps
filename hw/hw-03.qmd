@@ -1,0 +1,96 @@
+---
+title: "Homework 3"
+subtitle: "Time Series Graphics Part 2"
+eval: false
+---
+
+```{r}
+#| eval: true
+#| include: false
+library(tidyverse)
+library(fpp3)
+```
+
+# Getting started
+
+### Start with the following steps:
+
+-   Go to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Open the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like *hw-03_LAST_NAME.qmd*.
+
+-   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the folder `STA364_Projects` (that we share) -\> Change the "LAST_NAME part of the file name to your last name -\> Save*.
+
+-   Update the top of the document, called the `YAML,` with your name.
+
+# Homework Instructions
+
+::: callout-note
+Be sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but **also** write a complete sentence with the answer). Be sure to save your files frequently!
+
+From this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?
+:::
+
+Data for the homework is in the *STA364_inst_files \> data* folder.
+
+# Exercises
+
+### Question 1 (fpp7)
+
+1.  Monthly Australian retail data is provided in `aus_retail`. Select one of the time series as follows (but choose a different seed value):
+
+```{r q1}
+set.seed(12345678)
+myseries <- aus_retail |>
+  filter(`Series ID` == sample(aus_retail$`Series ID`,1))
+```
+
+Explore your chosen retail time series using the following functions: `autoplot`, `gg_season()`, `gg_subseries()`, `gg_lag()`, `ACF()|>autoplot()`.
+
+### Question 2 (fpp8)
+
+2.  Use the following graphics functions: `autoplot()`, `gg_season()`, `gg_subseries()`, `gg_lag()`, `ACF()` and explore features from the following time series: “Total Private” Employed from *us_employment*, Bricks from *aus_production*, Hare from *pelt*, “H02” Cost from *PBS*, and Barrels from *us_gasoline*.
+
+<!-- -->
+
+a.  Can you spot any seasonality, cyclicity, or trend?
+
+b.  What do you learn about the series?
+
+c.  What can you say about the seasonal patterns?
+
+d.  Can you identify any unusual years?
+
+### Question 3 (fpp10)
+
+3.  The *aus_livestock* data contains the monthly total number of pigs slaughtered in Victoria, Australia, from Jul 1972 to Dec 2018. Use `filter()` to extract pig slaughters in Victoria between 1990 and 1995. Use `autoplot()` and `ACF()` for this data. How do they differ from white noise? If a more extended period of data is used, what difference does it make to the ACF?
+
+### Question 4 (fpp11)
+
+4.  
+
+    a.  Use the following code to compute the daily changes in Google closing stock prices. Explain what lines 2 through 5 are doing.
+
+```{r q4}
+dgoog <- gafa_stock |>                                    # line 1
+  filter(Symbol == "GOOG", year(Date) >= 2018) |>         # line 2
+  mutate(trading_day = row_number()) |>                   # line 3
+  update_tsibble(index = trading_day, regular = TRUE) |>  # line 4
+  mutate(diff = difference(Close))                        # line 5
+
+```
+
+b.  Why was it necessary to re-index the tsibble?
+
+c.  Plot these differences and their ACF.
+
+d.  Do the changes in the stock prices look like white noise?
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane of RStudio (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final HTML document to the respective assignment on [Moodle]({{< var course.moodle >}})
