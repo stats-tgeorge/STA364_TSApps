@@ -171,6 +171,7 @@ $$w_t = \left\{\begin{array}{ll}
 ## Box-Cox transformations
 
 ```{r food-anim, cache=TRUE, echo=FALSE, fig.show='animate', interval=1/10, message=FALSE, fig.height=4.5, fig.width=9, aniopts='controls,buttonsize=0.3cm,width=13.5cm'}
+
 food |>
   mutate(!!!set_names(map(seq(0, 1, 0.01), ~ expr(fabletools::box_cox(Turnover, !!.x))), seq(0, 1, 0.01))) |>
   select(-Turnover) |>

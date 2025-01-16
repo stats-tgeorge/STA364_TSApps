@@ -21,6 +21,8 @@ title: "Useful links"
     -   [Data Visualization: A Practice Introduction](https://socviz.co/index.html)
     -   [Patchwork R Package](https://patchwork.data-imaginist.com/index.html)
 
+-   [Introduction to `feasts` R package](https://cran.r-project.org/web/packages/feasts/vignettes/feasts.html)
+
 ## Data Links
 -   [TidyTuesday](https://github.com/rfordatascience/tidytuesday)
 -   [R Data Sources for Regression Analysis](https://rfun.library.duke.edu/blog/data-sources-for-regression-analysis/)

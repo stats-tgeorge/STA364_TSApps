@@ -1,0 +1,885 @@
+---
+title: "Chapter 5\nForecasters Toolbox"
+format: 
+  revealjs:
+    output-file: "5-toolbox.html"
+  html:
+    output-file: "5-toolbox_o.html"
+logo: "../img/favicon.png"
+---
+
+# A tidy forecasting workflow
+
+## Setup
+
+```{r packages}
+library(fpp3)
+```
+
+## A tidy forecasting workflow
+
+The process of producing forecasts can be split up into a few fundamental steps.
+
+1. Preparing data
+2. Data visualization
+3. Specifying a model
+4. Model estimation
+5. Accuracy \& performance evaluation
+6. Producing forecasts
+
+## A tidy forecasting workflow
+
+```{r workflow, echo = FALSE}
+line_curve <- function(x, y, xend, yend, ...){
+  geom_curve(
+    aes(x = x, y = y, xend = xend, yend = yend),
+    arrow = arrow(type = "closed", length = unit(0.03, "npc")),
+    ...
+  )
+}
+
+ggplot() +
+  geom_text(
+    aes(x = x, y = y, label = label),
+    data = tribble(
+      ~ x, ~ y, ~ label,
+      1, 0, "Tidy",
+      7/3, 0, "Visualise",
+      3, 0.5, "Specify",
+      11/3, 0, "Estimate",
+      3, -0.5, "Evaluate",
+      5, 0, "Forecast"
+    ),
+    size = 5
+  ) +
+  geom_segment(
+    aes(x = x, y = y, xend = xend, yend = yend),
+    data = tribble(
+      ~ x, ~ y, ~ xend, ~ yend,
+      1.3, 0, 1.9, 0,
+      4.1, 0, 4.6, 0
+    ),
+    arrow = arrow(type = "closed", length = unit(0.03, "npc"))
+  ) +
+  line_curve(7/3, 0.1, 8/3, 0.5, angle = 250, curvature = -0.3) +
+  line_curve(10/3, 0.5, 11/3, 0.1, angle = 250, curvature = -0.3) +
+  line_curve(8/3, -0.5, 7/3, -0.1, angle = 250, curvature = -0.3) +
+  line_curve(11/3, -0.1, 10/3, -0.5, angle = 250, curvature = -0.3) +
+  theme_void() +
+  xlim(0.8, 5.2) +
+  ylim(-0.6, 0.6) +
+  coord_equal(ratio = 1)
+```
+
+## Data preparation (tidy)
+
+
+```{r GDPpc}
+gdppc <- global_economy %>%
+  mutate(GDP_per_capita = GDP/Population) %>%
+  select(Year, Country, GDP, Population, GDP_per_capita)
+gdppc
+```
+
+## Data visualisation
+
+```{r GDP-plot}
+gdppc %>%
+  filter(Country=="Sweden") %>%
+  autoplot(GDP_per_capita) +
+    labs(title = "GDP per capita for Sweden", y = "$US")
+```
+
+## Model estimation
+
+The `model()` function trains models to data.
+
+```{r GDP-model, warning=FALSE}
+fit <- gdppc %>%
+  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later
+fit |> head(5)
+```
+
+:::{.callout-note}
+A \texttt{mable} is a model table, each cell corresponds to a fitted model.
+:::
+
+## Producing forecasts
+
+```{r GDP-fc, echo = TRUE, dependson='GDP-model', warning=FALSE}
+fit %>% forecast(h = "3 years")
+```
+
+:::{.callout-note}
+A \texttt{fable} is a forecast table with point forecasts and distributions.
+:::
+
+## Visualising forecasts
+
+```{r GDP-fc-plot, warning=FALSE, message=FALSE}
+fit %>% forecast(h = "3 years") %>%
+  filter(Country=="Sweden") %>%
+  autoplot(gdppc) +
+    labs(title = "GDP per capita for Sweden", y = "$US")
+```
+
+# Some simple forecasting methods
+
+## `MEAN(y)`: Average method {.smaller}
+
+  * Forecast of all future values is equal to mean of historical data $\{y_1,\dots,y_T\}$.
+  * Forecasts: $\hat{y}_{T+h|T} = \bar{y} = (y_1+\dots+y_T)/T$
+
+. . .
+
+```{r mean-method-explained, echo=FALSE, message=FALSE, warning=FALSE}
+bricks <- aus_production %>%
+  filter(!is.na(Bricks)) %>%
+  mutate(average = mean(Bricks))
+
+fc <- bricks %>%
+  filter(row_number() == n()) %>% as_tibble() %>%
+  unnest(Quarter = list(as.Date(Quarter) + months(c(0, 12*5))))
+
+bricks %>%
+  ggplot(aes(x = Quarter, y = Bricks)) +
+  geom_line() +
+  geom_line(aes(y = average), colour = "#0072B2", linetype = "dashed") +
+  geom_line(aes(y = average), data = fc, colour = "#0072B2") +
+  labs(title = "Clay brick production in Australia")
+```
+
+## `NAIVE(y)`: Naïve method {.smaller}
+
+  * Forecasts equal to last observed value.
+  * Forecasts: $\hat{y}_{T+h|T} =y_T$.
+  * Consequence of efficient market hypothesis.
+
+. . .
+
+```{r naive-method-explained, echo = FALSE, warning = FALSE}
+bricks %>%
+  filter(!is.na(Bricks)) %>%
+  model(NAIVE(Bricks)) %>%
+  forecast(h = "5 years") %>%
+  autoplot(filter(bricks, year(Quarter) > 1990), level = NULL) +
+  geom_point(data = slice(bricks, n()), aes(y=Bricks), colour = "#0072B2") +
+  labs(title = "Clay brick production in Australia")
+```
+
+
+## `SNAIVE(y ~ lag(m))`: Seasonal naïve method {.smaller}
+
+  * Forecasts equal to last value from same season.
+  * Forecasts: $\hat{y}_{T+h|T} =y_{T+h-m(k+1)}$, where $m=$ seasonal period and $k$ is the integer part of $(h-1)/m$.
+
+
+. . .
+
+
+```{r snaive-method-explained, echo = FALSE, warning = FALSE}
+bricks %>%
+  model(SNAIVE(Bricks ~ lag("year"))) %>%
+  forecast(h = "5 years") %>%
+  autoplot(filter(bricks, year(Quarter) > 1990), level = NULL) +
+  geom_point(data = slice(bricks, (n()-3):n()), aes(y=Bricks), colour = "#0072B2") +
+  labs(title = "Clay brick production in Australia")
+```
+
+
+## `RW(y ~ drift())`: Drift method
+
+:::{.panel-tabset}
+
+### Definition
+
+ * Forecasts equal to last value plus average change.
+ * Forecasts:\vspace*{-.7cm}
+
+ \begin{align*}
+ \hat{y}_{T+h|T} & =  y_{T} + \frac{h}{T-1}\sum_{t=2}^T (y_t-y_{t-1})\\
+                 & = y_T + \frac{h}{T-1}(y_T -y_1).
+ \end{align*}\vspace*{-0.2cm}
+
+   * Equivalent to extrapolating a line drawn between first and last observations.
+
+### Plot
+
+```{r drift-method-explained, echo = FALSE, warning = FALSE}
+aus_production %>%
+  filter(!is.na(Bricks)) %>%
+  model(RW(Bricks ~ drift())) %>%
+  forecast(h = "5 years") %>%
+  autoplot(aus_production, level = NULL) +
+  geom_line(data = slice(aus_production, range(cumsum(!is.na(Bricks)))),
+            aes(y=Bricks), linetype = "dashed", colour = "#0072B2") +
+  labs(title = "Clay brick production in Australia")
+```
+
+:::
+
+## Model fitting
+
+The `model()` function trains models to data.
+
+```{r brick-model}
+brick_fit <-  aus_production %>%
+  filter(!is.na(Bricks)) %>%
+  model(
+    Seasonal_naive = SNAIVE(Bricks),
+    Naive = NAIVE(Bricks),
+    Drift = RW(Bricks ~ drift()),
+    Mean = MEAN(Bricks)
+  )
+```
+
+```{r brick-model2, echo=FALSE, dependson='brick-model'}
+brick_fit
+```
+
+## Producing forecasts
+
+
+```{r brick-fc, echo = TRUE, dependson='brick-model'}
+brick_fc <- brick_fit %>%
+  forecast(h = "5 years")
+```
+
+```{r brick-fbl, echo = FALSE, dependson='brick-fc'}
+print(brick_fc, n = 4)
+```
+
+## Visualising forecasts
+
+```{r brick-fc-plot, warning=FALSE, message=FALSE, dependson='brick-fc'}
+brick_fc %>%
+  autoplot(aus_production, level = NULL) +
+  labs(title = "Clay brick production in Australia",
+       y = "Millions of bricks") +
+  guides(colour = guide_legend(title = "Forecast"))
+```
+
+
+
+
+
+## Facebook closing stock price
+
+:::{.panel-tabset}
+
+### Code 
+```{r fbf2, fig.show='hide'}
+# Extract training data
+fb_stock <- gafa_stock %>%
+  filter(Symbol == "FB") %>%
+  mutate(trading_day = row_number()) %>%
+  update_tsibble(index=trading_day, regular=TRUE)
+
+# Specify, estimate and forecast
+fb_stock %>%
+  model(
+    Mean = MEAN(Close),
+    Naive = NAIVE(Close),
+    Drift = RW(Close ~ drift())
+  ) %>%
+  forecast(h=42) %>%
+  autoplot(fb_stock, level = NULL) +
+  labs(title = "Facebook closing stock price", y="$US") +
+  guides(colour=guide_legend(title="Forecast"))
+```
+
+### Plot
+```{r ref.label='fbf2', echo=FALSE}
+```
+
+:::
+
+
+
+## Your turn
+
+ * Produce forecasts using an appropriate benchmark method for household wealth (`hh_budget`). Plot the results using `autoplot()`.
+ * Produce forecasts using an appropriate benchmark method for Australian takeaway food turnover (`aus_retail`). Plot the results using `autoplot()`.
+
+# Residual diagnostics
+
+## Fitted values {.smaller}
+
+ - $\hat{y}_{t|t-1}$ is the forecast of $y_t$ based on observations $y_1,\dots,y_{t-1}$.
+ - We call these "fitted values".
+ - Sometimes drop the subscript: $\hat{y}_t \equiv \hat{y}_{t|t-1}$.
+ - Often not true forecasts since parameters are estimated on all data.
+
+. . .
+
+*For example:*
+
+ - $\hat{y}_{t} = \bar{y}$ for average method.
+ - $\hat{y}_{t} = y_{t-1} + (y_{T}-y_1)/(T-1)$ for drift method.
+
+## Forecasting residuals {.smaller}
+
+*Residuals in forecasting:* difference between observed value and its fitted value: $e_t = y_t-\hat{y}_{t|t-1}$.
+
+. . .
+
+
+**Assumptions**
+
+  1. $\{e_t\}$ uncorrelated. If they aren't, then information left in  residuals that should be used in computing forecasts.
+  2. $\{e_t\}$ have mean zero. If they don't, then forecasts are biased.
+
+. . .
+
+**Useful properties** (for distributions & prediction intervals)
+
+  3. $\{e_t\}$ have constant variance.
+  4. $\{e_t\}$ are normally distributed.
+
+## Facebook closing stock price
+
+```{r fbf}
+fb_stock %>% autoplot(Close)
+```
+
+## Facebook closing stock price {.smaller}
+
+```{r augment}
+fit <- fb_stock %>% model(NAIVE(Close))
+augment(fit) |> head(5)
+```
+
+. . .
+
+Naive forecasts:
+
+$\hat{y}_{t|t-1} = y_{t-1}$
+
+$e_t  = y_t - \hat{y}_{t|t-1} = y_t-y_{t-1}$
+
+Where .fitted = $\hat{y}_{t|t-1}$ and .resid = $\phantom{\hat{y}_{|}}{e}_{t}\phantom{\hat{y}_{|}}$
+
+## Facebook closing stock price
+
+```{r dj4, echo=TRUE, warning=FALSE}
+augment(fit) %>%
+  ggplot(aes(x = trading_day)) +
+  geom_line(aes(y = Close, colour = "Data")) +
+  geom_line(aes(y = .fitted, colour = "Fitted"))
+```
+
+## Facebook closing stock price
+
+```{r dj4a, echo=TRUE, warning=FALSE}
+augment(fit) %>%
+  filter(trading_day > 1100) %>%
+  ggplot(aes(x = trading_day)) +
+  geom_line(aes(y = Close, colour = "Data")) +
+  geom_line(aes(y = .fitted, colour = "Fitted"))
+```
+
+## Facebook closing stock price
+
+```{r dj5, echo=TRUE, warning = FALSE}
+augment(fit) %>%
+  autoplot(.resid) +
+  labs(y = "$US",
+       title = "Residuals from naïve method")
+```
+
+## Facebook closing stock price
+
+```{r dj6, warning=FALSE}
+augment(fit) %>%
+  ggplot(aes(x = .resid)) +
+  geom_histogram(bins = 150) +
+  labs(title = "Histogram of residuals")
+```
+
+## Facebook closing stock price
+
+```{r dj7}
+augment(fit) %>%
+  ACF(.resid) %>%
+  autoplot() + labs(title = "ACF of residuals")
+```
+
+## `gg_tsresiduals()` function
+
+```{r dj10, echo=TRUE, warning = FALSE}
+gg_tsresiduals(fit)
+```
+
+## ACF of residuals
+
+  * We assume that the residuals are white noise (uncorrelated, mean zero, constant variance). If they aren't, then there is information left in  the residuals that should be used in computing forecasts.
+
+  * So a standard residual diagnostic is to check the ACF of the residuals of a forecasting method.
+
+  * We *expect* these to look like white noise.
+
+## Portmanteau tests: Box-Pierce test {.smaller}
+
+$r_k = $ autocorrelation of residual at lag $k$
+
+. . .
+
+Consider a *whole set* of $r_{k}$ values, and develop a test to see whether the set is significantly different from a zero set.
+
+**Box-Pierce test**
+$$Q = T \sum_{k=1}^\ell r_k^2$$
+where $\ell$  is max lag being considered and $T$ is number of observations.
+
+  * If each $r_k$ close to zero, $Q$ will be **small**.
+  * If some $r_k$ values large (positive or negative), $Q$ will be **large**.
+
+
+
+## Portmanteau tests: Ljung-Box test (more accurate) (1/2) {.smaller}
+
+$r_k = $ autocorrelation of residual at lag $k$
+
+. . .
+
+Consider a *whole set* of $r_{k}$  values, and develop a test to see whether the set is significantly different from a zero set.
+
+**Ljung-Box test**
+ $$Q^* = T(T+2) \sum_{k=1}^\ell (T-k)^{-1}r_k^2$$$
+where $\ell$  is max lag being considered and $T$ is number of observations.
+
+## Portmanteau tests: Ljung-Box test (more accurate) (2/2) {.smaller}
+
+  * If each $r_k$ close to zero, $Q^*$ will be **small**.
+  * If some $r_k$ values large (positive or negative), $Q$ will be **large**.
+  * Use $\ell=10$ for non-seasonal data, $\ell=2m$ for seasonal data (where $m$ is seasonal period).
+  * Better performance, especially in small samples. Test is not good when $\ell$ is large, so if these values are larger than $T/5$, then use $\ell=T/5$
+  * How large is too large? 
+
+## Portmanteau tests {.smaller}
+
+  * If data are WN, $Q$ and $Q^*$ have $\chi^2$ distribution with  $\ell$ degrees of freedom.
+
+  * `lag` $= \ell$
+
+. . .
+
+```{r dj9, echo=TRUE}
+augment(fit) %>%
+  features(.resid, box_pierce, lag=10)
+```
+
+. . .
+
+```{r dj9_2, echo = TRUE}
+augment(fit) %>%
+  features(.resid, ljung_box, lag=10)
+```
+
+# Distributional forecasts and prediction intervals
+
+## Forecast distributions
+
+ * A forecast $\hat{y}_{T+h|T}$ is (usually) the mean of the conditional distribution $y_{T+h} \mid y_1, \dots, y_{T}$.
+ * Most time series models produce normally distributed forecasts.
+ * The forecast distribution describes the probability of observing any future value.
+
+## Forecast distributions {.smaller}
+
+Assuming residuals are normal, uncorrelated, sd = $\hat\sigma$:
+
+. . .
+
+| Method          	| Forecast Distribution                                                            	|
+|-----------------	|----------------------------------------------------------------------------------	|
+| Mean:           	| $y_{T+h\|T} \sim N(\bar{y}, (1 + 1/T)\hat{\sigma}^2)$                            	|
+| Naïve:          	| $y_{T+h\|T} \sim N(y_T, h\hat{\sigma}^2)$                                        	|
+| Seasonal naïve: 	| $y_{T+h\|T} \sim N(y_{T+h-m(k+1)}, (k+1)\hat{\sigma}^2)$                         	|
+| Drift:          	| $y_{T+h\|T} \sim N(y_T + \frac{h}{T-1}(y_T - y_1),h\frac{T+h}{T}\hat{\sigma}^2)$ 	|
+
+where $k$ is the integer part of $(h-1)/m$.
+
+:::{.callout-note}
+When $h=1$ and $T$ is large, these all give the same approximate forecast variance: $\hat{\sigma}^2$.
+:::
+
+## Prediction intervals {.smaller}
+
+ * A prediction interval gives a region within which we expect $y_{T+h}$ to lie with a specified probability.
+ * Assuming forecast errors are normally distributed, then a 95% PI is
+
+. . .
+
+  $$\hat{y}_{T+h|T} \pm 1.96 \hat\sigma_h$$
+
+where $\hat\sigma_h$ is the st dev of the $h$-step distribution.
+
+:::{.callout-note}
+When $h=1$, $\hat\sigma_h$ can be estimated from the residuals.
+:::
+
+## Prediction intervals
+
+```{r brick-fc-interval, dependson='brick-fc'}
+brick_fc %>% hilo(level = 95)
+```
+
+## Prediction intervals {.smaller}
+
+ * Point forecasts often useless without a measure of uncertainty (such as prediction intervals).
+ * Prediction intervals require a stochastic model (with random errors, etc).
+ * For most models, prediction intervals get wider as the forecast horizon increases.
+ * Use `level` argument to control coverage.
+ * Check residual assumptions before believing them.
+ * Usually too narrow due to unaccounted uncertainty.
+
+# Forecasting with transformations
+
+## Modelling with transformations
+
+```{r food, echo=TRUE}
+eggs <- prices %>%
+  filter(!is.na(eggs)) %>% select(eggs)
+eggs %>% autoplot() +
+  labs(title="Annual egg prices",
+       y="$US (adjusted for inflation)")
+```
+
+## Modelling with transformations {.smaller}
+
+Transformations used in the left of the formula will be automatically back-transformed. To model log-transformed egg prices, you could use:
+
+
+
+```{r food-bt-fit, dependson='food'}
+fit <- eggs %>%
+  model(RW(log(eggs) ~ drift()))
+fit
+```
+
+## Forecasting with transformations
+
+```{r food-bt-fc, dependson='food-bt-fit'}
+fc <- fit %>%
+  forecast(h = 50)
+fc
+```
+
+## Forecasting with transformations
+
+```{r elec9,echo=TRUE, dependson='food-bt-fc'}
+fc %>% autoplot(eggs) +
+  labs(title="Annual egg prices",
+       y="US$ (adjusted for inflation)")
+```
+
+## Bias adjustment {.smaller}
+
+  * Back-transformed point forecasts are medians.
+  * Back-transformed PI have the correct coverage.
+
+. . .
+
+**Back-transformed means (if you are math inclined)**
+
+Let $X$ be have mean $\mu$ and variance $\sigma^2$.
+
+Let $f(x)$ be back-transformation function, and $Y=f(X)$.
+
+Taylor series expansion about $\mu$:
+$$f(X) = f(\mu) + (X-\mu)f'(\mu) + \frac{1}{2}(X-\mu)^2f''(\mu).$$
+
+:::{.callout-note}
+\centerline{$\E[Y] = \E[f(X)] = f(\mu) + \frac12 \sigma^2 f''(\mu)$}
+:::
+
+## Bias adjustment {.smaller}
+
+
+
+**Box-Cox back-transformation (if math inclined):**
+\begin{align*}
+y_t &= \left\{\begin{array}{ll}
+        \exp(w_t)      & \quad \lambda = 0; \\
+        (\lambda W_t+1)^{1/\lambda}  & \quad \lambda \ne 0.
+\end{array}\right. \\
+f(x) &= \begin{cases}
+                        e^x & \quad\lambda=0;\\
+ (\lambda x + 1)^{1/\lambda} & \quad\lambda\ne0.
+ \end{cases}\\
+f''(x) &= \begin{cases}
+                        e^x & \quad\lambda=0;\\
+ (1-\lambda)(\lambda x + 1)^{1/\lambda-2} & \quad\lambda\ne0.
+ \end{cases}
+\end{align*}
+
+:::{.callout-note}
+\centerline{$\E[Y] = \begin{cases}
+                        e^\mu\left[1+\frac{\sigma^2}{2}\right] & \quad\lambda=0;\\
+ (\lambda \mu + 1)^{1/\lambda}\left[1+\frac{\sigma^2(1-\lambda)}{2(\lambda\mu+1)^2}\right] & \quad\lambda\ne0.
+ \end{cases}$}
+:::
+
+## Bias adjustment
+
+```{r biasadj, message=FALSE}
+fc %>%
+  autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +
+  labs(title="Annual egg prices",
+       y="US$ (adjusted for inflation)")
+```
+
+# Forecasting and decomposition
+
+## Forecasting and decomposition
+
+$$y_t = \hat{S}_t + \hat{A}_t$$
+
+- $\hat{A}_t$ is seasonally adjusted component
+- $\hat{S}_t$ is seasonal component.
+
+
+  *  Forecast $\hat{S}_t$ using SNAIVE.
+  *  Forecast $\hat{A}_t$ using non-seasonal time series method.
+  *  Combine forecasts of $\hat{S}_t$ and $\hat{A}_t$ to get forecasts of original data.
+
+## US Retail Employment
+
+
+```{r usretail}
+us_retail_employment <- us_employment %>%
+  filter(year(Month) >= 1990, Title == "Retail Trade") %>%
+  select(-Series_ID)
+us_retail_employment
+```
+
+
+
+## US Retail Employment
+
+
+```{r usretail1, echo=TRUE}
+dcmp <- us_retail_employment %>%
+  model(STL(Employed)) %>%
+  components() %>% select(-.model)
+dcmp
+```
+
+
+
+## US Retail Employment
+
+```{r usretail2, echo=TRUE}
+dcmp_forecast<- dcmp %>%
+                model(NAIVE(season_adjust)) %>%
+                forecast()
+
+  autoplot(dcmp_forecast,dcmp) +
+  labs(title = "Naive forecasts of seasonally adjusted data")
+```
+
+
+
+## US Retail Employment
+
+
+```{r usretail3, echo=TRUE}
+us_retail_employment %>%
+  model(stlf = decomposition_model(
+    STL(Employed ~ trend(window = 7), robust = TRUE),
+    NAIVE(season_adjust)
+  )) %>%
+  forecast() %>%
+  autoplot(us_retail_employment)
+```
+
+
+
+## Decomposition models {.smaller}
+
+`decomposition_model()` creates a decomposition model
+
+ * You must provide a method for forecasting the `season_adjust` series.
+ * A seasonal naive method is used by default for the `seasonal` components.
+ * The variances from both the seasonally adjusted and seasonal forecasts are combined.
+
+# Evaluating forecast accuracy
+
+## Training and test sets (1/2)
+
+```{r traintest, echo=FALSE, cache=TRUE}
+train <- 1:18
+test <- 19:24
+par(mar = c(0, 0, 0, 0))
+plot(0, 0, xlim = c(0, 26), ylim = c(0, 2), xaxt = "n", yaxt = "n", bty = "n", xlab = "", ylab = "", type = "n")
+arrows(0, 0.5, 25, 0.5, 0.05)
+points(train, train * 0 + 0.5, pch = 19, col = "#0072B2")
+points(test, test * 0 + 0.5, pch = 19, col = "#D55E00")
+text(26, 0.5, "time")
+text(10, 1, "Training data", col = "#0072B2")
+text(21, 1, "Test data", col = "#D55E00")
+```
+
+
+## Training and test sets (2/2)
+
+-   A model which fits the training data well will not necessarily forecast well.
+-   A perfect fit can always be obtained by using a model with enough parameters.
+-   Over-fitting a model to data is just as bad as failing to identify a systematic pattern in the data.
+  * **The test set must not be used for *any* aspect of model development or calculation of forecasts.**
+  * Forecast accuracy is based only on the test set.
+
+## Forecast errors
+
+Forecast "error": the difference between an observed value and its forecast.
+$$
+  e_{T+h} = y_{T+h} - \hat{y}_{T+h|T},
+$$
+where the training data is given by $\{y_1,\dots,y_T\}$
+
+- Unlike residuals, forecast errors on the test set involve multi-step forecasts.
+- These are *true* forecast errors as the test data is not used in computing $\hat{y}_{T+h|T}$.
+
+## Measures of forecast accuracy
+
+:::{.panel-tabset}
+
+### Code 
+```{r beer-fc-1, fig.show='hide'}
+train <- aus_production %>%
+  filter(between(year(Quarter), 1992, 2007))
+beer <- aus_production %>%
+  filter(year(Quarter) >= 1992)
+beer_fc_plot <- train %>%
+  model(
+    Mean = MEAN(Beer),
+    Naive = NAIVE(Beer),
+    Seasonal_naive = SNAIVE(Beer),
+    Drift = RW(Beer ~ drift())
+  ) %>%
+  forecast(h=11) %>%
+  autoplot(beer, level = NULL) +
+    labs(title = "Forecasts for quarterly beer production",
+         y = "Megalitres") +
+    guides(colour=guide_legend(title="Forecast"))
+beer_fc_plot
+```
+
+### Plot
+
+```{r ref.label = 'beer-fc-1', message=FALSE, warning=FALSE, echo=FALSE}
+```
+
+:::
+
+## Measures of forecast accuracy {.smaller}
+
+$y_{T+h}=  (T+h)$th observation, $h=1,\dots,H$
+
+$\hat{y}_{T+h|T}=$ its forecast based on data up to time $T$.
+
+$e_{T+h} = y_{T+h} - \hat{y}_{{T+h}|{T}}$
+
+. . .
+
+| Name                        	| Abb. 	| Formula                                    	|
+|-----------------------------	|------	|--------------------------------------------	|
+| Mean Abosolue Error         	| MAE  	| $\text{mean}(\|e_{T+h}\|)$                 	|
+| Mean Squared Error          	| MSE  	| $\text{mean}(e_{T+h}^2)$                   	|
+| Root MSE                    	| RMSE 	| $\sqrt{\text{mean}(e_{T+h}^2)$             	|
+| Mean Absolute Percent Error 	| MAPE 	| $100\text{mean}(\|e_{T+h}\|/ \|y_{T+h}\|)$ 	|
+
+  * MAE, MSE, RMSE are all scale dependent.
+  * MAPE is scale independent but is only sensible if $y_t\gg 0$ for all $t$, and $y$ has a natural zero.
+
+## Mean Absolute Scaled Error (non-seasonal) {.smaller}
+
+$$
+\text{MASE} = \text{mean}(|e_{T+h}|/Q)
+$$
+
+where $Q$ is a stable measure of the scale of the time series $\{y_t\}$.
+
+Proposed by Hyndman and Koehler (IJF, 2006).
+
+For non-seasonal time series,
+
+$$
+  Q = (T-1)^{-1}\sum_{t=2}^T |y_t-y_{t-1}|
+$$
+works well. Then MASE is equivalent to MAE relative to a naïve method.
+
+
+## Mean Absolute Scaled Error (seasonal){.smaller}
+
+$$
+\text{MASE} = \text{mean}(|e_{T+h}|/Q)
+$$
+
+where $Q$ is a stable measure of the scale of the time series $\{y_t\}$.
+
+Proposed by Hyndman and Koehler (IJF, 2006).
+
+For seasonal time series,
+$$
+  Q = (T-m)^{-1}\sum_{t=m+1}^T |y_t-y_{t-m}|
+$$
+works well. Then MASE is equivalent to MAE relative to a seasonal naïve method.
+
+
+## Measures of forecast accuracy: Time Series
+
+```{r beer-fc-2}
+beer_fc_plot
+```
+
+## Measures of forecast accuracy: Model Fits
+
+```{r beer-forecasts, results='hide'}
+recent_production <- aus_production %>%
+  filter(year(Quarter) >= 1992)
+train <- recent_production %>%
+  filter(year(Quarter) <= 2007)
+beer_fit <- train %>%
+  model(
+    Mean = MEAN(Beer),
+    Naive = NAIVE(Beer),
+    Seasonal_naive = SNAIVE(Beer),
+    Drift = RW(Beer ~ drift())
+  )
+beer_fc <- beer_fit %>%
+  forecast(h = 10)
+```
+
+## Measures of forecast accuracy: On Training data (1/2)
+
+* Smaller is better
+* Use to evaluate models individually (based on training data, overfitting possible)
+
+. . .
+
+```{r beer-train-accuracy, eval=T}
+accuracy(beer_fit)
+```
+
+
+## Measures of forecast accuracy: On Training data (2/2)
+```{r beer-train-table, echo=TRUE}
+accuracy(beer_fit) %>%
+  arrange(.model) %>% # Sorts model names alphabetically
+  select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined
+```
+
+
+## Measures of forecast accuracy: On Testing data
+
+* Smaller is better
+* Can be used to compare models and evaluate models individually
+* Gives a realistic expectation of error if we rebuild model on all data for future forecasts
+
+. . .
+
+```{r beer-test-table, echo=TRUE}
+accuracy(beer_fc, recent_production) %>%
+  arrange(.model) %>%
+  select(.model, .type, RMSE, MAE, MAPE, MASE)
+```
