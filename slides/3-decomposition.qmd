@@ -489,6 +489,11 @@ aus_exports |>
 
 # STL decomposition
 
+## LOESS?
+
+<https://www.youtube.com/watch?v=Vf7oJ6z2LCc>
+
+
 ## STL decomposition {.smaller}
 
   -  STL: "Seasonal and Trend decomposition using Loess"

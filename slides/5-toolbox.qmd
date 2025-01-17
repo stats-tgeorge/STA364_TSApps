@@ -75,8 +75,8 @@ ggplot() +
 
 
 ```{r GDPpc}
-gdppc <- global_economy %>%
-  mutate(GDP_per_capita = GDP/Population) %>%
+gdppc <- global_economy |>
+  mutate(GDP_per_capita = GDP/Population) |>
   select(Year, Country, GDP, Population, GDP_per_capita)
 gdppc
 ```
@@ -84,8 +84,8 @@ gdppc
 ## Data visualisation
 
 ```{r GDP-plot}
-gdppc %>%
-  filter(Country=="Sweden") %>%
+gdppc |>
+  filter(Country=="Sweden") |>
   autoplot(GDP_per_capita) +
     labs(title = "GDP per capita for Sweden", y = "$US")
 ```
@@ -95,7 +95,7 @@ gdppc %>%
 The `model()` function trains models to data.
 
 ```{r GDP-model, warning=FALSE}
-fit <- gdppc %>%
+fit <- gdppc |>
   model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later
 fit |> head(5)
 ```
@@ -107,7 +107,7 @@ A \texttt{mable} is a model table, each cell corresponds to a fitted model.
 ## Producing forecasts
 
 ```{r GDP-fc, echo = TRUE, dependson='GDP-model', warning=FALSE}
-fit %>% forecast(h = "3 years")
+fit |> forecast(h = "3 years")
 ```
 
 :::{.callout-note}
@@ -117,8 +117,8 @@ A \texttt{fable} is a forecast table with point forecasts and distributions.
 ## Visualising forecasts
 
 ```{r GDP-fc-plot, warning=FALSE, message=FALSE}
-fit %>% forecast(h = "3 years") %>%
-  filter(Country=="Sweden") %>%
+fit |> forecast(h = "3 years") |>
+  filter(Country=="Sweden") |>
   autoplot(gdppc) +
     labs(title = "GDP per capita for Sweden", y = "$US")
 ```
@@ -132,22 +132,33 @@ fit %>% forecast(h = "3 years") %>%
 
 . . .
 
-```{r mean-method-explained, echo=FALSE, message=FALSE, warning=FALSE}
-bricks <- aus_production %>%
-  filter(!is.na(Bricks)) %>%
+## `MEAN(y)`: Average method Plot
+
+:::{.panel-tabset}
+
+### Code 
+```{r mean-method-explained, message=FALSE, warning=FALSE, fig.show='hide'}
+bricks <- aus_production |>
+  filter(!is.na(Bricks)) |>
   mutate(average = mean(Bricks))
 
-fc <- bricks %>%
-  filter(row_number() == n()) %>% as_tibble() %>%
+fc <- bricks |>
+  filter(row_number() == n()) |> as_tibble() |>
   unnest(Quarter = list(as.Date(Quarter) + months(c(0, 12*5))))
 
-bricks %>%
+bricks |>
   ggplot(aes(x = Quarter, y = Bricks)) +
   geom_line() +
   geom_line(aes(y = average), colour = "#0072B2", linetype = "dashed") +
   geom_line(aes(y = average), data = fc, colour = "#0072B2") +
   labs(title = "Clay brick production in Australia")
 ```
+
+### Plot
+```{r ref.label='mean-method-explained', echo=FALSE}
+```
+
+:::
 
 ## `NAIVE(y)`: Naïve method {.smaller}
 
@@ -157,16 +168,26 @@ bricks %>%
 
 . . .
 
-```{r naive-method-explained, echo = FALSE, warning = FALSE}
-bricks %>%
-  filter(!is.na(Bricks)) %>%
-  model(NAIVE(Bricks)) %>%
-  forecast(h = "5 years") %>%
+:::{.panel-tabset}
+
+### Code
+
+```{r naive-method-explained, warning = FALSE}
+bricks |>
+  filter(!is.na(Bricks)) |>
+  model(NAIVE(Bricks)) |>
+  forecast(h = "5 years") |>
   autoplot(filter(bricks, year(Quarter) > 1990), level = NULL) +
-  geom_point(data = slice(bricks, n()), aes(y=Bricks), colour = "#0072B2") +
-  labs(title = "Clay brick production in Australia")
+    geom_point(data = slice(bricks, n()), aes(y=Bricks), colour = "#0072B2") +
+    labs(title = "Clay brick production in Australia")
 ```
 
+### Plot
+
+```{r ref.label='naive-method-explained', echo=FALSE}
+```
+
+:::
 
 ## `SNAIVE(y ~ lag(m))`: Seasonal naïve method {.smaller}
 
@@ -176,16 +197,25 @@ bricks %>%
 
 . . .
 
+:::{.panel-tabset}
 
-```{r snaive-method-explained, echo = FALSE, warning = FALSE}
-bricks %>%
-  model(SNAIVE(Bricks ~ lag("year"))) %>%
-  forecast(h = "5 years") %>%
+### Code 
+
+```{r snaive-method-explained, warning = FALSE}
+bricks |>
+  model(SNAIVE(Bricks ~ lag("year"))) |>
+  forecast(h = "5 years") |>
   autoplot(filter(bricks, year(Quarter) > 1990), level = NULL) +
   geom_point(data = slice(bricks, (n()-3):n()), aes(y=Bricks), colour = "#0072B2") +
   labs(title = "Clay brick production in Australia")
 ```
 
+### Plot
+
+```{r ref.label='snaive-method-explained', echo=FALSE}
+```
+
+:::
 
 ## `RW(y ~ drift())`: Drift method
 
@@ -203,13 +233,13 @@ bricks %>%
 
    * Equivalent to extrapolating a line drawn between first and last observations.
 
-### Plot
+### Code & Plot
 
 ```{r drift-method-explained, echo = FALSE, warning = FALSE}
-aus_production %>%
-  filter(!is.na(Bricks)) %>%
-  model(RW(Bricks ~ drift())) %>%
-  forecast(h = "5 years") %>%
+aus_production |>
+  filter(!is.na(Bricks)) |>
+  model(RW(Bricks ~ drift())) |>
+  forecast(h = "5 years") |>
   autoplot(aus_production, level = NULL) +
   geom_line(data = slice(aus_production, range(cumsum(!is.na(Bricks)))),
             aes(y=Bricks), linetype = "dashed", colour = "#0072B2") +
@@ -223,8 +253,8 @@ aus_production %>%
 The `model()` function trains models to data.
 
 ```{r brick-model}
-brick_fit <-  aus_production %>%
-  filter(!is.na(Bricks)) %>%
+brick_fit <-  aus_production |>
+  filter(!is.na(Bricks)) |>
   model(
     Seasonal_naive = SNAIVE(Bricks),
     Naive = NAIVE(Bricks),
@@ -241,7 +271,7 @@ brick_fit
 
 
 ```{r brick-fc, echo = TRUE, dependson='brick-model'}
-brick_fc <- brick_fit %>%
+brick_fc <- brick_fit |>
   forecast(h = "5 years")
 ```
 
@@ -252,7 +282,7 @@ print(brick_fc, n = 4)
 ## Visualising forecasts
 
 ```{r brick-fc-plot, warning=FALSE, message=FALSE, dependson='brick-fc'}
-brick_fc %>%
+brick_fc |>
   autoplot(aus_production, level = NULL) +
   labs(title = "Clay brick production in Australia",
        y = "Millions of bricks") +
@@ -270,19 +300,19 @@ brick_fc %>%
 ### Code 
 ```{r fbf2, fig.show='hide'}
 # Extract training data
-fb_stock <- gafa_stock %>%
-  filter(Symbol == "FB") %>%
-  mutate(trading_day = row_number()) %>%
+fb_stock <- gafa_stock |>
+  filter(Symbol == "FB") |>
+  mutate(trading_day = row_number()) |>
   update_tsibble(index=trading_day, regular=TRUE)
 
 # Specify, estimate and forecast
-fb_stock %>%
+fb_stock |>
   model(
     Mean = MEAN(Close),
     Naive = NAIVE(Close),
     Drift = RW(Close ~ drift())
-  ) %>%
-  forecast(h=42) %>%
+  ) |>
+  forecast(h=42) |>
   autoplot(fb_stock, level = NULL) +
   labs(title = "Facebook closing stock price", y="$US") +
   guides(colour=guide_legend(title="Forecast"))
@@ -339,13 +369,13 @@ fb_stock %>%
 ## Facebook closing stock price
 
 ```{r fbf}
-fb_stock %>% autoplot(Close)
+fb_stock |> autoplot(Close)
 ```
 
 ## Facebook closing stock price {.smaller}
 
 ```{r augment}
-fit <- fb_stock %>% model(NAIVE(Close))
+fit <- fb_stock |> model(NAIVE(Close))
 augment(fit) |> head(5)
 ```
 
@@ -362,7 +392,7 @@ Where .fitted = $\hat{y}_{t|t-1}$ and .resid = $\phantom{\hat{y}_{|}}{e}_{t}\pha
 ## Facebook closing stock price
 
 ```{r dj4, echo=TRUE, warning=FALSE}
-augment(fit) %>%
+augment(fit) |>
   ggplot(aes(x = trading_day)) +
   geom_line(aes(y = Close, colour = "Data")) +
   geom_line(aes(y = .fitted, colour = "Fitted"))
@@ -371,8 +401,8 @@ augment(fit) %>%
 ## Facebook closing stock price
 
 ```{r dj4a, echo=TRUE, warning=FALSE}
-augment(fit) %>%
-  filter(trading_day > 1100) %>%
+augment(fit) |>
+  filter(trading_day > 1100) |>
   ggplot(aes(x = trading_day)) +
   geom_line(aes(y = Close, colour = "Data")) +
   geom_line(aes(y = .fitted, colour = "Fitted"))
@@ -381,7 +411,7 @@ augment(fit) %>%
 ## Facebook closing stock price
 
 ```{r dj5, echo=TRUE, warning = FALSE}
-augment(fit) %>%
+augment(fit) |>
   autoplot(.resid) +
   labs(y = "$US",
        title = "Residuals from naïve method")
@@ -390,7 +420,7 @@ augment(fit) %>%
 ## Facebook closing stock price
 
 ```{r dj6, warning=FALSE}
-augment(fit) %>%
+augment(fit) |>
   ggplot(aes(x = .resid)) +
   geom_histogram(bins = 150) +
   labs(title = "Histogram of residuals")
@@ -399,8 +429,8 @@ augment(fit) %>%
 ## Facebook closing stock price
 
 ```{r dj7}
-augment(fit) %>%
-  ACF(.resid) %>%
+augment(fit) |>
+  ACF(.resid) |>
   autoplot() + labs(title = "ACF of residuals")
 ```
 
@@ -464,14 +494,14 @@ where $\ell$  is max lag being considered and $T$ is number of observations.
 . . .
 
 ```{r dj9, echo=TRUE}
-augment(fit) %>%
+augment(fit) |>
   features(.resid, box_pierce, lag=10)
 ```
 
 . . .
 
 ```{r dj9_2, echo = TRUE}
-augment(fit) %>%
+augment(fit) |>
   features(.resid, ljung_box, lag=10)
 ```
 
@@ -520,7 +550,7 @@ When $h=1$, $\hat\sigma_h$ can be estimated from the residuals.
 ## Prediction intervals
 
 ```{r brick-fc-interval, dependson='brick-fc'}
-brick_fc %>% hilo(level = 95)
+brick_fc |> hilo(level = 95)
 ```
 
 ## Prediction intervals {.smaller}
@@ -537,9 +567,9 @@ brick_fc %>% hilo(level = 95)
 ## Modelling with transformations
 
 ```{r food, echo=TRUE}
-eggs <- prices %>%
-  filter(!is.na(eggs)) %>% select(eggs)
-eggs %>% autoplot() +
+eggs <- prices |>
+  filter(!is.na(eggs)) |> select(eggs)
+eggs |> autoplot() +
   labs(title="Annual egg prices",
        y="$US (adjusted for inflation)")
 ```
@@ -551,7 +581,7 @@ Transformations used in the left of the formula will be automatically back-trans
 
 
 ```{r food-bt-fit, dependson='food'}
-fit <- eggs %>%
+fit <- eggs |>
   model(RW(log(eggs) ~ drift()))
 fit
 ```
@@ -559,7 +589,7 @@ fit
 ## Forecasting with transformations
 
 ```{r food-bt-fc, dependson='food-bt-fit'}
-fc <- fit %>%
+fc <- fit |>
   forecast(h = 50)
 fc
 ```
@@ -567,7 +597,7 @@ fc
 ## Forecasting with transformations
 
 ```{r elec9,echo=TRUE, dependson='food-bt-fc'}
-fc %>% autoplot(eggs) +
+fc |> autoplot(eggs) +
   labs(title="Annual egg prices",
        y="US$ (adjusted for inflation)")
 ```
@@ -622,7 +652,7 @@ f''(x) &= \begin{cases}
 ## Bias adjustment
 
 ```{r biasadj, message=FALSE}
-fc %>%
+fc |>
   autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +
   labs(title="Annual egg prices",
        y="US$ (adjusted for inflation)")
@@ -646,8 +676,8 @@ $$y_t = \hat{S}_t + \hat{A}_t$$
 
 
 ```{r usretail}
-us_retail_employment <- us_employment %>%
-  filter(year(Month) >= 1990, Title == "Retail Trade") %>%
+us_retail_employment <- us_employment |>
+  filter(year(Month) >= 1990, Title == "Retail Trade") |>
   select(-Series_ID)
 us_retail_employment
 ```
@@ -658,9 +688,9 @@ us_retail_employment
 
 
 ```{r usretail1, echo=TRUE}
-dcmp <- us_retail_employment %>%
-  model(STL(Employed)) %>%
-  components() %>% select(-.model)
+dcmp <- us_retail_employment |>
+  model(STL(Employed)) |>
+  components() |> select(-.model)
 dcmp
 ```
 
@@ -669,8 +699,8 @@ dcmp
 ## US Retail Employment
 
 ```{r usretail2, echo=TRUE}
-dcmp_forecast<- dcmp %>%
-                model(NAIVE(season_adjust)) %>%
+dcmp_forecast<- dcmp |>
+                model(NAIVE(season_adjust)) |>
                 forecast()
 
   autoplot(dcmp_forecast,dcmp) +
@@ -683,12 +713,12 @@ dcmp_forecast<- dcmp %>%
 
 
 ```{r usretail3, echo=TRUE}
-us_retail_employment %>%
+us_retail_employment |>
   model(stlf = decomposition_model(
     STL(Employed ~ trend(window = 7), robust = TRUE),
     NAIVE(season_adjust)
-  )) %>%
-  forecast() %>%
+  )) |>
+  forecast() |>
   autoplot(us_retail_employment)
 ```
 
@@ -745,18 +775,18 @@ where the training data is given by $\{y_1,\dots,y_T\}$
 
 ### Code 
 ```{r beer-fc-1, fig.show='hide'}
-train <- aus_production %>%
+train <- aus_production |>
   filter(between(year(Quarter), 1992, 2007))
-beer <- aus_production %>%
+beer <- aus_production |>
   filter(year(Quarter) >= 1992)
-beer_fc_plot <- train %>%
+beer_fc_plot <- train |>
   model(
     Mean = MEAN(Beer),
     Naive = NAIVE(Beer),
     Seasonal_naive = SNAIVE(Beer),
     Drift = RW(Beer ~ drift())
-  ) %>%
-  forecast(h=11) %>%
+  ) |>
+  forecast(h=11) |>
   autoplot(beer, level = NULL) +
     labs(title = "Forecasts for quarterly beer production",
          y = "Megalitres") +
@@ -835,18 +865,18 @@ beer_fc_plot
 ## Measures of forecast accuracy: Model Fits
 
 ```{r beer-forecasts, results='hide'}
-recent_production <- aus_production %>%
+recent_production <- aus_production |>
   filter(year(Quarter) >= 1992)
-train <- recent_production %>%
+train <- recent_production |>
   filter(year(Quarter) <= 2007)
-beer_fit <- train %>%
+beer_fit <- train |>
   model(
     Mean = MEAN(Beer),
     Naive = NAIVE(Beer),
     Seasonal_naive = SNAIVE(Beer),
     Drift = RW(Beer ~ drift())
   )
-beer_fc <- beer_fit %>%
+beer_fc <- beer_fit |>
   forecast(h = 10)
 ```
 
@@ -864,8 +894,8 @@ accuracy(beer_fit)
 
 ## Measures of forecast accuracy: On Training data (2/2)
 ```{r beer-train-table, echo=TRUE}
-accuracy(beer_fit) %>%
-  arrange(.model) %>% # Sorts model names alphabetically
+accuracy(beer_fit) |>
+  arrange(.model) |> # Sorts model names alphabetically
   select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined
 ```
 
@@ -879,7 +909,7 @@ accuracy(beer_fit) %>%
 . . .
 
 ```{r beer-test-table, echo=TRUE}
-accuracy(beer_fc, recent_production) %>%
-  arrange(.model) %>%
+accuracy(beer_fc, recent_production) |>
+  arrange(.model) |>
   select(.model, .type, RMSE, MAE, MAPE, MASE)
 ```

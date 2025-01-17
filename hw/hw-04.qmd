@@ -1,0 +1,134 @@
+---
+title: "Homework 4"
+subtitle: "Time Series Decomposition"
+eval: false
+---
+
+```{r}
+#| eval: true
+#| include: false
+library(tidyverse)
+library(fpp3)
+library(seasonal)
+```
+
+# Getting started
+
+### Start with the following steps:
+
+-   Go to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Open the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like *hw-0X_LAST_NAME.qmd*.
+
+-   Then you need to save your copy. Click *File -\> Save as -\> Navigate to the folder `STA364_Projects` (that we share) -\> Change the "LAST_NAME part of the file name to your last name -\> Save*.
+
+-   Update the top of the document, called the `YAML,` with your name.
+
+# Homework Instructions
+
+::: callout-note
+Be sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but **also** write a complete sentence with the answer). Be sure to save your files frequently!
+
+From this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?
+:::
+
+::: callout-important
+You will now need to make your own R chunks for problems that require code. You should name each chunk appropriately, for example, `q1_a`. This process assures that when you render and get an error, the error tells you which chunk is causing the error. You **cannot** use duplicate chunk labels.
+
+\`\`\`{r q1_a}
+
+\`\`\`
+:::
+
+Data for the homework is in the *STA364_inst_files \> data* folder.
+
+# Exercises
+
+### Question 1 (fpp3_2)
+
+For each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect. If not, explain why not.
+
+a.  United States GDP from *global_economy*.
+
+b.  Slaughter of Victorian “Bulls, bullocks and steers” in *aus_livestock*.
+
+c.  Victorian Electricity Demand from *vic_elec*.
+
+d.  Gas production from *aus_production*.
+
+### Question 2 (fpp3_5)
+
+For the following series, find an appropriate Box-Cox transformation to stabilize the variance: Pedestrian counts at Southern Cross Station from data *pedestrian*. Make sure to compare the series before and after the transformation and discuss whether or not it was effective.
+
+### Question 3
+
+Change the seed and run the following to get 10 random integers:
+
+```{r q3}
+set.seed(CHANGE_TO_RANDOM_WHOLE_POSITIVE_NUMBER)
+runif(10,1,10)
+```
+
+You can do this exercise by hand and turn in a piece of paper. Apply MA(5) smoothing (moving average with $m=5$) to this small data set. Show your work.
+
+### Question 4 (fpp3_7)
+
+Consider the last five years of the Gas data from *aus_production*.
+
+```{r}
+gas <- tail(aus_production, 5*4) |> select(Gas)
+```
+
+a.  Plot the time series. Can you identify seasonal fluctuations and/or a trend cycle?
+
+b.  Use STL decomposition to decompose the series and show associated plots. No comments are required.
+
+c.  Do the results in (b) support the graphical interpretation from part (a)?
+
+d.  Compute and plot the seasonally adjusted data. What does this show?
+
+e.  Use the following code to change one observation to be an outlier (e.g., add 300 to one observation). You will need to save the result to a new object.
+
+```{r}
+gas |>
+  mutate(Gas = if_else(Quarter == yearquarter("2007Q4"), Gas + 300, Gas))
+```
+
+Recompute the seasonally adjusted data. What is the effect of the outlier?
+
+f.  Does it make any difference if the outlier is near the end rather than in the middle of the time series? You will need to copy and change the snippet of code above.
+
+### Question 5 (fpp3_10)
+
+This exercise uses the *canadian_gas* data (monthly Canadian gas production in billions of cubic metres, January 1960 – February 2005).
+
+a.  Plot the data using `autoplot()`, `gg_subseries()` and `gg_season()` to look at the effect of the changing seasonality over time.
+
+b.  Do an STL decomposition of the data. You will need to choose a seasonal window to allow for the changing shape of the seasonal component. Recall when we used `STL(variable ~ seasonal(window="some window")`.
+
+c.  How does the seasonal shape change over time? \[Hint: Try plotting the seasonal component using `gg_season()`.\]
+
+d.  Can you produce a plausible seasonally adjusted series?
+
+e.  The following code decomposes using **SEATS** and **X-11**. How do the 3 decomposition's compare?
+
+```{r}
+canadian_gas |>
+  model(X_13ARIMA_SEATS(Volume ~ seats())) |>
+  components() |>
+  autoplot()
+  
+canadian_gas |>
+  model(X_13ARIMA_SEATS(Volume ~ x11())) |>
+  components() |>
+  autoplot()
+```
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane of RStudio (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final HTML document to the respective assignment on [Moodle]({{< var course.moodle >}})

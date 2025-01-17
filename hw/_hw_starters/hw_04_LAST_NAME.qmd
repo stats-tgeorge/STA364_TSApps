@@ -1,0 +1,116 @@
+---
+title: "Homework 4"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+### Question 1 (fpp3_2)
+
+For each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect. If not, explain why not.
+
+a.  United States GDP from *global_economy*.
+
+
+b.  Slaughter of Victorian “Bulls, bullocks and steers” in *aus_livestock*.
+
+
+c.  Victorian Electricity Demand from *vic_elec*.
+
+
+d.  Gas production from *aus_production*.
+
+
+
+
+
+### Question 2 (fpp3_5)
+
+For the following series, find an appropriate Box-Cox transformation to stabilize the variance: Pedestrian counts at Southern Cross Station from data *pedestrian*. Make sure to compare the series before and after the transformation and discuss whether or not it was effective.
+
+
+
+
+
+### Question 3
+
+Change the seed and run the following to get 10 random integers:
+
+```{r q3}
+set.seed(CHANGE_TO_RANDOM_WHOLE_POSITIVE_NUMBER)
+runif(10,1,10)
+```
+
+You can do this exercise by hand and turn in a piece of paper. Apply MA(5) smoothing (moving average with $m=5$) to this small data set. Show your work.
+
+
+
+
+
+### Question 4 (fpp3_7)
+
+Consider the last five years of the Gas data from *aus_production*.
+
+```{r}
+gas <- tail(aus_production, 5*4) |> select(Gas)
+```
+
+a.  Plot the time series. Can you identify seasonal fluctuations and/or a trend cycle?
+
+
+b.  Use STL decomposition to decompose the series and show associated plots. No comments are required.
+
+
+c.  Do the results in (b) support the graphical interpretation from part (a)?
+
+
+d.  Compute and plot the seasonally adjusted data. What does this show?
+
+
+e.  Use the following code to change one observation to be an outlier (e.g., add 300 to one observation). You will need to save the result to a new object.
+
+
+```{r}
+gas |>
+  mutate(Gas = if_else(Quarter == yearquarter("2007Q4"), Gas + 300, Gas))
+```
+
+Recompute the seasonally adjusted data. What is the effect of the outlier?
+
+
+
+f.  Does it make any difference if the outlier is near the end rather than in the middle of the time series? You will need to copy and change the snippet of code above.
+
+
+
+
+### Question 5 (fpp3_10)
+
+This exercise uses the *canadian_gas* data (monthly Canadian gas production in billions of cubic metres, January 1960 – February 2005).
+
+a.  Plot the data using `autoplot()`, `gg_subseries()` and `gg_season()` to look at the effect of the changing seasonality over time.
+
+
+b.  Do an STL decomposition of the data. You will need to choose a seasonal window to allow for the changing shape of the seasonal component. Recall when we used `STL(variable ~ seasonal(window="some window")`.
+
+
+c.  How does the seasonal shape change over time? \[Hint: Try plotting the seasonal component using `gg_season()`.\]
+
+
+d.  Can you produce a plausible seasonally adjusted series?
+
+
+e.  The following code decomposes using **SEATS** and **X-11**. How do the 3 decomposition's compare?
+
+```{r}
+canadian_gas |>
+  model(X_13ARIMA_SEATS(Volume ~ seats())) |>
+  components() |>
+  autoplot()
+  
+canadian_gas |>
+  model(X_13ARIMA_SEATS(Volume ~ x11())) |>
+  components() |>
+  autoplot()
+```

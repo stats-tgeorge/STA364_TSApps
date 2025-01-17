@@ -305,6 +305,13 @@
     "text": "X-13ARIMA-SEATS\nAdvantages\n\nModel-based\nSmooth trend estimate\nAllows estimates at end points\nAllows changing seasonality\nDeveloped for economic data\n\n\nDisadvantages\n\nOnly developed for quarterly and monthly data"
   },
   {
+    "objectID": "slides/3-decomp.html#loess",
+    "href": "slides/3-decomp.html#loess",
+    "title": "Chapter 3 Decomposition",
+    "section": "LOESS?",
+    "text": "LOESS?\nhttps://www.youtube.com/watch?v=Vf7oJ6z2LCc"
+  },
+  {
     "objectID": "slides/3-decomp.html#stl-decomposition-1",
     "href": "slides/3-decomp.html#stl-decomposition-1",
     "title": "Chapter 3 Decomposition",
@@ -646,6 +653,13 @@
     "title": "Chapter 3 Decomposition",
     "section": "X-13ARIMA-SEATS",
     "text": "X-13ARIMA-SEATS\nAdvantages\n\nModel-based\nSmooth trend estimate\nAllows estimates at end points\nAllows changing seasonality\nDeveloped for economic data\n\n. . .\nDisadvantages\n\nOnly developed for quarterly and monthly data"
+  },
+  {
+    "objectID": "slides/3-decomp_o.html#loess",
+    "href": "slides/3-decomp_o.html#loess",
+    "title": "Chapter 3 Decomposition",
+    "section": "LOESS?",
+    "text": "LOESS?\nhttps://www.youtube.com/watch?v=Vf7oJ6z2LCc"
   },
   {
     "objectID": "slides/3-decomp_o.html#stl-decomposition-1",
@@ -1558,46 +1572,90 @@
     "text": "References\n\nForecasting: Principles and Practice\nDr. Mine Çetinkaya-Rundel\nModern Dive."
   },
   {
-    "objectID": "hw/hw-03.html",
-    "href": "hw/hw-03.html",
-    "title": "Homework 3",
+    "objectID": "hw/hw-04.html",
+    "href": "hw/hw-04.html",
+    "title": "Homework 4",
     "section": "",
-    "text": "Getting started\n\nStart with the following steps:\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-03_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name.\n\n\n\n\nHomework Instructions\n\n\n\n\n\n\nNote\n\n\n\nBe sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but also write a complete sentence with the answer). Be sure to save your files frequently!\nFrom this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?\n\n\nData for the homework is in the STA364_inst_files &gt; data folder.\n\n\nExercises\n\nQuestion 1 (fpp7)\n\nMonthly Australian retail data is provided in aus_retail. Select one of the time series as follows (but choose a different seed value):\n\n\nset.seed(12345678)\nmyseries &lt;- aus_retail |&gt;\n  filter(`Series ID` == sample(aus_retail$`Series ID`,1))\n\nExplore your chosen retail time series using the following functions: autoplot, gg_season(), gg_subseries(), gg_lag(), ACF()|&gt;autoplot().\n\n\nQuestion 2 (fpp8)\n\nUse the following graphics functions: autoplot(), gg_season(), gg_subseries(), gg_lag(), ACF() and explore features from the following time series: “Total Private” Employed from us_employment, Bricks from aus_production, Hare from pelt, “H02” Cost from PBS, and Barrels from us_gasoline.\n\n\n\nCan you spot any seasonality, cyclicity, or trend?\nWhat do you learn about the series?\nWhat can you say about the seasonal patterns?\nCan you identify any unusual years?\n\n\n\nQuestion 3 (fpp10)\n\nThe aus_livestock data contains the monthly total number of pigs slaughtered in Victoria, Australia, from Jul 1972 to Dec 2018. Use filter() to extract pig slaughters in Victoria between 1990 and 1995. Use autoplot() and ACF() for this data. How do they differ from white noise? If a more extended period of data is used, what difference does it make to the ACF?\n\n\n\nQuestion 4 (fpp11)\n\n\nUse the following code to compute the daily changes in Google closing stock prices. Explain what lines 2 through 5 are doing.\n\n\n\ndgoog &lt;- gafa_stock |&gt;                                    # line 1\n  filter(Symbol == \"GOOG\", year(Date) &gt;= 2018) |&gt;         # line 2\n  mutate(trading_day = row_number()) |&gt;                   # line 3\n  update_tsibble(index = trading_day, regular = TRUE) |&gt;  # line 4\n  mutate(diff = difference(Close))                        # line 5\n\n\nWhy was it necessary to re-index the tsibble?\nPlot these differences and their ACF.\nDo the changes in the stock prices look like white noise?\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane of RStudio (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final HTML document to the respective assignment on Moodle"
+    "text": "Getting started\n\nStart with the following steps:\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-0X_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name.\n\n\n\n\nHomework Instructions\n\n\n\n\n\n\nNote\n\n\n\nBe sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but also write a complete sentence with the answer). Be sure to save your files frequently!\nFrom this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will now need to make your own R chunks for problems that require code. You should name each chunk appropriately, for example, q1_a. This process assures that when you render and get an error, the error tells you which chunk is causing the error. You cannot use duplicate chunk labels.\n```{r q1_a}\n```\n\n\nData for the homework is in the STA364_inst_files &gt; data folder.\n\n\nExercises\n\nQuestion 1 (fpp3_2)\nFor each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect. If not, explain why not.\n\nUnited States GDP from global_economy.\nSlaughter of Victorian “Bulls, bullocks and steers” in aus_livestock.\nVictorian Electricity Demand from vic_elec.\nGas production from aus_production.\n\n\n\nQuestion 2 (fpp3_5)\nFor the following series, find an appropriate Box-Cox transformation to stabilize the variance: Pedestrian counts at Southern Cross Station from data pedestrian. Make sure to compare the series before and after the transformation and discuss whether or not it was effective.\n\n\nQuestion 3\nChange the seed and run the following to get 10 random integers:\n\nset.seed(CHANGE_TO_RANDOM_WHOLE_POSITIVE_NUMBER)\nrunif(10,1,10)\n\nYou can do this exercise by hand and turn in a piece of paper. Apply MA(5) smoothing (moving average with \\(m=5\\)) to this small data set. Show your work.\n\n\nQuestion 4 (fpp3_7)\nConsider the last five years of the Gas data from aus_production.\n\ngas &lt;- tail(aus_production, 5*4) |&gt; select(Gas)\n\n\nPlot the time series. Can you identify seasonal fluctuations and/or a trend cycle?\nUse STL decomposition to decompose the series and show associated plots. No comments are required.\nDo the results in (b) support the graphical interpretation from part (a)?\nCompute and plot the seasonally adjusted data. What does this show?\nUse the following code to change one observation to be an outlier (e.g., add 300 to one observation). You will need to save the result to a new object.\n\n\ngas |&gt;\n  mutate(Gas = if_else(Quarter == yearquarter(\"2007Q4\"), Gas + 300, Gas))\n\nRecompute the seasonally adjusted data. What is the effect of the outlier?\n\nDoes it make any difference if the outlier is near the end rather than in the middle of the time series? You will need to copy and change the snippet of code above.\n\n\n\nQuestion 5 (fpp3_10)\nThis exercise uses the canadian_gas data (monthly Canadian gas production in billions of cubic metres, January 1960 – February 2005).\n\nPlot the data using autoplot(), gg_subseries() and gg_season() to look at the effect of the changing seasonality over time.\nDo an STL decomposition of the data. You will need to choose a seasonal window to allow for the changing shape of the seasonal component. Recall when we used STL(variable ~ seasonal(window=\"some window\").\nHow does the seasonal shape change over time? [Hint: Try plotting the seasonal component using gg_season().]\nCan you produce a plausible seasonally adjusted series?\nThe following code decomposes using SEATS and X-11. How do the 3 decomposition’s compare?\n\n\ncanadian_gas |&gt;\n  model(X_13ARIMA_SEATS(Volume ~ seats())) |&gt;\n  components() |&gt;\n  autoplot()\n  \ncanadian_gas |&gt;\n  model(X_13ARIMA_SEATS(Volume ~ x11())) |&gt;\n  components() |&gt;\n  autoplot()\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane of RStudio (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final HTML document to the respective assignment on Moodle"
   },
   {
-    "objectID": "hw/hw-01.html",
-    "href": "hw/hw-01.html",
-    "title": "Homework 1",
+    "objectID": "hw/hw-02.html",
+    "href": "hw/hw-02.html",
+    "title": "Homework 2",
     "section": "",
-    "text": "The goal of this assignment is to introduce you to R, RStudio, and Time Series!"
+    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
   },
   {
-    "objectID": "hw/hw-01.html#terminology",
-    "href": "hw/hw-01.html#terminology",
-    "title": "Homework 1",
-    "section": "Terminology",
-    "text": "Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR: The name of the programming language we will be using throughout the course.\nRStudio: An integrated development environment for R. In other words, it is a convenient interface for writing and running R code."
+    "objectID": "hw/hw-02.html#rrstudio-in-class",
+    "href": "hw/hw-02.html#rrstudio-in-class",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
   },
   {
-    "objectID": "hw/hw-01.html#rrstudio-in-class",
-    "href": "hw/hw-01.html#rrstudio-in-class",
-    "title": "Homework 1",
-    "section": "R/Rstudio in Class",
-    "text": "R/Rstudio in Class\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOn the bottom right of RStudio, you should see a Files tab. Click that tab.\n\nYou should now see a folder with your name on it. In this shared folder, we can both create, edit, and delete files.\nYou should also see a folder named STA364_inst_files. This is where I will place the files you will need for homework, exams, labs, etc.\n\n\n\nEach of your assignments will begin with the following setup steps.\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-01_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML with your name."
+    "objectID": "hw/hw-02.html#reading",
+    "href": "hw/hw-02.html#reading",
+    "title": "Homework 2",
+    "section": "Reading",
+    "text": "Reading\nRead fpp3 2.7-2.9."
   },
   {
-    "objectID": "hw/hw-01.html#hello-rstudio",
-    "href": "hw/hw-01.html#hello-rstudio",
-    "title": "Homework 1",
-    "section": "Hello RStudio!",
-    "text": "Hello RStudio!\nRStudio is comprised of four panes.\n\n\n\n\n\n\n\n\n\n\nOn the bottom left is the Console, this is where you can write code that will be evaluated. Try typing 2 + 2 here and hit enter, what do you get?\nOn the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.\nIf you click on a file, it will open in the editor, on the top left pane. *The image shows an rmd file but we will be working with Quarto files (qmd).\nFinally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing x &lt;- 2 in the Console and hit enter, what do you get in the Environment pane?"
+    "objectID": "hw/hw-02.html#problems",
+    "href": "hw/hw-02.html#problems",
+    "title": "Homework 2",
+    "section": "Problems",
+    "text": "Problems\n\nQuestion 1\nExplore the following four time series: Bricks from aus_production, Lynx from pelt, Close from gafa_stock, and Demand from vic_elec.\n\nUse ? (or help()) to find out about the data in each series.\nWhat is the time interval of each series?\nUse autoplot() to produce a time plot of each series.\nFor the last plot, modify the axis labels and title. See the labs() function.\n\n\n\nQuestion 2 (fpp3)\n\nCreate a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the files tab on the bottom right. Click New Folder and name the folder data.\nNow, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder\nCheck the box next to tute.csv, then More, then Copy to…, and save the file in your newly created data folder.\n\nThe first chunk below reads tute1.csv into R and then shows the data with the View() function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and GDP. Sales contains the quarterly sales for a small company over the period 1981-2005. AdBudget is the advertising budget, and GDP is the gross domestic product. All series have been adjusted for inflation.\nYou can read the data into R with the following script:\n\ntute1 &lt;- readr::read_csv(\"data/tute1.csv\")\nView(tute1)\n\nThen converts the data to a time series object in R (tsibble).\n\nmytimeseries &lt;- tute1 |&gt;\n  mutate(Quarter = yearquarter(Quarter)) |&gt;\n  as_tsibble(index = Quarter)\n\nThen construct the time series plot for the Sales series.\n\nmytimeseries |&gt;\n  autoplot(Sales)\n\n\nUse this code to generate a time series plot for the other two series in the data, AdBudget, and GDP.\nCompare and contrast the three series.\n\n\n\nQuestion 3 (fpp4)\nThe USgas package contains data on the demand for natural gas in the US.\n\nInstall the USgas package. (Use install.packages('package_name')). Then to use it you will need library(package_name).\nCreate a tsibble from us_total with year as the index and state as the key.\nPlot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).\n\n\n\nQuestion 4 (fpp6)\nThe aus_arrivals data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the fpp3 package.\n\nUse autoplot(), gg_season() and gg_subseries() to compare the differences between the arrivals from these four countries.\nCan you identify any unusual observations?"
   },
   {
-    "objectID": "hw/hw-01.html#packages",
-    "href": "hw/hw-01.html#packages",
-    "title": "Homework 1",
-    "section": "Packages",
-    "text": "Packages\nR is an open-source language, and developers contribute functionality to R via packages. In this assignment we will use the following packages:\n\ntidyverse: a collection of packages for doing data analysis in a “tidy” way\nfpp3: a package that contains functions and datasets for our course/book\n\nWe use the library() function to load packages. In your Quarto document you should see an R chunk labelled load-packages which has the necessary code for loading both packages. You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the Run Current Chunk icon (green arrow pointing right icon).\n\n\n\n\n\n\n\n\n\nNote that these packages also get loaded in your Quarto environment when you Render your Quarto document."
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
+    ]
   },
   {
     "objectID": "course-links.html",
@@ -1644,83 +1702,46 @@
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "Homework 1",
     "section": "",
-    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
-    "crumbs": [
-      "Course information",
-      "R/RStudio Access"
-    ]
+    "text": "The goal of this assignment is to introduce you to R, RStudio, and Time Series!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "hw/hw-01.html#terminology",
+    "href": "hw/hw-01.html#terminology",
+    "title": "Homework 1",
+    "section": "Terminology",
+    "text": "Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR: The name of the programming language we will be using throughout the course.\nRStudio: An integrated development environment for R. In other words, it is a convenient interface for writing and running R code."
+  },
+  {
+    "objectID": "hw/hw-01.html#rrstudio-in-class",
+    "href": "hw/hw-01.html#rrstudio-in-class",
+    "title": "Homework 1",
+    "section": "R/Rstudio in Class",
+    "text": "R/Rstudio in Class\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOn the bottom right of RStudio, you should see a Files tab. Click that tab.\n\nYou should now see a folder with your name on it. In this shared folder, we can both create, edit, and delete files.\nYou should also see a folder named STA364_inst_files. This is where I will place the files you will need for homework, exams, labs, etc.\n\n\n\nEach of your assignments will begin with the following setup steps.\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-01_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML with your name."
+  },
+  {
+    "objectID": "hw/hw-01.html#hello-rstudio",
+    "href": "hw/hw-01.html#hello-rstudio",
+    "title": "Homework 1",
+    "section": "Hello RStudio!",
+    "text": "Hello RStudio!\nRStudio is comprised of four panes.\n\n\n\n\n\n\n\n\n\n\nOn the bottom left is the Console, this is where you can write code that will be evaluated. Try typing 2 + 2 here and hit enter, what do you get?\nOn the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.\nIf you click on a file, it will open in the editor, on the top left pane. *The image shows an rmd file but we will be working with Quarto files (qmd).\nFinally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing x &lt;- 2 in the Console and hit enter, what do you get in the Environment pane?"
+  },
+  {
+    "objectID": "hw/hw-01.html#packages",
+    "href": "hw/hw-01.html#packages",
+    "title": "Homework 1",
+    "section": "Packages",
+    "text": "Packages\nR is an open-source language, and developers contribute functionality to R via packages. In this assignment we will use the following packages:\n\ntidyverse: a collection of packages for doing data analysis in a “tidy” way\nfpp3: a package that contains functions and datasets for our course/book\n\nWe use the library() function to load packages. In your Quarto document you should see an R chunk labelled load-packages which has the necessary code for loading both packages. You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the Run Current Chunk icon (green arrow pointing right icon).\n\n\n\n\n\n\n\n\n\nNote that these packages also get loaded in your Quarto environment when you Render your Quarto document."
+  },
+  {
+    "objectID": "hw/hw-03.html",
+    "href": "hw/hw-03.html",
+    "title": "Homework 3",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "course-instructor.html",
-    "href": "course-instructor.html",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-instructor.html#instructor",
-    "href": "course-instructor.html#instructor",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Time Series Applications",
-    "section": "",
-    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "hw/hw-02.html",
-    "href": "hw/hw-02.html",
-    "title": "Homework 2",
-    "section": "",
-    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
-  },
-  {
-    "objectID": "hw/hw-02.html#rrstudio-in-class",
-    "href": "hw/hw-02.html#rrstudio-in-class",
-    "title": "Homework 2",
-    "section": "",
-    "text": "Go to our RStudio Server at http://turing.cornellcollege.edu:8787/\n\n\n\n\nFinding the instructions on our website: https://stats-tgeorge.github.io/STA363_AdvReg/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-02_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name."
-  },
-  {
-    "objectID": "hw/hw-02.html#reading",
-    "href": "hw/hw-02.html#reading",
-    "title": "Homework 2",
-    "section": "Reading",
-    "text": "Reading\nRead fpp3 2.7-2.9."
-  },
-  {
-    "objectID": "hw/hw-02.html#problems",
-    "href": "hw/hw-02.html#problems",
-    "title": "Homework 2",
-    "section": "Problems",
-    "text": "Problems\n\nQuestion 1\nExplore the following four time series: Bricks from aus_production, Lynx from pelt, Close from gafa_stock, and Demand from vic_elec.\n\nUse ? (or help()) to find out about the data in each series.\nWhat is the time interval of each series?\nUse autoplot() to produce a time plot of each series.\nFor the last plot, modify the axis labels and title. See the labs() function.\n\n\n\nQuestion 2 (fpp3)\n\nCreate a data folder inside your STA364 project folder. Go to RStudio and navigate to your STA364Project folder in the files tab on the bottom right. Click New Folder and name the folder data.\nNow, you need to copy the data from the instructor data folder to a data folder in your folder. Go to the STA364_inst_files folder and into the data folder\nCheck the box next to tute.csv, then More, then Copy to…, and save the file in your newly created data folder.\n\nThe first chunk below reads tute1.csv into R and then shows the data with the View() function. You should find four columns of information. Columns B through D each contain a quarterly series labeled Sales, AdBudget, and GDP. Sales contains the quarterly sales for a small company over the period 1981-2005. AdBudget is the advertising budget, and GDP is the gross domestic product. All series have been adjusted for inflation.\nYou can read the data into R with the following script:\n\ntute1 &lt;- readr::read_csv(\"data/tute1.csv\")\nView(tute1)\n\nThen converts the data to a time series object in R (tsibble).\n\nmytimeseries &lt;- tute1 |&gt;\n  mutate(Quarter = yearquarter(Quarter)) |&gt;\n  as_tsibble(index = Quarter)\n\nThen construct the time series plot for the Sales series.\n\nmytimeseries |&gt;\n  autoplot(Sales)\n\n\nUse this code to generate a time series plot for the other two series in the data, AdBudget, and GDP.\nCompare and contrast the three series.\n\n\n\nQuestion 3 (fpp4)\nThe USgas package contains data on the demand for natural gas in the US.\n\nInstall the USgas package. (Use install.packages('package_name')). Then to use it you will need library(package_name).\nCreate a tsibble from us_total with year as the index and state as the key.\nPlot the annual natural gas consumption by state for the New England area (comprising the states of Maine, Vermont, New Hampshire, Massachusetts, Connecticut and Rhode Island).\n\n\n\nQuestion 4 (fpp6)\nThe aus_arrivals data set comprises quarterly international arrivals to Australia from Japan, New Zealand, the UK, and the US. It is available after you call in the fpp3 package.\n\nUse autoplot(), gg_season() and gg_subseries() to compare the differences between the arrivals from these four countries.\nCan you identify any unusual observations?"
+    "text": "Getting started\n\nStart with the following steps:\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nOpen the respective file from the shared STA364_inst_files folder mentioned above. It will be named something like hw-03_LAST_NAME.qmd.\nThen you need to save your copy. Click File -&gt; Save as -&gt; Navigate to the folder STA364_Projects (that we share) -&gt; Change the “LAST_NAME part of the file name to your last name -&gt; Save.\nUpdate the top of the document, called the YAML, with your name.\n\n\n\n\nHomework Instructions\n\n\n\n\n\n\nNote\n\n\n\nBe sure to include the relevant R code and complete sentences answering each question (e.g., if I ask for the average, you can output the answer in R but also write a complete sentence with the answer). Be sure to save your files frequently!\nFrom this point forward, you need to start commenting on your graphs. What do you observe? Are there trends/cycles/seasonal effects? Outliers? Other interesting features?\n\n\nData for the homework is in the STA364_inst_files &gt; data folder.\n\n\nExercises\n\nQuestion 1 (fpp7)\n\nMonthly Australian retail data is provided in aus_retail. Select one of the time series as follows (but choose a different seed value):\n\n\nset.seed(12345678)\nmyseries &lt;- aus_retail |&gt;\n  filter(`Series ID` == sample(aus_retail$`Series ID`,1))\n\nExplore your chosen retail time series using the following functions: autoplot, gg_season(), gg_subseries(), gg_lag(), ACF()|&gt;autoplot().\n\n\nQuestion 2 (fpp8)\n\nUse the following graphics functions: autoplot(), gg_season(), gg_subseries(), gg_lag(), ACF() and explore features from the following time series: “Total Private” Employed from us_employment, Bricks from aus_production, Hare from pelt, “H02” Cost from PBS, and Barrels from us_gasoline.\n\n\n\nCan you spot any seasonality, cyclicity, or trend?\nWhat do you learn about the series?\nWhat can you say about the seasonal patterns?\nCan you identify any unusual years?\n\n\n\nQuestion 3 (fpp10)\n\nThe aus_livestock data contains the monthly total number of pigs slaughtered in Victoria, Australia, from Jul 1972 to Dec 2018. Use filter() to extract pig slaughters in Victoria between 1990 and 1995. Use autoplot() and ACF() for this data. How do they differ from white noise? If a more extended period of data is used, what difference does it make to the ACF?\n\n\n\nQuestion 4 (fpp11)\n\n\nUse the following code to compute the daily changes in Google closing stock prices. Explain what lines 2 through 5 are doing.\n\n\n\ndgoog &lt;- gafa_stock |&gt;                                    # line 1\n  filter(Symbol == \"GOOG\", year(Date) &gt;= 2018) |&gt;         # line 2\n  mutate(trading_day = row_number()) |&gt;                   # line 3\n  update_tsibble(index = trading_day, regular = TRUE) |&gt;  # line 4\n  mutate(diff = difference(Close))                        # line 5\n\n\nWhy was it necessary to re-index the tsibble?\nPlot these differences and their ACF.\nDo the changes in the stock prices look like white noise?\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane of RStudio (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final HTML document to the respective assignment on Moodle"
   },
   {
     "objectID": "index.html",
@@ -2781,7 +2802,7 @@
     "href": "slides/5-toolbox_o.html",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "library(fpp3)\n\n\n\n\nThe process of producing forecasts can be split up into a few fundamental steps.\n\nPreparing data\nData visualization\nSpecifying a model\nModel estimation\nAccuracy & performance evaluation\nProducing forecasts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngdppc &lt;- global_economy %&gt;%\n  mutate(GDP_per_capita = GDP/Population) %&gt;%\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows\n\n\n\n\n\n\ngdppc %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")\n\n\n\n\n\n\n\n\n\n\n\nThe model() function trains models to data.\n\nfit &lt;- gdppc %&gt;%\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a model table, each cell corresponds to a fitted model.\n\n\n\n\n\n\nfit %&gt;% forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a forecast table with point forecasts and distributions.\n\n\n\n\n\n\nfit %&gt;% forecast(h = \"3 years\") %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
+    "text": "library(fpp3)\n\n\n\n\nThe process of producing forecasts can be split up into a few fundamental steps.\n\nPreparing data\nData visualization\nSpecifying a model\nModel estimation\nAccuracy & performance evaluation\nProducing forecasts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngdppc &lt;- global_economy |&gt;\n  mutate(GDP_per_capita = GDP/Population) |&gt;\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows\n\n\n\n\n\n\ngdppc |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")\n\n\n\n\n\n\n\n\n\n\n\nThe model() function trains models to data.\n\nfit &lt;- gdppc |&gt;\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a model table, each cell corresponds to a fitted model.\n\n\n\n\n\n\nfit |&gt; forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a forecast table with point forecasts and distributions.\n\n\n\n\n\n\nfit |&gt; forecast(h = \"3 years\") |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#setup",
@@ -2802,35 +2823,35 @@
     "href": "slides/5-toolbox_o.html#data-preparation-tidy",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "gdppc &lt;- global_economy %&gt;%\n  mutate(GDP_per_capita = GDP/Population) %&gt;%\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows"
+    "text": "gdppc &lt;- global_economy |&gt;\n  mutate(GDP_per_capita = GDP/Population) |&gt;\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows"
   },
   {
     "objectID": "slides/5-toolbox_o.html#data-visualisation",
     "href": "slides/5-toolbox_o.html#data-visualisation",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "gdppc %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
+    "text": "gdppc |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#model-estimation",
     "href": "slides/5-toolbox_o.html#model-estimation",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "The model() function trains models to data.\n\nfit &lt;- gdppc %&gt;%\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a model table, each cell corresponds to a fitted model."
+    "text": "The model() function trains models to data.\n\nfit &lt;- gdppc |&gt;\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a model table, each cell corresponds to a fitted model."
   },
   {
     "objectID": "slides/5-toolbox_o.html#producing-forecasts",
     "href": "slides/5-toolbox_o.html#producing-forecasts",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "fit %&gt;% forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a forecast table with point forecasts and distributions."
+    "text": "fit |&gt; forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nA is a forecast table with point forecasts and distributions."
   },
   {
     "objectID": "slides/5-toolbox_o.html#visualising-forecasts",
     "href": "slides/5-toolbox_o.html#visualising-forecasts",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "",
-    "text": "fit %&gt;% forecast(h = \"3 years\") %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
+    "text": "fit |&gt; forecast(h = \"3 years\") |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#meany-average-method",
@@ -2840,53 +2861,60 @@
     "text": "MEAN(y): Average method\n\nForecast of all future values is equal to mean of historical data \\(\\{y_1,\\dots,y_T\\}\\).\nForecasts: \\(\\hat{y}_{T+h|T} = \\bar{y} = (y_1+\\dots+y_T)/T\\)\n\n. . ."
   },
   {
+    "objectID": "slides/5-toolbox_o.html#meany-average-method-plot",
+    "href": "slides/5-toolbox_o.html#meany-average-method-plot",
+    "title": "Chapter 5 Forecasters Toolbox",
+    "section": "MEAN(y): Average method Plot",
+    "text": "MEAN(y): Average method Plot\n\nCodePlot\n\n\n\nbricks &lt;- aus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  mutate(average = mean(Bricks))\n\nfc &lt;- bricks |&gt;\n  filter(row_number() == n()) |&gt; as_tibble() |&gt;\n  unnest(Quarter = list(as.Date(Quarter) + months(c(0, 12*5))))\n\nbricks |&gt;\n  ggplot(aes(x = Quarter, y = Bricks)) +\n  geom_line() +\n  geom_line(aes(y = average), colour = \"#0072B2\", linetype = \"dashed\") +\n  geom_line(aes(y = average), data = fc, colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
+  },
+  {
     "objectID": "slides/5-toolbox_o.html#naivey-naïve-method",
     "href": "slides/5-toolbox_o.html#naivey-naïve-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "NAIVE(y): Naïve method",
-    "text": "NAIVE(y): Naïve method\n\nForecasts equal to last observed value.\nForecasts: \\(\\hat{y}_{T+h|T} =y_T\\).\nConsequence of efficient market hypothesis.\n\n. . ."
+    "text": "NAIVE(y): Naïve method\n\nForecasts equal to last observed value.\nForecasts: \\(\\hat{y}_{T+h|T} =y_T\\).\nConsequence of efficient market hypothesis.\n\n. . .\n\nCodePlot\n\n\n\nbricks |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(NAIVE(Bricks)) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(filter(bricks, year(Quarter) &gt; 1990), level = NULL) +\n    geom_point(data = slice(bricks, n()), aes(y=Bricks), colour = \"#0072B2\") +\n    labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#snaivey-lagm-seasonal-naïve-method",
     "href": "slides/5-toolbox_o.html#snaivey-lagm-seasonal-naïve-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "SNAIVE(y ~ lag(m)): Seasonal naïve method",
-    "text": "SNAIVE(y ~ lag(m)): Seasonal naïve method\n\nForecasts equal to last value from same season.\nForecasts: \\(\\hat{y}_{T+h|T} =y_{T+h-m(k+1)}\\), where \\(m=\\) seasonal period and \\(k\\) is the integer part of \\((h-1)/m\\).\n\n. . ."
+    "text": "SNAIVE(y ~ lag(m)): Seasonal naïve method\n\nForecasts equal to last value from same season.\nForecasts: \\(\\hat{y}_{T+h|T} =y_{T+h-m(k+1)}\\), where \\(m=\\) seasonal period and \\(k\\) is the integer part of \\((h-1)/m\\).\n\n. . .\n\nCodePlot\n\n\n\nbricks |&gt;\n  model(SNAIVE(Bricks ~ lag(\"year\"))) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(filter(bricks, year(Quarter) &gt; 1990), level = NULL) +\n  geom_point(data = slice(bricks, (n()-3):n()), aes(y=Bricks), colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#rwy-drift-drift-method",
     "href": "slides/5-toolbox_o.html#rwy-drift-drift-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "RW(y ~ drift()): Drift method",
-    "text": "RW(y ~ drift()): Drift method\n\nDefinitionPlot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
+    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
   },
   {
     "objectID": "slides/5-toolbox_o.html#model-fitting",
     "href": "slides/5-toolbox_o.html#model-fitting",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Model fitting",
-    "text": "Model fitting\nThe model() function trains models to data.\n\nbrick_fit &lt;-  aus_production %&gt;%\n  filter(!is.na(Bricks)) %&gt;%\n  model(\n    Seasonal_naive = SNAIVE(Bricks),\n    Naive = NAIVE(Bricks),\n    Drift = RW(Bricks ~ drift()),\n    Mean = MEAN(Bricks)\n  )\n\n\n\n# A mable: 1 x 4\n  Seasonal_naive   Naive         Drift    Mean\n         &lt;model&gt; &lt;model&gt;       &lt;model&gt; &lt;model&gt;\n1       &lt;SNAIVE&gt; &lt;NAIVE&gt; &lt;RW w/ drift&gt;  &lt;MEAN&gt;"
+    "text": "Model fitting\nThe model() function trains models to data.\n\nbrick_fit &lt;-  aus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(\n    Seasonal_naive = SNAIVE(Bricks),\n    Naive = NAIVE(Bricks),\n    Drift = RW(Bricks ~ drift()),\n    Mean = MEAN(Bricks)\n  )\n\n\n\n# A mable: 1 x 4\n  Seasonal_naive   Naive         Drift    Mean\n         &lt;model&gt; &lt;model&gt;       &lt;model&gt; &lt;model&gt;\n1       &lt;SNAIVE&gt; &lt;NAIVE&gt; &lt;RW w/ drift&gt;  &lt;MEAN&gt;"
   },
   {
     "objectID": "slides/5-toolbox_o.html#producing-forecasts-1",
     "href": "slides/5-toolbox_o.html#producing-forecasts-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Producing forecasts",
-    "text": "Producing forecasts\n\nbrick_fc &lt;- brick_fit %&gt;%\n  forecast(h = \"5 years\")\n\n\n\n# A fable: 80 x 4 [1Q]\n# Key:     .model [4]\n  .model   Quarter       Bricks .mean\n  &lt;chr&gt;      &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n1 Seasona… 2005 Q3 N(428, 2336)   428\n2 Seasona… 2005 Q4 N(397, 2336)   397\n3 Seasona… 2006 Q1 N(355, 2336)   355\n4 Seasona… 2006 Q2 N(435, 2336)   435\n# ℹ 76 more rows"
+    "text": "Producing forecasts\n\nbrick_fc &lt;- brick_fit |&gt;\n  forecast(h = \"5 years\")\n\n\n\n# A fable: 80 x 4 [1Q]\n# Key:     .model [4]\n  .model   Quarter       Bricks .mean\n  &lt;chr&gt;      &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n1 Seasona… 2005 Q3 N(428, 2336)   428\n2 Seasona… 2005 Q4 N(397, 2336)   397\n3 Seasona… 2006 Q1 N(355, 2336)   355\n4 Seasona… 2006 Q2 N(435, 2336)   435\n# ℹ 76 more rows"
   },
   {
     "objectID": "slides/5-toolbox_o.html#visualising-forecasts-1",
     "href": "slides/5-toolbox_o.html#visualising-forecasts-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Visualising forecasts",
-    "text": "Visualising forecasts\n\nbrick_fc %&gt;%\n  autoplot(aus_production, level = NULL) +\n  labs(title = \"Clay brick production in Australia\",\n       y = \"Millions of bricks\") +\n  guides(colour = guide_legend(title = \"Forecast\"))"
+    "text": "Visualising forecasts\n\nbrick_fc |&gt;\n  autoplot(aus_production, level = NULL) +\n  labs(title = \"Clay brick production in Australia\",\n       y = \"Millions of bricks\") +\n  guides(colour = guide_legend(title = \"Forecast\"))"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nCodePlot\n\n\n\n# Extract training data\nfb_stock &lt;- gafa_stock %&gt;%\n  filter(Symbol == \"FB\") %&gt;%\n  mutate(trading_day = row_number()) %&gt;%\n  update_tsibble(index=trading_day, regular=TRUE)\n\n# Specify, estimate and forecast\nfb_stock %&gt;%\n  model(\n    Mean = MEAN(Close),\n    Naive = NAIVE(Close),\n    Drift = RW(Close ~ drift())\n  ) %&gt;%\n  forecast(h=42) %&gt;%\n  autoplot(fb_stock, level = NULL) +\n  labs(title = \"Facebook closing stock price\", y=\"$US\") +\n  guides(colour=guide_legend(title=\"Forecast\"))"
+    "text": "Facebook closing stock price\n\nCodePlot\n\n\n\n# Extract training data\nfb_stock &lt;- gafa_stock |&gt;\n  filter(Symbol == \"FB\") |&gt;\n  mutate(trading_day = row_number()) |&gt;\n  update_tsibble(index=trading_day, regular=TRUE)\n\n# Specify, estimate and forecast\nfb_stock |&gt;\n  model(\n    Mean = MEAN(Close),\n    Naive = NAIVE(Close),\n    Drift = RW(Close ~ drift())\n  ) |&gt;\n  forecast(h=42) |&gt;\n  autoplot(fb_stock, level = NULL) +\n  labs(title = \"Facebook closing stock price\", y=\"$US\") +\n  guides(colour=guide_legend(title=\"Forecast\"))"
   },
   {
     "objectID": "slides/5-toolbox_o.html#your-turn",
@@ -2914,49 +2942,49 @@
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nfb_stock %&gt;% autoplot(Close)"
+    "text": "Facebook closing stock price\n\nfb_stock |&gt; autoplot(Close)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-2",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nfit &lt;- fb_stock %&gt;% model(NAIVE(Close))\naugment(fit) |&gt; head(5)\n\n# A tsibble: 5 x 7 [1]\n# Key:       Symbol, .model [1]\n  Symbol .model       trading_day Close .fitted .resid .innov\n  &lt;chr&gt;  &lt;chr&gt;              &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 FB     NAIVE(Close)           1  54.7    NA   NA     NA    \n2 FB     NAIVE(Close)           2  54.6    54.7 -0.150 -0.150\n3 FB     NAIVE(Close)           3  57.2    54.6  2.64   2.64 \n4 FB     NAIVE(Close)           4  57.9    57.2  0.720  0.720\n5 FB     NAIVE(Close)           5  58.2    57.9  0.310  0.310\n\n\n. . .\nNaive forecasts:\n\\(\\hat{y}_{t|t-1} = y_{t-1}\\)\n\\(e_t  = y_t - \\hat{y}_{t|t-1} = y_t-y_{t-1}\\)\nWhere .fitted = \\(\\hat{y}_{t|t-1}\\) and .resid = \\(\\phantom{\\hat{y}_{|}}{e}_{t}\\phantom{\\hat{y}_{|}}\\)"
+    "text": "Facebook closing stock price\n\nfit &lt;- fb_stock |&gt; model(NAIVE(Close))\naugment(fit) |&gt; head(5)\n\n# A tsibble: 5 x 7 [1]\n# Key:       Symbol, .model [1]\n  Symbol .model       trading_day Close .fitted .resid .innov\n  &lt;chr&gt;  &lt;chr&gt;              &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 FB     NAIVE(Close)           1  54.7    NA   NA     NA    \n2 FB     NAIVE(Close)           2  54.6    54.7 -0.150 -0.150\n3 FB     NAIVE(Close)           3  57.2    54.6  2.64   2.64 \n4 FB     NAIVE(Close)           4  57.9    57.2  0.720  0.720\n5 FB     NAIVE(Close)           5  58.2    57.9  0.310  0.310\n\n\n. . .\nNaive forecasts:\n\\(\\hat{y}_{t|t-1} = y_{t-1}\\)\n\\(e_t  = y_t - \\hat{y}_{t|t-1} = y_t-y_{t-1}\\)\nWhere .fitted = \\(\\hat{y}_{t|t-1}\\) and .resid = \\(\\phantom{\\hat{y}_{|}}{e}_{t}\\phantom{\\hat{y}_{|}}\\)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-3",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-3",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-4",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-4",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  filter(trading_day &gt; 1100) %&gt;%\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  filter(trading_day &gt; 1100) |&gt;\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-5",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-5",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  autoplot(.resid) +\n  labs(y = \"$US\",\n       title = \"Residuals from naïve method\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  autoplot(.resid) +\n  labs(y = \"$US\",\n       title = \"Residuals from naïve method\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-6",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-6",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ggplot(aes(x = .resid)) +\n  geom_histogram(bins = 150) +\n  labs(title = \"Histogram of residuals\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ggplot(aes(x = .resid)) +\n  geom_histogram(bins = 150) +\n  labs(title = \"Histogram of residuals\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#facebook-closing-stock-price-7",
     "href": "slides/5-toolbox_o.html#facebook-closing-stock-price-7",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ACF(.resid) %&gt;%\n  autoplot() + labs(title = \"ACF of residuals\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ACF(.resid) |&gt;\n  autoplot() + labs(title = \"ACF of residuals\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#gg_tsresiduals-function",
@@ -2998,7 +3026,7 @@
     "href": "slides/5-toolbox_o.html#portmanteau-tests",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests",
-    "text": "Portmanteau tests\n\nIf data are WN, \\(Q\\) and \\(Q^*\\) have \\(\\chi^2\\) distribution with \\(\\ell\\) degrees of freedom.\nlag \\(= \\ell\\)\n\n. . .\n\naugment(fit) %&gt;%\n  features(.resid, box_pierce, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       bp_stat bp_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.281\n\n\n. . .\n\naugment(fit) %&gt;%\n  features(.resid, ljung_box, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       lb_stat lb_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.276"
+    "text": "Portmanteau tests\n\nIf data are WN, \\(Q\\) and \\(Q^*\\) have \\(\\chi^2\\) distribution with \\(\\ell\\) degrees of freedom.\nlag \\(= \\ell\\)\n\n. . .\n\naugment(fit) |&gt;\n  features(.resid, box_pierce, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       bp_stat bp_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.281\n\n\n. . .\n\naugment(fit) |&gt;\n  features(.resid, ljung_box, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       lb_stat lb_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.276"
   },
   {
     "objectID": "slides/5-toolbox_o.html#forecast-distributions",
@@ -3026,7 +3054,7 @@
     "href": "slides/5-toolbox_o.html#prediction-intervals-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Prediction intervals",
-    "text": "Prediction intervals\n\nbrick_fc %&gt;% hilo(level = 95)\n\n# A tsibble: 80 x 5 [1Q]\n# Key:       .model [4]\n   .model  Quarter       Bricks .mean\n   &lt;chr&gt;     &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n 1 Season… 2005 Q3 N(428, 2336)   428\n 2 Season… 2005 Q4 N(397, 2336)   397\n 3 Season… 2006 Q1 N(355, 2336)   355\n 4 Season… 2006 Q2 N(435, 2336)   435\n 5 Season… 2006 Q3 N(428, 4672)   428\n 6 Season… 2006 Q4 N(397, 4672)   397\n 7 Season… 2007 Q1 N(355, 4672)   355\n 8 Season… 2007 Q2 N(435, 4672)   435\n 9 Season… 2007 Q3 N(428, 7008)   428\n10 Season… 2007 Q4 N(397, 7008)   397\n# ℹ 70 more rows\n# ℹ 1 more variable: `95%` &lt;hilo&gt;"
+    "text": "Prediction intervals\n\nbrick_fc |&gt; hilo(level = 95)\n\n# A tsibble: 80 x 5 [1Q]\n# Key:       .model [4]\n   .model  Quarter       Bricks .mean\n   &lt;chr&gt;     &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n 1 Season… 2005 Q3 N(428, 2336)   428\n 2 Season… 2005 Q4 N(397, 2336)   397\n 3 Season… 2006 Q1 N(355, 2336)   355\n 4 Season… 2006 Q2 N(435, 2336)   435\n 5 Season… 2006 Q3 N(428, 4672)   428\n 6 Season… 2006 Q4 N(397, 4672)   397\n 7 Season… 2007 Q1 N(355, 4672)   355\n 8 Season… 2007 Q2 N(435, 4672)   435\n 9 Season… 2007 Q3 N(428, 7008)   428\n10 Season… 2007 Q4 N(397, 7008)   397\n# ℹ 70 more rows\n# ℹ 1 more variable: `95%` &lt;hilo&gt;"
   },
   {
     "objectID": "slides/5-toolbox_o.html#prediction-intervals-2",
@@ -3040,28 +3068,28 @@
     "href": "slides/5-toolbox_o.html#modelling-with-transformations",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Modelling with transformations",
-    "text": "Modelling with transformations\n\neggs &lt;- prices %&gt;%\n  filter(!is.na(eggs)) %&gt;% select(eggs)\neggs %&gt;% autoplot() +\n  labs(title=\"Annual egg prices\",\n       y=\"$US (adjusted for inflation)\")"
+    "text": "Modelling with transformations\n\neggs &lt;- prices |&gt;\n  filter(!is.na(eggs)) |&gt; select(eggs)\neggs |&gt; autoplot() +\n  labs(title=\"Annual egg prices\",\n       y=\"$US (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#modelling-with-transformations-1",
     "href": "slides/5-toolbox_o.html#modelling-with-transformations-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Modelling with transformations",
-    "text": "Modelling with transformations\nTransformations used in the left of the formula will be automatically back-transformed. To model log-transformed egg prices, you could use:\n\nfit &lt;- eggs %&gt;%\n  model(RW(log(eggs) ~ drift()))\nfit\n\n# A mable: 1 x 1\n  `RW(log(eggs) ~ drift())`\n                    &lt;model&gt;\n1             &lt;RW w/ drift&gt;"
+    "text": "Modelling with transformations\nTransformations used in the left of the formula will be automatically back-transformed. To model log-transformed egg prices, you could use:\n\nfit &lt;- eggs |&gt;\n  model(RW(log(eggs) ~ drift()))\nfit\n\n# A mable: 1 x 1\n  `RW(log(eggs) ~ drift())`\n                    &lt;model&gt;\n1             &lt;RW w/ drift&gt;"
   },
   {
     "objectID": "slides/5-toolbox_o.html#forecasting-with-transformations-1",
     "href": "slides/5-toolbox_o.html#forecasting-with-transformations-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecasting with transformations",
-    "text": "Forecasting with transformations\n\nfc &lt;- fit %&gt;%\n  forecast(h = 50)\nfc\n\n# A fable: 50 x 4 [1Y]\n# Key:     .model [1]\n   .model                   year             eggs .mean\n   &lt;chr&gt;                   &lt;dbl&gt;           &lt;dist&gt; &lt;dbl&gt;\n 1 RW(log(eggs) ~ drift())  1994 t(N(4.1, 0.018))  61.8\n 2 RW(log(eggs) ~ drift())  1995 t(N(4.1, 0.036))  61.4\n 3 RW(log(eggs) ~ drift())  1996 t(N(4.1, 0.055))  61.0\n 4 RW(log(eggs) ~ drift())  1997 t(N(4.1, 0.074))  60.6\n 5 RW(log(eggs) ~ drift())  1998 t(N(4.1, 0.093))  60.2\n 6 RW(log(eggs) ~ drift())  1999    t(N(4, 0.11))  59.8\n 7 RW(log(eggs) ~ drift())  2000    t(N(4, 0.13))  59.4\n 8 RW(log(eggs) ~ drift())  2001    t(N(4, 0.15))  59.0\n 9 RW(log(eggs) ~ drift())  2002    t(N(4, 0.18))  58.6\n10 RW(log(eggs) ~ drift())  2003     t(N(4, 0.2))  58.3\n# ℹ 40 more rows"
+    "text": "Forecasting with transformations\n\nfc &lt;- fit |&gt;\n  forecast(h = 50)\nfc\n\n# A fable: 50 x 4 [1Y]\n# Key:     .model [1]\n   .model                   year             eggs .mean\n   &lt;chr&gt;                   &lt;dbl&gt;           &lt;dist&gt; &lt;dbl&gt;\n 1 RW(log(eggs) ~ drift())  1994 t(N(4.1, 0.018))  61.8\n 2 RW(log(eggs) ~ drift())  1995 t(N(4.1, 0.036))  61.4\n 3 RW(log(eggs) ~ drift())  1996 t(N(4.1, 0.055))  61.0\n 4 RW(log(eggs) ~ drift())  1997 t(N(4.1, 0.074))  60.6\n 5 RW(log(eggs) ~ drift())  1998 t(N(4.1, 0.093))  60.2\n 6 RW(log(eggs) ~ drift())  1999    t(N(4, 0.11))  59.8\n 7 RW(log(eggs) ~ drift())  2000    t(N(4, 0.13))  59.4\n 8 RW(log(eggs) ~ drift())  2001    t(N(4, 0.15))  59.0\n 9 RW(log(eggs) ~ drift())  2002    t(N(4, 0.18))  58.6\n10 RW(log(eggs) ~ drift())  2003     t(N(4, 0.2))  58.3\n# ℹ 40 more rows"
   },
   {
     "objectID": "slides/5-toolbox_o.html#forecasting-with-transformations-2",
     "href": "slides/5-toolbox_o.html#forecasting-with-transformations-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecasting with transformations",
-    "text": "Forecasting with transformations\n\nfc %&gt;% autoplot(eggs) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
+    "text": "Forecasting with transformations\n\nfc |&gt; autoplot(eggs) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#bias-adjustment",
@@ -3082,7 +3110,7 @@
     "href": "slides/5-toolbox_o.html#bias-adjustment-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\n\nfc %&gt;%\n  autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
+    "text": "Bias adjustment\n\nfc |&gt;\n  autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#forecasting-and-decomposition-1",
@@ -3096,28 +3124,28 @@
     "href": "slides/5-toolbox_o.html#us-retail-employment",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\nus_retail_employment &lt;- us_employment %&gt;%\n  filter(year(Month) &gt;= 1990, Title == \"Retail Trade\") %&gt;%\n  select(-Series_ID)\nus_retail_employment\n\n# A tsibble: 357 x 3 [1M]\n      Month Title        Employed\n      &lt;mth&gt; &lt;chr&gt;           &lt;dbl&gt;\n 1 1990 Jan Retail Trade   13256.\n 2 1990 Feb Retail Trade   12966.\n 3 1990 Mar Retail Trade   12938.\n 4 1990 Apr Retail Trade   13012.\n 5 1990 May Retail Trade   13108.\n 6 1990 Jun Retail Trade   13183.\n 7 1990 Jul Retail Trade   13170.\n 8 1990 Aug Retail Trade   13160.\n 9 1990 Sep Retail Trade   13113.\n10 1990 Oct Retail Trade   13185.\n# ℹ 347 more rows"
+    "text": "US Retail Employment\n\nus_retail_employment &lt;- us_employment |&gt;\n  filter(year(Month) &gt;= 1990, Title == \"Retail Trade\") |&gt;\n  select(-Series_ID)\nus_retail_employment\n\n# A tsibble: 357 x 3 [1M]\n      Month Title        Employed\n      &lt;mth&gt; &lt;chr&gt;           &lt;dbl&gt;\n 1 1990 Jan Retail Trade   13256.\n 2 1990 Feb Retail Trade   12966.\n 3 1990 Mar Retail Trade   12938.\n 4 1990 Apr Retail Trade   13012.\n 5 1990 May Retail Trade   13108.\n 6 1990 Jun Retail Trade   13183.\n 7 1990 Jul Retail Trade   13170.\n 8 1990 Aug Retail Trade   13160.\n 9 1990 Sep Retail Trade   13113.\n10 1990 Oct Retail Trade   13185.\n# ℹ 347 more rows"
   },
   {
     "objectID": "slides/5-toolbox_o.html#us-retail-employment-1",
     "href": "slides/5-toolbox_o.html#us-retail-employment-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\ndcmp &lt;- us_retail_employment %&gt;%\n  model(STL(Employed)) %&gt;%\n  components() %&gt;% select(-.model)\ndcmp\n\n# A tsibble: 357 x 6 [1M]\n      Month Employed  trend season_year remainder season_adjust\n      &lt;mth&gt;    &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1 1990 Jan   13256. 13288.      -33.0      0.836        13289.\n 2 1990 Feb   12966. 13269.     -258.     -44.6          13224.\n 3 1990 Mar   12938. 13250.     -290.     -22.1          13228.\n 4 1990 Apr   13012. 13231.     -220.       1.05         13232.\n 5 1990 May   13108. 13211.     -114.      11.3          13223.\n 6 1990 Jun   13183. 13192.      -24.3     15.5          13207.\n 7 1990 Jul   13170. 13172.      -23.2     21.6          13193.\n 8 1990 Aug   13160. 13151.       -9.52    17.8          13169.\n 9 1990 Sep   13113. 13131.      -39.5     22.0          13153.\n10 1990 Oct   13185. 13110.       61.6     13.2          13124.\n# ℹ 347 more rows"
+    "text": "US Retail Employment\n\ndcmp &lt;- us_retail_employment |&gt;\n  model(STL(Employed)) |&gt;\n  components() |&gt; select(-.model)\ndcmp\n\n# A tsibble: 357 x 6 [1M]\n      Month Employed  trend season_year remainder season_adjust\n      &lt;mth&gt;    &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1 1990 Jan   13256. 13288.      -33.0      0.836        13289.\n 2 1990 Feb   12966. 13269.     -258.     -44.6          13224.\n 3 1990 Mar   12938. 13250.     -290.     -22.1          13228.\n 4 1990 Apr   13012. 13231.     -220.       1.05         13232.\n 5 1990 May   13108. 13211.     -114.      11.3          13223.\n 6 1990 Jun   13183. 13192.      -24.3     15.5          13207.\n 7 1990 Jul   13170. 13172.      -23.2     21.6          13193.\n 8 1990 Aug   13160. 13151.       -9.52    17.8          13169.\n 9 1990 Sep   13113. 13131.      -39.5     22.0          13153.\n10 1990 Oct   13185. 13110.       61.6     13.2          13124.\n# ℹ 347 more rows"
   },
   {
     "objectID": "slides/5-toolbox_o.html#us-retail-employment-2",
     "href": "slides/5-toolbox_o.html#us-retail-employment-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\ndcmp_forecast&lt;- dcmp %&gt;%\n                model(NAIVE(season_adjust)) %&gt;%\n                forecast()\n\n  autoplot(dcmp_forecast,dcmp) +\n  labs(title = \"Naive forecasts of seasonally adjusted data\")"
+    "text": "US Retail Employment\n\ndcmp_forecast&lt;- dcmp |&gt;\n                model(NAIVE(season_adjust)) |&gt;\n                forecast()\n\n  autoplot(dcmp_forecast,dcmp) +\n  labs(title = \"Naive forecasts of seasonally adjusted data\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#us-retail-employment-3",
     "href": "slides/5-toolbox_o.html#us-retail-employment-3",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\nus_retail_employment %&gt;%\n  model(stlf = decomposition_model(\n    STL(Employed ~ trend(window = 7), robust = TRUE),\n    NAIVE(season_adjust)\n  )) %&gt;%\n  forecast() %&gt;%\n  autoplot(us_retail_employment)"
+    "text": "US Retail Employment\n\nus_retail_employment |&gt;\n  model(stlf = decomposition_model(\n    STL(Employed ~ trend(window = 7), robust = TRUE),\n    NAIVE(season_adjust)\n  )) |&gt;\n  forecast() |&gt;\n  autoplot(us_retail_employment)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#decomposition-models",
@@ -3152,7 +3180,7 @@
     "href": "slides/5-toolbox_o.html#measures-of-forecast-accuracy",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy",
-    "text": "Measures of forecast accuracy\n\nCodePlot\n\n\n\ntrain &lt;- aus_production %&gt;%\n  filter(between(year(Quarter), 1992, 2007))\nbeer &lt;- aus_production %&gt;%\n  filter(year(Quarter) &gt;= 1992)\nbeer_fc_plot &lt;- train %&gt;%\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  ) %&gt;%\n  forecast(h=11) %&gt;%\n  autoplot(beer, level = NULL) +\n    labs(title = \"Forecasts for quarterly beer production\",\n         y = \"Megalitres\") +\n    guides(colour=guide_legend(title=\"Forecast\"))\nbeer_fc_plot"
+    "text": "Measures of forecast accuracy\n\nCodePlot\n\n\n\ntrain &lt;- aus_production |&gt;\n  filter(between(year(Quarter), 1992, 2007))\nbeer &lt;- aus_production |&gt;\n  filter(year(Quarter) &gt;= 1992)\nbeer_fc_plot &lt;- train |&gt;\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  ) |&gt;\n  forecast(h=11) |&gt;\n  autoplot(beer, level = NULL) +\n    labs(title = \"Forecasts for quarterly beer production\",\n         y = \"Megalitres\") +\n    guides(colour=guide_legend(title=\"Forecast\"))\nbeer_fc_plot"
   },
   {
     "objectID": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-1",
@@ -3187,7 +3215,7 @@
     "href": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-model-fits",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: Model Fits",
-    "text": "Measures of forecast accuracy: Model Fits\n\nrecent_production &lt;- aus_production %&gt;%\n  filter(year(Quarter) &gt;= 1992)\ntrain &lt;- recent_production %&gt;%\n  filter(year(Quarter) &lt;= 2007)\nbeer_fit &lt;- train %&gt;%\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  )\nbeer_fc &lt;- beer_fit %&gt;%\n  forecast(h = 10)"
+    "text": "Measures of forecast accuracy: Model Fits\n\nrecent_production &lt;- aus_production |&gt;\n  filter(year(Quarter) &gt;= 1992)\ntrain &lt;- recent_production |&gt;\n  filter(year(Quarter) &lt;= 2007)\nbeer_fit &lt;- train |&gt;\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  )\nbeer_fc &lt;- beer_fit |&gt;\n  forecast(h = 10)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-on-training-data-12",
@@ -3201,14 +3229,14 @@
     "href": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-on-training-data-22",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: On Training data (2/2)",
-    "text": "Measures of forecast accuracy: On Training data (2/2)\n\naccuracy(beer_fit) %&gt;%\n  arrange(.model) %&gt;% # Sorts model names alphabetically\n  select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined\n\n# A tibble: 4 × 6\n  .model         .type     RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Training  65.3  54.8 12.2   3.83\n2 Mean           Training  43.6  35.2  7.89  2.46\n3 Naive          Training  65.3  54.7 12.2   3.83\n4 Seasonal_naive Training  16.8  14.3  3.31  1"
+    "text": "Measures of forecast accuracy: On Training data (2/2)\n\naccuracy(beer_fit) |&gt;\n  arrange(.model) |&gt; # Sorts model names alphabetically\n  select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined\n\n# A tibble: 4 × 6\n  .model         .type     RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Training  65.3  54.8 12.2   3.83\n2 Mean           Training  43.6  35.2  7.89  2.46\n3 Naive          Training  65.3  54.7 12.2   3.83\n4 Seasonal_naive Training  16.8  14.3  3.31  1"
   },
   {
     "objectID": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-on-testing-data",
     "href": "slides/5-toolbox_o.html#measures-of-forecast-accuracy-on-testing-data",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: On Testing data",
-    "text": "Measures of forecast accuracy: On Testing data\n\nSmaller is better\nCan be used to compare models and evaluate models individually\nGives a realistic expectation of error if we rebuild model on all data for future forecasts\n\n. . .\n\naccuracy(beer_fc, recent_production) %&gt;%\n  arrange(.model) %&gt;%\n  select(.model, .type, RMSE, MAE, MAPE, MASE)\n\n# A tibble: 4 × 6\n  .model         .type  RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Test   64.9  58.9 14.6  4.12 \n2 Mean           Test   38.4  34.8  8.28 2.44 \n3 Naive          Test   62.7  57.4 14.2  4.01 \n4 Seasonal_naive Test   14.3  13.4  3.17 0.937"
+    "text": "Measures of forecast accuracy: On Testing data\n\nSmaller is better\nCan be used to compare models and evaluate models individually\nGives a realistic expectation of error if we rebuild model on all data for future forecasts\n\n. . .\n\naccuracy(beer_fc, recent_production) |&gt;\n  arrange(.model) |&gt;\n  select(.model, .type, RMSE, MAE, MAPE, MASE)\n\n# A tibble: 4 × 6\n  .model         .type  RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Test   64.9  58.9 14.6  4.12 \n2 Mean           Test   38.4  34.8  8.28 2.44 \n3 Naive          Test   62.7  57.4 14.2  4.01 \n4 Seasonal_naive Test   14.3  13.4  3.17 0.937"
   },
   {
     "objectID": "slides/5-toolbox.html#setup",
@@ -3236,35 +3264,35 @@
     "href": "slides/5-toolbox.html#data-preparation-tidy",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Data preparation (tidy)",
-    "text": "Data preparation (tidy)\n\ngdppc &lt;- global_economy %&gt;%\n  mutate(GDP_per_capita = GDP/Population) %&gt;%\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows"
+    "text": "Data preparation (tidy)\n\ngdppc &lt;- global_economy |&gt;\n  mutate(GDP_per_capita = GDP/Population) |&gt;\n  select(Year, Country, GDP, Population, GDP_per_capita)\ngdppc\n\n# A tsibble: 15,150 x 5 [1Y]\n# Key:       Country [263]\n    Year Country             GDP Population GDP_per_capita\n   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt;\n 1  1960 Afghanistan  537777811.    8996351           59.8\n 2  1961 Afghanistan  548888896.    9166764           59.9\n 3  1962 Afghanistan  546666678.    9345868           58.5\n 4  1963 Afghanistan  751111191.    9533954           78.8\n 5  1964 Afghanistan  800000044.    9731361           82.2\n 6  1965 Afghanistan 1006666638.    9938414          101. \n 7  1966 Afghanistan 1399999967.   10152331          138. \n 8  1967 Afghanistan 1673333418.   10372630          161. \n 9  1968 Afghanistan 1373333367.   10604346          130. \n10  1969 Afghanistan 1408888922.   10854428          130. \n# ℹ 15,140 more rows"
   },
   {
     "objectID": "slides/5-toolbox.html#data-visualisation",
     "href": "slides/5-toolbox.html#data-visualisation",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Data visualisation",
-    "text": "Data visualisation\n\ngdppc %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
+    "text": "Data visualisation\n\ngdppc |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(GDP_per_capita) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
   },
   {
     "objectID": "slides/5-toolbox.html#model-estimation",
     "href": "slides/5-toolbox.html#model-estimation",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Model estimation",
-    "text": "Model estimation\nThe model() function trains models to data.\n\nfit &lt;- gdppc %&gt;%\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\nA is a model table, each cell corresponds to a fitted model."
+    "text": "Model estimation\nThe model() function trains models to data.\n\nfit &lt;- gdppc |&gt;\n  model(trend_model = TSLM(GDP_per_capita ~ trend())) # TSLM to be covered later\nfit |&gt; head(5)\n\n# A mable: 5 x 2\n# Key:     Country [5]\n  Country        trend_model\n  &lt;fct&gt;              &lt;model&gt;\n1 Afghanistan         &lt;TSLM&gt;\n2 Albania             &lt;TSLM&gt;\n3 Algeria             &lt;TSLM&gt;\n4 American Samoa      &lt;TSLM&gt;\n5 Andorra             &lt;TSLM&gt;\n\n\n\n\n\n\n\n\nNote\n\n\nA is a model table, each cell corresponds to a fitted model."
   },
   {
     "objectID": "slides/5-toolbox.html#producing-forecasts",
     "href": "slides/5-toolbox.html#producing-forecasts",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Producing forecasts",
-    "text": "Producing forecasts\n\nfit %&gt;% forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\nA is a forecast table with point forecasts and distributions."
+    "text": "Producing forecasts\n\nfit |&gt; forecast(h = \"3 years\")\n\n# A fable: 789 x 5 [1Y]\n# Key:     Country, .model [263]\n   Country  .model  Year   GDP_per_capita\n   &lt;fct&gt;    &lt;chr&gt;  &lt;dbl&gt;           &lt;dist&gt;\n 1 Afghani… trend…  2018     N(526, 9653)\n 2 Afghani… trend…  2019     N(534, 9689)\n 3 Afghani… trend…  2020     N(542, 9727)\n 4 Albania  trend…  2018  N(4716, 476419)\n 5 Albania  trend…  2019  N(4867, 481086)\n 6 Albania  trend…  2020  N(5018, 486012)\n 7 Algeria  trend…  2018  N(4410, 643094)\n 8 Algeria  trend…  2019  N(4489, 645311)\n 9 Algeria  trend…  2020  N(4568, 647602)\n10 America… trend…  2018 N(12491, 652926)\n# ℹ 779 more rows\n# ℹ 1 more variable: .mean &lt;dbl&gt;\n\n\n\n\n\n\n\n\nNote\n\n\nA is a forecast table with point forecasts and distributions."
   },
   {
     "objectID": "slides/5-toolbox.html#visualising-forecasts",
     "href": "slides/5-toolbox.html#visualising-forecasts",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Visualising forecasts",
-    "text": "Visualising forecasts\n\nfit %&gt;% forecast(h = \"3 years\") %&gt;%\n  filter(Country==\"Sweden\") %&gt;%\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
+    "text": "Visualising forecasts\n\nfit |&gt; forecast(h = \"3 years\") |&gt;\n  filter(Country==\"Sweden\") |&gt;\n  autoplot(gdppc) +\n    labs(title = \"GDP per capita for Sweden\", y = \"$US\")"
   },
   {
     "objectID": "slides/5-toolbox.html#meany-average-method",
@@ -3274,53 +3302,60 @@
     "text": "MEAN(y): Average method\n\nForecast of all future values is equal to mean of historical data \\(\\{y_1,\\dots,y_T\\}\\).\nForecasts: \\(\\hat{y}_{T+h|T} = \\bar{y} = (y_1+\\dots+y_T)/T\\)"
   },
   {
+    "objectID": "slides/5-toolbox.html#meany-average-method-plot",
+    "href": "slides/5-toolbox.html#meany-average-method-plot",
+    "title": "Chapter 5 Forecasters Toolbox",
+    "section": "MEAN(y): Average method Plot",
+    "text": "MEAN(y): Average method Plot\n\nCodePlot\n\n\n\nbricks &lt;- aus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  mutate(average = mean(Bricks))\n\nfc &lt;- bricks |&gt;\n  filter(row_number() == n()) |&gt; as_tibble() |&gt;\n  unnest(Quarter = list(as.Date(Quarter) + months(c(0, 12*5))))\n\nbricks |&gt;\n  ggplot(aes(x = Quarter, y = Bricks)) +\n  geom_line() +\n  geom_line(aes(y = average), colour = \"#0072B2\", linetype = \"dashed\") +\n  geom_line(aes(y = average), data = fc, colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
+  },
+  {
     "objectID": "slides/5-toolbox.html#naivey-naïve-method",
     "href": "slides/5-toolbox.html#naivey-naïve-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "NAIVE(y): Naïve method",
-    "text": "NAIVE(y): Naïve method\n\nForecasts equal to last observed value.\nForecasts: \\(\\hat{y}_{T+h|T} =y_T\\).\nConsequence of efficient market hypothesis."
+    "text": "NAIVE(y): Naïve method\n\nForecasts equal to last observed value.\nForecasts: \\(\\hat{y}_{T+h|T} =y_T\\).\nConsequence of efficient market hypothesis.\n\n\n\nCodePlot\n\n\n\nbricks |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(NAIVE(Bricks)) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(filter(bricks, year(Quarter) &gt; 1990), level = NULL) +\n    geom_point(data = slice(bricks, n()), aes(y=Bricks), colour = \"#0072B2\") +\n    labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox.html#snaivey-lagm-seasonal-naïve-method",
     "href": "slides/5-toolbox.html#snaivey-lagm-seasonal-naïve-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "SNAIVE(y ~ lag(m)): Seasonal naïve method",
-    "text": "SNAIVE(y ~ lag(m)): Seasonal naïve method\n\nForecasts equal to last value from same season.\nForecasts: \\(\\hat{y}_{T+h|T} =y_{T+h-m(k+1)}\\), where \\(m=\\) seasonal period and \\(k\\) is the integer part of \\((h-1)/m\\)."
+    "text": "SNAIVE(y ~ lag(m)): Seasonal naïve method\n\nForecasts equal to last value from same season.\nForecasts: \\(\\hat{y}_{T+h|T} =y_{T+h-m(k+1)}\\), where \\(m=\\) seasonal period and \\(k\\) is the integer part of \\((h-1)/m\\).\n\n\n\nCodePlot\n\n\n\nbricks |&gt;\n  model(SNAIVE(Bricks ~ lag(\"year\"))) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(filter(bricks, year(Quarter) &gt; 1990), level = NULL) +\n  geom_point(data = slice(bricks, (n()-3):n()), aes(y=Bricks), colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox.html#rwy-drift-drift-method",
     "href": "slides/5-toolbox.html#rwy-drift-drift-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "RW(y ~ drift()): Drift method",
-    "text": "RW(y ~ drift()): Drift method\n\nDefinitionPlot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
+    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
   },
   {
     "objectID": "slides/5-toolbox.html#model-fitting",
     "href": "slides/5-toolbox.html#model-fitting",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Model fitting",
-    "text": "Model fitting\nThe model() function trains models to data.\n\nbrick_fit &lt;-  aus_production %&gt;%\n  filter(!is.na(Bricks)) %&gt;%\n  model(\n    Seasonal_naive = SNAIVE(Bricks),\n    Naive = NAIVE(Bricks),\n    Drift = RW(Bricks ~ drift()),\n    Mean = MEAN(Bricks)\n  )\n\n\n\n# A mable: 1 x 4\n  Seasonal_naive   Naive         Drift    Mean\n         &lt;model&gt; &lt;model&gt;       &lt;model&gt; &lt;model&gt;\n1       &lt;SNAIVE&gt; &lt;NAIVE&gt; &lt;RW w/ drift&gt;  &lt;MEAN&gt;"
+    "text": "Model fitting\nThe model() function trains models to data.\n\nbrick_fit &lt;-  aus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(\n    Seasonal_naive = SNAIVE(Bricks),\n    Naive = NAIVE(Bricks),\n    Drift = RW(Bricks ~ drift()),\n    Mean = MEAN(Bricks)\n  )\n\n\n\n# A mable: 1 x 4\n  Seasonal_naive   Naive         Drift    Mean\n         &lt;model&gt; &lt;model&gt;       &lt;model&gt; &lt;model&gt;\n1       &lt;SNAIVE&gt; &lt;NAIVE&gt; &lt;RW w/ drift&gt;  &lt;MEAN&gt;"
   },
   {
     "objectID": "slides/5-toolbox.html#producing-forecasts-1",
     "href": "slides/5-toolbox.html#producing-forecasts-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Producing forecasts",
-    "text": "Producing forecasts\n\nbrick_fc &lt;- brick_fit %&gt;%\n  forecast(h = \"5 years\")\n\n\n\n# A fable: 80 x 4 [1Q]\n# Key:     .model [4]\n  .model   Quarter       Bricks .mean\n  &lt;chr&gt;      &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n1 Seasona… 2005 Q3 N(428, 2336)   428\n2 Seasona… 2005 Q4 N(397, 2336)   397\n3 Seasona… 2006 Q1 N(355, 2336)   355\n4 Seasona… 2006 Q2 N(435, 2336)   435\n# ℹ 76 more rows"
+    "text": "Producing forecasts\n\nbrick_fc &lt;- brick_fit |&gt;\n  forecast(h = \"5 years\")\n\n\n\n# A fable: 80 x 4 [1Q]\n# Key:     .model [4]\n  .model   Quarter       Bricks .mean\n  &lt;chr&gt;      &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n1 Seasona… 2005 Q3 N(428, 2336)   428\n2 Seasona… 2005 Q4 N(397, 2336)   397\n3 Seasona… 2006 Q1 N(355, 2336)   355\n4 Seasona… 2006 Q2 N(435, 2336)   435\n# ℹ 76 more rows"
   },
   {
     "objectID": "slides/5-toolbox.html#visualising-forecasts-1",
     "href": "slides/5-toolbox.html#visualising-forecasts-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Visualising forecasts",
-    "text": "Visualising forecasts\n\nbrick_fc %&gt;%\n  autoplot(aus_production, level = NULL) +\n  labs(title = \"Clay brick production in Australia\",\n       y = \"Millions of bricks\") +\n  guides(colour = guide_legend(title = \"Forecast\"))"
+    "text": "Visualising forecasts\n\nbrick_fc |&gt;\n  autoplot(aus_production, level = NULL) +\n  labs(title = \"Clay brick production in Australia\",\n       y = \"Millions of bricks\") +\n  guides(colour = guide_legend(title = \"Forecast\"))"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nCodePlot\n\n\n\n# Extract training data\nfb_stock &lt;- gafa_stock %&gt;%\n  filter(Symbol == \"FB\") %&gt;%\n  mutate(trading_day = row_number()) %&gt;%\n  update_tsibble(index=trading_day, regular=TRUE)\n\n# Specify, estimate and forecast\nfb_stock %&gt;%\n  model(\n    Mean = MEAN(Close),\n    Naive = NAIVE(Close),\n    Drift = RW(Close ~ drift())\n  ) %&gt;%\n  forecast(h=42) %&gt;%\n  autoplot(fb_stock, level = NULL) +\n  labs(title = \"Facebook closing stock price\", y=\"$US\") +\n  guides(colour=guide_legend(title=\"Forecast\"))"
+    "text": "Facebook closing stock price\n\nCodePlot\n\n\n\n# Extract training data\nfb_stock &lt;- gafa_stock |&gt;\n  filter(Symbol == \"FB\") |&gt;\n  mutate(trading_day = row_number()) |&gt;\n  update_tsibble(index=trading_day, regular=TRUE)\n\n# Specify, estimate and forecast\nfb_stock |&gt;\n  model(\n    Mean = MEAN(Close),\n    Naive = NAIVE(Close),\n    Drift = RW(Close ~ drift())\n  ) |&gt;\n  forecast(h=42) |&gt;\n  autoplot(fb_stock, level = NULL) +\n  labs(title = \"Facebook closing stock price\", y=\"$US\") +\n  guides(colour=guide_legend(title=\"Forecast\"))"
   },
   {
     "objectID": "slides/5-toolbox.html#your-turn",
@@ -3348,49 +3383,49 @@
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nfb_stock %&gt;% autoplot(Close)"
+    "text": "Facebook closing stock price\n\nfb_stock |&gt; autoplot(Close)"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-2",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\nfit &lt;- fb_stock %&gt;% model(NAIVE(Close))\naugment(fit) |&gt; head(5)\n\n# A tsibble: 5 x 7 [1]\n# Key:       Symbol, .model [1]\n  Symbol .model       trading_day Close .fitted .resid .innov\n  &lt;chr&gt;  &lt;chr&gt;              &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 FB     NAIVE(Close)           1  54.7    NA   NA     NA    \n2 FB     NAIVE(Close)           2  54.6    54.7 -0.150 -0.150\n3 FB     NAIVE(Close)           3  57.2    54.6  2.64   2.64 \n4 FB     NAIVE(Close)           4  57.9    57.2  0.720  0.720\n5 FB     NAIVE(Close)           5  58.2    57.9  0.310  0.310\n\n\n\nNaive forecasts:\n\\(\\hat{y}_{t|t-1} = y_{t-1}\\)\n\\(e_t  = y_t - \\hat{y}_{t|t-1} = y_t-y_{t-1}\\)\nWhere .fitted = \\(\\hat{y}_{t|t-1}\\) and .resid = \\(\\phantom{\\hat{y}_{|}}{e}_{t}\\phantom{\\hat{y}_{|}}\\)"
+    "text": "Facebook closing stock price\n\nfit &lt;- fb_stock |&gt; model(NAIVE(Close))\naugment(fit) |&gt; head(5)\n\n# A tsibble: 5 x 7 [1]\n# Key:       Symbol, .model [1]\n  Symbol .model       trading_day Close .fitted .resid .innov\n  &lt;chr&gt;  &lt;chr&gt;              &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 FB     NAIVE(Close)           1  54.7    NA   NA     NA    \n2 FB     NAIVE(Close)           2  54.6    54.7 -0.150 -0.150\n3 FB     NAIVE(Close)           3  57.2    54.6  2.64   2.64 \n4 FB     NAIVE(Close)           4  57.9    57.2  0.720  0.720\n5 FB     NAIVE(Close)           5  58.2    57.9  0.310  0.310\n\n\n\nNaive forecasts:\n\\(\\hat{y}_{t|t-1} = y_{t-1}\\)\n\\(e_t  = y_t - \\hat{y}_{t|t-1} = y_t-y_{t-1}\\)\nWhere .fitted = \\(\\hat{y}_{t|t-1}\\) and .resid = \\(\\phantom{\\hat{y}_{|}}{e}_{t}\\phantom{\\hat{y}_{|}}\\)"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-3",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-3",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-4",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-4",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  filter(trading_day &gt; 1100) %&gt;%\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  filter(trading_day &gt; 1100) |&gt;\n  ggplot(aes(x = trading_day)) +\n  geom_line(aes(y = Close, colour = \"Data\")) +\n  geom_line(aes(y = .fitted, colour = \"Fitted\"))"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-5",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-5",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  autoplot(.resid) +\n  labs(y = \"$US\",\n       title = \"Residuals from naïve method\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  autoplot(.resid) +\n  labs(y = \"$US\",\n       title = \"Residuals from naïve method\")"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-6",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-6",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ggplot(aes(x = .resid)) +\n  geom_histogram(bins = 150) +\n  labs(title = \"Histogram of residuals\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ggplot(aes(x = .resid)) +\n  geom_histogram(bins = 150) +\n  labs(title = \"Histogram of residuals\")"
   },
   {
     "objectID": "slides/5-toolbox.html#facebook-closing-stock-price-7",
     "href": "slides/5-toolbox.html#facebook-closing-stock-price-7",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Facebook closing stock price",
-    "text": "Facebook closing stock price\n\naugment(fit) %&gt;%\n  ACF(.resid) %&gt;%\n  autoplot() + labs(title = \"ACF of residuals\")"
+    "text": "Facebook closing stock price\n\naugment(fit) |&gt;\n  ACF(.resid) |&gt;\n  autoplot() + labs(title = \"ACF of residuals\")"
   },
   {
     "objectID": "slides/5-toolbox.html#gg_tsresiduals-function",
@@ -3432,7 +3467,7 @@
     "href": "slides/5-toolbox.html#portmanteau-tests",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests",
-    "text": "Portmanteau tests\n\nIf data are WN, \\(Q\\) and \\(Q^*\\) have \\(\\chi^2\\) distribution with \\(\\ell\\) degrees of freedom.\nlag \\(= \\ell\\)\n\n\n\naugment(fit) %&gt;%\n  features(.resid, box_pierce, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       bp_stat bp_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.281\n\n\n\n\n\naugment(fit) %&gt;%\n  features(.resid, ljung_box, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       lb_stat lb_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.276"
+    "text": "Portmanteau tests\n\nIf data are WN, \\(Q\\) and \\(Q^*\\) have \\(\\chi^2\\) distribution with \\(\\ell\\) degrees of freedom.\nlag \\(= \\ell\\)\n\n\n\naugment(fit) |&gt;\n  features(.resid, box_pierce, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       bp_stat bp_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.281\n\n\n\n\n\naugment(fit) |&gt;\n  features(.resid, ljung_box, lag=10)\n\n# A tibble: 1 × 4\n  Symbol .model       lb_stat lb_pvalue\n  &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n1 FB     NAIVE(Close)    12.1     0.276"
   },
   {
     "objectID": "slides/5-toolbox.html#forecast-distributions",
@@ -3460,7 +3495,7 @@
     "href": "slides/5-toolbox.html#prediction-intervals-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Prediction intervals",
-    "text": "Prediction intervals\n\nbrick_fc %&gt;% hilo(level = 95)\n\n# A tsibble: 80 x 5 [1Q]\n# Key:       .model [4]\n   .model  Quarter       Bricks .mean\n   &lt;chr&gt;     &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n 1 Season… 2005 Q3 N(428, 2336)   428\n 2 Season… 2005 Q4 N(397, 2336)   397\n 3 Season… 2006 Q1 N(355, 2336)   355\n 4 Season… 2006 Q2 N(435, 2336)   435\n 5 Season… 2006 Q3 N(428, 4672)   428\n 6 Season… 2006 Q4 N(397, 4672)   397\n 7 Season… 2007 Q1 N(355, 4672)   355\n 8 Season… 2007 Q2 N(435, 4672)   435\n 9 Season… 2007 Q3 N(428, 7008)   428\n10 Season… 2007 Q4 N(397, 7008)   397\n# ℹ 70 more rows\n# ℹ 1 more variable: `95%` &lt;hilo&gt;"
+    "text": "Prediction intervals\n\nbrick_fc |&gt; hilo(level = 95)\n\n# A tsibble: 80 x 5 [1Q]\n# Key:       .model [4]\n   .model  Quarter       Bricks .mean\n   &lt;chr&gt;     &lt;qtr&gt;       &lt;dist&gt; &lt;dbl&gt;\n 1 Season… 2005 Q3 N(428, 2336)   428\n 2 Season… 2005 Q4 N(397, 2336)   397\n 3 Season… 2006 Q1 N(355, 2336)   355\n 4 Season… 2006 Q2 N(435, 2336)   435\n 5 Season… 2006 Q3 N(428, 4672)   428\n 6 Season… 2006 Q4 N(397, 4672)   397\n 7 Season… 2007 Q1 N(355, 4672)   355\n 8 Season… 2007 Q2 N(435, 4672)   435\n 9 Season… 2007 Q3 N(428, 7008)   428\n10 Season… 2007 Q4 N(397, 7008)   397\n# ℹ 70 more rows\n# ℹ 1 more variable: `95%` &lt;hilo&gt;"
   },
   {
     "objectID": "slides/5-toolbox.html#prediction-intervals-2",
@@ -3474,28 +3509,28 @@
     "href": "slides/5-toolbox.html#modelling-with-transformations",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Modelling with transformations",
-    "text": "Modelling with transformations\n\neggs &lt;- prices %&gt;%\n  filter(!is.na(eggs)) %&gt;% select(eggs)\neggs %&gt;% autoplot() +\n  labs(title=\"Annual egg prices\",\n       y=\"$US (adjusted for inflation)\")"
+    "text": "Modelling with transformations\n\neggs &lt;- prices |&gt;\n  filter(!is.na(eggs)) |&gt; select(eggs)\neggs |&gt; autoplot() +\n  labs(title=\"Annual egg prices\",\n       y=\"$US (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox.html#modelling-with-transformations-1",
     "href": "slides/5-toolbox.html#modelling-with-transformations-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Modelling with transformations",
-    "text": "Modelling with transformations\nTransformations used in the left of the formula will be automatically back-transformed. To model log-transformed egg prices, you could use:\n\nfit &lt;- eggs %&gt;%\n  model(RW(log(eggs) ~ drift()))\nfit\n\n# A mable: 1 x 1\n  `RW(log(eggs) ~ drift())`\n                    &lt;model&gt;\n1             &lt;RW w/ drift&gt;"
+    "text": "Modelling with transformations\nTransformations used in the left of the formula will be automatically back-transformed. To model log-transformed egg prices, you could use:\n\nfit &lt;- eggs |&gt;\n  model(RW(log(eggs) ~ drift()))\nfit\n\n# A mable: 1 x 1\n  `RW(log(eggs) ~ drift())`\n                    &lt;model&gt;\n1             &lt;RW w/ drift&gt;"
   },
   {
     "objectID": "slides/5-toolbox.html#forecasting-with-transformations-1",
     "href": "slides/5-toolbox.html#forecasting-with-transformations-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecasting with transformations",
-    "text": "Forecasting with transformations\n\nfc &lt;- fit %&gt;%\n  forecast(h = 50)\nfc\n\n# A fable: 50 x 4 [1Y]\n# Key:     .model [1]\n   .model                   year             eggs .mean\n   &lt;chr&gt;                   &lt;dbl&gt;           &lt;dist&gt; &lt;dbl&gt;\n 1 RW(log(eggs) ~ drift())  1994 t(N(4.1, 0.018))  61.8\n 2 RW(log(eggs) ~ drift())  1995 t(N(4.1, 0.036))  61.4\n 3 RW(log(eggs) ~ drift())  1996 t(N(4.1, 0.055))  61.0\n 4 RW(log(eggs) ~ drift())  1997 t(N(4.1, 0.074))  60.6\n 5 RW(log(eggs) ~ drift())  1998 t(N(4.1, 0.093))  60.2\n 6 RW(log(eggs) ~ drift())  1999    t(N(4, 0.11))  59.8\n 7 RW(log(eggs) ~ drift())  2000    t(N(4, 0.13))  59.4\n 8 RW(log(eggs) ~ drift())  2001    t(N(4, 0.15))  59.0\n 9 RW(log(eggs) ~ drift())  2002    t(N(4, 0.18))  58.6\n10 RW(log(eggs) ~ drift())  2003     t(N(4, 0.2))  58.3\n# ℹ 40 more rows"
+    "text": "Forecasting with transformations\n\nfc &lt;- fit |&gt;\n  forecast(h = 50)\nfc\n\n# A fable: 50 x 4 [1Y]\n# Key:     .model [1]\n   .model                   year             eggs .mean\n   &lt;chr&gt;                   &lt;dbl&gt;           &lt;dist&gt; &lt;dbl&gt;\n 1 RW(log(eggs) ~ drift())  1994 t(N(4.1, 0.018))  61.8\n 2 RW(log(eggs) ~ drift())  1995 t(N(4.1, 0.036))  61.4\n 3 RW(log(eggs) ~ drift())  1996 t(N(4.1, 0.055))  61.0\n 4 RW(log(eggs) ~ drift())  1997 t(N(4.1, 0.074))  60.6\n 5 RW(log(eggs) ~ drift())  1998 t(N(4.1, 0.093))  60.2\n 6 RW(log(eggs) ~ drift())  1999    t(N(4, 0.11))  59.8\n 7 RW(log(eggs) ~ drift())  2000    t(N(4, 0.13))  59.4\n 8 RW(log(eggs) ~ drift())  2001    t(N(4, 0.15))  59.0\n 9 RW(log(eggs) ~ drift())  2002    t(N(4, 0.18))  58.6\n10 RW(log(eggs) ~ drift())  2003     t(N(4, 0.2))  58.3\n# ℹ 40 more rows"
   },
   {
     "objectID": "slides/5-toolbox.html#forecasting-with-transformations-2",
     "href": "slides/5-toolbox.html#forecasting-with-transformations-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecasting with transformations",
-    "text": "Forecasting with transformations\n\nfc %&gt;% autoplot(eggs) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
+    "text": "Forecasting with transformations\n\nfc |&gt; autoplot(eggs) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox.html#bias-adjustment",
@@ -3516,7 +3551,7 @@
     "href": "slides/5-toolbox.html#bias-adjustment-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\n\nfc %&gt;%\n  autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
+    "text": "Bias adjustment\n\nfc |&gt;\n  autoplot(eggs, level = 80, point_forecast = lst(mean, median)) +\n  labs(title=\"Annual egg prices\",\n       y=\"US$ (adjusted for inflation)\")"
   },
   {
     "objectID": "slides/5-toolbox.html#forecasting-and-decomposition-1",
@@ -3530,28 +3565,28 @@
     "href": "slides/5-toolbox.html#us-retail-employment",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\nus_retail_employment &lt;- us_employment %&gt;%\n  filter(year(Month) &gt;= 1990, Title == \"Retail Trade\") %&gt;%\n  select(-Series_ID)\nus_retail_employment\n\n# A tsibble: 357 x 3 [1M]\n      Month Title        Employed\n      &lt;mth&gt; &lt;chr&gt;           &lt;dbl&gt;\n 1 1990 Jan Retail Trade   13256.\n 2 1990 Feb Retail Trade   12966.\n 3 1990 Mar Retail Trade   12938.\n 4 1990 Apr Retail Trade   13012.\n 5 1990 May Retail Trade   13108.\n 6 1990 Jun Retail Trade   13183.\n 7 1990 Jul Retail Trade   13170.\n 8 1990 Aug Retail Trade   13160.\n 9 1990 Sep Retail Trade   13113.\n10 1990 Oct Retail Trade   13185.\n# ℹ 347 more rows"
+    "text": "US Retail Employment\n\nus_retail_employment &lt;- us_employment |&gt;\n  filter(year(Month) &gt;= 1990, Title == \"Retail Trade\") |&gt;\n  select(-Series_ID)\nus_retail_employment\n\n# A tsibble: 357 x 3 [1M]\n      Month Title        Employed\n      &lt;mth&gt; &lt;chr&gt;           &lt;dbl&gt;\n 1 1990 Jan Retail Trade   13256.\n 2 1990 Feb Retail Trade   12966.\n 3 1990 Mar Retail Trade   12938.\n 4 1990 Apr Retail Trade   13012.\n 5 1990 May Retail Trade   13108.\n 6 1990 Jun Retail Trade   13183.\n 7 1990 Jul Retail Trade   13170.\n 8 1990 Aug Retail Trade   13160.\n 9 1990 Sep Retail Trade   13113.\n10 1990 Oct Retail Trade   13185.\n# ℹ 347 more rows"
   },
   {
     "objectID": "slides/5-toolbox.html#us-retail-employment-1",
     "href": "slides/5-toolbox.html#us-retail-employment-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\ndcmp &lt;- us_retail_employment %&gt;%\n  model(STL(Employed)) %&gt;%\n  components() %&gt;% select(-.model)\ndcmp\n\n# A tsibble: 357 x 6 [1M]\n      Month Employed  trend season_year remainder season_adjust\n      &lt;mth&gt;    &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1 1990 Jan   13256. 13288.      -33.0      0.836        13289.\n 2 1990 Feb   12966. 13269.     -258.     -44.6          13224.\n 3 1990 Mar   12938. 13250.     -290.     -22.1          13228.\n 4 1990 Apr   13012. 13231.     -220.       1.05         13232.\n 5 1990 May   13108. 13211.     -114.      11.3          13223.\n 6 1990 Jun   13183. 13192.      -24.3     15.5          13207.\n 7 1990 Jul   13170. 13172.      -23.2     21.6          13193.\n 8 1990 Aug   13160. 13151.       -9.52    17.8          13169.\n 9 1990 Sep   13113. 13131.      -39.5     22.0          13153.\n10 1990 Oct   13185. 13110.       61.6     13.2          13124.\n# ℹ 347 more rows"
+    "text": "US Retail Employment\n\ndcmp &lt;- us_retail_employment |&gt;\n  model(STL(Employed)) |&gt;\n  components() |&gt; select(-.model)\ndcmp\n\n# A tsibble: 357 x 6 [1M]\n      Month Employed  trend season_year remainder season_adjust\n      &lt;mth&gt;    &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1 1990 Jan   13256. 13288.      -33.0      0.836        13289.\n 2 1990 Feb   12966. 13269.     -258.     -44.6          13224.\n 3 1990 Mar   12938. 13250.     -290.     -22.1          13228.\n 4 1990 Apr   13012. 13231.     -220.       1.05         13232.\n 5 1990 May   13108. 13211.     -114.      11.3          13223.\n 6 1990 Jun   13183. 13192.      -24.3     15.5          13207.\n 7 1990 Jul   13170. 13172.      -23.2     21.6          13193.\n 8 1990 Aug   13160. 13151.       -9.52    17.8          13169.\n 9 1990 Sep   13113. 13131.      -39.5     22.0          13153.\n10 1990 Oct   13185. 13110.       61.6     13.2          13124.\n# ℹ 347 more rows"
   },
   {
     "objectID": "slides/5-toolbox.html#us-retail-employment-2",
     "href": "slides/5-toolbox.html#us-retail-employment-2",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\ndcmp_forecast&lt;- dcmp %&gt;%\n                model(NAIVE(season_adjust)) %&gt;%\n                forecast()\n\n  autoplot(dcmp_forecast,dcmp) +\n  labs(title = \"Naive forecasts of seasonally adjusted data\")"
+    "text": "US Retail Employment\n\ndcmp_forecast&lt;- dcmp |&gt;\n                model(NAIVE(season_adjust)) |&gt;\n                forecast()\n\n  autoplot(dcmp_forecast,dcmp) +\n  labs(title = \"Naive forecasts of seasonally adjusted data\")"
   },
   {
     "objectID": "slides/5-toolbox.html#us-retail-employment-3",
     "href": "slides/5-toolbox.html#us-retail-employment-3",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "US Retail Employment",
-    "text": "US Retail Employment\n\nus_retail_employment %&gt;%\n  model(stlf = decomposition_model(\n    STL(Employed ~ trend(window = 7), robust = TRUE),\n    NAIVE(season_adjust)\n  )) %&gt;%\n  forecast() %&gt;%\n  autoplot(us_retail_employment)"
+    "text": "US Retail Employment\n\nus_retail_employment |&gt;\n  model(stlf = decomposition_model(\n    STL(Employed ~ trend(window = 7), robust = TRUE),\n    NAIVE(season_adjust)\n  )) |&gt;\n  forecast() |&gt;\n  autoplot(us_retail_employment)"
   },
   {
     "objectID": "slides/5-toolbox.html#decomposition-models",
@@ -3586,7 +3621,7 @@
     "href": "slides/5-toolbox.html#measures-of-forecast-accuracy",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy",
-    "text": "Measures of forecast accuracy\n\nCodePlot\n\n\n\ntrain &lt;- aus_production %&gt;%\n  filter(between(year(Quarter), 1992, 2007))\nbeer &lt;- aus_production %&gt;%\n  filter(year(Quarter) &gt;= 1992)\nbeer_fc_plot &lt;- train %&gt;%\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  ) %&gt;%\n  forecast(h=11) %&gt;%\n  autoplot(beer, level = NULL) +\n    labs(title = \"Forecasts for quarterly beer production\",\n         y = \"Megalitres\") +\n    guides(colour=guide_legend(title=\"Forecast\"))\nbeer_fc_plot"
+    "text": "Measures of forecast accuracy\n\nCodePlot\n\n\n\ntrain &lt;- aus_production |&gt;\n  filter(between(year(Quarter), 1992, 2007))\nbeer &lt;- aus_production |&gt;\n  filter(year(Quarter) &gt;= 1992)\nbeer_fc_plot &lt;- train |&gt;\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  ) |&gt;\n  forecast(h=11) |&gt;\n  autoplot(beer, level = NULL) +\n    labs(title = \"Forecasts for quarterly beer production\",\n         y = \"Megalitres\") +\n    guides(colour=guide_legend(title=\"Forecast\"))\nbeer_fc_plot"
   },
   {
     "objectID": "slides/5-toolbox.html#measures-of-forecast-accuracy-1",
@@ -3621,7 +3656,7 @@
     "href": "slides/5-toolbox.html#measures-of-forecast-accuracy-model-fits",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: Model Fits",
-    "text": "Measures of forecast accuracy: Model Fits\n\nrecent_production &lt;- aus_production %&gt;%\n  filter(year(Quarter) &gt;= 1992)\ntrain &lt;- recent_production %&gt;%\n  filter(year(Quarter) &lt;= 2007)\nbeer_fit &lt;- train %&gt;%\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  )\nbeer_fc &lt;- beer_fit %&gt;%\n  forecast(h = 10)"
+    "text": "Measures of forecast accuracy: Model Fits\n\nrecent_production &lt;- aus_production |&gt;\n  filter(year(Quarter) &gt;= 1992)\ntrain &lt;- recent_production |&gt;\n  filter(year(Quarter) &lt;= 2007)\nbeer_fit &lt;- train |&gt;\n  model(\n    Mean = MEAN(Beer),\n    Naive = NAIVE(Beer),\n    Seasonal_naive = SNAIVE(Beer),\n    Drift = RW(Beer ~ drift())\n  )\nbeer_fc &lt;- beer_fit |&gt;\n  forecast(h = 10)"
   },
   {
     "objectID": "slides/5-toolbox.html#measures-of-forecast-accuracy-on-training-data-12",
@@ -3635,13 +3670,13 @@
     "href": "slides/5-toolbox.html#measures-of-forecast-accuracy-on-training-data-22",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: On Training data (2/2)",
-    "text": "Measures of forecast accuracy: On Training data (2/2)\n\naccuracy(beer_fit) %&gt;%\n  arrange(.model) %&gt;% # Sorts model names alphabetically\n  select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined\n\n# A tibble: 4 × 6\n  .model         .type     RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Training  65.3  54.8 12.2   3.83\n2 Mean           Training  43.6  35.2  7.89  2.46\n3 Naive          Training  65.3  54.7 12.2   3.83\n4 Seasonal_naive Training  16.8  14.3  3.31  1"
+    "text": "Measures of forecast accuracy: On Training data (2/2)\n\naccuracy(beer_fit) |&gt;\n  arrange(.model) |&gt; # Sorts model names alphabetically\n  select(.model, .type, RMSE, MAE, MAPE, MASE) #The metrics we defined\n\n# A tibble: 4 × 6\n  .model         .type     RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Training  65.3  54.8 12.2   3.83\n2 Mean           Training  43.6  35.2  7.89  2.46\n3 Naive          Training  65.3  54.7 12.2   3.83\n4 Seasonal_naive Training  16.8  14.3  3.31  1"
   },
   {
     "objectID": "slides/5-toolbox.html#measures-of-forecast-accuracy-on-testing-data",
     "href": "slides/5-toolbox.html#measures-of-forecast-accuracy-on-testing-data",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Measures of forecast accuracy: On Testing data",
-    "text": "Measures of forecast accuracy: On Testing data\n\nSmaller is better\nCan be used to compare models and evaluate models individually\nGives a realistic expectation of error if we rebuild model on all data for future forecasts\n\n\n\naccuracy(beer_fc, recent_production) %&gt;%\n  arrange(.model) %&gt;%\n  select(.model, .type, RMSE, MAE, MAPE, MASE)\n\n# A tibble: 4 × 6\n  .model         .type  RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Test   64.9  58.9 14.6  4.12 \n2 Mean           Test   38.4  34.8  8.28 2.44 \n3 Naive          Test   62.7  57.4 14.2  4.01 \n4 Seasonal_naive Test   14.3  13.4  3.17 0.937"
+    "text": "Measures of forecast accuracy: On Testing data\n\nSmaller is better\nCan be used to compare models and evaluate models individually\nGives a realistic expectation of error if we rebuild model on all data for future forecasts\n\n\n\naccuracy(beer_fc, recent_production) |&gt;\n  arrange(.model) |&gt;\n  select(.model, .type, RMSE, MAE, MAPE, MASE)\n\n# A tibble: 4 × 6\n  .model         .type  RMSE   MAE  MAPE  MASE\n  &lt;chr&gt;          &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drift          Test   64.9  58.9 14.6  4.12 \n2 Mean           Test   38.4  34.8  8.28 2.44 \n3 Naive          Test   62.7  57.4 14.2  4.01 \n4 Seasonal_naive Test   14.3  13.4  3.17 0.937"
   }
 ]
