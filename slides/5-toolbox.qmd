@@ -172,7 +172,7 @@ bricks |>
 
 ### Code
 
-```{r naive-method-explained, warning = FALSE}
+```{r naive-method-explained, warning = FALSE,fig.show='hide'}
 bricks |>
   filter(!is.na(Bricks)) |>
   model(NAIVE(Bricks)) |>
@@ -184,7 +184,7 @@ bricks |>
 
 ### Plot
 
-```{r ref.label='naive-method-explained', echo=FALSE}
+```{r ref.label='naive-method-explained', echo=FALSE,fig.height=3}
 ```
 
 :::
@@ -201,7 +201,7 @@ bricks |>
 
 ### Code 
 
-```{r snaive-method-explained, warning = FALSE}
+```{r snaive-method-explained, warning = FALSE,fig.show='hide'}
 bricks |>
   model(SNAIVE(Bricks ~ lag("year"))) |>
   forecast(h = "5 years") |>
@@ -212,30 +212,30 @@ bricks |>
 
 ### Plot
 
-```{r ref.label='snaive-method-explained', echo=FALSE}
+```{r ref.label='snaive-method-explained', echo=FALSE,fig.height=3}
 ```
 
 :::
 
-## `RW(y ~ drift())`: Drift method
+## `RW(y ~ drift())`: Drift method {.smaller}
 
 :::{.panel-tabset}
 
 ### Definition
 
  * Forecasts equal to last value plus average change.
- * Forecasts:\vspace*{-.7cm}
+ * Forecasts:
 
  \begin{align*}
  \hat{y}_{T+h|T} & =  y_{T} + \frac{h}{T-1}\sum_{t=2}^T (y_t-y_{t-1})\\
                  & = y_T + \frac{h}{T-1}(y_T -y_1).
- \end{align*}\vspace*{-0.2cm}
+ \end{align*}
 
-   * Equivalent to extrapolating a line drawn between first and last observations.
+ * Equivalent to extrapolating a line drawn between first and last observations.
 
 ### Code & Plot
 
-```{r drift-method-explained, echo = FALSE, warning = FALSE}
+```{r drift-method-explained, warning = FALSE,fig.height=3}
 aus_production |>
   filter(!is.na(Bricks)) |>
   model(RW(Bricks ~ drift())) |>
@@ -450,7 +450,7 @@ gg_tsresiduals(fit)
 
 ## Portmanteau tests: Box-Pierce test {.smaller}
 
-$r_k = $ autocorrelation of residual at lag $k$
+$r_k =$ autocorrelation of residual at lag $k$
 
 . . .
 
@@ -467,7 +467,7 @@ where $\ell$  is max lag being considered and $T$ is number of observations.
 
 ## Portmanteau tests: Ljung-Box test (more accurate) (1/2) {.smaller}
 
-$r_k = $ autocorrelation of residual at lag $k$
+$r_k =$ autocorrelation of residual at lag $k$
 
 . . .
 
@@ -528,6 +528,8 @@ Assuming residuals are normal, uncorrelated, sd = $\hat\sigma$:
 
 where $k$ is the integer part of $(h-1)/m$.
 
+. . .
+
 :::{.callout-note}
 When $h=1$ and $T$ is large, these all give the same approximate forecast variance: $\hat{\sigma}^2$.
 :::
@@ -542,6 +544,8 @@ When $h=1$ and $T$ is large, these all give the same approximate forecast varian
   $$\hat{y}_{T+h|T} \pm 1.96 \hat\sigma_h$$
 
 where $\hat\sigma_h$ is the st dev of the $h$-step distribution.
+
+. . .
 
 :::{.callout-note}
 When $h=1$, $\hat\sigma_h$ can be estimated from the residuals.
@@ -619,7 +623,7 @@ Taylor series expansion about $\mu$:
 $$f(X) = f(\mu) + (X-\mu)f'(\mu) + \frac{1}{2}(X-\mu)^2f''(\mu).$$
 
 :::{.callout-note}
-\centerline{$\E[Y] = \E[f(X)] = f(\mu) + \frac12 \sigma^2 f''(\mu)$}
+$E[Y] = E[f(X)] = f(\mu) + \frac12 \sigma^2 f''(\mu)$
 :::
 
 ## Bias adjustment {.smaller}
@@ -643,10 +647,10 @@ f''(x) &= \begin{cases}
 \end{align*}
 
 :::{.callout-note}
-\centerline{$\E[Y] = \begin{cases}
+$E[Y] = \begin{cases}
                         e^\mu\left[1+\frac{\sigma^2}{2}\right] & \quad\lambda=0;\\
  (\lambda \mu + 1)^{1/\lambda}\left[1+\frac{\sigma^2(1-\lambda)}{2(\lambda\mu+1)^2}\right] & \quad\lambda\ne0.
- \end{cases}$}
+ \end{cases}$
 :::
 
 ## Bias adjustment

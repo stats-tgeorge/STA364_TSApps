@@ -2886,7 +2886,7 @@
     "href": "slides/5-toolbox_o.html#rwy-drift-drift-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "RW(y ~ drift()): Drift method",
-    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
+    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations.\n\n\n\n\naus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(RW(Bricks ~ drift())) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(aus_production, level = NULL) +\n  geom_line(data = slice(aus_production, range(cumsum(!is.na(Bricks)))),\n            aes(y=Bricks), linetype = \"dashed\", colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox_o.html#model-fitting",
@@ -3005,14 +3005,14 @@
     "href": "slides/5-toolbox_o.html#portmanteau-tests-box-pierce-test",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests: Box-Pierce test",
-    "text": "Portmanteau tests: Box-Pierce test\n$r_k = $ autocorrelation of residual at lag \\(k\\)\n. . .\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nBox-Pierce test \\[Q = T \\sum_{k=1}^\\ell r_k^2\\] where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations.\n\nIf each \\(r_k\\) close to zero, \\(Q\\) will be small.\nIf some \\(r_k\\) values large (positive or negative), \\(Q\\) will be large."
+    "text": "Portmanteau tests: Box-Pierce test\n\\(r_k =\\) autocorrelation of residual at lag \\(k\\)\n. . .\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nBox-Pierce test \\[Q = T \\sum_{k=1}^\\ell r_k^2\\] where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations.\n\nIf each \\(r_k\\) close to zero, \\(Q\\) will be small.\nIf some \\(r_k\\) values large (positive or negative), \\(Q\\) will be large."
   },
   {
     "objectID": "slides/5-toolbox_o.html#portmanteau-tests-ljung-box-test-more-accurate-12",
     "href": "slides/5-toolbox_o.html#portmanteau-tests-ljung-box-test-more-accurate-12",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)",
-    "text": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)\n$r_k = $ autocorrelation of residual at lag \\(k\\)\n. . .\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nLjung-Box test \\[Q^* = T(T+2) \\sum_{k=1}^\\ell (T-k)^{-1}r_k^2\\]$ where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations."
+    "text": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)\n\\(r_k =\\) autocorrelation of residual at lag \\(k\\)\n. . .\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nLjung-Box test \\[Q^* = T(T+2) \\sum_{k=1}^\\ell (T-k)^{-1}r_k^2\\]$ where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations."
   },
   {
     "objectID": "slides/5-toolbox_o.html#portmanteau-tests-ljung-box-test-more-accurate-22",
@@ -3040,14 +3040,14 @@
     "href": "slides/5-toolbox_o.html#forecast-distributions-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecast distributions",
-    "text": "Forecast distributions\nAssuming residuals are normal, uncorrelated, sd = \\(\\hat\\sigma\\):\n. . .\n\n\n\n\n\n\n\nMethod\nForecast Distribution\n\n\n\n\nMean:\n\\(y_{T+h\\|T} \\sim N(\\bar{y}, (1 + 1/T)\\hat{\\sigma}^2)\\)\n\n\nNaïve:\n\\(y_{T+h\\|T} \\sim N(y_T, h\\hat{\\sigma}^2)\\)\n\n\nSeasonal naïve:\n\\(y_{T+h\\|T} \\sim N(y_{T+h-m(k+1)}, (k+1)\\hat{\\sigma}^2)\\)\n\n\nDrift:\n\\(y_{T+h\\|T} \\sim N(y_T + \\frac{h}{T-1}(y_T - y_1),h\\frac{T+h}{T}\\hat{\\sigma}^2)\\)\n\n\n\nwhere \\(k\\) is the integer part of \\((h-1)/m\\).\n\n\n\n\n\n\nNote\n\n\n\nWhen \\(h=1\\) and \\(T\\) is large, these all give the same approximate forecast variance: \\(\\hat{\\sigma}^2\\)."
+    "text": "Forecast distributions\nAssuming residuals are normal, uncorrelated, sd = \\(\\hat\\sigma\\):\n. . .\n\n\n\n\n\n\n\nMethod\nForecast Distribution\n\n\n\n\nMean:\n\\(y_{T+h\\|T} \\sim N(\\bar{y}, (1 + 1/T)\\hat{\\sigma}^2)\\)\n\n\nNaïve:\n\\(y_{T+h\\|T} \\sim N(y_T, h\\hat{\\sigma}^2)\\)\n\n\nSeasonal naïve:\n\\(y_{T+h\\|T} \\sim N(y_{T+h-m(k+1)}, (k+1)\\hat{\\sigma}^2)\\)\n\n\nDrift:\n\\(y_{T+h\\|T} \\sim N(y_T + \\frac{h}{T-1}(y_T - y_1),h\\frac{T+h}{T}\\hat{\\sigma}^2)\\)\n\n\n\nwhere \\(k\\) is the integer part of \\((h-1)/m\\).\n. . .\n\n\n\n\n\n\nNote\n\n\n\nWhen \\(h=1\\) and \\(T\\) is large, these all give the same approximate forecast variance: \\(\\hat{\\sigma}^2\\)."
   },
   {
     "objectID": "slides/5-toolbox_o.html#prediction-intervals",
     "href": "slides/5-toolbox_o.html#prediction-intervals",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Prediction intervals",
-    "text": "Prediction intervals\n\nA prediction interval gives a region within which we expect \\(y_{T+h}\\) to lie with a specified probability.\nAssuming forecast errors are normally distributed, then a 95% PI is\n\n. . .\n\\[\\hat{y}_{T+h|T} \\pm 1.96 \\hat\\sigma_h\\]\nwhere \\(\\hat\\sigma_h\\) is the st dev of the \\(h\\)-step distribution.\n\n\n\n\n\n\nNote\n\n\n\nWhen \\(h=1\\), \\(\\hat\\sigma_h\\) can be estimated from the residuals."
+    "text": "Prediction intervals\n\nA prediction interval gives a region within which we expect \\(y_{T+h}\\) to lie with a specified probability.\nAssuming forecast errors are normally distributed, then a 95% PI is\n\n. . .\n\\[\\hat{y}_{T+h|T} \\pm 1.96 \\hat\\sigma_h\\]\nwhere \\(\\hat\\sigma_h\\) is the st dev of the \\(h\\)-step distribution.\n. . .\n\n\n\n\n\n\nNote\n\n\n\nWhen \\(h=1\\), \\(\\hat\\sigma_h\\) can be estimated from the residuals."
   },
   {
     "objectID": "slides/5-toolbox_o.html#prediction-intervals-1",
@@ -3096,14 +3096,14 @@
     "href": "slides/5-toolbox_o.html#bias-adjustment",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\n\nBack-transformed point forecasts are medians.\nBack-transformed PI have the correct coverage.\n\n. . .\nBack-transformed means (if you are math inclined)\nLet \\(X\\) be have mean \\(\\mu\\) and variance \\(\\sigma^2\\).\nLet \\(f(x)\\) be back-transformation function, and \\(Y=f(X)\\).\nTaylor series expansion about \\(\\mu\\): \\[f(X) = f(\\mu) + (X-\\mu)f'(\\mu) + \\frac{1}{2}(X-\\mu)^2f''(\\mu).\\]\n\n\n\n\n\n\nNote"
+    "text": "Bias adjustment\n\nBack-transformed point forecasts are medians.\nBack-transformed PI have the correct coverage.\n\n. . .\nBack-transformed means (if you are math inclined)\nLet \\(X\\) be have mean \\(\\mu\\) and variance \\(\\sigma^2\\).\nLet \\(f(x)\\) be back-transformation function, and \\(Y=f(X)\\).\nTaylor series expansion about \\(\\mu\\): \\[f(X) = f(\\mu) + (X-\\mu)f'(\\mu) + \\frac{1}{2}(X-\\mu)^2f''(\\mu).\\]\n\n\n\n\n\n\nNote\n\n\n\n\\(E[Y] = E[f(X)] = f(\\mu) + \\frac12 \\sigma^2 f''(\\mu)\\)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#bias-adjustment-1",
     "href": "slides/5-toolbox_o.html#bias-adjustment-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\nBox-Cox back-transformation (if math inclined): \\[\\begin{align*}\ny_t &= \\left\\{\\begin{array}{ll}\n        \\exp(w_t)      & \\quad \\lambda = 0; \\\\\n        (\\lambda W_t+1)^{1/\\lambda}  & \\quad \\lambda \\ne 0.\n\\end{array}\\right. \\\\\nf(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(\\lambda x + 1)^{1/\\lambda} & \\quad\\lambda\\ne0.\n\\end{cases}\\\\\nf''(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(1-\\lambda)(\\lambda x + 1)^{1/\\lambda-2} & \\quad\\lambda\\ne0.\n\\end{cases}\n\\end{align*}\\]\n\n\n\n\n\n\nNote"
+    "text": "Bias adjustment\nBox-Cox back-transformation (if math inclined): \\[\\begin{align*}\ny_t &= \\left\\{\\begin{array}{ll}\n        \\exp(w_t)      & \\quad \\lambda = 0; \\\\\n        (\\lambda W_t+1)^{1/\\lambda}  & \\quad \\lambda \\ne 0.\n\\end{array}\\right. \\\\\nf(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(\\lambda x + 1)^{1/\\lambda} & \\quad\\lambda\\ne0.\n\\end{cases}\\\\\nf''(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(1-\\lambda)(\\lambda x + 1)^{1/\\lambda-2} & \\quad\\lambda\\ne0.\n\\end{cases}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\n\\(E[Y] = \\begin{cases}\n                        e^\\mu\\left[1+\\frac{\\sigma^2}{2}\\right] & \\quad\\lambda=0;\\\\\n(\\lambda \\mu + 1)^{1/\\lambda}\\left[1+\\frac{\\sigma^2(1-\\lambda)}{2(\\lambda\\mu+1)^2}\\right] & \\quad\\lambda\\ne0.\n\\end{cases}\\)"
   },
   {
     "objectID": "slides/5-toolbox_o.html#bias-adjustment-2",
@@ -3327,7 +3327,7 @@
     "href": "slides/5-toolbox.html#rwy-drift-drift-method",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "RW(y ~ drift()): Drift method",
-    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\vspace*{-0.2cm}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations."
+    "text": "RW(y ~ drift()): Drift method\n\nDefinitionCode & Plot\n\n\n\nForecasts equal to last value plus average change.\nForecasts:\n\n\\[\\begin{align*}\n\\hat{y}_{T+h|T} & =  y_{T} + \\frac{h}{T-1}\\sum_{t=2}^T (y_t-y_{t-1})\\\\\n                 & = y_T + \\frac{h}{T-1}(y_T -y_1).\n\\end{align*}\\]\n\nEquivalent to extrapolating a line drawn between first and last observations.\n\n\n\n\naus_production |&gt;\n  filter(!is.na(Bricks)) |&gt;\n  model(RW(Bricks ~ drift())) |&gt;\n  forecast(h = \"5 years\") |&gt;\n  autoplot(aus_production, level = NULL) +\n  geom_line(data = slice(aus_production, range(cumsum(!is.na(Bricks)))),\n            aes(y=Bricks), linetype = \"dashed\", colour = \"#0072B2\") +\n  labs(title = \"Clay brick production in Australia\")"
   },
   {
     "objectID": "slides/5-toolbox.html#model-fitting",
@@ -3446,14 +3446,14 @@
     "href": "slides/5-toolbox.html#portmanteau-tests-box-pierce-test",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests: Box-Pierce test",
-    "text": "Portmanteau tests: Box-Pierce test\n$r_k = $ autocorrelation of residual at lag \\(k\\)\n\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nBox-Pierce test \\[Q = T \\sum_{k=1}^\\ell r_k^2\\] where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations.\n\nIf each \\(r_k\\) close to zero, \\(Q\\) will be small.\nIf some \\(r_k\\) values large (positive or negative), \\(Q\\) will be large."
+    "text": "Portmanteau tests: Box-Pierce test\n\\(r_k =\\) autocorrelation of residual at lag \\(k\\)\n\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nBox-Pierce test \\[Q = T \\sum_{k=1}^\\ell r_k^2\\] where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations.\n\nIf each \\(r_k\\) close to zero, \\(Q\\) will be small.\nIf some \\(r_k\\) values large (positive or negative), \\(Q\\) will be large."
   },
   {
     "objectID": "slides/5-toolbox.html#portmanteau-tests-ljung-box-test-more-accurate-12",
     "href": "slides/5-toolbox.html#portmanteau-tests-ljung-box-test-more-accurate-12",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)",
-    "text": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)\n$r_k = $ autocorrelation of residual at lag \\(k\\)\n\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nLjung-Box test \\[Q^* = T(T+2) \\sum_{k=1}^\\ell (T-k)^{-1}r_k^2\\]$ where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations."
+    "text": "Portmanteau tests: Ljung-Box test (more accurate) (1/2)\n\\(r_k =\\) autocorrelation of residual at lag \\(k\\)\n\nConsider a whole set of \\(r_{k}\\) values, and develop a test to see whether the set is significantly different from a zero set.\nLjung-Box test \\[Q^* = T(T+2) \\sum_{k=1}^\\ell (T-k)^{-1}r_k^2\\]$ where \\(\\ell\\) is max lag being considered and \\(T\\) is number of observations."
   },
   {
     "objectID": "slides/5-toolbox.html#portmanteau-tests-ljung-box-test-more-accurate-22",
@@ -3481,14 +3481,14 @@
     "href": "slides/5-toolbox.html#forecast-distributions-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Forecast distributions",
-    "text": "Forecast distributions\nAssuming residuals are normal, uncorrelated, sd = \\(\\hat\\sigma\\):\n\n\n\n\n\n\n\n\nMethod\nForecast Distribution\n\n\n\n\nMean:\n\\(y_{T+h\\|T} \\sim N(\\bar{y}, (1 + 1/T)\\hat{\\sigma}^2)\\)\n\n\nNaïve:\n\\(y_{T+h\\|T} \\sim N(y_T, h\\hat{\\sigma}^2)\\)\n\n\nSeasonal naïve:\n\\(y_{T+h\\|T} \\sim N(y_{T+h-m(k+1)}, (k+1)\\hat{\\sigma}^2)\\)\n\n\nDrift:\n\\(y_{T+h\\|T} \\sim N(y_T + \\frac{h}{T-1}(y_T - y_1),h\\frac{T+h}{T}\\hat{\\sigma}^2)\\)\n\n\n\nwhere \\(k\\) is the integer part of \\((h-1)/m\\).\n\n\n\n\n\n\nNote\n\n\nWhen \\(h=1\\) and \\(T\\) is large, these all give the same approximate forecast variance: \\(\\hat{\\sigma}^2\\)."
+    "text": "Forecast distributions\nAssuming residuals are normal, uncorrelated, sd = \\(\\hat\\sigma\\):\n\n\n\n\n\n\n\n\nMethod\nForecast Distribution\n\n\n\n\nMean:\n\\(y_{T+h\\|T} \\sim N(\\bar{y}, (1 + 1/T)\\hat{\\sigma}^2)\\)\n\n\nNaïve:\n\\(y_{T+h\\|T} \\sim N(y_T, h\\hat{\\sigma}^2)\\)\n\n\nSeasonal naïve:\n\\(y_{T+h\\|T} \\sim N(y_{T+h-m(k+1)}, (k+1)\\hat{\\sigma}^2)\\)\n\n\nDrift:\n\\(y_{T+h\\|T} \\sim N(y_T + \\frac{h}{T-1}(y_T - y_1),h\\frac{T+h}{T}\\hat{\\sigma}^2)\\)\n\n\n\nwhere \\(k\\) is the integer part of \\((h-1)/m\\).\n\n\n\n\n\n\n\n\nNote\n\n\nWhen \\(h=1\\) and \\(T\\) is large, these all give the same approximate forecast variance: \\(\\hat{\\sigma}^2\\)."
   },
   {
     "objectID": "slides/5-toolbox.html#prediction-intervals",
     "href": "slides/5-toolbox.html#prediction-intervals",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Prediction intervals",
-    "text": "Prediction intervals\n\nA prediction interval gives a region within which we expect \\(y_{T+h}\\) to lie with a specified probability.\nAssuming forecast errors are normally distributed, then a 95% PI is\n\n\n\\[\\hat{y}_{T+h|T} \\pm 1.96 \\hat\\sigma_h\\]\nwhere \\(\\hat\\sigma_h\\) is the st dev of the \\(h\\)-step distribution.\n\n\n\n\n\n\nNote\n\n\nWhen \\(h=1\\), \\(\\hat\\sigma_h\\) can be estimated from the residuals."
+    "text": "Prediction intervals\n\nA prediction interval gives a region within which we expect \\(y_{T+h}\\) to lie with a specified probability.\nAssuming forecast errors are normally distributed, then a 95% PI is\n\n\n\\[\\hat{y}_{T+h|T} \\pm 1.96 \\hat\\sigma_h\\]\nwhere \\(\\hat\\sigma_h\\) is the st dev of the \\(h\\)-step distribution.\n\n\n\n\n\n\n\n\nNote\n\n\nWhen \\(h=1\\), \\(\\hat\\sigma_h\\) can be estimated from the residuals."
   },
   {
     "objectID": "slides/5-toolbox.html#prediction-intervals-1",
@@ -3537,14 +3537,14 @@
     "href": "slides/5-toolbox.html#bias-adjustment",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\n\nBack-transformed point forecasts are medians.\nBack-transformed PI have the correct coverage.\n\n\nBack-transformed means (if you are math inclined)\nLet \\(X\\) be have mean \\(\\mu\\) and variance \\(\\sigma^2\\).\nLet \\(f(x)\\) be back-transformation function, and \\(Y=f(X)\\).\nTaylor series expansion about \\(\\mu\\): \\[f(X) = f(\\mu) + (X-\\mu)f'(\\mu) + \\frac{1}{2}(X-\\mu)^2f''(\\mu).\\]\n\n\n\n\n\n\nNote"
+    "text": "Bias adjustment\n\nBack-transformed point forecasts are medians.\nBack-transformed PI have the correct coverage.\n\n\nBack-transformed means (if you are math inclined)\nLet \\(X\\) be have mean \\(\\mu\\) and variance \\(\\sigma^2\\).\nLet \\(f(x)\\) be back-transformation function, and \\(Y=f(X)\\).\nTaylor series expansion about \\(\\mu\\): \\[f(X) = f(\\mu) + (X-\\mu)f'(\\mu) + \\frac{1}{2}(X-\\mu)^2f''(\\mu).\\]\n\n\n\n\n\n\nNote\n\n\n\\(E[Y] = E[f(X)] = f(\\mu) + \\frac12 \\sigma^2 f''(\\mu)\\)"
   },
   {
     "objectID": "slides/5-toolbox.html#bias-adjustment-1",
     "href": "slides/5-toolbox.html#bias-adjustment-1",
     "title": "Chapter 5 Forecasters Toolbox",
     "section": "Bias adjustment",
-    "text": "Bias adjustment\nBox-Cox back-transformation (if math inclined): \\[\\begin{align*}\ny_t &= \\left\\{\\begin{array}{ll}\n        \\exp(w_t)      & \\quad \\lambda = 0; \\\\\n        (\\lambda W_t+1)^{1/\\lambda}  & \\quad \\lambda \\ne 0.\n\\end{array}\\right. \\\\\nf(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(\\lambda x + 1)^{1/\\lambda} & \\quad\\lambda\\ne0.\n\\end{cases}\\\\\nf''(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(1-\\lambda)(\\lambda x + 1)^{1/\\lambda-2} & \\quad\\lambda\\ne0.\n\\end{cases}\n\\end{align*}\\]\n\n\n\n\n\n\nNote"
+    "text": "Bias adjustment\nBox-Cox back-transformation (if math inclined): \\[\\begin{align*}\ny_t &= \\left\\{\\begin{array}{ll}\n        \\exp(w_t)      & \\quad \\lambda = 0; \\\\\n        (\\lambda W_t+1)^{1/\\lambda}  & \\quad \\lambda \\ne 0.\n\\end{array}\\right. \\\\\nf(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(\\lambda x + 1)^{1/\\lambda} & \\quad\\lambda\\ne0.\n\\end{cases}\\\\\nf''(x) &= \\begin{cases}\n                        e^x & \\quad\\lambda=0;\\\\\n(1-\\lambda)(\\lambda x + 1)^{1/\\lambda-2} & \\quad\\lambda\\ne0.\n\\end{cases}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\\(E[Y] = \\begin{cases}\n                        e^\\mu\\left[1+\\frac{\\sigma^2}{2}\\right] & \\quad\\lambda=0;\\\\\n(\\lambda \\mu + 1)^{1/\\lambda}\\left[1+\\frac{\\sigma^2(1-\\lambda)}{2(\\lambda\\mu+1)^2}\\right] & \\quad\\lambda\\ne0.\n\\end{cases}\\)"
   },
   {
     "objectID": "slides/5-toolbox.html#bias-adjustment-2",
