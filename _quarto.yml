@@ -7,7 +7,7 @@ project:
   output-dir: docs
   
 website:
-  title: "{{< var course.title >}}"
+  title: "Time Series Application"
   site-url: https://stats-tgeorge.github.io/STA364_TSApps/
   sidebar:
     background: "#BBBCBC"
@@ -81,7 +81,7 @@ format:
     highlight-style: monokai
 
 execute:
-  freeze: auto
+  freeze: true
 
 
     
