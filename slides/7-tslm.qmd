@@ -39,10 +39,12 @@ That is, the coefficients measure the \orange{marginal effects}.
 
 
 ```{r ConsInc}
-us_change |>
-  pivot_longer(c(Consumption, Income), names_to="Series") |>
-  autoplot(value) +
-  labs(y="% change")
+us_change |> autoplot(Consumption) +
+  geom_line(aes(y = Income, color = "Income")) +
+  geom_line(aes(y = Consumption, color = "Consumption")) +
+  scale_color_manual(values = c("Income" = "blue", "Consumption" = "red")) +
+  labs(y = "% change", color = "Legend")
+  
 ```
 
 ## Example: US consumption expenditure
@@ -66,7 +68,7 @@ report(fit_cons)
 
 ## Example: US consumption expenditure {.smaller}
 
-```{r MultiPredictors, out.height=3}
+```{r MultiPredictors, fig.height=3}
 us_change |>
   gather("Measure", "Change", Consumption, Income, Production, Savings, Unemployment) |>
   ggplot(aes(x = Quarter, y = Change, colour = Measure)) +
@@ -171,7 +173,7 @@ augment(fit_consMR) |>
 
 ### Plot
 
-```{r ref.label = 'usfitted2', message=FALSE, warning=FALSE, echo=FALSE}
+```{r ref.label = 'usfitted2', message=FALSE, warning=FALSE, echo=FALSE,fig.height=2.7}
 ```
 
 :::
@@ -591,7 +593,7 @@ where $L$ is the likelihood and $k$ is the number of predictors in the model.
 
 ## Harmonic regression: eating-out expenditure again (1/8) {.smaller}
 
-```{r cafe, echo=TRUE, fig.height=2.6}
+```{r cafe, echo=TRUE, fig.height=4}
 aus_cafe <- aus_retail |>
   filter(Industry == "Cafes, restaurants and takeaway food services",
          year(Month) %in% 2004:2018) |>

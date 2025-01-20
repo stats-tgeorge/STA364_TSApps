@@ -3705,7 +3705,7 @@
     "href": "slides/7-tslm_o.html#example-us-consumption-expenditure",
     "title": "Chapter 7 Time Series Linear Models",
     "section": "Example: US consumption expenditure",
-    "text": "Example: US consumption expenditure\n\nus_change |&gt;\n  pivot_longer(c(Consumption, Income), names_to=\"Series\") |&gt;\n  autoplot(value) +\n  labs(y=\"% change\")"
+    "text": "Example: US consumption expenditure\n\nus_change |&gt; autoplot(Consumption) +\n  geom_line(aes(y = Income, color = \"Income\")) +\n  geom_line(aes(y = Consumption, color = \"Consumption\")) +\n  scale_color_manual(values = c(\"Income\" = \"blue\", \"Consumption\" = \"red\")) +\n  labs(y = \"% change\", color = \"Legend\")"
   },
   {
     "objectID": "slides/7-tslm_o.html#example-us-consumption-expenditure-1",
@@ -4202,7 +4202,7 @@
     "href": "slides/7-tslm.html#example-us-consumption-expenditure",
     "title": "Chapter 7 Time Series Linear Models",
     "section": "Example: US consumption expenditure",
-    "text": "Example: US consumption expenditure\n\nus_change |&gt;\n  pivot_longer(c(Consumption, Income), names_to=\"Series\") |&gt;\n  autoplot(value) +\n  labs(y=\"% change\")"
+    "text": "Example: US consumption expenditure\n\nus_change |&gt; autoplot(Consumption) +\n  geom_line(aes(y = Income, color = \"Income\")) +\n  geom_line(aes(y = Consumption, color = \"Consumption\")) +\n  scale_color_manual(values = c(\"Income\" = \"blue\", \"Consumption\" = \"red\")) +\n  labs(y = \"% change\", color = \"Legend\")"
   },
   {
     "objectID": "slides/7-tslm.html#example-us-consumption-expenditure-1",
