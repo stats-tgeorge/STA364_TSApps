@@ -1,0 +1,156 @@
+---
+title: "Homework 5"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| eval: true
+#| include: false
+library(tidyverse)
+library(fpp3)
+library(seasonal)
+```
+
+
+### Question 1 (fpp5_1)
+
+Plot the time series and produce forecasts for the following series using whichever of `NAIVE(y)`, `SNAIVE(y)` or `RW(y ~ drift())` is more appropriate in each case. Explain your choice in each case with 1 sentence. 
+
+a. Australian Population (*global_economy*)
+b. Bricks (*aus_production*)
+c. NSW Lambs (*aus_livestock*). NSW stands for new south wales, use a filter on territory.
+d. Household wealth (*hh_budget*). Choose a country with a filter.
+
+
+### Question 2 (fpp5_2)
+
+Use the Facebook stock price (data set *gafa_stock*) to do the following:
+
+a. Produce a time plot of the series.
+
+b. Produce forecasts using the drift method and plot them.
+
+c. Show that the forecasts are identical to extending the line drawn between the first and last observations.
+
+### Question 3 (fpp5_3)
+
+Apply a seasonal naïve method to the quarterly Australian beer production data from 1992. Check if the residuals look like white noise, and plot the forecasts. The following code will help.
+
+```{r}
+# Extract data of interest
+recent_production <- aus_production |>
+  filter(year(Quarter) >= 1992)
+# Define and estimate a model
+fit <- recent_production |> model(SNAIVE(Beer))
+# Look at the residuals
+fit |> gg_tsresiduals()
+# Look a some forecasts
+fit |> forecast() |> autoplot(recent_production)
+```
+
+Discuss quality of this model using the residuals. 
+
+
+### Question 4 (fpp5_6)
+
+Are the following statements true or false? Explain your answer.
+
+- Good forecast methods should have normally distributed residuals.
+- A model with small residuals will give good forecasts.
+- The best measure of forecast accuracy is MAPE.
+- If your model doesn’t forecast well, you should make it more complicated.
+- Always choose the model with the best forecast accuracy as measured on the test set.
+
+
+### Question 5 (fpp5_7)
+
+Monthly Australian retail data is provided in *aus_retail*. Select one of the time series as follows (but choose your own seed value):
+
+```{r}
+set.seed("CHANGE THIS TO A NUMBER")
+myseries <- aus_retail |>
+  filter(`Series ID` == sample(aus_retail$`Series ID`,1))
+```
+
+a. Create a training dataset consisting of observations before 2011 using
+
+```{r}
+myseries_train <- myseries |>
+  filter(year(Month) < 2011)
+```
+
+
+b. Check that your data have been split appropriately by producing the following plot.
+
+```{r}
+autoplot(myseries, Turnover) +
+  autolayer(myseries_train, Turnover, colour = "red")
+```
+
+c. Fit a seasonal naïve model using `SNAIVE()` applied to your training data (*myseries_train*).
+
+```{r}
+fit <- myseries_train |>
+  model(SNAIVE())
+```
+
+d. Check the residuals.
+
+```{r}
+fit |> gg_tsresiduals()
+```
+
+Do the residuals appear to be uncorrelated and normally distributed?
+
+e. Produce forecasts for the test data
+
+```{r}
+fc <- fit |>
+  forecast(new_data = anti_join(myseries, myseries_train))
+fc |> autoplot(myseries)
+```
+
+f. Compare the accuracy of your forecasts against the actual values.
+
+```{r}
+fit |> accuracy()
+fc |> accuracy(myseries)
+```
+
+g. How sensitive are the accuracy measures to the amount of training data used? You will need to copy some of your code above and play around with the amount of data held out and the amount used to check the forecast. Make sure to answer this using a metric that does not depend on the amount of data in your testing set. 
+
+
+### Question 6 (fpp5_9)
+
+a. Create a training set for household wealth (*hh_budget*) by withholding the last four years as a test set and choosing a country with a filter. 
+
+b. Fit **all** the appropriate benchmark methods to the training set and forecast the periods covered by the test set.
+
+c. Compute the accuracy of your forecasts. Which method does best?
+
+d. Do the residuals from the best method resemble white noise?
+
+
+
+### Question 7 (fpp5_11)
+
+
+We will use the Bricks data from *aus_production* (Australian quarterly clay brick production 1956–2005) for this exercise.
+
+a. Use an STL decomposition to calculate the trend-cycle and seasonal indices. (Experiment with having fixed or changing seasonality. This is changing the window in the `season()` function within the `STL()` function.)
+
+b. Compute and plot the seasonally adjusted data.
+
+c. Use a naïve method to produce forecasts of the seasonally adjusted data.
+
+d. Use `decomposition_model()` to reseasonalise the results, giving forecasts for the original data.
+
+e. Do the residuals look uncorrelated?
+
+f. Repeat with a robust STL decomposition. Does it make much difference?
+
+g. Compare forecasts from `decomposition_model()` with those from `SNAIVE()`, using a test set comprising the last 2 years of data. Which is better?
+
