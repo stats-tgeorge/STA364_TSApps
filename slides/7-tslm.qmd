@@ -408,6 +408,7 @@ Periodic seasonality can be handled using pairs of Fourier terms:
 $$s_{k}(t) = \sin\left(\frac{2\pi k t}{m}\right)\qquad c_{k}(t) = \cos\left(\frac{2\pi k t}{m}\right)$$
 
 $$y_t = a + bt + \sum_{k=1}^K \left[\alpha_k s_k(t) + \beta_k c_k(t)\right] + \varepsilon_t$$
+where $m$ is the seasonal period. 
 
 * Every periodic function can be approximated by sums of sin and cos terms for large enough $K$.
 * Choose $K$ by minimizing AICc.
