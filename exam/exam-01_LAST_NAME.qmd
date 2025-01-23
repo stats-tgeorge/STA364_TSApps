@@ -1,0 +1,79 @@
+---
+title: "STA 364 Midterm Exam"
+subtitle: "Spring 2025"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+#### Data qand Setup
+
+The data is found in the *ffp3* package and is called *aus_vehicle_sales*. Use `?aus_vehicle_sales` to learn more about the data. For this exam, you will explore the *SUVs*. The data has been split into a training set and the whole data.
+
+```{r packages}
+library(fpp3)
+
+```
+
+
+```{r define_data}
+aus_suv <- aus_vehicle_sales |> 
+  filter(Type == "SUV")|>
+  select(-Type)
+
+suv_train <- 
+  aus_suv |> 
+  filter(year(Month) <= 2016)
+```
+
+#### Questions
+
+1.  Plot and discuss the time series. Use `autoplot`, `ggsubseries` and `gg_season` graphs.
+
+```{r q1}
+
+```
+
+2.  Investigate if there is significant autocorrelation. Use `gg_lag()` and `ACF() |> autoplot()` to make the graphs. Does this information agree with your previous discussion in (1)?
+
+```{r q2}
+
+```
+
+3.  Using your already created graphs, is the relationship between season and trend additive or multiplicative? Explain. If multiplicative, explain what that implies about modeling and forecasting with your series.
+
+```{r q3}
+
+```
+
+4.  Regardless of your previous answer, apply a log transformation on the Count and then do an STL decomposition on your series. Discuss if the decomposition components agree with your answers in (1) and (2). You will need `model(STL(log(Count))) |> components() |> autoplot()`.
+
+```{r q4}
+
+```
+
+5.  The code below can be modified to fit all benchmark models and a decomposition model to forecast the number of SUV sales in Australia in the next 1 year. Discuss which methods are best and why.
+
+```{r q5}
+
+```
+
+
+6.  Now, we want to compare models using metrics. Use the provided code to get model metrics, then choose the best model.
+
+```{r q6}
+
+```
+
+7.  Using the chosen model form in (6), refit that type of model on the complete data and provide forecasts (plot) for 2018. You should use parts of the code provided above.
+
+```{r q7}
+
+```
+
+8.  Assess the final chosen model. You may want the functions `gg_tsresiduals()`, `report()`, and `augment()`, to get information about the model and relevant plots, but you can also use others.
+
+```{r q8}
+
+```
