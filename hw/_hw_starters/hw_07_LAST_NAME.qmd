@@ -1,0 +1,112 @@
+---
+title: "Homework 7"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| eval: true
+library(fpp3)
+```
+
+
+### Question 1 (fpp8_5)
+
+The data set *global_economy* contains the annual **Imports** from many countries. Select the country you did in class.
+
+a.  Plot the Imports series and discuss the main features of the data.
+
+b.  Forecast the series using an ETS(A,N,N) model and plot the forecasts.
+
+c.  Compute the RMSE values for the training data.
+
+d.  Compare the results to those from an ETS(A,A,N) model. (Remember that the trended model is using one more parameter than the simpler model.) Discuss the merits of the two forecasting methods for this data set.
+
+e.  Compare the forecasts from both methods. Which do you think is best?
+
+f.  Calculate a 95% prediction interval for the first forecast for each model, using the RMSE values and assuming normal errors. Compare your intervals with those produced using R.
+
+
+
+### Question 2 (fpp8_6)
+
+Forecast the Chinese GDP from the *global_economy* data set using an ETS model. Experiment with the options in the ETS() function to see how much the forecasts change with a damped trend or a Box-Cox transformation. Try to develop an intuition of what each is doing to the forecasts.
+
+Tip: Use a relatively large value of h when forecasting so you can clearly see the differences between the various options when plotting the forecasts.
+
+
+
+
+### Question 3 (fpp8_8&9)
+
+Recall your retail time series data:
+
+```{r}
+set.seed(12345678)
+myseries <- aus_retail |>
+  filter(`Series ID` == sample(aus_retail$`Series ID`,1))
+```
+
+a.  Why is multiplicative seasonality necessary for this series?
+
+b.  Apply Holt-Winters’ multiplicative method to the data. Experiment with making the trend damped.
+
+c.  Compare the RMSE of the one-step forecasts from the two methods. Which do you prefer?
+
+d.  Check that the residuals from the best method look like white noise.
+
+e.  Now, find the test set RMSE while training the model until the end of 2010. Can you beat a seasonal naïve approach?
+
+f.  Try an STL decomposition applied to the Box-Cox transformed series, followed by ETS on the seasonally adjusted data. How does that compare with your best previous forecasts on the test set?
+
+
+
+
+### Question 4 (fpp8_10)
+
+Compute the total domestic overnight trips across Australia from the tourism dataset.
+
+a.  Plot the data, but you do **not** need to describe the features (for time's sake).
+
+b.  Decompose the series using STL and obtain the seasonally adjusted data.
+
+c.  Forecast the next two years of the series using an additive damped trend method applied to the seasonally adjusted data. (This can be specified using `decomposition_model()`.)
+
+d.  Forecast the next two years of the series using an appropriate model for Holt’s linear method applied to the seasonally adjusted data (as before but without a damped trend).
+
+e.  Now, use ETS() to choose a seasonal model for the data.
+
+f.  Compare the RMSE of the ETS model's RMSE with the models you obtained using STL decompositions. Which gives the better in-sample fits?
+
+
+
+
+
+### Question 5 (fpp8_11)
+
+This exercise uses the quarterly number of arrivals to Australia from New Zealand, 1981 Q1 – 2012 Q3, from data set *aus_arrivals*.
+
+a.  Make a time plot of your data but you do **not** need to describe the features (for time's sake).
+
+b.  Create a training set that withholds the last two years of available data. Forecast the test set using an appropriate model for Holt-Winters’ multiplicative method.
+
+c.  Why is multiplicative seasonality necessary here?
+
+d.  Forecast the two-year test set using each of the following methods:
+
+-   An ETS model.
+
+-   An additive ETS model applied to a log-transformed series.
+
+-   A seasonal naïve method.
+
+-   An STL decomposition applied to the log transformed data followed by an ETS model applied to the seasonally adjusted (transformed) data.
+
+
+e.  Which method gives the best forecasts? Does it pass the residual tests?
+
+
+
+
