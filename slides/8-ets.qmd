@@ -867,8 +867,6 @@ sth_cross_ped |>
 
 . . .
 
-**There are also multiplicative trend methods (not recommended).**
-
 
 ## ETS models {.smaller}
 
@@ -932,6 +930,7 @@ minimizing $L^*$.
 * Therefore $0< \alpha <1$, &nbsp;&nbsp; $0 < \beta < \alpha$ &nbsp;&nbsp; and $0< \gamma < 1-\alpha$.
 * $0.8<\phi<0.98$ --- to prevent numerical difficulties.
 
+. . .
 
 **Admissible region**
 
@@ -945,7 +944,7 @@ minimizing $L^*$.
 **Akaike's Information Criterion**
 
 
-\text{AIC} = -2\log(\text{L}) + 2k
+$$AIC = -2\log(\text{L}) + 2k$$
 
 where $L$ is the likelihood and $k$ is the number of parameters initial states estimated in the model.
 

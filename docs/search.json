@@ -5761,7 +5761,7 @@
     "href": "slides/8-ets.html#exponential-smoothing-methods-1",
     "title": "Chapter 8 ETS",
     "section": "Exponential smoothing methods",
-    "text": "Exponential smoothing methods\n\n\n\nMethod\nDescription\n\n\n\n\n(N,N)\nSimple exponential smoothing\n\n\n(A,N)\nHolt’s linear method\n\n\n(\\(A_d\\),N)\nAdditive damped trend method\n\n\n(A,A)\nAdditive Holt-Winters’ method\n\n\n(A,M)\nMultiplicative Holt-Winters’ method\n\n\n(\\(A_d\\),M)\nDamped multiplicative Holt-Winters’ method\n\n\n\n\nThere are also multiplicative trend methods (not recommended)."
+    "text": "Exponential smoothing methods\n\n\n\nMethod\nDescription\n\n\n\n\n(N,N)\nSimple exponential smoothing\n\n\n(A,N)\nHolt’s linear method\n\n\n(\\(A_d\\),N)\nAdditive damped trend method\n\n\n(A,A)\nAdditive Holt-Winters’ method\n\n\n(A,M)\nMultiplicative Holt-Winters’ method\n\n\n(\\(A_d\\),M)\nDamped multiplicative Holt-Winters’ method"
   },
   {
     "objectID": "slides/8-ets.html#ets-models-1",
@@ -5803,14 +5803,14 @@
     "href": "slides/8-ets.html#parameter-restrictions",
     "title": "Chapter 8 ETS",
     "section": "Parameter restrictions",
-    "text": "Parameter restrictions\nUsual region\n\nTraditional restrictions in the methods \\(0&lt; \\alpha,\\beta^*,\\gamma^*,\\phi&lt;1\\)(equations interpreted as weighted averages).\nIn models we set \\(\\beta=\\alpha\\beta^*\\) and \\(\\gamma=(1-\\alpha)\\gamma^*\\).\nTherefore \\(0&lt; \\alpha &lt;1\\),    \\(0 &lt; \\beta &lt; \\alpha\\)    and \\(0&lt; \\gamma &lt; 1-\\alpha\\).\n\\(0.8&lt;\\phi&lt;0.98\\) — to prevent numerical difficulties.\n\nAdmissible region\n\nTo prevent observations in the distant past having a continuing effect on current forecasts.\nUsually (but not always) less restrictive than traditional region.\nFor example for ETS(A,N,N): traditional* \\(0&lt; \\alpha &lt;1\\) while admissible \\(0&lt; \\alpha &lt;2\\)."
+    "text": "Parameter restrictions\nUsual region\n\nTraditional restrictions in the methods \\(0&lt; \\alpha,\\beta^*,\\gamma^*,\\phi&lt;1\\)(equations interpreted as weighted averages).\nIn models we set \\(\\beta=\\alpha\\beta^*\\) and \\(\\gamma=(1-\\alpha)\\gamma^*\\).\nTherefore \\(0&lt; \\alpha &lt;1\\),    \\(0 &lt; \\beta &lt; \\alpha\\)    and \\(0&lt; \\gamma &lt; 1-\\alpha\\).\n\\(0.8&lt;\\phi&lt;0.98\\) — to prevent numerical difficulties.\n\n\nAdmissible region\n\nTo prevent observations in the distant past having a continuing effect on current forecasts.\nUsually (but not always) less restrictive than traditional region.\nFor example for ETS(A,N,N): traditional* \\(0&lt; \\alpha &lt;1\\) while admissible \\(0&lt; \\alpha &lt;2\\)."
   },
   {
     "objectID": "slides/8-ets.html#model-selection",
     "href": "slides/8-ets.html#model-selection",
     "title": "Chapter 8 ETS",
     "section": "Model selection",
-    "text": "Model selection\nAkaike’s Information Criterion\n = -2() + 2k\nwhere \\(L\\) is the likelihood and \\(k\\) is the number of parameters initial states estimated in the model.\n\nCorrected AIC\n\\[\\text{AIC}_{\\text{c}} = \\text{AIC} + \\frac{2k(k+1)}{T-k-1}\\]\nwhich is the AIC corrected (for small sample bias).\n\n\nBayesian Information Criterion\n\\[\\text{BIC} = \\text{AIC} + k[\\log(T)-2].\\]"
+    "text": "Model selection\nAkaike’s Information Criterion\n\\[AIC = -2\\log(\\text{L}) + 2k\\]\nwhere \\(L\\) is the likelihood and \\(k\\) is the number of parameters initial states estimated in the model.\n\nCorrected AIC\n\\[\\text{AIC}_{\\text{c}} = \\text{AIC} + \\frac{2k(k+1)}{T-k-1}\\]\nwhich is the AIC corrected (for small sample bias).\n\n\nBayesian Information Criterion\n\\[\\text{BIC} = \\text{AIC} + k[\\log(T)-2].\\]"
   },
   {
     "objectID": "slides/8-ets.html#automatic-forecasting",
