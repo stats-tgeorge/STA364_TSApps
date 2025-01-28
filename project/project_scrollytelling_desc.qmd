@@ -1,0 +1,157 @@
+---
+title: "Time Series Scrollytelling Project"
+sidebar: false
+
+format: 
+  closeread-html:
+    remove-header-space: true
+    embed-resources: true
+    cr-style:
+
+      narrative-text-color-overlay: white
+      narrative-text-color-sidebar: white
+      narrative-font-family: times-new-roman
+      narrative-text-color: white
+      narrative-font-size: 3rem
+      
+      #section-background-color: "#523178"
+      narrative-background-color-sidebar: "#523178"
+      #narrative-background-color-sidebar: "#2C2A29"
+
+---
+
+## Time Series Scrollytelling Project
+
+
+
+::: {.cr-section layout="sidebar-left"}
+
+
+In this project you will tell a *data story* using scrollytelling.... @cr-favicon
+
+:::{#cr-favicon}
+![](../img/favicon.png)
+:::
+
+
+
+
+We will follow Cole Nussbaumer Knaflics's six lessons of data stories from his book "storytelling with data: a data visualization guide for business professionals" @cr-lessons 
+
+
+[@cr-lessons]{zoom-to="1" highlight="1"}
+
+## 1
+
+
+[@cr-lessons]{zoom-to="2" highlight="2"}
+
+## 2
+
+
+[@cr-lessons]{zoom-to="3" highlight="3"}
+
+## 3
+
+
+[@cr-lessons]{zoom-to="4" highlight="4"}
+
+## 4
+
+
+[@cr-lessons]{zoom-to="5" highlight="5"}
+
+## 5
+
+
+[@cr-lessons]{zoom-to="6" highlight="6"}
+
+## 6
+
+
+
+:::{#cr-lessons  .scale-to-fill}
+| Understand the context
+| Choose an appropriate visual display 
+| Eliminate clutter
+| Focus attention where you want it
+| Think like a designer
+| Tell a story
+:::
+
+
+:::
+
+
+### I will check that you...
+
+:::{.cr-section layout = "sidebar-left"}
+
+
+@cr-longdesc Choose an appropriate choice of time series data 
+
+@cr-longdesc2 Used external resources to add to your story (statistics, images, etc.) 
+
+
+@cr-longdesc3 Wrote a scrollytelling story appropriate for your choice of audience (high schoolers, general public, etc.)
+
+@cr-longdesc4 Used plot or plots to help tell and enhance your story
+
+@cr-longdesc5 Utilized scrollytelling features (zoom, highlighting) to enhance the story
+
+@cr-longdesc6 Used Clear writing, grammar, and gave references
+
+
+:::{#cr-longdesc .scale-to-fill}
+1. Choose a dataset that contains time series. Ideally, you are interested and think others will find it interesting. Make sure it's relevant to your story and comes from a reliable source.
+:::
+
+:::{#cr-longdesc2 .scale-to-fill}
+2. Enhance your story by including additional information such as statistics, images, or results from reliable sources. These extras should help explain your main points and make your story more interesting.
+:::
+
+:::{#cr-longdesc3 .scale-to-fill}
+3. Tailor your story to suit the people who will read it. Use language and examples that are appropriate for your audience, whether they are high school students, the general public, or another group. Try and test your a draft at the Writing Studio or elsewhere. 
+:::
+
+:::{#cr-longdesc4 .scale-to-fill}
+4. Use relevant statistical plot or plots to present your data. These visuals should help explain your points clearly and make the data easier to understand. Discuss interesting features, such as outliers or interesting trends. Make their observation part of the story. 
+:::
+
+:::{#cr-longdesc5 .scale-to-fill}
+5. Add interactive elements such as zooming in on important data points or highlighting key trends. These features can make your story more engaging and help readers focus on the most important information. The features should help understanding and not be distracting. 
+:::
+
+:::{#cr-longdesc6 .scale-to-fill}
+6. Make sure your writing is clear and free of errors. Check your grammar and spelling, and provide references for any data or information you use. This helps make your story professional and trustworthy.
+
+
+:::
+
+:::
+
+
+## Rubric
+
+| Part | Description                                                                 | Points |
+|------|-----------------------------------------------------------------------------|--------|
+| 1    | Choose an appropriate choice of time series data                            | 10     |
+| 2    | Used external resources to add to story (publications, statistics, images, etc.)          | 10     |
+| 3    | Wrote a scrollytelling story appropriate for your choice of audience (high schoolers, general public, etc.) | 10     |
+| 4    | Used plot or plots to help tell and enhance your story                      | 30     |
+| 5    | Utilized scrollytelling features (zoom, highlighting) to enhance your story  | 30     |
+| 6    | Used clear writing, grammar, and gave references                            | 10     |
+
+### Resources
+
+- [Closeread](https://closeread.dev/)
+- [Closeread Examples](https://closeread.dev/gallery/)
+- [Data Sources](https://stats-tgeorge.github.io/STA364_TSApps/course-links.html)
+
+
+
+
+
+
+
+

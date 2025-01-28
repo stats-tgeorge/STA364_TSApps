@@ -44,8 +44,8 @@ website:
             text: Schedule & Assignments
           - href: course-links.qmd
             text: Useful links
-          # - href: project.qmd
-          #   text: Project
+          - href: project/project_scrollytelling_desc.qmd
+            text: Project
       #     - href: project/1-working-collaboratively.qmd
       #       text: Working Together Lab
             
