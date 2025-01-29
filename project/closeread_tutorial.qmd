@@ -1,0 +1,87 @@
+---
+title: "Closeread Tutorial"
+format: html
+---
+
+The purpose of this tutorial to help you create a *basic* C*loseread* document for your projects. After going through it, you should have an outline that you can modify for your projects.
+
+
+## Prepare
+
+Start by opening the template document, `closeread_template_LAST_NAME` and save your own copy, changing the file name to your name. 
+
+Next, open the file and render it to see your first *Closeread* document! 
+
+## Look at examples
+
+In order for understanding the following elements, look through the following two examples, and pay attention to how they use text, and features to draw focus, and how they format the page.
+1) [The Visual Display of Quantitative Information](https://closeread.dev/gallery/examples/minards-map/) by Edward Tufte.
+2) [A Poem (and a Painting) About the Suffering That Hides in Plain Sight](https://closeread.dev/gallery/examples/auden-poem/) by Elisa Gabbert.
+
+## Understanding the Pieces
+
+### a. Sections
+
+Sections are parts of your document, top to bottom, that you want to look differently. In many cases, your entire closeread document could be all one large section. To create a section we use (exactly):
+
+```markdown
+:::{.cr-section}
+
+
+:::
+```
+
+We place all things we want to follow the same style (columns, colors, etc) in between the "\:\:\:".
+
+### b. Stickies and Triggers
+
+In both examples, text, or images, was fixed on the right hand side while the text flowed free on the left. The items on the right, that are fixed, are called `stickies`. 
+
+You define what item you want to be a sticky using:
+
+```markdown
+:::{#cr-choose_a_name}
+
+:::
+```
+
+The text, image, etc. that you want to *stick* goes in the middle. Each sticky element should get its own name by changing "choose_a_name" but make sure you keep the "#-". 
+
+Then, you need to say when you want the sticky to appear. Somehwere in your regular text you *trigger* your sticky by using `@cr-choose_a_name`. 
+
+
+:::{.callout-tip}
+## Example
+
+There once was a student `@cr-choose_a_name`. 
+
+:::
+
+In this case, the sticky will start to appear once the statement "This is an example" gets toward the top of the page on the left. It will stay *stuck* until the next sticky is called or the section ends. 
+
+
+### c. Scaling
+
+
+
+### d. Panning
+
+
+
+### e. Zooming
+
+
+
+### f. Highlighting
+
+
+
+### g. Highlighting and zooming
+
+
+
+### h. Styling 
+
+
+
+  
