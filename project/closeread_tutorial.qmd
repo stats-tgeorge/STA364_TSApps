@@ -189,7 +189,7 @@ It is common to want to zoom into a line or span of code or text while also high
 
 `hlz="4"`: highlight line 4 while zooming in on the line that contains it.
 
-:::{.callout-tip title = "Highlight and Zoom Example}
+:::{.callout-tip title = "Highlight and Zoom Example"}
 I can zoom in and highlight the line "who ate sourdough for dinner." in the *line block* above by using `[@cr-choose_a_name]{hlz = "4"}`
 :::
 
