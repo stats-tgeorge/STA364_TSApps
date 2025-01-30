@@ -254,12 +254,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#a.-sections" id="toc-a.-sections" class="nav-link" data-scroll-target="#a.-sections">a. Sections</a></li>
   <li><a href="#b.-stickies-and-triggers" id="toc-b.-stickies-and-triggers" class="nav-link" data-scroll-target="#b.-stickies-and-triggers">b. Stickies and Triggers</a></li>
-  <li><a href="#c.-scaling" id="toc-c.-scaling" class="nav-link" data-scroll-target="#c.-scaling">c.&nbsp;Scaling</a></li>
-  <li><a href="#d.-panning" id="toc-d.-panning" class="nav-link" data-scroll-target="#d.-panning">d.&nbsp;Panning</a></li>
-  <li><a href="#e.-zooming" id="toc-e.-zooming" class="nav-link" data-scroll-target="#e.-zooming">e. Zooming</a></li>
-  <li><a href="#f.-highlighting" id="toc-f.-highlighting" class="nav-link" data-scroll-target="#f.-highlighting">f.&nbsp;Highlighting</a></li>
-  <li><a href="#g.-highlighting-and-zooming" id="toc-g.-highlighting-and-zooming" class="nav-link" data-scroll-target="#g.-highlighting-and-zooming">g. Highlighting and zooming</a></li>
-  <li><a href="#h.-styling" id="toc-h.-styling" class="nav-link" data-scroll-target="#h.-styling">h. Styling</a></li>
+  <li><a href="#c.-styling" id="toc-c.-styling" class="nav-link" data-scroll-target="#c.-styling">c.&nbsp;Styling</a></li>
+  <li><a href="#focus-effects" id="toc-focus-effects" class="nav-link" data-scroll-target="#focus-effects">Focus Effects</a></li>
+  <li><a href="#combining-effects" id="toc-combining-effects" class="nav-link" data-scroll-target="#combining-effects">Combining effects</a></li>
+  <li><a href="#k.-layouts" id="toc-k.-layouts" class="nav-link" data-scroll-target="#k.-layouts">k. Layouts</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -286,68 +284,300 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The purpose of this tutorial to help you create a <em>basic</em> C<em>loseread</em> document for your projects. After going through it, you should have an outline that you can modify for your projects.</p>
+<p>The purpose of this tutorial is to help you create a <em>basic</em> <em>Closeread</em> document for your projects. After going through it, you should understand the essential components and options to make your document.</p>
 <section id="prepare" class="level2">
 <h2 class="anchored" data-anchor-id="prepare">Prepare</h2>
-<p>Start by opening the template document, <code>closeread_template_LAST_NAME</code> and save your own copy, changing the file name to your name.</p>
-<p>Next, open the file and render it to see your first <em>Closeread</em> document!</p>
+<p>Start by copy the R project folder, <code>closeread_project</code>. Then go to your new folder and click on the <code>closeread_project.Rproj</code> file. If a pop-up appears, confirm you want to open the project. Finally, open the <code>closeread_template_LAST_NAME.qmd</code> file using the file tab on the bottom right of RStudio. You can change the file name from the file tab as well.</p>
+<p>Render it to see your first <em>Closeread</em> document!</p>
 </section>
 <section id="look-at-examples" class="level2">
 <h2 class="anchored" data-anchor-id="look-at-examples">Look at examples</h2>
-<p>In order for understanding the following elements, look through the following two examples, and pay attention to how they use text, and features to draw focus, and how they format the page. 1) <a href="https://closeread.dev/gallery/examples/minards-map/">The Visual Display of Quantitative Information</a> by Edward Tufte. 2) <a href="https://closeread.dev/gallery/examples/auden-poem/">A Poem (and a Painting) About the Suffering That Hides in Plain Sight</a> by Elisa Gabbert.</p>
+<p>In order to understand the following elements, look through the following two examples and pay attention to how they use text and features to draw focus and how they format the page.</p>
+<ol type="1">
+<li><p><a href="https://closeread.dev/gallery/examples/minards-map/">The Visual Display of Quantitative Information</a> by Edward Tufte.</p></li>
+<li><p><a href="https://closeread.dev/gallery/examples/auden-poem/">A Poem (and a Painting) About the Suffering That Hides in Plain Sight</a> by Elisa Gabbert.</p></li>
+</ol>
 </section>
 <section id="understanding-the-pieces" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-pieces">Understanding the Pieces</h2>
 <section id="a.-sections" class="level3">
 <h3 class="anchored" data-anchor-id="a.-sections">a. Sections</h3>
-<p>Sections are parts of your document, top to bottom, that you want to look differently. In many cases, your entire closeread document could be all one large section. To create a section we use (exactly):</p>
+<p>Sections are parts of your document, top to bottom, that you want to look different. In many cases, your entire closeread document will be one large section. To create a section we use (exactly):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::{.cr-section}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We place all things we want to follow the same style (columns, colors, etc) in between the “:::”.</p>
+<p>We place all things we want to follow the same style (columns, colors, etc) in between the <code>:::</code>.</p>
 </section>
 <section id="b.-stickies-and-triggers" class="level3">
 <h3 class="anchored" data-anchor-id="b.-stickies-and-triggers">b. Stickies and Triggers</h3>
-<p>In both examples, text, or images, was fixed on the right hand side while the text flowed free on the left. The items on the right, that are fixed, are called <code>stickies</code>.</p>
+<p>In both examples, text or images were fixed on the right-hand side while the text flowed free on the left. The fixed items on the right are called <code>stickies</code>.</p>
 <p>You define what item you want to be a sticky using:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-choose_a_name}</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The text, image, etc. that you want to <em>stick</em> goes in the middle. Each sticky element should get its own name by changing “choose_a_name” but make sure you keep the “#-”.</p>
-<p>Then, you need to say when you want the sticky to appear. Somehwere in your regular text you <em>trigger</em> your sticky by using <code>@cr-choose_a_name</code>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<p>The text, image, etc., that you want to <em>stick</em> goes in the middle. Each sticky element should get its own name by changing “choose_a_name” but make sure you keep the “#-.”</p>
+<p>Then, you need to say when you want the sticky to appear. Somewhere in your regular text you <em>trigger</em> your sticky by using <code>@cr-choose_a_name</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Sticky Call Example">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example
+Sticky Call Example
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>There once was a student <code>@cr-choose_a_name</code>.</p>
 </div>
 </div>
-<p>In this case, the sticky will start to appear once the statement “This is an example” gets toward the top of the page on the left. It will stay <em>stuck</em> until the next sticky is called or the section ends.</p>
+<p>In this case, the sticky will appear once the statement “This is an example” gets toward the top of the page on the left. It will stay <em>stuck</em> until the next sticky is called or the section ends.</p>
 </section>
-<section id="c.-scaling" class="level3">
-<h3 class="anchored" data-anchor-id="c.-scaling">c.&nbsp;Scaling</h3>
+<section id="c.-styling" class="level3">
+<h3 class="anchored" data-anchor-id="c.-styling">c.&nbsp;Styling</h3>
+<p>You can add document-wide styling at the top of your <code>qmd</code> document. One such option <code>narrative-text-color-overlay: "#e2e2e2"</code> has been included in your template. Additional options would go directly below or in place of that option. You can give exact colors by using hex colors in quotes. Cornell Purple is <code>#523178</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Style Options">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Style Options
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>narrative-background-color-overlay</code>: the background color used for narrative text blocks in sidebar layouts</li>
+<li><code>narrative-text-color-overlay</code>: the color of narrative text in overlay layouts</li>
+<li><code>narrative-background-color-sidebar</code>: the background color used for the narrative column in sidebar layouts</li>
+<li><code>narrative-text-color-sidebar</code>: the color of narrative text in sidebar layouts</li>
+<li><code>narrative-border-radius</code>: the border radius of narrative text blocks in overlay layouts</li>
+<li><code>narrative-overlay-max-width</code>: the maximum width of narrative text blocks in overlay layouts</li>
+<li><code>narrative-overlay-min-width</code>: the minimum width of narrative text blocks in overlay layouts
+<ul>
+<li>It’s generally best to leave this one alone: setting it can cause mobile layout issues.</li>
+</ul></li>
+<li><code>narrative-outer-margin</code>: the margin pushing narrative content in from the left (on <code>overlay-left</code> layouts) or right edge (on <code>overlay-right</code>)</li>
+<li><code>narrative-font-family</code>: the font(s) used for narrative content</li>
+<li><code>narrative-font-size</code>: the font size used for narrative content</li>
+<li><code>poem-font-family</code>: the font(s) used for lineblock poems</li>
+<li><code>section-background-color</code>: the background color used for Closeread sections</li>
+<li><code>narrative-sidebar-width</code>: the width of the sidebar. Defaults to <code>1fr</code>: the sticky content is <code>2fr</code> in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different <code>fr</code> value, a fixed value, or a combination of the two using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax"><code>minmax()</code></a>.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="d.-panning" class="level3">
-<h3 class="anchored" data-anchor-id="d.-panning">d.&nbsp;Panning</h3>
+<section id="focus-effects" class="level3">
+<h3 class="anchored" data-anchor-id="focus-effects">Focus Effects</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Focus Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Focus Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For example, <span class="citation" data-cites="cr-choose_a_name">[@cr-choose_a_name]</span>{ DO SOMETHING COOL}.</p>
+</div>
+</div>
+<section id="d.-line-block-examples" class="level4">
+<h4 class="anchored" data-anchor-id="d.-line-block-examples">d.&nbsp;Line block examples</h4>
+<p>In some many cases, you will have a block of text or code you want to discuss. You should setup a line block. These are made using vertical lines, space, and the line of the text.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Line Block Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Line Block Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="line-block">{#cr-chooose_a_name}<br>
+Once was a student<br>
+who ate sourdough for dinner.<br>
+Upon their waking<br>
+their own tummy was quaking<br>
+as the bread was bad.</div>
+</div>
+</div>
 </section>
-<section id="e.-zooming" class="level3">
-<h3 class="anchored" data-anchor-id="e.-zooming">e. Zooming</h3>
+<section id="e.-scaling" class="level4">
+<h4 class="anchored" data-anchor-id="e.-scaling">e. Scaling</h4>
+<p>You can scale a sticky element up or down by using the scale-by attribute and providing a numerical scaling factor. For example:</p>
+<p><code>scale-by=".5"</code>: shrinks a sticky to 50% of its original size</p>
+<p><code>scale-by="3"</code>: triples the size of a sticky.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Scalling Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Scalling Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can scale your sticky using <code>[@cr-choose_a_name]{scale-by=".5"}</code>.</p>
+</div>
+</div>
 </section>
-<section id="f.-highlighting" class="level3">
-<h3 class="anchored" data-anchor-id="f.-highlighting">f.&nbsp;Highlighting</h3>
+<section id="f.-panning" class="level4">
+<h4 class="anchored" data-anchor-id="f.-panning">f.&nbsp;Panning</h4>
+<p>Using the pan-to attribute, you can pan across any sticky element (often an image). It supports several different units:</p>
+<p><code>pan-to="25%,-50%"</code>: pan the sticky 25% of its width to the right and 50% of its height up. <code>pan-to="-30px, 30px"</code>: pan the sticky 30 pixels to the left and 30 pixels down.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Panning Examples">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Panning Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can pan your sticky using <code>[@cr-choose_a_name]{pan-to="25%,-50%"}</code>,</p>
+<p>OR</p>
+<p>You can pan your sticky using <code>[@cr-choose_a_name]{pan-to="-30px,30px"}</code>.</p>
+</div>
+</div>
 </section>
-<section id="g.-highlighting-and-zooming" class="level3">
-<h3 class="anchored" data-anchor-id="g.-highlighting-and-zooming">g. Highlighting and zooming</h3>
+<section id="g.-zooming" class="level4">
+<h4 class="anchored" data-anchor-id="g.-zooming">g. Zooming</h4>
+<p>When your sticky is a code block or line, you can combine panning and scaling to focus the view on a line number or named span.</p>
+<p><code>zoom-to="3"</code>: zoom to line 3</p>
+<p><code>zoom-to="cr-span1"</code>: zoom to the line with the span with id cr-span1</p>
+<p>When you trigger a zoom to a line, it will zoom so that the line occupies most of the horizontal space in the viewpoint and is roughly centered vertically.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Zooming Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Zooming Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can zoom to line 5 of your sticky using <code>[@cr-choose_a_name]{zoom-to="5"}</code>, <strong>if</strong> the sticky is text or code.</p>
+</div>
+</div>
 </section>
-<section id="h.-styling" class="level3">
-<h3 class="anchored" data-anchor-id="h.-styling">h. Styling</h3>
+<section id="h.-highlighting" class="level4">
+<h4 class="anchored" data-anchor-id="h.-highlighting">h. Highlighting</h4>
+<p>You can highlight parts of the code and text of your sticky using the following syntax.</p>
+<p><code>highlight="1,3"</code>: highlight lines 1 and 3 <code>highlight="1-3"</code>: highlight lines 1, 2, and 3 <code>highlight="cr-span1"</code>: highlight the span with id cr-span1 <code>highlight="cr-span1,cr-span2"</code>: highlight the spans with ids cr-span1 and cr-span2</p>
+<p>Line highlighting (1 and 2) works on code cells and line blocks, while span highlighting (3 and 4) only works on line blocks.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Highlighting Examples">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Highlighting Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You highlight line 4 of your sticky using <code>[@cr-choose_a_name]{highlight="4"}</code> if your sticky is code or line blocks.</p>
+<p>In the example <em>line block</em> above, the line “their own tummy was quaking” would be highlighted.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="combining-effects" class="level3">
+<h3 class="anchored" data-anchor-id="combining-effects">Combining effects</h3>
+<p>You can combine multiple focus effects on a single trigger.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Combining Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Combining Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>[@cr-choose_a_name]{pan-to="50%,50%" scale-by="1.5"}</code> will pan the sticky down and to the right while increasing its size by 50%.</p>
+</div>
+</div>
+<p>One exception is the zoom-to attribute. Since it performs both panning and zooming, it will override those options if they’re included on the same trigger.</p>
+<section id="i.-highlighting-and-zooming" class="level4">
+<h4 class="anchored" data-anchor-id="i.-highlighting-and-zooming">i. Highlighting and zooming</h4>
+<p>It is common to want to zoom into a line or span of code or text while also highlighting. For this purpose, there is an additional attribute called <code>hlz</code>.</p>
+<p><code>hlz="4"</code>: highlight line 4 while zooming in on the line that contains it.</p>
+<p>:::{.callout-tip title = “Highlight and Zoom Example} I can zoom in and highlight the line”who ate sourdough for dinner.” in the <em>line block</em> above by using <code>[@cr-choose_a_name]{hlz = "4"}</code> :::</p>
+<p>Because this focus effect translates into highlight and zoom-to, the latter constrains it to only work for single spans or lines.</p>
+</section>
+<section id="j.-auto-filling-on-sticky" class="level4">
+<h4 class="anchored" data-anchor-id="j.-auto-filling-on-sticky">j. Auto filling on sticky</h4>
+<p>You can auto-zoom on a sticky by adding the <code>.scale_to_fill</code> attribute when you define the sticky.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Auto Scale Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Auto Scale Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="line-block">{#cr-chooose_a_name .scale_to_fill}<br>
+Once was a student<br>
+who ate sourdough for dinner.<br>
+Upon their waking<br>
+their own tummy was quaking<br>
+as the bread was bad.</div>
+</div>
+</div>
+</section>
+</section>
+<section id="k.-layouts" class="level3">
+<h3 class="anchored" data-anchor-id="k.-layouts">k. Layouts</h3>
+<p>You can also play around with layouts for each section. To change the default for all sections, you can do this at the start of the section or at the top of the document.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Change Document Wide Layout Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Change Document Wide Layout Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In your template, I’ve added the</p>
+<pre><code>cr-section:
+  layout: "sidebar-left"
+  </code></pre>
+<p>This is setting the default layout to “sidebar-left” which is actually the default.</p>
+</div>
+</div>
+<p>You also can change the layout for only one section:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Change Single Section Layout Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Change Single Section Layout Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{cr-section layout="overlay-center"}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Options for <code>layout</code> include:</p>
+<ul>
+<li><code>sidebar-left</code> (default)</li>
+<li><code>sidebar-right</code></li>
+<li><code>overlay-left</code></li>
+<li><code>overlay-center</code></li>
+<li><code>overlay-right</code></li>
+</ul>
 
 
 </section>

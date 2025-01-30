@@ -637,7 +637,7 @@ $$y_{t} = c + \phi_{1}y_{t - 1} + \cdots + \phi_{p}y_{t - p} + \theta_{1}\vareps
 
 * White noise model: ARIMA(0,0,0)
 * Random walk: ARIMA(0,1,0) with no constant
-* Random walk with drift: ARIMA(0,1,0) with \rlap{const.}
+* Random walk with drift: ARIMA(0,1,0) with a constant (c)
 * AR($p$): ARIMA($p$,0,0)
 * MA($q$): ARIMA(0,0,$q$)
 
@@ -670,6 +670,20 @@ $$
 $$
   y_t = c + y_{t-1} + \phi_1 y_{t-1}- \phi_1 y_{t-2} + \theta_1\varepsilon_{t-1} + \epsilon_t
 $$
+## General ARIMA Equation
+
+\[
+(1 - \phi_1 B - \cdots - \phi_p B^p)(1 - B)^d y_t = c + (1 + \theta_1 B + \cdots + \theta_q B^q) \varepsilon_t
+\]
+
+\[
+\underbrace{(1 - \phi_1 B - \cdots - \phi_p B^p)}_{\text{AR}(p)}
+\quad
+\underbrace{(1 - B)^d}_{d \text{ differences}}
+\quad
+\underbrace{(1 + \theta_1 B + \cdots + \theta_q B^q)}_{\text{MA}(q)}
+\]
+
 
 ## R model {.smaller}
 
@@ -1686,7 +1700,7 @@ fit |> forecast() |> autoplot(h02) +
   * Linear exponential smoothing models all special cases of ARIMA models.
   * Non-linear exponential smoothing models have no equivalent ARIMA counterparts.
   * Many ARIMA models have no exponential smoothing counterparts.
-  * ETS models all non-stationary. Models with seasonality or non-damped trend (or both) have two unit roots; all other models have one unit \rlap{root.}
+  * ETS models all non-stationary. Models with seasonality or non-damped trend (or both) have two unit roots; all other models have one unit **root.**
 
 
 

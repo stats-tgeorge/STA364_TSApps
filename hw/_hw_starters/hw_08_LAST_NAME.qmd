@@ -1,0 +1,63 @@
+---
+title: "Homework 7"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| eval: true
+library(fpp3)
+```
+
+
+## Question 1 (fpp9_1)
+The following plots show the autocorrleations for 36 random numbers, 360 random numbers and 1,000 random numbers.
+
+a. Explain the differences among these figures. Do they all indicate that the data are white noise?
+
+b. Why are the critical values at different distances from the mean of zero? Why are the autocorrelations different in each figure when they each refer to white noise?
+
+## Question 2 (ffp9_2)
+
+A classic example of a non-stationary series are stock prices. Plot the daily closing prices for Amazon stock (contained in *gafa_stock*), along with the ACF and PACF. Explain how each plot shows that the series is non-stationary and should be differenced.
+
+## Question 3 (ffp9_3)
+
+For the following series, find an appropriate Box-Cox transformation and order of differencing in order to obtain stationary data.
+
+a. Turkish GDP from *global_economy*.
+
+b. Accommodation takings in the state of Tasmania from *aus_accommodation*.
+
+c. Monthly sales from *souvenirs*.
+
+## Question 4 (fpp9_7)
+
+Consider *aus_airpassengers*, the total number of passengers (in millions) from Australian air carriers for the period 1970-2011.
+
+a. Use ARIMA() to find an appropriate ARIMA model. What model was selected. Check that the residuals look like white noise. Plot forecasts for the next 10 periods.
+
+b. Plot forecasts from an ARIMA(0,1,0) model with drift and compare these to part a.
+
+c. Plot forecasts from an ARIMA(2,1,2) model with drift and compare these to parts a and b. Remove the constant and see what happens.
+
+
+d. Plot forecasts from an ARIMA(0,2,1) model with a constant. What happens?
+
+## Question 5 (fpp9_11)
+
+Choose one of the following seasonal time series: the Australian production of electricity, cement, or gas (from *aus_production*).
+
+a. Do the data need transforming? If so, find a suitable transformation.
+
+b. Are the data stationary? If not, find an appropriate differencing which yields stationary data.
+
+c. Identify a couple of ARIMA models that might be useful in describing the time series. Which of your models is the best according to their AIC values?
+
+d. Estimate the parameters of your best model and do diagnostic testing on the residuals. Do the residuals resemble white noise? If not, try to find another ARIMA model which fits better.
+
+e. Forecast the next 24 months of data using your preferred model.
+
+f. Compare the forecasts obtained using `ETS()`.

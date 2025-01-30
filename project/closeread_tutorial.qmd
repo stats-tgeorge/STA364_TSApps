@@ -3,26 +3,27 @@ title: "Closeread Tutorial"
 format: html
 ---
 
-The purpose of this tutorial to help you create a *basic* C*loseread* document for your projects. After going through it, you should have an outline that you can modify for your projects.
-
+The purpose of this tutorial is to help you create a *basic* *Closeread* document for your projects. After going through it, you should understand the essential components and options to make your document. 
 
 ## Prepare
 
-Start by opening the template document, `closeread_template_LAST_NAME` and save your own copy, changing the file name to your name. 
+Start by copy the R project folder, `closeread_project`. Then go to your new folder and click on the `closeread_project.Rproj` file. If a pop-up appears, confirm you want to open the project. Finally, open the `closeread_template_LAST_NAME.qmd` file using the file tab on the bottom right of RStudio. You can change the file name from the file tab as well. 
 
-Next, open the file and render it to see your first *Closeread* document! 
+Render it to see your first *Closeread* document! 
 
 ## Look at examples
 
-In order for understanding the following elements, look through the following two examples, and pay attention to how they use text, and features to draw focus, and how they format the page.
+In order to understand the following elements, look through the following two examples and pay attention to how they use text and features to draw focus and how they format the page.
+
 1) [The Visual Display of Quantitative Information](https://closeread.dev/gallery/examples/minards-map/) by Edward Tufte.
+
 2) [A Poem (and a Painting) About the Suffering That Hides in Plain Sight](https://closeread.dev/gallery/examples/auden-poem/) by Elisa Gabbert.
 
 ## Understanding the Pieces
 
 ### a. Sections
 
-Sections are parts of your document, top to bottom, that you want to look differently. In many cases, your entire closeread document could be all one large section. To create a section we use (exactly):
+Sections are parts of your document, top to bottom, that you want to look different. In many cases, your entire closeread document will be one large section. To create a section we use (exactly):
 
 ```markdown
 :::{.cr-section}
@@ -31,11 +32,11 @@ Sections are parts of your document, top to bottom, that you want to look differ
 :::
 ```
 
-We place all things we want to follow the same style (columns, colors, etc) in between the "\:\:\:".
+We place all things we want to follow the same style (columns, colors, etc) in between the `:::`.
 
 ### b. Stickies and Triggers
 
-In both examples, text, or images, was fixed on the right hand side while the text flowed free on the left. The items on the right, that are fixed, are called `stickies`. 
+In both examples, text or images were fixed on the right-hand side while the text flowed free on the left. The fixed items on the right are called `stickies`. 
 
 You define what item you want to be a sticky using:
 
@@ -45,43 +46,199 @@ You define what item you want to be a sticky using:
 :::
 ```
 
-The text, image, etc. that you want to *stick* goes in the middle. Each sticky element should get its own name by changing "choose_a_name" but make sure you keep the "#-". 
+The text, image, etc., that you want to *stick* goes in the middle. Each sticky element should get its own name by changing "choose_a_name" but make sure you keep the "#-." 
 
-Then, you need to say when you want the sticky to appear. Somehwere in your regular text you *trigger* your sticky by using `@cr-choose_a_name`. 
+Then, you need to say when you want the sticky to appear. Somewhere in your regular text you *trigger* your sticky by using `@cr-choose_a_name`. 
 
 
-:::{.callout-tip}
-## Example
-
+:::{.callout-tip title = "Sticky Call Example"}
 There once was a student `@cr-choose_a_name`. 
+:::
+
+In this case, the sticky will appear once the statement "This is an example" gets toward the top of the page on the left. It will stay *stuck* until the next sticky is called or the section ends. 
+
+
+
+### c. Styling 
+
+You can add document-wide styling at the top of your `qmd` document. One such option `narrative-text-color-overlay: "#e2e2e2"` has been included in your template. Additional options would go directly below or in place of that option. You can give exact colors by using hex colors in quotes. Cornell Purple is `#523178`.
+
+:::{.callout-tip title="Style Options" collapse="true"}
+- `narrative-background-color-overlay`: the background color used for narrative text blocks in sidebar layouts
+- `narrative-text-color-overlay`: the color of narrative text in overlay layouts
+- `narrative-background-color-sidebar`: the background color used for the narrative column in sidebar layouts
+- `narrative-text-color-sidebar`: the color of narrative text in sidebar layouts
+- `narrative-border-radius`: the border radius of narrative text blocks in overlay layouts
+- `narrative-overlay-max-width`: the maximum width of narrative text blocks in overlay layouts
+- `narrative-overlay-min-width`: the minimum width of narrative text blocks in overlay layouts
+  * It's generally best to leave this one alone: setting it can cause mobile layout issues.
+- `narrative-outer-margin`: the margin pushing narrative content in from the left (on `overlay-left` layouts) or right edge (on `overlay-right`)
+- `narrative-font-family`: the font(s) used for narrative content
+- `narrative-font-size`: the font size used for narrative content
+- `poem-font-family`: the font(s) used for lineblock poems
+- `section-background-color`: the background color used for Closeread sections
+- `narrative-sidebar-width`: the width of the sidebar. Defaults to `1fr`: the sticky content is `2fr` in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different `fr` value, a fixed value, or a combination of the two using [`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax).
+:::
+
+
+
+### Focus Effects
+
+
+
+:::{.callout-tip title="Focus Example"}
+
+For example, [@cr-choose_a_name]{ DO SOMETHING COOL}.
+:::
+
+
+
+#### d. Line block examples
+
+In some many cases, you will have a block of text or code you want to discuss. You should setup a line block. These are made using vertical lines, space, and the line of the text. 
+
+:::{.callout-tip title="Line Block Example"}
+
+| {#cr-chooose_a_name}
+| Once was a student
+| who ate sourdough for dinner.
+| Upon their waking 
+| their own tummy was quaking 
+| as the bread was bad.
+:::
+
+
+#### e. Scaling
+
+You can scale a sticky element up or down by using the scale-by attribute and providing a numerical scaling factor. For example:
+
+`scale-by=".5"`: shrinks a sticky to 50% of its original size
+
+`scale-by="3"`: triples the size of a sticky.
+
+:::{.callout-tip title="Scalling Example"}
+
+You can scale your sticky using `[@cr-choose_a_name]{scale-by=".5"}`.
 
 :::
 
-In this case, the sticky will start to appear once the statement "This is an example" gets toward the top of the page on the left. It will stay *stuck* until the next sticky is called or the section ends. 
+
+#### f. Panning
+
+Using the pan-to attribute, you can pan across any sticky element (often an image). It supports several different units:
+
+`pan-to="25%,-50%"`: pan the sticky 25% of its width to the right and 50% of its height up.
+`pan-to="-30px, 30px"`: pan the sticky 30 pixels to the left and 30 pixels down.
+
+:::{.callout-tip title="Panning Examples"}
+You can pan your sticky using `[@cr-choose_a_name]{pan-to="25%,-50%"}`,
+
+OR
+
+You can pan your sticky using `[@cr-choose_a_name]{pan-to="-30px,30px"}`.
+:::
+
+#### g. Zooming
+
+When your sticky is a code block or line, you can combine panning and scaling to focus the view on a line number or named span.
+
+`zoom-to="3"`: zoom to line 3
+
+`zoom-to="cr-span1"`: zoom to the line with the span with id cr-span1
+
+When you trigger a zoom to a line, it will zoom so that the line occupies most of the horizontal space in the viewpoint and is roughly centered vertically.
+
+:::{.callout-tip title="Zooming Example"}
+You can zoom to line 5 of your sticky using `[@cr-choose_a_name]{zoom-to="5"}`, **if** the sticky is text or code. 
+:::
 
 
-### c. Scaling
+#### h. Highlighting
+
+You can highlight parts of the code and text of your sticky using the following syntax.
+
+`highlight="1,3"`: highlight lines 1 and 3
+`highlight="1-3"`: highlight lines 1, 2, and 3
+`highlight="cr-span1"`: highlight the span with id cr-span1
+`highlight="cr-span1,cr-span2"`: highlight the spans with ids cr-span1 and cr-span2
+
+Line highlighting (1 and 2) works on code cells and line blocks, while span highlighting (3 and 4) only works on line blocks.
+
+:::{.callout-tip title="Highlighting Examples"}
+You highlight line 4 of your sticky using `[@cr-choose_a_name]{highlight="4"}` if your sticky is code or line blocks. 
+
+In the example *line block* above, the line "their own tummy was quaking" would be highlighted. 
+:::
 
 
 
-### d. Panning
+### Combining effects
+
+You can combine multiple focus effects on a single trigger.
+
+:::{.callout-tip title="Combining Example"}
+
+`[@cr-choose_a_name]{pan-to="50%,50%" scale-by="1.5"}` will pan the sticky down and to the right while increasing its size by 50%.
+:::
+
+One exception is the zoom-to attribute. Since it performs both panning and zooming, it will override those options if they’re included on the same trigger.
+
+#### i. Highlighting and zooming
+
+It is common to want to zoom into a line or span of code or text while also highlighting. For this purpose, there is an additional attribute called `hlz`.
+
+`hlz="4"`: highlight line 4 while zooming in on the line that contains it.
+
+:::{.callout-tip title = "Highlight and Zoom Example}
+I can zoom in and highlight the line "who ate sourdough for dinner." in the *line block* above by using `[@cr-choose_a_name]{hlz = "4"}`
+:::
+
+Because this focus effect translates into highlight and zoom-to, the latter constrains it to only work for single spans or lines.
+
+#### j. Auto filling on sticky
+
+You can auto-zoom on a sticky by adding the `.scale_to_fill` attribute when you define the sticky. 
+
+:::{.callout-tip title="Auto Scale Example"}
+
+| {#cr-chooose_a_name .scale_to_fill}
+| Once was a student
+| who ate sourdough for dinner.
+| Upon their waking 
+| their own tummy was quaking 
+| as the bread was bad.
+:::
 
 
+### k. Layouts
 
-### e. Zooming
+You can also play around with layouts for each section. To change the default for all sections, you can do this at the start of the section or at the top of the document.
+
+:::{.callout-tip title = "Change Document Wide Layout Example"}
+In your template, I've added the 
+
+    cr-section:
+      layout: "sidebar-left"
+      
+This is setting the default layout to "sidebar-left" which is actually the default. 
+:::
+
+You also can change the layout for only one section: 
+
+:::{.callout-tip title = "Change Single Section Layout Example"}
+```markdown
+:::{cr-section layout="overlay-center"}
+
+:::
+```
+:::
+
+Options for `layout` include:
+
+- `sidebar-left` (default)
+- `sidebar-right`
+- `overlay-left`
+- `overlay-center`
+- `overlay-right`
 
 
-
-### f. Highlighting
-
-
-
-### g. Highlighting and zooming
-
-
-
-### h. Styling 
-
-
-
-  
