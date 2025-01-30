@@ -698,7 +698,7 @@ $(1-\phi_1B - \cdots - \phi_p B^p)(y_t' - \mu) = (1 + \theta_1 B + \cdots + \the
  * $y_t' = (1-B)^d y_t$
  * $\mu$ is the mean of $y_t'$.
  * $c = \mu(1-\phi_1 - \cdots - \phi_p )$.
- * `fable` uses mean form
+ * `fable` uses the  intercept form
 
 ## Egyptian exports
 

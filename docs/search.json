@@ -7574,7 +7574,7 @@
     "href": "slides/9-arima.html#r-model",
     "title": "Chapter 9 ARIMA",
     "section": "R model",
-    "text": "R model\nIntercept Form\n\\((1-\\phi_1B - \\cdots - \\phi_p B^p) y_t' = c + (1 + \\theta_1 B + \\cdots + \\theta_q B^q)\\epsilon_t\\)\n\nMean Form\n\\((1-\\phi_1B - \\cdots - \\phi_p B^p)(y_t' - \\mu) = (1 + \\theta_1 B + \\cdots + \\theta_q B^q)\\epsilon_t\\)\n\n\\(y_t' = (1-B)^d y_t\\)\n\\(\\mu\\) is the mean of \\(y_t'\\).\n\\(c = \\mu(1-\\phi_1 - \\cdots - \\phi_p )\\).\nfable uses mean form"
+    "text": "R model\nIntercept Form\n\\((1-\\phi_1B - \\cdots - \\phi_p B^p) y_t' = c + (1 + \\theta_1 B + \\cdots + \\theta_q B^q)\\epsilon_t\\)\n\nMean Form\n\\((1-\\phi_1B - \\cdots - \\phi_p B^p)(y_t' - \\mu) = (1 + \\theta_1 B + \\cdots + \\theta_q B^q)\\epsilon_t\\)\n\n\\(y_t' = (1-B)^d y_t\\)\n\\(\\mu\\) is the mean of \\(y_t'\\).\n\\(c = \\mu(1-\\phi_1 - \\cdots - \\phi_p )\\).\nfable uses the intercept form"
   },
   {
     "objectID": "slides/9-arima.html#egyptian-exports",
