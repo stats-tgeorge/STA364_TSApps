@@ -670,19 +670,17 @@ $$
 $$
   y_t = c + y_{t-1} + \phi_1 y_{t-1}- \phi_1 y_{t-2} + \theta_1\varepsilon_{t-1} + \epsilon_t
 $$
-## General ARIMA Equation
 
-\[
-(1 - \phi_1 B - \cdots - \phi_p B^p)(1 - B)^d y_t = c + (1 + \theta_1 B + \cdots + \theta_q B^q) \varepsilon_t
-\]
+## General ARIMA Equation {.smaller}
 
-\[
+
+$$
 \underbrace{(1 - \phi_1 B - \cdots - \phi_p B^p)}_{\text{AR}(p)}
 \quad
-\underbrace{(1 - B)^d}_{d \text{ differences}}
+\underbrace{(1 - B)^d}_{d \text{ differences}}y_t = c+
 \quad
-\underbrace{(1 + \theta_1 B + \cdots + \theta_q B^q)}_{\text{MA}(q)}
-\]
+\underbrace{(1 + \theta_1 B + \cdots + \theta_q B^q)}_{\text{MA}(q)}\epsilon_t
+$$
 
 
 ## R model {.smaller}
@@ -700,7 +698,7 @@ $(1-\phi_1B - \cdots - \phi_p B^p)(y_t' - \mu) = (1 + \theta_1 B + \cdots + \the
  * $y_t' = (1-B)^d y_t$
  * $\mu$ is the mean of $y_t'$.
  * $c = \mu(1-\phi_1 - \cdots - \phi_p )$.
- * `fable` uses intercept form
+ * `fable` uses mean form
 
 ## Egyptian exports
 
@@ -764,13 +762,17 @@ fit |> forecast(h=10) |>
 
 ## Understanding ARIMA models {.smaller}
 
+The constant c has an important effect on the long-term forecasts obtained from these models.
+
 * If $c=0$ and $d=0$, the long-term forecasts will go to zero.
 * If $c=0$ and $d=1$, the long-term forecasts will go to a non-zero constant.
 * If $c=0$ and $d=2$, the long-term forecasts will follow a straight line.
 
 * If $c\ne0$ and $d=0$, the long-term forecasts will go to the mean of the data.
 * If $c\ne0$ and $d=1$, the long-term forecasts will follow a straight line.
-* If $c\ne0$ and $d=2$, the long-term forecasts will follow a quadratic trend.
+* If $c\ne0$ and $d=2$, the long-term forecasts will follow a quadratic trend. (This is not recommended, and `fable` will not permit it.)
+
+
 
 ## Understanding ARIMA models {.smaller}
 
