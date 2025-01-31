@@ -1,0 +1,25 @@
+---
+title: "turtle_lab"
+format: html
+---
+
+## Setup
+
+1.  Make your copy of the Quarto template, `turtle_lab_LAST_NAME.qmd`.
+2.  Copy the data `cleaned_turtles.csv` from the shared folder to your own folder or read it from the instructor's folder.
+
+## Questions
+
+We will be working with two time series: the mean proportion of the time the turtles were dry (`proportion dry`) and the mean light (`mean_light`) while dry (all recorded values in this data are when they were dry).
+
+1.  Create a training set, leaving off the last 2 months of data.
+
+2.  For each series:
+
+<!-- -->
+
+a.  Use all appropriate visualizations to identify prospective models.
+
+b.  Build a time series model (without predictors) to predict the series. Evaluating the performance of your models on the test set. Explain your choice of the best model.
+
+c.  Investigate the usefulness of other predictors in predicting the series. Build a time series model using the other predictors and evaluate the performance of your models on the test set. Explain your choice of the best model.

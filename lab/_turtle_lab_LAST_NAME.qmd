@@ -1,0 +1,18 @@
+---
+title: "Turtle Lab"
+author: "YOUR NAME"
+format: html
+---
+
+
+## Setup
+
+```{r}
+library(fpp3)
+
+turtles <- readr::read_csv('FILE LOCATION/cleaned_turtles.csv')
+
+```
+
+
+## Questions
