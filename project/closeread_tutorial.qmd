@@ -197,11 +197,11 @@ Because this focus effect translates into highlight and zoom-to, the latter cons
 
 #### j. Auto filling on sticky
 
-You can auto-zoom on a sticky by adding the `.scale_to_fill` attribute when you define the sticky. 
+You can auto-zoom on a sticky by adding the `.scale-to-fill` attribute when you define the sticky. 
 
 :::{.callout-tip title="Auto Scale Example"}
 
-| {#cr-chooose_a_name .scale_to_fill}
+| {#cr-chooose_a_name .scale-to-fill}
 | Once was a student
 | who ate sourdough for dinner.
 | Upon their waking 
