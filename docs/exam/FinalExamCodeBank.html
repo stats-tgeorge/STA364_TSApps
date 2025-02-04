@@ -318,7 +318,7 @@ Note
 <li><code>data|&gt; model(comma semparted list of models)</code>.</li>
 <li>Benchmark models: <code>NAIVE()</code>, <code>SNAIVE()</code>, <code>MEAN()</code>, <code>RM(ts~dift())</code>.</li>
 <li><code>ETS()</code> where you can specify the model using <code>ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))</code>.</li>
-<li><code>TSLM()</code> where you can include more than a constant using <code>TSLM(ts~predicotrs)</code> where one predictor can be time using <code>trend()</code>.</li>
+<li><code>TSLM()</code> where you can include more than a constant using <code>TSLM(ts~predicotrs)</code> where one predictor can be time using <code>trend()</code>. Season terms can be added with <code>season()</code> and fourier terms can be added with <code>fourier(K=something)</code>.</li>
 <li><code>decomposition_model()</code>: the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data.</li>
 <li>Print the model by retyping the model name and running.</li>
 <li><code>report()</code>: Gives model information but can only accept 1 model at a time.</li>

@@ -36,7 +36,7 @@ To get more information on each function, use `?function_name()`.
 -   `data|> model(comma semparted list of models)`.
 -   Benchmark models: `NAIVE()`, `SNAIVE()`, `MEAN()`, `RM(ts~dift())`.
 -   `ETS()` where you can specify the model using `ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))`.
--   `TSLM()` where you can include more than a constant using `TSLM(ts~predicotrs)` where one predictor can be time using `trend()`.
+-   `TSLM()` where you can include more than a constant using `TSLM(ts~predicotrs)` where one predictor can be time using `trend()`. Season terms can be added with `season()` and fourier terms can be added with `fourier(K=something)`. 
 -   `decomposition_model()`: the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data.
 -   Print the model by retyping the model name and running.
 -   `report()`: Gives model information but can only accept 1 model at a time.
