@@ -3306,6 +3306,71 @@
     "text": "Data qand Setup\nThe data is found in the ffp3 package and is called aus_vehicle_sales. Use ?aus_vehicle_sales to learn more about the data. For this exam, you will explore the SUVs. The data has been split into a training set and the whole data.\n\nlibrary(fpp3)\n\nRegistered S3 method overwritten by 'tsibble':\n  method               from \n  as_tibble.grouped_df dplyr\n\n\n── Attaching packages ──────────────────────────────────────────── fpp3 1.0.1 ──\n\n\n✔ tibble      3.2.1     ✔ tsibble     1.1.5\n✔ dplyr       1.1.4     ✔ tsibbledata 0.4.1\n✔ tidyr       1.3.1     ✔ feasts      0.4.1\n✔ lubridate   1.9.4     ✔ fable       0.4.1\n✔ ggplot2     3.5.1     \n\n\n── Conflicts ───────────────────────────────────────────────── fpp3_conflicts ──\n✖ lubridate::date()    masks base::date()\n✖ dplyr::filter()      masks stats::filter()\n✖ tsibble::intersect() masks base::intersect()\n✖ tsibble::interval()  masks lubridate::interval()\n✖ dplyr::lag()         masks stats::lag()\n✖ tsibble::setdiff()   masks base::setdiff()\n✖ tsibble::union()     masks base::union()\n\n\n\naus_suv &lt;- aus_vehicle_sales |&gt; \n  filter(Type == \"SUV\")|&gt;\n  select(-Type)\n\nsuv_train &lt;- \n  aus_suv |&gt; \n  filter(year(Month) &lt;= 2016)\n\n\n\nQuestions\n\nPlot and discuss the time series. Use autoplot, ggsubseries and gg_season graphs.\n\n\nInvestigate if there is significant autocorrelation. Use gg_lag() and ACF() |&gt; autoplot() to make the graphs. Does this information agree with your previous discussion in (1)?\n\n\nUsing your already created graphs, is the relationship between season and trend additive or multiplicative? Explain. If multiplicative, explain what that implies about modeling and forecasting with your series.\n\n\nRegardless of your previous answer, apply a log transformation on the Count and then do an STL decomposition on your series. Discuss if the decomposition components agree with your answers in (1) and (2). You will need model(STL(log(Count))) |&gt; components() |&gt; autoplot().\n\n\nThe code below can be modified to fit all benchmark models and a decomposition model to forecast the number of SUV sales in Australia in the next 1 year. Discuss which methods are best and why.\n\n\nNow, we want to compare models using metrics. Use the provided code to get model metrics, then choose the best model.\n\n\nUsing the chosen model form in (6), refit that type of model on the complete data and provide forecasts (plot) for 2018. You should use parts of the code provided above.\n\n\nAssess the final chosen model. You may want the functions gg_tsresiduals(), report(), and augment(), to get information about the model and relevant plots, but you can also use others."
   },
   {
+    "objectID": "exam/e1_outline_s25.html",
+    "href": "exam/e1_outline_s25.html",
+    "title": "STA 364 Spring 2025",
+    "section": "",
+    "text": "The basic steps and concepts of forecasting. Examples: Closer forecasts will be better, and predictable patterns will be easy to forecast.\nTime series graphics\n\n\nTime plots\nPatterns, trend, season, cycle\nInterpreting gg_season, gg_subseries graphs.\nAutocorrelation, lag plots, correlogram\nWhite noise\nConnecting/cross-referencing information from these plots.\n\n\nDecomposition\n\n\nTransformations and adjustments - multiplicative to additive, box_cox use.\nTS components, Trend, season, remainder, seasonally adjusted series\nMoving average\nSTL decomposition (that it uses loess at multiple stages)\n\n\nToolbox\n\n\nEDA -&gt; Define model -&gt; Train model -&gt; Check performance -&gt; produce forecasts\nTrain/ Test. Why. Using test sets to compare models but using metrics on either to evaluate an individual model.\nSimple forecasting methods: MEAN, NAIVE, SNAIVE, DRIFT\n\nWhen to use which, and how to model with them.\n\nResiduals and residual diagnostic (check for autocorrelation)\nPrediction intervals\nForecasting with decomposition\n\n\nTSLM\n\n\nLinear model in TS\nRegression model assessment. AIC, AICc, BIC, R2, and R2Adj\nPicking useful predictors: dummy, harmonic, step, spike, lagged values\nNonlinear: piece-wise, log-log"
+  },
+  {
+    "objectID": "exam/e1_outline_s25.html#outline",
+    "href": "exam/e1_outline_s25.html#outline",
+    "title": "STA 364 Spring 2025",
+    "section": "",
+    "text": "The basic steps and concepts of forecasting. Examples: Closer forecasts will be better, and predictable patterns will be easy to forecast.\nTime series graphics\n\n\nTime plots\nPatterns, trend, season, cycle\nInterpreting gg_season, gg_subseries graphs.\nAutocorrelation, lag plots, correlogram\nWhite noise\nConnecting/cross-referencing information from these plots.\n\n\nDecomposition\n\n\nTransformations and adjustments - multiplicative to additive, box_cox use.\nTS components, Trend, season, remainder, seasonally adjusted series\nMoving average\nSTL decomposition (that it uses loess at multiple stages)\n\n\nToolbox\n\n\nEDA -&gt; Define model -&gt; Train model -&gt; Check performance -&gt; produce forecasts\nTrain/ Test. Why. Using test sets to compare models but using metrics on either to evaluate an individual model.\nSimple forecasting methods: MEAN, NAIVE, SNAIVE, DRIFT\n\nWhen to use which, and how to model with them.\n\nResiduals and residual diagnostic (check for autocorrelation)\nPrediction intervals\nForecasting with decomposition\n\n\nTSLM\n\n\nLinear model in TS\nRegression model assessment. AIC, AICc, BIC, R2, and R2Adj\nPicking useful predictors: dummy, harmonic, step, spike, lagged values\nNonlinear: piece-wise, log-log"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Time Series Applications",
+    "section": "",
+    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
+    ]
+  },
+  {
     "objectID": "course-links.html",
     "href": "course-links.html",
     "title": "Useful links",
@@ -3350,55 +3415,18 @@
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
+    "objectID": "exam/FinalExamCodeBank.html",
+    "href": "exam/FinalExamCodeBank.html",
+    "title": "Code Bank for Final Exam",
     "section": "",
-    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
-    "crumbs": [
-      "Course information",
-      "R/RStudio Access"
-    ]
+    "text": "Note\n\n\n\nts is used to abbreviate time series.\nTo get more information on each function, use ?function_name().\n\n\n\nGraph functions\n\nautoplot()\ngg_subseries()\ngg_season()\ngg_lag()\ngg_season()\ngg_tsdisplay(,plot_type = \"partial\")\ngg_tresiduals()\n\n\n\nCalculation Functions\n\nforecast(): Requires (a) model object(s), then either h=\"some time frame\" or data.\nACF()\nPACF()\nmodel(STL(ts))\ncomponents(): pulls out the components of a decomposition\naugment(): creates a table of values from a regression model\nfeatures(ts, features = guerrero): finds the lambda value for a box cox transformation\nfeatures(.innov, ljung_box, lag = choose): Ljung-Box test. Use \\(\\ell=10\\) for non-seasonal data and \\(\\ell=2m\\) for seasonal data.\nfeatures(ts, choose_a_KPSS_option): Choose either unitroot_kpss, unitroot_ndiffs, or unitroot_nsdiffs.\n\n\n\nFit and assess models\n\ndata|&gt; model(comma semparted list of models)\nBenchmark models: NAIVE(), SNAIVE(), MEAN(), RM(ts~dift()),\nETS() where you can specify the model using ETS(ts ~ error(\"A\"or\"M\")+trend(\"A\"or\"Ad\"or\"M\")+season(\"A\"or\"Ad\"or\"M\"))\nTSLM() where you can include more than a constant using TSLM(ts~predicotrs) where one predictor can be time using trend().\ndecomposition_model(): the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data.\nPrint the model by retyping the model name and running.\nreport(): Gives model information but can only accept 1 model at a time.\nARIMA(): Pick orders using ts~pdq(p,d,q) or ts~pdf(p,d,q)+PDQ(P,D,Q).\naccuracy()\n\n\n\nHelpful data functons\n\nmutate() to create new columns\ntsibble() to create tsibbles\nselect() to pick columns\nfilter() to pick rows meeting a condition\nyearmonth(), yearweek() to covert strings to year month (week) type to create a tsibble"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "exam/e2_outline_s25.html",
+    "href": "exam/e2_outline_s25.html",
+    "title": "STA 364 Spring 2025",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "course-instructor.html",
-    "href": "course-instructor.html",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-instructor.html#instructor",
-    "href": "course-instructor.html#instructor",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Time Series Applications",
-    "section": "",
-    "text": "Course Description\nTime series analysis is a vital tool for investigating data from many fields, such as business, economics, engineering, biology, medicine, social sciences, and politics. Understanding and anticipating a variable’s change over time is valuable. This class will cover an array of time series methods, including those for correlation analysis and forecasting, stochastic models, regression analysis with time-related variables, and stationary/nonstationary models.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
+    "text": "This in-class exam is worth 100 points. The take-home is worth 100 points.\n\n\nOutline\n\nContent in Exam 1 Outline HERE.\nETS Models\n\n\nSmoothing models with trend\nSmoothing models with seasonality\nIdentifying when to use multiplicative models vs additive models\nComparing models\nHow ETS() auto selection function works.\nGiven the forecast variance formula, \\(\\hat{\\sigma}_h\\), calculate the prediction interval.\n\n\nARIMA Models\n\n\nStationarity: Identify if a series is or is not stationary.\nDifferencing: What is it? What kinds? Why?\nBackshift notation: What is it, and what does it do?\nAutoregressive Models (AR): Conditions, how to fit, model equation.\nMoving Average Models (MA): Conditions, how to fit, model equation.\nARIMA Models: Write out the specific equation using the general equation and a 𝑝,𝑑, and 𝑞 (small) idenifying the orders (\\(p\\) and \\(q\\)) by looking at a stationary series’s correlogram and PACF plot.\nSARIMA Models: Same as ARIMA but with a season piece.\nARIMA vs ETA\nARIMA() function default algorithm.\n\n\nOverall\n\n\nFitting and comparing models on a test set\nForecasting with all models\n\n\n\nCodebank\nYou can also find the take home exam codebank by clicking HERE."
   },
   {
     "objectID": "hw/hw-01.html",
@@ -3482,7 +3510,7 @@
     "href": "index.html",
     "title": "Time Series Applications Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the block.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 Jan\nSyllabus, R Intro, and Ch1 Getting Started\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 Jan\nCh2 TS Graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 Jan\nCh2 TS Graphics & Ch 3 TS Decomposition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 Jan\nCh3 TS Decomposition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 Jan\nCh 5 The Forecasters Toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 Jan\nCh5/Ch 7 TS Regression Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 Jan\nCh 7 TS Regression Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 Jan\nCh 7 TS Regression Models & Exam Discussion\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 Jan\nExam 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 Jan\nCh 8 & Ch 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n31 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n3 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n4 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n5 Feb\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the block.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 Jan\nSyllabus, R Intro, and Ch1 Getting Started\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 Jan\nCh2 TS Graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 Jan\nCh2 TS Graphics & Ch 3 TS Decomposition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 Jan\nCh3 TS Decomposition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 Jan\nCh 5 The Forecasters Toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 Jan\nCh5/Ch 7 TS Regression Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 Jan\nCh 7 TS Regression Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 Jan\nCh 7 TS Regression Models & Exam Discussion\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 Jan\nExam 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 Jan\nCh 8 Exponential Smoothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 Jan\nCh 8 & Ch 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n31 Jan\nCh 9 ARIMA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n3 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n4 Feb\nProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n5 Feb\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"

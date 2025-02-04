@@ -1,0 +1,44 @@
+---
+title: "STA 364 Spring 2025"
+subtitle: "Exam 2 Outline"
+execute: 
+  message: false
+  warning: false
+embed-resources: true
+---
+
+##### This in-class exam is worth `100 points`. The take-home is worth `100 points`.
+
+### Outline
+
+a.  Content in Exam 1 Outline [HERE](https://stats-tgeorge.github.io/STA364_TSApps/exam/e1_outline_s25.html).
+
+b.  ETS Models
+
+-   Smoothing models with trend
+-   Smoothing models with seasonality
+-   Identifying when to use multiplicative models vs additive models
+-   Comparing models
+-   How `ETS()` auto selection function works.
+-   Given the forecast variance formula, $\hat{\sigma}_h$, calculate the prediction interval.
+
+c.  ARIMA Models
+
+-   Stationarity: Identify if a series is or is not stationary.
+-   Differencing: What is it? What kinds? Why?
+-   Backshift notation: What is it, and what does it do?
+-   Autoregressive Models (AR): Conditions, how to fit, model equation.
+-   Moving Average Models (MA): Conditions, how to fit, model equation.
+-   ARIMA Models: Write out the specific equation using the general equation and a 𝑝,𝑑, and 𝑞 (small) idenifying the orders ($p$ and $q$) by looking at a stationary series's correlogram and PACF plot.
+-   SARIMA Models: Same as ARIMA but with a season piece.
+-   ARIMA vs ETA
+-   `ARIMA()` function default algorithm.
+
+d.  Overall
+
+-   Fitting and comparing models on a test set
+-   Forecasting with all models
+
+### Codebank
+
+You can also find the take home exam codebank by clicking [HERE](FinalExamCodeBank.qmd). 

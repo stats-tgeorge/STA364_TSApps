@@ -1,0 +1,47 @@
+---
+title: "STA 364 Spring 2025"
+subtitle: "Outline"
+execute: 
+  message: false
+  warning: false
+embed-resources: true
+---
+
+## Outline
+
+a.  The basic steps and concepts of forecasting. Examples: Closer forecasts will be better, and predictable patterns will be easy to forecast.
+
+b.  Time series graphics
+
+-   Time plots
+-   Patterns, trend, season, cycle
+-   Interpreting `gg_season`, `gg_subseries` graphs.
+-   Autocorrelation, lag plots, correlogram
+-   White noise
+-   Connecting/cross-referencing information from these plots.
+
+c.  Decomposition
+
+-   Transformations and adjustments - multiplicative to additive, box_cox use.
+-   TS components, Trend, season, remainder, seasonally adjusted series
+-   Moving average
+-   STL decomposition (that it uses loess at multiple stages)
+
+d.  Toolbox
+
+-   EDA -\> Define model -\> Train model -\> Check performance -\> produce forecasts
+-   Train/ Test. Why. Using test sets to compare models but using metrics on either to evaluate an individual model.
+-   Simple forecasting methods: MEAN, NAIVE, SNAIVE, DRIFT
+    -   When to use which, and how to model with them.
+-   Residuals and residual diagnostic (check for autocorrelation)
+-   Prediction intervals
+-   Forecasting with decomposition
+
+e.  TSLM
+
+-   Linear model in TS
+-   Regression model assessment. AIC, AICc, BIC, R2, and R2Adj
+-   Picking useful predictors: dummy, harmonic, step, spike, lagged values
+-   Nonlinear: piece-wise, log-log
+
+##### This in-class exam is worth `100 points`. The take-home is worth `100 points`.
