@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Code Bank for Final Exam – Time Series Application</title>
+<title>Code Bank – Time Series Application</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Code Bank for Final Exam</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Code Bank</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -246,7 +246,7 @@ window.Quarto = {
   <li><a href="#graph-functions" id="toc-graph-functions" class="nav-link active" data-scroll-target="#graph-functions">Graph functions</a></li>
   <li><a href="#calculation-functions" id="toc-calculation-functions" class="nav-link" data-scroll-target="#calculation-functions">Calculation Functions</a></li>
   <li><a href="#fit-and-assess-models" id="toc-fit-and-assess-models" class="nav-link" data-scroll-target="#fit-and-assess-models">Fit and assess models</a></li>
-  <li><a href="#helpful-data-functons" id="toc-helpful-data-functons" class="nav-link" data-scroll-target="#helpful-data-functons">Helpful data functons</a></li>
+  <li><a href="#helpful-data-functions" id="toc-helpful-data-functions" class="nav-link" data-scroll-target="#helpful-data-functions">Helpful data functions</a></li>
   </ul>
 </nav>
     </div>
@@ -255,7 +255,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Code Bank for Final Exam</h1>
+<h1 class="title">Code Bank</h1>
 </div>
 
 
@@ -289,25 +289,25 @@ Note
 <section id="graph-functions" class="level3">
 <h3 class="anchored" data-anchor-id="graph-functions">Graph functions</h3>
 <ul>
-<li><code>autoplot()</code></li>
-<li><code>gg_subseries()</code></li>
-<li><code>gg_season()</code></li>
-<li><code>gg_lag()</code></li>
-<li><code>gg_season()</code></li>
-<li><code>gg_tsdisplay(,plot_type = "partial")</code></li>
-<li><code>gg_tresiduals()</code></li>
+<li><code>autoplot()</code>.</li>
+<li><code>gg_subseries()</code>.</li>
+<li><code>gg_season()</code>.</li>
+<li><code>gg_lag()</code>.</li>
+<li><code>gg_season()</code>.</li>
+<li><code>gg_tsdisplay(,plot_type = "partial")</code>.</li>
+<li><code>gg_tresiduals()</code>.</li>
 </ul>
 </section>
 <section id="calculation-functions" class="level3">
 <h3 class="anchored" data-anchor-id="calculation-functions">Calculation Functions</h3>
 <ul>
 <li><code>forecast()</code>: Requires (a) model object(s), then either <code>h="some time frame"</code> or data.</li>
-<li><code>ACF()</code></li>
-<li><code>PACF()</code></li>
-<li><code>model(STL(ts))</code></li>
-<li><code>components()</code>: pulls out the components of a decomposition</li>
-<li><code>augment()</code>: creates a table of values from a regression model</li>
-<li><code>features(ts, features = guerrero)</code>: finds the lambda value for a box cox transformation</li>
+<li><code>ACF()</code>.</li>
+<li><code>PACF()</code>.</li>
+<li><code>model(STL(ts))</code>.</li>
+<li><code>components()</code>: pulls out the components of a decomposition.</li>
+<li><code>augment()</code>: creates a table of values from a regression model.</li>
+<li><code>features(ts, features = guerrero)</code>: finds the lambda value for a box cox transformation.</li>
 <li><code>features(.innov, ljung_box, lag = choose)</code>: Ljung-Box test. Use <span class="math inline">\(\ell=10\)</span> for non-seasonal data and <span class="math inline">\(\ell=2m\)</span> for seasonal data.</li>
 <li><code>features(ts, choose_a_KPSS_option)</code>: Choose either <code>unitroot_kpss</code>, <code>unitroot_ndiffs</code>, or <code>unitroot_nsdiffs</code>.</li>
 </ul>
@@ -315,9 +315,9 @@ Note
 <section id="fit-and-assess-models" class="level3">
 <h3 class="anchored" data-anchor-id="fit-and-assess-models">Fit and assess models</h3>
 <ul>
-<li><code>data|&gt; model(comma semparted list of models)</code></li>
-<li>Benchmark models: <code>NAIVE()</code>, <code>SNAIVE()</code>, <code>MEAN()</code>, <code>RM(ts~dift())</code>,</li>
-<li><code>ETS()</code> where you can specify the model using <code>ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))</code></li>
+<li><code>data|&gt; model(comma semparted list of models)</code>.</li>
+<li>Benchmark models: <code>NAIVE()</code>, <code>SNAIVE()</code>, <code>MEAN()</code>, <code>RM(ts~dift())</code>.</li>
+<li><code>ETS()</code> where you can specify the model using <code>ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))</code>.</li>
 <li><code>TSLM()</code> where you can include more than a constant using <code>TSLM(ts~predicotrs)</code> where one predictor can be time using <code>trend()</code>.</li>
 <li><code>decomposition_model()</code>: the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data.</li>
 <li>Print the model by retyping the model name and running.</li>
@@ -326,14 +326,16 @@ Note
 <li><code>accuracy()</code></li>
 </ul>
 </section>
-<section id="helpful-data-functons" class="level3">
-<h3 class="anchored" data-anchor-id="helpful-data-functons">Helpful data functons</h3>
+<section id="helpful-data-functions" class="level3">
+<h3 class="anchored" data-anchor-id="helpful-data-functions">Helpful data functions</h3>
 <ul>
-<li><code>mutate()</code> to create new columns</li>
-<li><code>tsibble()</code> to create tsibbles</li>
-<li><code>select()</code> to pick columns</li>
-<li><code>filter()</code> to pick rows meeting a condition</li>
-<li><code>yearmonth()</code>, <code>yearweek()</code> to covert strings to year month (week) type to create a tsibble</li>
+<li><code>mutate()</code> to create new columns.</li>
+<li><code>tsibble()</code> to create tsibbles, use <code>key=</code> to choose categorical columns that are relevant, and <code>index=</code> to choose the time variable.</li>
+<li><code>select()</code> to pick columns.</li>
+<li><code>filter()</code> to pick rows meeting a condition.</li>
+<li><code>yearmonth()</code>, <code>yearweek()</code> to convert strings to year month (week) type to create a tsibble.</li>
+<li><code>year()</code> function to get the year.</li>
+<li><code>month()</code> function to get the month.</li>
 </ul>
 
 

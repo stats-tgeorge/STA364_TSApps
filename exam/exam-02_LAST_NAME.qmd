@@ -1,0 +1,53 @@
+---
+title: "STA 364 Final Exam"
+subtitle: "Spring 2025"
+author: "REPLACE WITH NAME"
+format:
+  html:
+    embed-resources: true
+---
+
+#### Setup and Data
+
+```{r packages}
+library(fpp3)
+old_ny_childcare <- ny_childcare |> filter(year(Month)<2020)
+```
+
+#### Questions
+
+1.  Using appropriate plots, discuss which ETS models might be best and why. Match the components (E,T,S) and their functional form (Additive, Multiplicative) with what you see in your plots.
+
+```{r q1}
+
+```
+
+2.  Using appropriate plots, discuss which ARIMA, or SARIMA models might be best. References specific plots and be specific.
+
+```{r q2}
+
+```
+
+3.  Fit all appropriate models, including those you just mentioned; we have covered during the course using a training and testing approach, holding the last 2 years for testing.
+
+```{r q3}
+
+```
+
+4.  Compare all models using multiple accuracy metrics on the training and testing set and visualize their forecasts on the testing set (and the whole series). Pick the best 2.
+
+```{r q4}
+
+```
+
+5.  Assess the quality of the two chosen models and select the best overall model.
+
+```{r q5}
+
+```
+
+6.  Using the best model, refit that type of model on the complete data and provide forecasts (plot) for 2020. Do you think your forecast is accurate? Why or why not?
+
+```{r q6}
+
+```

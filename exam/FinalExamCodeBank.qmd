@@ -1,54 +1,54 @@
 ---
-title: "Code Bank for Final Exam"
+title: "Code Bank"
 format: html
 ---
 
-:::{.callout-note}
-`ts` is used to abbreviate time series. 
+::: callout-note
+`ts` is used to abbreviate time series.
 
 To get more information on each function, use `?function_name()`.
 :::
 
 ### Graph functions
 
-- `autoplot()`
-- `gg_subseries()`
-- `gg_season()`
-- `gg_lag()`
-- `gg_season()`
-- `gg_tsdisplay(,plot_type = "partial")`
-- `gg_tresiduals()`
+-   `autoplot()`.
+-   `gg_subseries()`.
+-   `gg_season()`.
+-   `gg_lag()`.
+-   `gg_season()`.
+-   `gg_tsdisplay(,plot_type = "partial")`.
+-   `gg_tresiduals()`.
 
 ### Calculation Functions
 
-- `forecast()`: Requires (a) model object(s), then either `h="some time frame"` or data. 
-- `ACF()`
-- `PACF()`
-- `model(STL(ts))`
-- `components()`: pulls out the components of a decomposition
-- `augment()`: creates a table of values from a regression model
-- `features(ts, features = guerrero)`: finds the lambda value for a box cox transformation
-- `features(.innov, ljung_box, lag = choose)`: Ljung-Box test. Use $\ell=10$ for non-seasonal data and $\ell=2m$ for seasonal data.
-- `features(ts, choose_a_KPSS_option)`: Choose either `unitroot_kpss`, `unitroot_ndiffs`, or `unitroot_nsdiffs`.
-
+-   `forecast()`: Requires (a) model object(s), then either `h="some time frame"` or data.
+-   `ACF()`.
+-   `PACF()`.
+-   `model(STL(ts))`.
+-   `components()`: pulls out the components of a decomposition.
+-   `augment()`: creates a table of values from a regression model.
+-   `features(ts, features = guerrero)`: finds the lambda value for a box cox transformation.
+-   `features(.innov, ljung_box, lag = choose)`: Ljung-Box test. Use $\ell=10$ for non-seasonal data and $\ell=2m$ for seasonal data.
+-   `features(ts, choose_a_KPSS_option)`: Choose either `unitroot_kpss`, `unitroot_ndiffs`, or `unitroot_nsdiffs`.
 
 ### Fit and assess models
 
-- `data|> model(comma semparted list of models)`
-- Benchmark models: `NAIVE()`, `SNAIVE()`, `MEAN()`, `RM(ts~dift())`, 
-- `ETS()` where you can specify the model using `ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))`
-- `TSLM()` where you can include more than a constant using `TSLM(ts~predicotrs)` where one predictor can be time using `trend()`. 
-- `decomposition_model()`: the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data. 
-- Print the model by retyping the model name and running.
-- `report()`: Gives model information but can only accept 1 model at a time. 
-- `ARIMA()`: Pick orders using `ts~pdq(p,d,q)` or `ts~pdf(p,d,q)+PDQ(P,D,Q)`.
-- `accuracy()`
+-   `data|> model(comma semparted list of models)`.
+-   Benchmark models: `NAIVE()`, `SNAIVE()`, `MEAN()`, `RM(ts~dift())`.
+-   `ETS()` where you can specify the model using `ETS(ts ~ error("A"or"M")+trend("A"or"Ad"or"M")+season("A"or"Ad"or"M"))`.
+-   `TSLM()` where you can include more than a constant using `TSLM(ts~predicotrs)` where one predictor can be time using `trend()`.
+-   `decomposition_model()`: the first argument is a decomposition, then the second argument is what type of model you want to fit on the seasonally adjusted data.
+-   Print the model by retyping the model name and running.
+-   `report()`: Gives model information but can only accept 1 model at a time.
+-   `ARIMA()`: Pick orders using `ts~pdq(p,d,q)` or `ts~pdf(p,d,q)+PDQ(P,D,Q)`.
+-   `accuracy()`
 
-### Helpful data functons
-- `mutate()` to create new columns
-- `tsibble()` to create tsibbles
-- `select()` to pick columns
-- `filter()` to pick rows meeting a condition
-- `yearmonth()`, `yearweek()` to covert strings to year month (week) type to create a tsibble
+### Helpful data functions
 
-
+-   `mutate()` to create new columns.
+-   `tsibble()` to create tsibbles, use `key=` to choose categorical columns that are relevant, and `index=` to choose the time variable.
+-   `select()` to pick columns.
+-   `filter()` to pick rows meeting a condition.
+-   `yearmonth()`, `yearweek()` to convert strings to year month (week) type to create a tsibble.
+-   `year()` function to get the year.
+-   `month()` function to get the month.

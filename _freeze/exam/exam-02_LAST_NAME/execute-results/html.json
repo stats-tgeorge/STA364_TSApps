@@ -1,0 +1,15 @@
+{
+  "hash": "94f806c7ca8cac198ef1d9dac69e49d0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"STA 364 Final Exam\"\nsubtitle: \"Spring 2025\"\nauthor: \"REPLACE WITH NAME\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\n\n#### Setup and Data\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(fpp3)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nRegistered S3 method overwritten by 'tsibble':\n  method               from \n  as_tibble.grouped_df dplyr\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching packages ──────────────────────────────────────────── fpp3 1.0.1 ──\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\n✔ tibble      3.2.1     ✔ tsibble     1.1.5\n✔ dplyr       1.1.4     ✔ tsibbledata 0.4.1\n✔ tidyr       1.3.1     ✔ feasts      0.4.1\n✔ lubridate   1.9.4     ✔ fable       0.4.1\n✔ ggplot2     3.5.1     \n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Conflicts ───────────────────────────────────────────────── fpp3_conflicts ──\n✖ lubridate::date()    masks base::date()\n✖ dplyr::filter()      masks stats::filter()\n✖ tsibble::intersect() masks base::intersect()\n✖ tsibble::interval()  masks lubridate::interval()\n✖ dplyr::lag()         masks stats::lag()\n✖ tsibble::setdiff()   masks base::setdiff()\n✖ tsibble::union()     masks base::union()\n```\n\n\n:::\n\n```{.r .cell-code}\nold_ny_childcare <- ny_childcare |> filter(year(Month)<2020)\n```\n:::\n\n\n\n#### Questions\n\n1.  Using appropriate plots, discuss which ETS models might be best and why. Match the components (E,T,S) and their functional form (Additive, Multiplicative) with what you see in your plots.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n2.  Using appropriate plots, discuss which ARIMA, or SARIMA models might be best. References specific plots and be specific.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n3.  Fit all appropriate models, including those you just mentioned; we have covered during the course using a training and testing approach, holding the last 2 years for testing.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n4.  Compare all models using multiple accuracy metrics on the training and testing set and visualize their forecasts on the testing set (and the whole series). Pick the best 2.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n5.  Assess the quality of the two chosen models and select the best overall model.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n6.  Using the best model, refit that type of model on the complete data and provide forecasts (plot) for 2020. Do you think your forecast is accurate? Why or why not?\n\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
