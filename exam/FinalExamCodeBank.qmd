@@ -42,6 +42,7 @@ To get more information on each function, use `?function_name()`.
 -   `report()`: Gives model information but can only accept 1 model at a time.
 -   `ARIMA()`: Pick orders using `ts~pdq(p,d,q)` or `ts~pdf(p,d,q)+PDQ(P,D,Q)`.
 -   `accuracy()`
+-   `tidy()` will give the coefficients table for most model types
 
 ### Helpful data functions
 

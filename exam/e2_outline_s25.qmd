@@ -29,7 +29,7 @@ c.  ARIMA Models
 -   Backshift notation: What is it, and what does it do?
 -   Autoregressive Models (AR): Conditions, how to fit, model equation.
 -   Moving Average Models (MA): Conditions, how to fit, model equation.
--   ARIMA Models: Write out the specific equation using the general equation and a 𝑝,𝑑, and 𝑞 (small) idenifying the orders ($p$ and $q$) by looking at a stationary series's correlogram and PACF plot.
+-   ARIMA Models (*see below*): Write out the specific equation using the general equation and a 𝑝,𝑑, and 𝑞 (small) identifying the orders ($p$ and $q$) by looking at a stationary series's correlogram and PACF plot.
 -   SARIMA Models: Same as ARIMA but with a season piece.
 -   ARIMA vs ETA
 -   `ARIMA()` function default algorithm.
@@ -39,6 +39,32 @@ d.  Overall
 -   Fitting and comparing models on a test set
 -   Forecasting with all models
 
-### Codebank
+#### ARIMA Process
 
-You can also find the take home exam codebank by clicking [HERE](FinalExamCodeBank.qmd). 
+1.  Plot the data. Identify any unusual observations.
+
+2.  If necessary, transform the data (using a Box-Cox transformation) to stabilize the variance.
+
+3.  If the data are non-stationary: take first differences of the data until the data are stationary.
+
+4.  Examine the ACF/PACF (**of the stationary series**): Is an AR($p$) or MA($q$) model appropriate?
+
+  a.  **AR(**$p$): We have an AR($p$) model when
+  
+  -   the ACF is exponentially decaying or sinusoidal
+  -   there is a significant spike at lag $p$ in **PACF**, but none beyond $p$
+
+  b.  **MA(**$q$): We have an MA($q$) model when
+  
+  -   the PACF is exponentially decaying or sinusoidal
+  -   there is a significant spike at lag $q$ in **ACF**, but none beyond $q$
+
+5.  Try your chosen model(s), and use the *AICc* to search for a better model.
+
+6.  Check the residuals from your chosen model by plotting the ACF of the residuals, and doing a portmanteau test of the residuals. If they do not look like white noise, try a modified model.
+
+7.  Once the residuals look like white noise, calculate forecasts.
+
+### Code Bank
+
+You can also find the take-home exam code bank by clicking [HERE](FinalExamCodeBank.qmd).
