@@ -44,11 +44,17 @@ website:
             text: Schedule & Assignments
           - href: course-links.qmd
             text: Useful links
+          
+      - section: "Project"
+        href: project/project.qmd
+        contents: 
+          - href: project/project.qmd
+            text: Project Overview
+          - href: project/closeread_tutorial.qmd
+            text: Closeread Tutorial
           - href: project/project_scrollytelling_desc.qmd
-            text: Project
-      #     - href: project/1-working-collaboratively.qmd
-      #       text: Working Together Lab
-            
+            text: Project Description
+          
       - section: "Course information"
         contents:
           - href: syllabus.qmd

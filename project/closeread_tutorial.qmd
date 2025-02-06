@@ -5,6 +5,8 @@ format: html
 
 The purpose of this tutorial is to help you create a *basic* *Closeread* document for your projects. After going through it, you should understand the essential components and options to make your document. 
 
+The bulk of this document is from the Closeread documentation by Dr. Andrew Bray. See <https://closeread.dev/>.
+
 ## Prepare
 
 Start by copy the R project folder, `closeread_project`. Then go to your new folder and click on the `closeread_project.Rproj` file. If a pop-up appears, confirm you want to open the project. Finally, open the `closeread_template_LAST_NAME.qmd` file using the file tab on the bottom right of RStudio. You can change the file name from the file tab as well. 

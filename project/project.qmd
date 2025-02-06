@@ -1,0 +1,26 @@
+---
+title: "Scrollytelling Project Overview"
+subtitle: "With Student Examples"
+listing:
+  id: ex
+  contents: "student_examples/meta.yml"
+  template: "student_examples/custom.ejs"
+  type: table
+---
+
+### Overview
+
+During this course, students were asked to tell a data story, to focus on the world around their data, at the dates and times in their data. Students used Dr. Andrew Brays Quarto extension to create scrollytelling story in R. Below you will find the project description, the Closeread  tutorial given to students and student examples that they have agreed to share. 
+
+The project description, is, itself, a Closeread document. See it [HERE](project_scrollytelling_desc.qmd). 
+
+The tutorial is a re-organized version of Dr. Bray's Closeread documentation.See it [HERE](closeread_tutorial.qmd).
+
+There is also a template folder you can access on the [Github](https://github.com/stats-tgeorge/STA364_TSApps). 
+
+See the Closeread documentation at <https://closeread.dev/>.
+
+### Student Scrollytelling Examples
+
+::: {#ex}
+:::
